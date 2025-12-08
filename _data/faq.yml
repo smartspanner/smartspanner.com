@@ -1,0 +1,17 @@
+- question: How do I access Smartspanner CMMS?
+  answer: Smartspanner is a cloud hosted web application. It is accessed by using a normal web browser to login to your account. Please note that we do not provide support for Microsoft IE or Edge browsers. You can also access the platform using our native iOS or Android applications. For sign up and set up, a web browser must be used. You can use Smartspanner CMMS on a tablet by using a browser.
+
+- question: Will Smartspanner work for my company?
+  answer: "Can't keep on top of preventative maintenance schedules because you are too busy firefighting? Lost some records from the last breakdown that would help solve a current issue? Smartspanner works for small companies with single users, up to large organisations with over 20 maintenance technicians. Its simplicity is a key to its success. It is easy to sign up and deploy with our mobile apps and desktop access. If you are looking to move from spreadsheets, emails, calendars to an integrated maintenance solution, Smartspanner is an ideal choice for first time CMMS users."
+
+- question: Is my data secure?
+  answer: Smartspanner uses a secure connection when you log in to encrypt the link between your PC or tablet and our servers. You can check this as with any website by looking for https:// in the address and the secure padlock logo on your browser.
+
+- question: If I cancel my subscription, what happens to the data?
+  answer: You can download all your data into excel using our reporting tools and delete your account with Smartspanner.
+
+- question: I don't have a company credit card, are there other ways to pay?
+  answer: We can arrange for an account to be set up and paid without a credit card in GBP, EUR, USD, NZD or AUD. Please contact us for details.
+
+- question: Where can I get an invoice?
+  answer: Invoices are emailed automatically at every billing cycle.

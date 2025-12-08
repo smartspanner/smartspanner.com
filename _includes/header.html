@@ -1,0 +1,38 @@
+<header id="header" class="header d-flex align-items-center">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner">
+    </a>
+    
+    <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
+    
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="#"><span>Solutions</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="{{ '/asset-management' | relative_url }}">Asset Management</a></li>
+            <li><a href="{{ '/facilities-management-maintenance' | relative_url }}">Facilities Management</a></li>
+            <li><a href="{{ '/industries' | relative_url }}">Industries</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/features' | relative_url }}"{% if page.url == '/features/' %} class="active"{% endif %}>Features</a></li>
+        <li><a href="{{ '/pricing' | relative_url }}"{% if page.url == '/pricing/' %} class="active"{% endif %}>Pricing</a></li>
+        <li class="dropdown">
+          <a href="#"><span>Resources</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="{{ site.support_url }}" target="_blank">Support <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="{{ '/cmms-demo-video' | relative_url }}">Demo Video</a></li>
+            <li><a href="{{ '/free-guide-choosing-your-cmms-vendors' | relative_url }}">Choosing Your CMMS</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/about' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a></li>
+        <li><a href="{{ '/contact' | relative_url }}"{% if page.url == '/contact/' %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ site.signup_url }}">Free Trial</a></li>
+        <li><a href="{{ site.app_url }}">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

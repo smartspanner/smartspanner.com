@@ -1,0 +1,74 @@
+- title: Works Order Scheduling
+  icon: fa-regular fa-calendar-days
+  link: work-order-software
+  description: Create and schedule tasks for your team. Set-up recurring schedules for Preventative Maintenance, Inspections and Servicing.
+
+- title: Asset Management
+  icon: fa-solid fa-industry
+  link: asset-management-software
+  description: Look up Asset history, linked spares and file repository. Group Assets by Site, location and asset hierarchy.
+
+- title: Check Lists & Inspections
+  icon: fa-solid fa-list-check
+  link: compliance-software
+  description: Create checklists and inspection routines to capture responses to all items with comments and media.
+
+- title: Spare Parts & Inventory
+  icon: fa-solid fa-gears
+  link: spare-part-inventory-software
+  description: Spares part inventory management, Low stock alerts on dashboard. Export stock report to excel.
+
+- title: Condition Based Monitoring
+  icon: fa-solid fa-chart-line
+  link: condition-based-monitoring
+  description: Monitor parameters for each asset to decide when to perform maintenance.
+
+- title: Dashboard and Alerts
+  icon: fa-solid fa-gauge
+  link: cmms-dashboard
+  description: Dashboard to track overdue works orders, work requests, overdue and more. Alerts for inspection failures and low inventory of spare parts.
+
+- title: Multi-Site
+  icon: fa-solid fa-location-dot
+  link: multi-site-maintenance-software
+  description: Quickly deploy across multi-site companies. Set permissions for your team at each site. Site specific or global dashboard views.
+
+- title: Performance and Statistics
+  icon: fa-solid fa-chart-simple
+  link: cmms-kpi-performance-indicators
+  description: Dashboard to track overdue works orders. Alerts for Requests, breakdowns and spare part inventory.
+
+- title: Subcontractors
+  icon: fa-solid fa-people-arrows
+  link: subcontractors
+  description: Track subcontractor costs within a works order. Store files against subcontract records.
+
+- title: Procedures
+  icon: fa-regular fa-rectangle-list
+  link: maintenance-procedure-software
+  description: Standardise procedures across multiple assets. Store files and documents to download from procedures.
+
+- title: Failure Codes
+  icon: fa-solid fa-code
+  link: maintenance-failure-codes
+  description: Tag a works order with a failure code for in depth analysis.
+
+- title: Purchasing
+  icon: fa-solid fa-dollar-sign
+  link: maintenance-purchase-orders
+  description: Built in purchasing for spare parts and goods receipts.
+
+- title: Lockout/TagOut
+  icon: fa-solid fa-lock
+  link: lockout-tagout
+  description: Track asset lockout using our mobile apps, track locks IDs and reasons for each lockout.
+
+- title: IoT Condition Monitoring
+  icon: fa-solid fa-heart-pulse
+  link: iot-condition-monitoring
+  description: Vibration, Temperature, Power Consumption, Flow Meters are all available as a cloud subscription service.
+
+- title: Mobile CMMS
+  icon: fa-solid fa-mobile-screen-button
+  link: mobile-cmms
+  description: Mobile apps available for Android and iOS users.

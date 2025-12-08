@@ -1,0 +1,31 @@
+<section id="faq" class="faq section-bg">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list">
+      {% for item in site.data.faq %}
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <i class="fa-regular fa-circle-question"></i>
+          <span>{{ item.question }}</span>
+          <i class="fa-solid fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer{% if forloop.first %} active{% endif %}">
+          <p>{{ item.answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.faq-toggle');
+  answer.classList.toggle('active');
+  icon.classList.toggle('rotate');
+}
+</script>

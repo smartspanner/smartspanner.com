@@ -1,0 +1,88 @@
+---
+layout: page
+title: Contact
+description: Contact Smartspanner for CMMS software enquiries. Based in Newcastle, UK with global support.
+keywords: smartspanner, smartspanner cmms, cmms system uk
+hero_image: /assets/img/services.jpg
+---
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="contact-wrap mb-5">
+        <h4 class="text-center">Get in Touch</h4>
+        <div class="col-8 offset-2">
+          <p class="text-center">We support customers globally from our base in Newcastle in the UK.</p>
+
+          <div class="info-wrap">
+            <div class="info-item">
+              <i class="fa-solid fa-phone"></i>
+              <p><a href="tel:{{ site.company.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' }}">{{ site.company.phone }}</a></p>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></p>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <p>
+                {{ site.company.address.line1 }}<br>
+                {{ site.company.address.line2 }}<br>
+                {{ site.company.address.city }}<br>
+                {{ site.company.address.postcode }}<br>
+                {{ site.company.address.country }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-demo-wrap">
+        <h4 class="text-center">Book a Demo</h4>
+        <div class="col-8 offset-2">
+          <p>Our free online demo usually takes about 45 mins using an online meeting.</p>
+
+          <form action="https://formspree.io/f/meqpyeea" method="POST">
+            <div class="form-group mt-2">
+              <label for="name">Name</label>
+              <input type="text" name="Name" class="form-control" id="name" required>
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="email">Email address</label>
+              <input type="email" name="Email" class="form-control" id="email" required>
+              <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="telephone">Telephone</label>
+              <input type="tel" name="Telephone" class="form-control" id="telephone">
+            </div>
+
+            <div class="mt-3">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="Message" rows="3"></textarea>
+            </div>
+
+            <p class="mt-3">How should we contact you?</p>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="Contact-me" id="contactEmail" value="email" checked>
+              <label class="form-check-label" for="contactEmail">Drop me an email</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="Contact-me" id="contactPhone" value="telephone">
+              <label class="form-check-label" for="contactPhone">Give me a call</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

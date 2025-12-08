@@ -1,0 +1,87 @@
+---
+layout: page
+title: Pricing
+description: Simple and affordable CMMS pricing. Choose from Basic, Standard, or Advanced plans starting from £13 per user per month.
+keywords: maintenance software, maintenance app, preventative maintenance, predictive maintenance system
+hero_image: /assets/img/compressed-air-maintenance.JPG
+---
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="section-header text-center">
+      <p>Choose one of our packages below that suits your needs. Prices are per user, per month.<br>We take care of all the updates, backups and security so you can focus on running your business.</p>
+    </div>
+
+    <div class="row">
+      {% for plan in site.data.pricing.plans %}
+      <div class="col-lg-4">
+        <div class="box featured">
+          <h3>{{ plan.name }}</h3>
+          <h4><sup>{{ plan.currency }}</sup>{{ plan.price }}<span>{{ plan.period }}</span></h4>
+          <ul>
+            {% for feature in plan.features %}
+            <li><i class="fa-regular fa-circle-check"></i> {{ feature }}</li>
+            {% endfor %}
+            {% if plan.highlighted %}
+            {% for feature in plan.highlighted %}
+            <li><i class="fa-regular fa-circle-check"></i> <strong>{{ feature }}</strong></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="{{ site.signup_url }}" class="btn btn-secondary mx-1">Sign Up</a>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary mx-1">Book a Demo</a>
+    </div>
+
+    <div class="text-center mt-4">
+      <p>Prices are in GBP and exclude VAT.<br>
+      For prices in USD, EUR, AUD, NZD please <a href="{{ '/contact' | relative_url }}">contact us</a></p>
+    </div>
+
+    <div class="section-header text-center mt-5">
+      <h3>All Plans Include:</h3>
+      <ul class="list-unstyled mt-3">
+        {% for item in site.data.pricing.all_plans_include %}
+        <li><i class="fa-regular fa-circle-check"></i> {{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IoT Section -->
+<section id="get-started" class="get-started section-bg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="content">
+          <h3>IoT Condition Monitoring</h3>
+          <h4>Wireless sensors with cloud AI machine monitoring</h4>
+          <p>Smartspanner provides IoT condition monitoring services for vibration, temperature, energy management and flow meters. A fully subscription based system and easy plug and play wireless sensors enables 24/7 monitoring of critical plant.</p>
+          <p>With AI monitoring your systems in the cloud, a machine health algorithm provides alerts and fault diagnosis. We can also include alert integration into your Smartspanner account or provide IoT monitoring as a separate product without the need for a CMMS subscription.</p>
+          <ul class="list-unstyled mt-4">
+            <li><i class="fa-regular fa-circle-check"></i> Temperature</li>
+            <li><i class="fa-regular fa-circle-check"></i> 3 Axis Vibration</li>
+            <li><i class="fa-regular fa-circle-check"></i> Power Consumption</li>
+            <li><i class="fa-regular fa-circle-check"></i> Flow Meters</li>
+          </ul>
+          <div class="mt-4">
+            <a href="{{ '/iot-condition-monitoring' | relative_url }}" class="btn btn-secondary mx-1">Learn More</a>
+            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary mx-1">Talk to Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="{{ '/assets/img/features/sensors.png' | relative_url }}" class="img-fluid" alt="IoT Sensors">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include faq.html %}

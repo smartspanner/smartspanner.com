@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<main id="main">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ page.hero_image | default: "/assets/img/header-features.png" | relative_url }}');">
+    <div class="container d-flex flex-column align-items-center text-center">
+      <h2>{{ page.title }}</h2>
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/features' | relative_url }}">Features</a></li>
+        <li>{{ page.title }}</li>
+      </ol>
+    </div>
+  </div>
+
+  {{ content }}
+</main>

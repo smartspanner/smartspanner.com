@@ -1,0 +1,14 @@
+- name: Baris C.
+  role: Support Engineer
+  stars: 5
+  quote: Very user friendly interface, which takes 5 minutes to understand it completely and you can start using it without hesitation. There is no useless tabs which makes everything complicated, only necessary components of CMMS are included.
+
+- name: Joe W.
+  role: Engineering Manager
+  stars: 5
+  quote: A quick, simple to use CMMS system that is ideal for the organisation size we work within.
+
+- name: Andrew G
+  role: Maintenance Manager
+  stars: 5
+  quote: Simple, flexible, no nonsense, everything in one package - no extras

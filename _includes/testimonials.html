@@ -1,0 +1,28 @@
+<section id="testimonials" class="testimonials section-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Testimonials</h2>
+    </div>
+    
+    <div class="row">
+      {% for testimonial in site.data.testimonials %}
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-item">
+          <h3>{{ testimonial.name }}</h3>
+          <h4>{{ testimonial.role }}</h4>
+          <div class="stars">
+            {% for i in (1..testimonial.stars) %}
+            <i class="fa-solid fa-star"></i>
+            {% endfor %}
+          </div>
+          <p>
+            <i class="fa-solid fa-quote-left quote-icon-left"></i>
+            {{ testimonial.quote }}
+            <i class="fa-solid fa-quote-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

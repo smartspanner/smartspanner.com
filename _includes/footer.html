@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>{{ site.company.name }}</h4>
+        <p>{{ site.description }}</p>
+        <div class="social-links">
+          <a href="{{ site.twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="{{ site.linkedin }}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="{{ '/asset-management' | relative_url }}">Asset Management</a></li>
+          <li><a href="{{ '/facilities-management-maintenance' | relative_url }}">Facilities Management</a></li>
+          <li><a href="{{ '/industries' | relative_url }}">Industries</a></li>
+          <li><a href="{{ '/features' | relative_url }}">Features</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ site.support_url }}" target="_blank">Support</a></li>
+          <li><a href="{{ '/cmms-demo-video' | relative_url }}">Demo Video</a></li>
+          <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/free-guide-choosing-your-cmms-vendors' | relative_url }}">Choosing Your CMMS</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="{{ '/about' | relative_url }}">About</a></li>
+          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/pricing' | relative_url }}">Pricing</a></li>
+          <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
+          <li><a href="{{ '/terms-of-service' | relative_url }}">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      &copy; Copyright <strong>{{ site.company.name }}</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="scroll-top" id="scroll-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</div>

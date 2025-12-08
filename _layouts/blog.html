@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<main id="main">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ "/assets/img/breadcrumbs-bg.jpg" | relative_url }}');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+      <h2>{{ page.breadcrumb_title | default: "Blog Details" }}</h2>
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+        <li>Blog Details</li>
+      </ol>
+    </div>
+  </div>
+
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <article class="blog-details">
+            <div class="post-img">
+              <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid">
+            </div>
+
+            <h2 class="title">{{ page.title }}</h2>
+
+            <div class="meta-top">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="{{ page.date }}">{{ page.date_display }}</time></li>
+              </ul>
+            </div>
+
+            <div class="content">
+              {{ content }}
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sidebar">
+            <div class="sidebar-item recent-posts">
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="mt-3">
+                <div class="post-item mt-3">
+                  <div>
+                    <h4><a href="{{ '/blog-unlimited-support' | relative_url }}">Why we offer unlimited support</a></h4>
+                    <time datetime="2021-12-01">December 2021</time>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div>
+                    <h4><a href="{{ '/blog-compliance-risks' | relative_url }}">Don't take risks with compliance</a></h4>
+                    <time datetime="2021-05-01">May 2021</time>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div>
+                    <h4><a href="{{ '/blog-maintenance-strategies' | relative_url }}">Maintenance Strategies</a></h4>
+                    <time datetime="2021-01-01">January 2021</time>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div>
+                    <h4><a href="{{ '/blog-cmms-benefits' | relative_url }}">5 Benefits of CMMS Software</a></h4>
+                    <time datetime="2020-10-01">October 2020</time>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div>
+                    <h4><a href="{{ '/blog-cmms-selection' | relative_url }}">CMMS Selection</a></h4>
+                    <time datetime="2020-09-01">September 2020</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

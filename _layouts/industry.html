@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main id="main">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ page.hero_image | default: "/assets/img/breadcrumbs-bg.jpg" | relative_url }}');">
+    <div class="container d-flex flex-column align-items-center text-center">
+      <h2>{{ page.title }}</h2>
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% if page.parent %}<li><a href="{{ page.parent_url | relative_url }}">{{ page.parent }}</a></li>{% endif %}
+        <li>{{ page.title }}</li>
+      </ol>
+    </div>
+  </div>
+
+  {% if page.lead or page.tags %}
+  <section id="jumbotron" class="jumbotron">
+    <div class="container text-center">
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      {% if page.tags %}
+      <div class="tags">
+        {% for tag in page.tags %}
+        <span class="badge rounded-pill my-1 p-2">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {{ content }}
+</main>

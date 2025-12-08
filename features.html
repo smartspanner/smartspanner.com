@@ -1,0 +1,49 @@
+---
+layout: page
+title: Features
+description: Explore Smartspanner CMMS features including work order management, asset management, preventative maintenance, mobile apps, and more.
+keywords: cmms, maintenance software, online maintenance app, asset maintenance, asset management, preventative maintenance
+hero_image: /assets/img/machinery.jpg
+---
+
+<!-- Services/Features Section -->
+<section id="services" class="services section-bg">
+  <div class="container">
+    <div class="row gy-4">
+      {% for feature in site.data.features %}
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <div class="icon">
+            <i class="{{ feature.icon }}"></i>
+          </div>
+          <h3><a href="{{ feature.link | relative_url }}">{{ feature.title }}</a></h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Get Started Section -->
+<section id="get-started" class="get-started section-bg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="content">
+          <h3>Cloud Deployment</h3>
+          <h4>Get started with a <a href="{{ site.signup_url }}">14 day free trial.</a><br>You will be up and running in less than 5 minutes.</h4>
+          <ul class="list-unstyled mt-4">
+            <li><i class="fa-solid fa-check-double"></i> Multi-site deployment</li>
+            <li><i class="fa-solid fa-check-double"></i> Unlimited storage</li>
+            <li><i class="fa-solid fa-check-double"></i> Free telephone and online support</li>
+            <li><i class="fa-solid fa-check-double"></i> Mobile apps for iOS and Android devices</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="{{ '/assets/img/laptop.png' | relative_url }}" class="img-fluid" alt="Laptop">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+plans:
+  - name: Basic
+    price: 13
+    currency: £
+    period: per user/month
+    features:
+      - Works order management
+      - Preventative maintenance scheduling
+      - Dashboard
+      - Email reminders
+      - Asset management & hierarchy
+      - Multi-site Deployment
+      - Spare parts
+      - Excel reporting
+      - Mobile apps
+
+  - name: Standard
+    price: 19
+    currency: £
+    period: per user/month
+    features:
+      - Works Order Management
+      - Preventative Maintenance scheduling
+      - Dashboard
+      - Email reminders and team notifications
+      - Asset Management & hierarchy
+      - Multi-site Deployment
+      - Spare Parts
+      - Excel Reporting
+      - Mobile Apps
+    highlighted:
+      - Procedures
+      - Subcontractors
+      - Failure Codes
+      - Asset Labels
+
+  - name: Advanced
+    price: 26
+    currency: £
+    period: per user/month
+    features:
+      - Works Order Management
+      - Preventative Maintenance scheduling
+      - Dashboard
+      - Email reminders and team notifications
+      - Asset Management & hierarchy
+      - Multi-site Deployment
+      - Spare Parts
+      - Excel Reporting
+      - Mobile Apps
+      - Procedures
+      - Subcontractors
+      - Failure Codes
+    highlighted:
+      - Asset Labels
+      - Spare Part Labels
+      - Check Lists
+      - Condition Monitoring
+      - Statistics
+      - Purchasing
+      - Asset Lockout
+      - "Risk Assessments *coming soon"
+
+all_plans_include:
+  - Unlimited works orders
+  - Unlimited file storage (10Mb per file limit)
+  - Automatic updates of features
+  - Daily Backup
+  - Online credit card billing
+  - Unlimited telephone and online support
+  - 14 days free trial

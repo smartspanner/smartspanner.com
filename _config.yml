@@ -1,0 +1,36 @@
+# Site settings
+title: Smartspanner CMMS
+description: Cloud-based CMMS software for maintenance management, asset tracking, and facilities management.
+url: "https://www.smartspanner.com"
+baseurl: ""
+
+# Company info
+company:
+  name: Smartspanner
+  phone: "+44 (0)191 3001217"
+  email: sales@smartspanner.com
+  address:
+    line1: Unit 3 Queens Court
+    line2: Team Valley Industrial Estate
+    city: Gateshead
+    postcode: NE11 0BU
+    country: United Kingdom
+
+# External links
+app_url: https://app.smartspanner.com
+signup_url: https://app.smartspanner.com/signup
+support_url: https://support.smartspanner.com
+
+# Social
+twitter: https://twitter.com/smartspanner
+linkedin: https://www.linkedin.com/company/smartspanner
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
