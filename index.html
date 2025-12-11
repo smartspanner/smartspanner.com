@@ -283,13 +283,20 @@ keywords: cmms software, maintenance software, facilities management software, a
   
   function showSlide(index) {
     const nextSlide = (index + slides.length) % slides.length;
-    // Add active to new slide first (it will fade in due to CSS transition)
+    if (nextSlide === currentSlide) return;
+    
+    // Add active to new slide (it will fade in)
     slides[nextSlide].classList.add('active');
-    // Remove active from current slide (it will fade out)
-    if (nextSlide !== currentSlide) {
-      slides[currentSlide].classList.remove('active');
-    }
-    currentSlide = nextSlide;
+    
+    // Add fade-out to current slide and remove active after transition
+    slides[currentSlide].classList.add('fade-out');
+    slides[currentSlide].classList.remove('active');
+    
+    // Clean up fade-out class after transition completes
+    setTimeout(() => {
+      slides[currentSlide].classList.remove('fade-out');
+      currentSlide = nextSlide;
+    }, 1500);
   }
   
   function changeSlide(direction) {
