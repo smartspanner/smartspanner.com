@@ -282,9 +282,14 @@ keywords: cmms software, maintenance software, facilities management software, a
   const slides = document.querySelectorAll('.carousel-item');
   
   function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
+    const nextSlide = (index + slides.length) % slides.length;
+    // Add active to new slide first (it will fade in due to CSS transition)
+    slides[nextSlide].classList.add('active');
+    // Remove active from current slide (it will fade out)
+    if (nextSlide !== currentSlide) {
+      slides[currentSlide].classList.remove('active');
+    }
+    currentSlide = nextSlide;
   }
   
   function changeSlide(direction) {
