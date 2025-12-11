@@ -10,24 +10,31 @@ hero_image: /assets/img/services.jpg
 <section id="contact" class="contact">
   <div class="container">
     <div class="row gy-4">
-      <div class="contact-wrap mb-5">
-        <h4 class="text-center">Get in Touch</h4>
-        <div class="col-8 offset-2">
-          <p class="text-center">We support customers globally from our base in Newcastle in the UK.</p>
+      <div class="col-lg-6">
+        <div class="contact-info-box">
+          <h3>Get in Touch</h3>
+          <p>We support customers globally from our base in Newcastle in the UK.</p>
 
-          <div class="info-wrap">
-            <div class="info-item">
-              <i class="fa-solid fa-phone"></i>
-              <p><a href="tel:{{ site.company.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' }}">{{ site.company.phone }}</a></p>
+          <div class="info-item d-flex">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+441913001217">+44(0)191 3001217</a></p>
             </div>
+          </div>
 
-            <div class="info-item">
-              <i class="fa-solid fa-envelope"></i>
-              <p><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></p>
+          <div class="info-item d-flex">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:sales@smartspanner.com">sales@smartspanner.com</a></p>
             </div>
+          </div>
 
-            <div class="info-item">
-              <i class="fa-solid fa-map-location-dot"></i>
+          <div class="info-item d-flex">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div>
+              <h4>Address</h4>
               <p>
                 {{ site.company.address.line1 }}<br>
                 {{ site.company.address.line2 }}<br>
@@ -40,46 +47,44 @@ hero_image: /assets/img/services.jpg
         </div>
       </div>
 
-      <div class="book-demo-wrap">
-        <h4 class="text-center">Book a Demo</h4>
-        <div class="col-8 offset-2">
+      <div class="col-lg-6">
+        <div class="contact-form-box">
+          <h3>Book a Demo</h3>
           <p>Our free online demo usually takes about 45 mins using an online meeting.</p>
 
-          <form action="https://formspree.io/f/meqpyeea" method="POST">
-            <div class="form-group mt-2">
+          <form action="https://formspree.io/f/meqpyeea" method="POST" class="contact-form">
+            <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" name="Name" class="form-control" id="name" required>
+              <input type="text" name="Name" id="name" required>
             </div>
 
-            <div class="form-group mt-3">
+            <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" name="Email" class="form-control" id="email" required>
-              <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <input type="email" name="Email" id="email" required>
+              <small>We'll never share your email with anyone else.</small>
             </div>
 
-            <div class="form-group mt-3">
+            <div class="form-group">
               <label for="telephone">Telephone</label>
-              <input type="tel" name="Telephone" class="form-control" id="telephone">
+              <input type="tel" name="Telephone" id="telephone">
             </div>
 
-            <div class="mt-3">
+            <div class="form-group">
               <label for="message">Message</label>
-              <textarea class="form-control" id="message" name="Message" rows="3"></textarea>
+              <textarea id="message" name="Message" rows="4"></textarea>
             </div>
 
-            <p class="mt-3">How should we contact you?</p>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="Contact-me" id="contactEmail" value="email" checked>
-              <label class="form-check-label" for="contactEmail">Drop me an email</label>
+            <div class="form-group">
+              <p>How should we contact you?</p>
+              <label class="radio-label">
+                <input type="radio" name="Contact-me" value="email" checked> Drop me an email
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="Contact-me" value="telephone"> Give me a call
+              </label>
             </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="Contact-me" id="contactPhone" value="telephone">
-              <label class="form-check-label" for="contactPhone">Give me a call</label>
-            </div>
-
-            <button type="submit" class="btn btn-primary mt-3">Send</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
       </div>
