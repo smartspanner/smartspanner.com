@@ -1,15 +1,13 @@
 <script>
   // Mobile Navigation Toggle
   document.querySelector('.mobile-nav-show').addEventListener('click', function() {
+    document.body.classList.add('mobile-nav-active');
     document.querySelector('#navbar').classList.add('active');
-    document.querySelector('.mobile-nav-hide').classList.remove('d-none');
-    this.classList.add('d-none');
   });
   
   document.querySelector('.mobile-nav-hide').addEventListener('click', function() {
+    document.body.classList.remove('mobile-nav-active');
     document.querySelector('#navbar').classList.remove('active');
-    document.querySelector('.mobile-nav-show').classList.remove('d-none');
-    this.classList.add('d-none');
   });
   
   // Dropdown toggle for mobile

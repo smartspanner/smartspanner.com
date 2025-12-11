@@ -350,11 +350,24 @@ img {
     display: block;
   }
   
+  .mobile-nav-show {
+    display: block;
+  }
+  
   .mobile-nav-hide {
+    display: none;
     position: fixed;
     right: 20px;
     top: 20px;
     z-index: 9999;
+  }
+  
+  .mobile-nav-active .mobile-nav-show {
+    display: none;
+  }
+  
+  .mobile-nav-active .mobile-nav-hide {
+    display: block;
   }
 }
 
