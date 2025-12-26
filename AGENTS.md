@@ -39,21 +39,36 @@ git add -A && git commit -m "prefix: description" && git push
 # SmartSpanner Marketing Site - Jekyll
 
 ## Overview
-Marketing website for SmartSpanner CMMS (Computerized Maintenance Management System).
+Marketing website for SmartSpanner CMMS (Computerized Maintenance Management System). Built with Jekyll, deployed to GitHub Pages.
 
 ## Access
 - **Production**: https://www.smartspanner.com
-- **Local Dev**: http://localhost:8080/smartspanner
+- **Local Dev**: https://tenx.fraction.app/smartspanner.com/
+- **Build Output**: `/home/dev/tenx/apps/websites/smartspanner.com/_site/`
 
-## Build Commands
+## Important: Two Configuration Files
+
+### `_config.yml` (Production) - DO NOT modify for local dev
+- `url: "https://www.smartspanner.com"`
+- `baseurl: ""`
+
+### `_config_dev.yml` (Development) - Use for local dev
+- `url: "https://tenx.fraction.app"`
+- `baseurl: "/smartspanner.com"`
+
+## Building the Site
+
+**IMPORTANT: After making ANY changes, you MUST rebuild:**
+
 ```bash
-# Build for local development
-docker compose exec jekyll jekyll build --config _config.yml,_config_dev.yml
+# Build with dev config for local testing
+docker exec websites_jekyll bash -c "cd /srv/smartspanner.com && jekyll build --config _config.yml,_config_dev.yml"
 
-# Watch mode
-docker compose exec jekyll jekyll build --config _config.yml,_config_dev.yml --watch
+# Verify build
+curl -I https://tenx.fraction.app/smartspanner.com/
 ```
 
 ## Key Info
 - **App URL**: https://app.smartspanner.com
 - **Support**: https://support.smartspanner.com
+- Use `{{ site.baseurl }}/assets/...` for all asset paths
