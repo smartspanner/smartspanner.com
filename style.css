@@ -206,7 +206,7 @@ img {
 .header {
   z-index: 997;
   position: absolute;
-  padding: 30px 0;
+  padding: 30px 20px;
   top: 0;
   left: 0;
   right: 0;
@@ -215,7 +215,7 @@ img {
 .header.scrolled {
   position: fixed;
   background: rgba(0, 0, 0, 0.9);
-  padding: 15px 0;
+  padding: 15px 20px;
 }
 
 .header .logo img {
@@ -287,6 +287,10 @@ img {
 
 .navbar .dropdown ul a:hover {
   color: var(--color-primary);
+}
+
+.navbar .dropdown ul a i {
+  margin-left: 6px;
 }
 
 .navbar .dropdown-indicator {
@@ -377,7 +381,7 @@ img {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -417,7 +421,7 @@ img {
 .hero .info {
   position: relative;
   z-index: 2;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -565,7 +569,7 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .alt-services h3 {
@@ -1331,9 +1335,10 @@ section {
 
 /* Footer */
 .footer {
-  background: #2e3035;
+  background: rgba(0, 0, 0, 0.9);
   color: rgba(255, 255, 255, 0.7);
   padding: 60px 0 30px;
+  font-size: 0.9rem;
 }
 
 .footer h4 {
@@ -1387,6 +1392,7 @@ section {
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 30px;
+  font-size: 0.9em;
 }
 
 .footer .copyright a {
@@ -1486,18 +1492,97 @@ section {
   line-height: 1.8;
 }
 
+/* About Image Background */
+.about .about-img {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   section {
     padding: 60px 0;
   }
-  
+
   .section-header p {
     max-width: 100%;
   }
-  
+
   .pricing .box {
     max-width: 80%;
     margin: 0 auto 30px;
+  }
+}
+
+/* Mobile Image Responsiveness */
+@media (max-width: 991px) {
+  /* Alt Services image section - reduce height on mobile */
+  .alt-services .img-bg {
+    min-height: 250px;
+    margin-bottom: 30px;
+  }
+
+  /* About page background image - stack on mobile */
+  .about .about-img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  /* Features tab images - ensure proper sizing */
+  .features .tab-pane .row {
+    flex-direction: column;
+  }
+
+  .features .tab-pane img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Get started section images */
+  .get-started img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Smaller alt services image on very small screens */
+  .alt-services .img-bg {
+    min-height: 200px;
+  }
+
+  /* About image smaller on mobile */
+  .about .about-img {
+    height: 220px;
+  }
+
+  /* Industry cards - ensure image isn't too tall */
+  .constructions .card-item .card-bg {
+    min-height: 180px;
+  }
+
+  /* Hero adjustments */
+  .hero .info h2 {
+    font-size: 28px;
+  }
+
+  .hero .info p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* Breadcrumb header images */
+  .breadcrumbs {
+    min-height: 300px;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 28px;
   }
 }
