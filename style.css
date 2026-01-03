@@ -381,7 +381,7 @@ img {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 64vh;
   overflow: hidden;
 }
 
@@ -421,7 +421,7 @@ img {
 .hero .info {
   position: relative;
   z-index: 2;
-  min-height: 80vh;
+  min-height: 64vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1331,6 +1331,24 @@ section {
 
 .faq .faq-list li.active .faq-answer {
   display: block;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* Footer */

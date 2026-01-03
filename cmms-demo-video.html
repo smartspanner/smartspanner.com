@@ -6,42 +6,70 @@ keywords: maintenance, cmms, compliance management software, facilities manageme
 hero_image: /assets/img/breadcrumbs-bg.jpg
 ---
 
-<section class="sample-page">
-  <div class="container col-10 col-md-6 col-lg-4 mb-4">
-    <p>This short video will give you a quick tour through the core functionality of Smartspanner CMMS. This is to give you an idea of how it works on a day to day basis. For more in-depth demo and discussion, just use the form below to book an online demo with us.</p>
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="text-center mb-4">This short video will give you a quick tour through the core functionality of Smartspanner CMMS. This is to give you an idea of how it works on a day to day basis. For more in-depth demo and discussion, just use the form below to book an online demo with us.</p>
 
-    <div class="ratio ratio-16x9 mb-4">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Smartspanner CMMS Demo" allowfullscreen></iframe>
+        <div class="video-container mb-5">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Smartspanner CMMS Demo" allowfullscreen></iframe>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-form-box">
+              <h3 class="text-center">Book a Demo</h3>
+              <form action="https://formspree.io/f/meqpyeea" method="POST" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" name="Name" id="name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" name="Email" id="email">
+                      <small>We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="telephone">Telephone</label>
+                      <input type="tel" name="Telephone" id="telephone">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="2"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <p>How should we contact you?</p>
+                  <label class="radio-label">
+                    <input type="radio" name="Contact-me" value="email" checked> Drop me an email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="Contact-me" value="telephone"> Give me a call
+                  </label>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <form action="https://formspree.io/f/meqpyeea" method="POST">
-      <div class="form-group mt-4">
-        <label for="name">Name</label>
-        <input type="text" name="Name" class="form-control" id="name" placeholder="">
-      </div>
-      <div class="form-group mt-4">
-        <label for="email">Email address</label>
-        <input type="email" name="Email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group mt-4">
-        <label for="telephone">Telephone</label>
-        <input type="tel" name="Telephone" class="form-control" id="telephone" placeholder="">
-      </div>
-      <div class="form-group mt-4">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" name="message" placeholder="" rows="2"></textarea>
-      </div>
-      <div class="form-check mt-4">
-        <p>How should we contact you?</p>
-        <input class="form-check-input" type="radio" name="Contact-me" id="contact-email" value="email" checked>
-        <label class="form-check-label" for="contact-email">Drop me an email</label>
-      </div>
-      <div class="form-check mt-4">
-        <input class="form-check-input" type="radio" name="Contact-me" id="contact-telephone" value="telephone">
-        <label class="form-check-label" for="contact-telephone">Give me a call</label>
-      </div>
-      <button type="submit" class="btn btn-primary mt-5">Send</button>
-    </form>
   </div>
 </section>
