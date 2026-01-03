@@ -1344,6 +1344,7 @@ section {
 .footer .footer-columns {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer .footer-col {
@@ -1359,7 +1360,7 @@ section {
 
 @media (min-width: 992px) {
   .footer .footer-col {
-    width: 25%;
+    width: auto;
   }
 }
 
