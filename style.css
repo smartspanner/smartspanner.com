@@ -1309,6 +1309,11 @@ section {
   padding: 20px 25px;
   cursor: pointer;
   transition: background-color 0.2s;
+  border-bottom: 1px solid #6c757d;
+}
+
+.faq .faq-row:first-child {
+  border-top: 1px solid #6c757d;
 }
 
 .faq .faq-row-white {
@@ -1316,11 +1321,11 @@ section {
 }
 
 .faq .faq-row-grey {
-  background: #e9ecef;
+  background: #f8f9fa;
 }
 
 .faq .faq-row:hover {
-  background: #dee2e6;
+  background: #e9ecef;
 }
 
 .faq .faq-question {
