@@ -206,7 +206,7 @@ img {
 .header {
   z-index: 997;
   position: absolute;
-  padding: 30px 20px;
+  padding: 30px 40px;
   top: 0;
   left: 0;
   right: 0;
@@ -215,7 +215,7 @@ img {
 .header.scrolled {
   position: fixed;
   background: rgba(0, 0, 0, 0.9);
-  padding: 15px 20px;
+  padding: 15px 40px;
 }
 
 .header .logo img {
@@ -1341,6 +1341,33 @@ section {
   font-size: 0.9rem;
 }
 
+.footer .footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .footer-col {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .footer .footer-col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .footer-col {
+    width: 20%;
+  }
+}
+
+.footer .footer-description {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .footer h4 {
   color: #fff;
   font-size: 18px;
@@ -1368,6 +1395,14 @@ section {
 .footer ul li i {
   margin-right: 8px;
   color: var(--color-primary);
+}
+
+.footer .footer-contact ul a {
+  color: var(--color-primary);
+}
+
+.footer .footer-contact ul a:hover {
+  color: #fff;
 }
 
 .footer .social-links a {
@@ -1474,6 +1509,14 @@ section {
   font-size: 20px;
   margin-right: 8px;
   color: var(--color-primary);
+}
+
+.service-details .services-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
 }
 
 /* Inner Pages */
