@@ -1310,11 +1310,11 @@ section {
 }
 
 .faq .faq-row-grey {
-  background: #f5f6f7;
+  background: #e9ecef;
 }
 
 .faq .faq-row:hover {
-  background: #e9ecef;
+  background: #dee2e6;
 }
 
 .faq .faq-question {
