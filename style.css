@@ -1056,11 +1056,6 @@ section {
 }
 
 /* About Section */
-.about .row.position-relative {
-  min-height: 400px;
-  overflow: hidden;
-}
-
 .about .our-story {
   padding: 40px;
   background-color: #f5f6f7;
@@ -1648,17 +1643,6 @@ section {
   line-height: 1.8;
 }
 
-/* About Image Background */
-.about .about-img {
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60%;
-  height: 100%;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   section {
@@ -1683,14 +1667,6 @@ section {
     margin-bottom: 30px;
   }
 
-  /* About page background image - stack on mobile */
-  .about .about-img {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
-  }
-
   /* Features tab images - ensure proper sizing */
   .features .tab-pane .row {
     flex-direction: column;
@@ -1711,11 +1687,6 @@ section {
   /* Smaller alt services image on very small screens */
   .alt-services .img-bg {
     min-height: 200px;
-  }
-
-  /* About image smaller on mobile */
-  .about .about-img {
-    height: 220px;
   }
 
   /* Industry cards - ensure image isn't too tall */
