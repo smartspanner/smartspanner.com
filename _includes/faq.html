@@ -8,6 +8,7 @@
       {% for item in site.data.faq %}
       <div class="faq-row {% cycle 'faq-row-white', 'faq-row-grey' %}" onclick="toggleFaq(this)">
         <div class="faq-question">
+          <i class="fa-regular fa-circle-question faq-q-icon"></i>
           <span>{{ item.question }}</span>
           <i class="fa-solid fa-chevron-down faq-icon"></i>
         </div>

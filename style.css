@@ -1326,6 +1326,13 @@ section {
   color: var(--color-secondary);
 }
 
+.faq .faq-q-icon {
+  color: var(--color-primary);
+  font-size: 18px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 .faq .faq-question span {
   flex: 1;
   padding-right: 15px;
