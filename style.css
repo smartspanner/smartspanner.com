@@ -218,8 +218,14 @@ img {
   padding: 15px 40px;
 }
 
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
 .header .logo img {
   max-height: 40px;
+  vertical-align: middle;
 }
 
 /* Navigation */
