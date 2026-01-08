@@ -5,8 +5,24 @@
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
 <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}">
+
+<!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<!-- Preload critical hero image for LCP -->
+<link rel="preload" as="image" href="{{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }}" fetchpriority="high">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="{{ '/style.min.css' | relative_url }}" as="style">
+
+<!-- Google Fonts - reduced weights, display swap for faster text rendering -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome - defer loading -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+<!-- Main stylesheet (minified) -->
+<link href="{{ '/style.min.css' | relative_url }}" rel="stylesheet">
