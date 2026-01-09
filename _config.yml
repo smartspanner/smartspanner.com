@@ -29,6 +29,11 @@ linkedin: https://www.linkedin.com/company/smartspanner
 markdown: kramdown
 permalink: pretty
 
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # Exclude from build
 exclude:
   - Gemfile
