@@ -435,6 +435,7 @@ img {
   padding: 0 50px;
 }
 
+.hero .info h1,
 .hero .info h2 {
   color: #fff;
   margin-bottom: 30px;
@@ -442,8 +443,10 @@ img {
   font-size: 56px;
   font-weight: 700;
   position: relative;
+  transition: opacity 0.3s ease;
 }
 
+.hero .info h1:after,
 .hero .info h2:after {
   content: "";
   position: absolute;
@@ -517,10 +520,11 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero .info h1,
   .hero .info h2 {
     font-size: 36px;
   }
-  
+
   .hero .info {
     padding: 0 20px;
   }
@@ -1737,6 +1741,7 @@ section {
   }
 
   /* Hero adjustments */
+  .hero .info h1,
   .hero .info h2 {
     font-size: 28px;
   }

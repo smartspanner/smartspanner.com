@@ -9,21 +9,21 @@ keywords: cmms software, maintenance software, facilities management software, a
 <section id="hero" class="hero">
   <div class="info d-flex align-items-center">
     <div class="container text-center">
-      <h1>Cloud CMMS Software for Maintenance Management</h1>
+      <h1 id="hero-title">Take Full Control of Your Maintenance Operations</h1>
       <p>Companies of all sizes use Smartspanner CMMS to manage maintenance and compliance; from hotels and theme parks to manufacturing and aerospace.</p>
       <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">BOOK A DEMO</a>
       <a href="{{ site.signup_url }}" class="btn-get-started">14 Day Free Trial</a>
     </div>
   </div>
-  
+
   <div class="carousel" id="hero-carousel">
-    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }})"></div>
-    <div class="carousel-item" style="background-image: url({{ '/assets/img/hero-carousel/compliance-maintenance.jpg' | relative_url }})"></div>
-    <div class="carousel-item" style="background-image: url({{ '/assets/img/hero-carousel/machine-maintenace.JPG' | relative_url }})"></div>
-    <div class="carousel-item" style="background-image: url({{ '/assets/img/hero-carousel/power-gen-maintenance.JPG' | relative_url }})"></div>
-    <div class="carousel-item" style="background-image: url({{ '/assets/img/hero-carousel/production-maintenance.JPG' | relative_url }})"></div>
+    <div class="carousel-item active" data-title="Take Full Control of Your Maintenance Operations" style="background-image: url({{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }})"></div>
+    <div class="carousel-item" data-title="Powerful Cloud-Based CMMS to Simplify Maintenance Management" style="background-image: url({{ '/assets/img/hero-carousel/power-gen-maintenance.JPG' | relative_url }})"></div>
+    <div class="carousel-item" data-title="All-in-One Maintenance Software for Facilities Management" style="background-image: url({{ '/assets/img/apartments.jpg' | relative_url }})"></div>
+    <div class="carousel-item" data-title="CMMS Built for Modern Manufacturing Teams" style="background-image: url({{ '/assets/img/hero-carousel/production-maintenance.JPG' | relative_url }})"></div>
+    <div class="carousel-item" data-title="Streamlined Compliance Management with Cloud CMMS" style="background-image: url({{ '/assets/img/hero-carousel/compliance-maintenance.jpg' | relative_url }})"></div>
   </div>
-  
+
   <div class="carousel-control-prev" onclick="changeSlide(-1)">
     <i class="fa-solid fa-chevron-left"></i>
   </div>
@@ -280,38 +280,47 @@ keywords: cmms software, maintenance software, facilities management software, a
   // Hero Carousel
   let currentSlide = 0;
   const slides = document.querySelectorAll('.carousel-item');
-  
+  const heroTitle = document.getElementById('hero-title');
+
   function showSlide(index) {
     const nextSlide = (index + slides.length) % slides.length;
     if (nextSlide === currentSlide) return;
-    
+
+    // Update title text
+    const newTitle = slides[nextSlide].dataset.title;
+    heroTitle.style.opacity = '0';
+    setTimeout(() => {
+      heroTitle.textContent = newTitle;
+      heroTitle.style.opacity = '1';
+    }, 300);
+
     // Add active to new slide (it will fade in)
     slides[nextSlide].classList.add('active');
-    
+
     // Add fade-out to current slide and remove active after transition
     slides[currentSlide].classList.add('fade-out');
     slides[currentSlide].classList.remove('active');
-    
+
     // Clean up fade-out class after transition completes
     setTimeout(() => {
       slides[currentSlide].classList.remove('fade-out');
       currentSlide = nextSlide;
     }, 1500);
   }
-  
+
   function changeSlide(direction) {
     showSlide(currentSlide + direction);
   }
-  
+
   // Auto-advance carousel
   setInterval(() => changeSlide(1), 5000);
-  
+
   // Tabs functionality
   document.querySelectorAll('.nav-link').forEach(function(tab) {
     tab.addEventListener('click', function() {
       document.querySelectorAll('.nav-link').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-      
+
       this.classList.add('active');
       document.getElementById(this.dataset.tab).classList.add('active');
     });
