@@ -440,7 +440,7 @@ img {
   color: #fff !important;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  font-size: 56px;
+  font-size: 42px;
   font-weight: 700;
   position: relative;
   transition: opacity 0.3s ease;
@@ -522,7 +522,7 @@ img {
 @media (max-width: 768px) {
   .hero .info h1,
   .hero .info h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .hero .info {
