@@ -437,7 +437,7 @@ img {
 
 .hero .info h1,
 .hero .info h2 {
-  color: #fff;
+  color: #fff !important;
   margin-bottom: 30px;
   padding-bottom: 30px;
   font-size: 56px;
