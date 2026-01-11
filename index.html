@@ -9,7 +9,11 @@ keywords: cmms software, maintenance software, facilities management software, a
 <section id="hero" class="hero">
   <div class="info d-flex align-items-center">
     <div class="container text-center">
-      <h1 id="hero-title">Take Full Control of Your Maintenance Operations</h1>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 id="hero-title">Take Full Control of Your Maintenance Operations</h1>
+        </div>
+      </div>
       <p>Over 100+ Companies, of all sizes, use Smartspanner to manage maintenance and compliance; from hotels and theme parks to manufacturing and aerospace.</p>
       <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">BOOK A DEMO</a>
       <a href="{{ site.signup_url }}" class="btn-get-started">14 Day Free Trial</a>
@@ -279,12 +283,17 @@ keywords: cmms software, maintenance software, facilities management software, a
 <script>
   // Hero Carousel
   let currentSlide = 0;
+  let isTransitioning = false;
   const slides = document.querySelectorAll('.carousel-item');
   const heroTitle = document.getElementById('hero-title');
 
   function showSlide(index) {
+    if (isTransitioning) return;
+
     const nextSlide = (index + slides.length) % slides.length;
     if (nextSlide === currentSlide) return;
+
+    isTransitioning = true;
 
     // Update title text
     const newTitle = slides[nextSlide].dataset.title;
@@ -298,13 +307,15 @@ keywords: cmms software, maintenance software, facilities management software, a
     slides[nextSlide].classList.add('active');
 
     // Add fade-out to current slide and remove active after transition
-    slides[currentSlide].classList.add('fade-out');
-    slides[currentSlide].classList.remove('active');
+    const prevSlide = currentSlide;
+    slides[prevSlide].classList.add('fade-out');
+    slides[prevSlide].classList.remove('active');
+    currentSlide = nextSlide;
 
     // Clean up fade-out class after transition completes
     setTimeout(() => {
-      slides[currentSlide].classList.remove('fade-out');
-      currentSlide = nextSlide;
+      slides[prevSlide].classList.remove('fade-out');
+      isTransitioning = false;
     }, 1500);
   }
 
