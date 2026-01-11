@@ -6,53 +6,38 @@ keywords: choosing your cmms vendor, CMMS selection, what is CMMS, cmms buying g
 hero_image: /assets/img/hotel-header.jpg
 ---
 
-<section id="about" class="about">
+<section id="contact" class="contact section-bg">
   <div class="container">
-    <div class="row position-relative">
-      <div class="col-lg-7 about-img" style="background-image: url({{ '/assets/img/features-4.jpg' | relative_url }});"></div>
-      <div class="col-lg-7">
-        <div class="our-story">
-          <h3>Download your free guide to selecting a CMMS vendor</h3>
-          <p>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-form-box">
+          <h3 class="text-center">Download your free CMMS selection guide</h3>
+          <p class="text-center mb-4">
             Our free guide gives you the key points any business should consider when selecting your CMMS vendor. It doesn't matter if this is your first CMMS or you are shopping around for an update, this guide will give you points to consider for your business.
           </p>
 
-          <!-- Download Form -->
-          <div id="guide-form-container">
-            <form id="guide-form" class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" name="Name" id="name" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="email">Email address *</label>
-                    <input type="email" name="Email" id="email" required>
-                  </div>
+          <form action="https://formspree.io/f/meqpyeea" method="POST" class="contact-form">
+            <input type="hidden" name="_next" value="{{ '/guide-download' | absolute_url }}">
+            <input type="hidden" name="Form-Type" value="CMMS Guide Download">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" name="Name" id="name" required>
                 </div>
               </div>
-              <input type="hidden" name="Form-Type" value="CMMS Guide Download">
-              <button type="submit" class="btn btn-primary" id="submit-btn">
-                <span id="btn-text">Get Free Guide</span>
-                <span id="btn-loading" style="display: none;">Sending...</span>
-              </button>
-            </form>
-            <small class="text-muted">We'll never share your email with anyone else.</small>
-          </div>
-
-          <!-- Success Message -->
-          <div id="guide-success" style="display: none;">
-            <div class="alert alert-success">
-              <h4><i class="fa-solid fa-circle-check"></i> Thank you!</h4>
-              <p>Your guide is ready to download.</p>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Email address *</label>
+                  <input type="email" name="Email" id="email" required>
+                  <small>We'll never share your email with anyone else.</small>
+                </div>
+              </div>
             </div>
-            <a href="{{ '/assets/resources/CMMS-Vendor-Selection.pdf' | relative_url }}" class="btn btn-primary" download>
-              <i class="fa-solid fa-download"></i> Download Guide (PDF)
-            </a>
-          </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Get Free Guide</button>
+            </div>
+          </form>
 
         </div>
       </div>
@@ -61,42 +46,3 @@ hero_image: /assets/img/hotel-header.jpg
 </section>
 
 {% include testimonials.html %}
-
-<script>
-document.getElementById('guide-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const submitBtn = document.getElementById('submit-btn');
-  const btnText = document.getElementById('btn-text');
-  const btnLoading = document.getElementById('btn-loading');
-
-  // Show loading state
-  submitBtn.disabled = true;
-  btnText.style.display = 'none';
-  btnLoading.style.display = 'inline';
-
-  try {
-    const response = await fetch('https://formspree.io/f/meqpyeea', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      // Hide form, show success message
-      document.getElementById('guide-form-container').style.display = 'none';
-      document.getElementById('guide-success').style.display = 'block';
-    } else {
-      throw new Error('Form submission failed');
-    }
-  } catch (error) {
-    alert('There was a problem submitting the form. Please try again or contact us directly.');
-    submitBtn.disabled = false;
-    btnText.style.display = 'inline';
-    btnLoading.style.display = 'none';
-  }
-});
-</script>

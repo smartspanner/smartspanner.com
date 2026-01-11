@@ -3,6 +3,7 @@
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
 
 <!-- Open Graph / Social -->
 <meta property="og:type" content="website">
