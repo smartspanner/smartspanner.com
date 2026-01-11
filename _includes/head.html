@@ -4,7 +4,70 @@
 <meta name="description" content="{{ page.description | default: site.description }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
 <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}">
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Smartspanner",
+  "url": "https://www.smartspanner.com",
+  "logo": "https://www.smartspanner.com/assets/img/logo.png",
+  "description": "Cloud-based CMMS software for maintenance management, asset tracking, and facilities management.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 3 Queens Court, Team Valley Industrial Estate",
+    "addressLocality": "Gateshead",
+    "postalCode": "NE11 0BU",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-191-300-1217",
+    "contactType": "sales",
+    "email": "sales@smartspanner.com"
+  },
+  "sameAs": [
+    "https://twitter.com/smartspanner",
+    "https://www.linkedin.com/company/smartspanner"
+  ]
+}
+</script>
+
+<!-- SoftwareApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Smartspanner CMMS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "Cloud-based CMMS software for maintenance management, asset tracking, and facilities management.",
+  "offers": {
+    "@type": "Offer",
+    "price": "13",
+    "priceCurrency": "GBP",
+    "priceValidUntil": "2026-12-31"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "50"
+  }
+}
+</script>
 
 <!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
