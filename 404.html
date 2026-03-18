@@ -1,0 +1,48 @@
+---
+layout: default
+title: 404 - Page Not Found
+description: The page you're looking for could not be found.
+permalink: /404.html
+robots: noindex
+---
+
+<section style="
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 60px 20px;
+">
+  <div style="max-width: 520px;">
+    <i class="fa-solid fa-wrench" style="
+      font-size: 5rem;
+      color: #feb900;
+      transform: rotate(-20deg);
+      display: inline-block;
+      margin-bottom: 24px;
+    "></i>
+    <h1 style="
+      font-size: 2.5rem;
+      color: #364d59;
+      margin-bottom: 16px;
+    ">404 — Page Not Found</h1>
+    <p style="
+      font-size: 1.15rem;
+      color: #52565e;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    ">Looks like this page needs a maintenance check. It may have been moved or no longer exists.</p>
+    <a href="{{ '/' | relative_url }}" class="btn-primary" style="
+      display: inline-block;
+      background-color: #feb900;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    " onmouseover="this.style.backgroundColor='#e5a700'" onmouseout="this.style.backgroundColor='#feb900'">Back to Homepage</a>
+  </div>
+</section>
