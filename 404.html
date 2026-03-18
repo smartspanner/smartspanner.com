@@ -1,16 +1,25 @@
 ---
-layout: default
-title: 404 - Page Not Found
-description: The page you're looking for could not be found.
+layout: null
 permalink: /404.html
-robots: noindex
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found - {{ site.title }}</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="margin: 0; font-family: 'Open Sans', sans-serif;">
 
 <section style="
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 100vh;
   text-align: center;
   padding: 60px 20px;
 ">
@@ -46,3 +55,6 @@ robots: noindex
     " onmouseover="this.style.backgroundColor='#e5a700'" onmouseout="this.style.backgroundColor='#feb900'">Back to Homepage</a>
   </div>
 </section>
+
+</body>
+</html>
