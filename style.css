@@ -1728,31 +1728,28 @@ section {
   line-height: 1.8;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  section {
-    padding: 60px 0;
-  }
-
-  .section-header p {
-    max-width: 100%;
-  }
-
-  .pricing .box {
-    max-width: 80%;
-    margin: 0 auto 30px;
-  }
-}
-
-/* Mobile Image Responsiveness */
+/* Responsive adjustments - Tablet */
 @media (max-width: 991px) {
-  /* Alt Services image section - reduce height on mobile */
+  /* Stack two-column layouts */
+  .alt-services .row,
+  .get-started .row {
+    flex-direction: column;
+  }
+
+  /* Alt Services image section */
   .alt-services .img-bg {
     min-height: 250px;
     margin-bottom: 30px;
+    order: -1;
   }
 
-  /* Features tab images - ensure proper sizing */
+  .alt-services .col-lg-5,
+  .alt-services .col-lg-6,
+  .get-started .col-lg-6 {
+    width: 100%;
+  }
+
+  /* Features tab images */
   .features .tab-pane .row {
     flex-direction: column;
   }
@@ -1766,36 +1763,227 @@ section {
   .get-started img {
     margin-top: 20px;
   }
+
+  /* Tables - make scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  thead, tbody, tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table[style*="min-width"] {
+    display: block;
+  }
 }
 
+/* Responsive adjustments - Mobile */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    padding-bottom: 30px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .section-header p {
+    max-width: 100%;
+  }
+
+  .pricing .box {
+    max-width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  /* Hero */
+  .hero .info h1,
+  .hero .info h2 {
+    font-size: 26px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero .info p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .hero .info {
+    padding: 0 15px;
+  }
+
+  .hero .btn-get-started {
+    padding: 10px 28px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    min-height: 250px;
+    padding: 120px 0 40px 0;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 30px;
+  }
+
+  /* Alt services text */
+  .alt-services h3 {
+    font-size: 22px;
+  }
+
+  .alt-services .icon-box {
+    margin-top: 25px;
+  }
+
+  /* Get started content */
+  .get-started .content h3 {
+    font-size: 26px;
+  }
+
+  /* Service items in grid */
+  .services .service-item {
+    padding: 25px;
+  }
+
+  .services .service-item h3 {
+    font-size: 18px;
+  }
+
+  /* Tables - stack on small screens */
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+
+  table tbody td {
+    display: block;
+    padding: 8px 16px !important;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  table tbody td:first-child {
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  /* Comparison side-by-side panels */
+  .row > .col-lg-6 > div[style*="box-shadow"] {
+    margin-bottom: 20px;
+  }
+
+  /* Footer columns */
+  .footer .footer-columns {
+    flex-direction: column;
+  }
+
+  .footer .footer-col {
+    width: 100% !important;
+  }
+
+  /* CTA sections */
+  section[id="cta"] h3 {
+    font-size: 26px !important;
+  }
+
+  section[id="cta"] p {
+    font-size: 16px !important;
+  }
+}
+
+/* Responsive adjustments - Small phones */
 @media (max-width: 576px) {
-  /* Smaller alt services image on very small screens */
   .alt-services .img-bg {
     min-height: 200px;
   }
 
-  /* Industry cards - ensure image isn't too tall */
   .constructions .card-item .card-bg {
     min-height: 180px;
   }
 
-  /* Hero adjustments */
   .hero .info h1,
   .hero .info h2 {
-    font-size: 28px;
-  }
-
-  .hero .info p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  /* Breadcrumb header images */
-  .breadcrumbs {
-    min-height: 300px;
+    font-size: 22px;
   }
 
   .breadcrumbs h2 {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  /* Ensure inline-styled elements don't overflow */
+  [style*="font-size: 36px"] {
+    font-size: 24px !important;
+  }
+
+  /* Tighter section padding */
+  section {
+    padding: 40px 0;
+  }
+
+  .section-header {
+    padding-bottom: 20px;
+  }
+}
+
+/* Mobile nav dropdown improvements */
+@media (max-width: 1279px) {
+  .navbar .dropdown ul {
+    border-top: none;
+    min-width: unset;
+  }
+
+  .navbar .dropdown ul.dropdown-wide {
+    min-width: unset;
+  }
+
+  .navbar .dropdown ul a {
+    white-space: normal;
+    font-size: 13px;
+    padding: 6px 0;
+  }
+
+  .navbar .dropdown .dropdown-label {
+    padding: 10px 0 3px;
+    color: var(--color-primary);
+    font-size: 10px;
+  }
+
+  .navbar .dropdown .dropdown-label:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 8px;
+    padding-top: 12px;
+  }
+
+  .navbar a.nav-cta {
+    margin-top: 5px;
+    display: inline-block;
   }
 }
