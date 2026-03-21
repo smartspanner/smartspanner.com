@@ -1,47 +1,517 @@
 ---
-layout: feature
+layout: default
 title: Mobile CMMS App
-description: Mobile CMMS app for iOS and Android. Update work orders, scan assets, capture photos on the go. Sync in real-time with your team. Free trial available.
-keywords: mobile cmms app, cmms mobile app, maintenance app ios, maintenance app android
-hero_image: /assets/img/header-features.png
+description: "Mobile CMMS software for maintenance on the move. Manage work orders, assets, and tasks from anywhere with Smartspanner — a mobile-first CMMS for real-world operations."
+keywords: mobile cmms, cmms mobile app, mobile maintenance software, tablet maintenance software, mobile cmms app, maintenance app ios, maintenance app android
 ---
 
-<section id="service-details" class="service-details">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-7">
-        <div class="services-list">
-          <h3>Designed for your front line technicians.</h3>
-          <ul>
-            <li><i class="fa-solid fa-circle-check"></i> Update and create works orders, add files and photos</li>
-            <li><i class="fa-solid fa-circle-check"></i> Update and create assets, add files and photos</li>
-            <li><i class="fa-solid fa-circle-check"></i> Update spare parts, add files and photos</li>
-            <li><i class="fa-solid fa-circle-check"></i> Perform spare stock takes</li>
-            <li><i class="fa-solid fa-circle-check"></i> Track demand using the dashboard</li>
-          </ul>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="info d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>Mobile CMMS Software for Maintenance on the Move</h1>
         </div>
       </div>
-
-      <div class="col-lg-5">
-        <img src="{{ '/assets/img/iphone.png' | relative_url }}" alt="Mobile CMMS" class="img-fluid services-img">
-      </div>
+      <p>Manage work orders, assets, and maintenance tasks from anywhere with Smartspanner — a mobile-first CMMS designed for real-world operations.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">BOOK A DEMO</a>
+      <a href="{{ site.signup_url }}" class="btn-get-started">Start Free Trial</a>
     </div>
+  </div>
+
+  <div class="carousel" id="hero-carousel">
+    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }})"></div>
   </div>
 </section>
 
-<section id="get-started" class="get-started section-bg">
-  <div class="container">
-    <div class="row">
-      <div class="d-flex align-items-center">
-        <div class="content">
-          <h3>Download our Mobile Apps</h3>
-          <h5>Available for use with iOS and Android phones.</h5>
-          <div class="mt-4">
-            <a href="https://play.google.com/store/apps/details?id=com.smartspanner.mobile.android"><img src="{{ '/assets/img/cmms-google-play.png' | relative_url }}" alt="Google Play" class="img-fluid" style="max-width: 200px;"></a>
-            <a href="https://apps.apple.com/gb/app/smartspanner/id1195653428"><img src="{{ '/assets/img/cmms-ios-appstore.png' | relative_url }}" alt="App Store" class="img-fluid" style="max-width: 200px;"></a>
+<main id="main">
+
+  <!-- What is Mobile CMMS -->
+  <section id="what-is-mobile" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>What is Mobile CMMS?</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p>Mobile CMMS software allows maintenance teams to manage operations directly from mobile devices such as smartphones and tablets.</p>
+          <p>Instead of relying on desktop systems or paperwork, technicians can:</p>
+          <ul>
+            <li><i class="fa-solid fa-check-double"></i> Access work orders in real time</li>
+            <li><i class="fa-solid fa-check-double"></i> Update job status on-site</li>
+            <li><i class="fa-solid fa-check-double"></i> Record maintenance data instantly</li>
+            <li><i class="fa-solid fa-check-double"></i> View asset information anywhere</li>
+          </ul>
+          <p>This enables faster, more efficient maintenance workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section id="the-problem" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Problem with Desktop-Only CMMS Systems</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p>Many traditional CMMS platforms were not built for mobile use.</p>
+          <p>This creates major challenges:</p>
+          <ul>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Technicians must return to a desk to update records</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Delays in reporting and communication</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Incomplete or inaccurate data</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Reduced productivity on the shop floor</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Continued reliance on paper-based processes</li>
+          </ul>
+          <p>Without mobile access, maintenance teams lose efficiency and visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Smartspanner Enables Mobile Maintenance -->
+  <section id="how-it-works" class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/iphone.png' | relative_url }});"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>How Smartspanner Enables Mobile Maintenance</h3>
+          <p>Smartspanner is built with mobility at its core.<br>
+          Technicians can:</p>
+
+          <div class="icon-box">
+            <i class="fa-regular fa-calendar-days"></i>
+            <div>
+              <h4>Receive and Update Work Orders</h4>
+              <p>Access assigned tasks and update progress in real time from any location.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div>
+              <h4>Access Asset History Instantly</h4>
+              <p>View full maintenance records, linked spare parts, and documentation on-site.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <div>
+              <h4>Record Job Details On-Site</h4>
+              <p>Capture labour, parts, photos, and notes directly from mobile devices.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-qrcode"></i>
+            <div>
+              <h4>Use QR Codes for Asset Information</h4>
+              <p>Scan assets to instantly retrieve details, history, and linked work orders.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Key Features -->
+  <section id="key-features" class="services section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Key Features of Smartspanner Mobile CMMS</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-regular fa-calendar-days"></i>
+            </div>
+            <h3>Mobile Work Orders</h3>
+            <p>Create, assign, and update work orders from any device.</p>
+            <a href="{{ '/work-order-management-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3>Real-Time Updates</h3>
+            <p>Instantly reflect changes across the system so everyone stays informed.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <h3>Asset Access Anywhere</h3>
+            <p>View full asset details and maintenance history on-site.</p>
+            <a href="{{ '/asset-management-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-qrcode"></i>
+            </div>
+            <h3>QR Code Scanning</h3>
+            <p>Scan assets to retrieve information, history, and linked work orders instantly.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <h3>Photo & File Capture</h3>
+            <p>Take photos and attach files directly to work orders and assets from your device.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>Mobile-Friendly Interface</h3>
+            <p>Designed specifically for ease of use in the field on phones and tablets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Apps -->
+  <section id="download-apps" class="get-started">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="content">
+            <h3>Download Our Mobile Apps</h3>
+            <h4>Available for iOS and Android devices.</h4>
+            <p>Get Smartspanner on your phone or tablet and start managing maintenance from anywhere.</p>
+            <div class="mt-3">
+              <a href="https://play.google.com/store/apps/details?id=com.smartspanner.mobile.android"><img src="{{ '/assets/img/cmms-google-play.png' | relative_url }}" alt="Google Play" class="img-fluid" style="max-width: 200px; margin-right: 10px;"></a>
+              <a href="https://apps.apple.com/gb/app/smartspanner/id1195653428"><img src="{{ '/assets/img/cmms-ios-appstore.png' | relative_url }}" alt="App Store" class="img-fluid" style="max-width: 200px;"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="{{ '/assets/img/iphone.png' | relative_url }}" class="img-fluid" alt="Smartspanner Mobile App" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Benefits of Mobile CMMS</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3>Increase Technician Productivity</h3>
+            <p>Eliminate unnecessary trips to the office — manage everything from the field.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>Improve Data Accuracy</h3>
+            <p>Capture information in real time at the point of work for complete, accurate records.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3>Faster Response Times</h3>
+            <p>React to issues immediately with instant notifications and real-time updates.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3>Better Communication</h3>
+            <p>Keep teams aligned with live updates visible across the entire system.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-file-circle-xmark"></i>
+            </div>
+            <h3>Reduce Paperwork</h3>
+            <p>Move to fully digital maintenance workflows and eliminate paper-based processes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Needs Mobile CMMS -->
+  <section id="who-needs" class="constructions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Who Needs Mobile CMMS?</h2>
+        <p>Mobile CMMS is essential for teams working in the field. If your team works away from a desk, mobile access is critical.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/manufacturing-maintenance.jpg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/manufacturing-maintenance-software' | relative_url }}">Manufacturing Technicians</a></h4>
+              <p>Update work orders and record maintenance data directly on the production floor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/apartments.jpg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/facility-management-software' | relative_url }}">Facilities Management Teams</a></h4>
+              <p>Manage building maintenance, inspections, and compliance checks across multiple sites.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/energy.jpeg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/energy-and-resources-maintenance' | relative_url }}">Energy & Utilities Operations</a></h4>
+              <p>Access maintenance data and update tasks at remote power generation and utility sites.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/distribution.jpg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/distribution-fleet-maintenance' | relative_url }}">Field Service & Property Maintenance</a></h4>
+              <p>Manage fleet servicing, property maintenance, and depot upkeep from the field.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="{{ '/industries' | relative_url }}" class="btn btn-primary">See all Industries ></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Smartspanner -->
+  <section id="why-smartspanner" class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/laptop.png' | relative_url }});"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Why Smartspanner is Different</h3>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div>
+              <h4>Built for Mobile Use</h4>
+              <p>Not just desktop software adapted for mobile — designed mobile-first.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-display"></i>
+            <div>
+              <h4>Simple and Intuitive</h4>
+              <p>Easy for technicians to adopt immediately with no training needed.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-rocket"></i>
+            <div>
+              <h4>Fast Implementation</h4>
+              <p>Get up and running in under an hour.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-link"></i>
+            <div>
+              <h4>Fully Integrated</h4>
+              <p>Mobile connects seamlessly with all CMMS features.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <h4>Unlimited Support</h4>
+              <p>Get help whenever you need it — at no extra cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile vs Traditional CMMS -->
+  <section id="mobile-vs-traditional">
+    <div class="container">
+      <div class="section-header">
+        <h2>Mobile CMMS vs Traditional CMMS</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <table style="width: 100%; border-collapse: collapse; margin: 30px 0;">
+            <thead>
+              <tr style="background: var(--color-primary); color: #fff;">
+                <th style="padding: 12px 20px; text-align: left;">Mobile CMMS</th>
+                <th style="padding: 12px 20px; text-align: left;">Traditional CMMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #dee2e6;">
+                <td style="padding: 12px 20px;">Accessible anywhere</td>
+                <td style="padding: 12px 20px;">Limited to desktop</td>
+              </tr>
+              <tr style="background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+                <td style="padding: 12px 20px;">Real-time updates</td>
+                <td style="padding: 12px 20px;">Delayed updates</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #dee2e6;">
+                <td style="padding: 12px 20px;">Higher adoption</td>
+                <td style="padding: 12px 20px;">Lower usability</td>
+              </tr>
+              <tr style="background: #f8f9fa;">
+                <td style="padding: 12px 20px;">Improved productivity</td>
+                <td style="padding: 12px 20px;">Inefficient workflows</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Modern maintenance teams require mobile-first solutions. Smartspanner delivers this as part of a complete <a href="{{ '/cmms-software' | relative_url }}">CMMS platform</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section id="best-practices" class="get-started section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="content">
+            <h3>Best Practices for Mobile Maintenance</h3>
+            <h4>To maximise effectiveness:</h4>
+            <ul>
+              <li><i class="fa-solid fa-check-double"></i> Equip all technicians with mobile access</li>
+              <li><i class="fa-solid fa-check-double"></i> Use QR codes for quick asset identification</li>
+              <li><i class="fa-solid fa-check-double"></i> Ensure real-time updates are standard practice</li>
+              <li><i class="fa-solid fa-check-double"></i> Eliminate paper-based processes</li>
+              <li><i class="fa-solid fa-check-double"></i> Train teams on mobile workflows</li>
+            </ul>
+            <p>Smartspanner makes this transition simple.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="{{ '/assets/img/features-4.jpg' | relative_url }}" class="img-fluid" alt="Mobile Maintenance Best Practices" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-row faq-row-white" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <i class="fa-regular fa-circle-question faq-q-icon"></i>
+            <span>What is mobile CMMS?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Mobile CMMS is a maintenance management system accessible via smartphones and tablets. It allows technicians to manage work orders, view asset information, and record maintenance data from anywhere.</p>
+          </div>
+        </div>
+
+        <div class="faq-row faq-row-grey" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <i class="fa-regular fa-circle-question faq-q-icon"></i>
+            <span>Do technicians need training?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No — Smartspanner is designed to be intuitive and easy to use. The mobile app has a simple interface that technicians can start using immediately with minimal guidance.</p>
+          </div>
+        </div>
+
+        <div class="faq-row faq-row-white" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <i class="fa-regular fa-circle-question faq-q-icon"></i>
+            <span>Can work orders be completed on mobile?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes — work orders can be fully managed from mobile devices. Technicians can view, update, add photos, record parts used, and complete work orders directly from their phone or tablet.</p>
+          </div>
+        </div>
+
+        <div class="faq-row faq-row-grey" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <i class="fa-regular fa-circle-question faq-q-icon"></i>
+            <span>Is it suitable for field teams?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes — Smartspanner is designed specifically for mobile use. Whether your team works on the shop floor, across multiple sites, or in the field, the mobile app keeps them connected and productive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="get-started section-bg">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 20px;">Empower Your Maintenance Team with Mobile-First Tools</h3>
+      <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">Book a demo today and see how Smartspanner transforms maintenance workflows.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+function toggleFaq(element) {
+  element.classList.toggle('active');
+}
+</script>

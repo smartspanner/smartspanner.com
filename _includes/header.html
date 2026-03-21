@@ -3,33 +3,69 @@
     <a href="{{ '/' | relative_url }}" class="logo">
       <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner">
     </a>
-    
+
     <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
     <i class="mobile-nav-toggle mobile-nav-hide fa-solid fa-xmark"></i>
-    
+
     <nav id="navbar" class="navbar">
       <ul>
         <li class="dropdown">
           <a href="#"><span>Solutions</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
-          <ul>
-            <li><a href="{{ '/asset-management' | relative_url }}">Asset Management</a></li>
-            <li><a href="{{ '/facilities-management-maintenance' | relative_url }}">Facilities Management</a></li>
-            <li><a href="{{ '/industries' | relative_url }}">Industries</a></li>
+          <ul class="dropdown-wide">
+            <li class="dropdown-label">Core Solutions</li>
+            <li><a href="{{ '/cmms-software' | relative_url }}">CMMS Software</a></li>
+            <li><a href="{{ '/maintenance-management-software' | relative_url }}">Maintenance Management Software</a></li>
+            <li><a href="{{ '/preventative-maintenance-software' | relative_url }}">Preventive Maintenance Software</a></li>
+            <li class="dropdown-label">Operational Tools</li>
+            <li><a href="{{ '/work-order-management-software' | relative_url }}">Work Order Management</a></li>
+            <li><a href="{{ '/maintenance-scheduling-software' | relative_url }}">Maintenance Scheduling</a></li>
+            <li><a href="{{ '/asset-management-software' | relative_url }}">Asset Management</a></li>
+            <li><a href="{{ '/equipment-maintenance-software' | relative_url }}">Equipment Maintenance</a></li>
+            <li class="dropdown-label">Use Case Solutions</li>
+            <li><a href="{{ '/facility-management-software' | relative_url }}">Facility Management Software</a></li>
+            <li><a href="{{ '/mobile-cmms' | relative_url }}">Mobile CMMS</a></li>
           </ul>
         </li>
-        <li><a href="{{ '/features' | relative_url }}"{% if page.url == '/features/' %} class="active"{% endif %}>Features</a></li>
-        <li><a href="{{ '/pricing' | relative_url }}"{% if page.url == '/pricing/' %} class="active"{% endif %}>Pricing</a></li>
+        <li class="dropdown">
+          <a href="{{ '/industries' | relative_url }}"><span>Industries</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="{{ '/manufacturing-maintenance-software' | relative_url }}">Manufacturing</a></li>
+            <li><a href="{{ '/facility-management-software' | relative_url }}">Facilities Management</a></li>
+            <li><a href="{{ '/energy-and-resources-maintenance' | relative_url }}">Energy & Utilities</a></li>
+            <li><a href="{{ '/distribution-fleet-maintenance' | relative_url }}">Logistics & Warehousing</a></li>
+            <li><a href="{{ '/industries' | relative_url }}">All Industries</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="{{ '/features' | relative_url }}"><span>Features</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="{{ '/work-order-software' | relative_url }}">Work Orders</a></li>
+            <li><a href="{{ '/asset-management-software' | relative_url }}">Asset Tracking</a></li>
+            <li><a href="{{ '/spare-part-inventory-software' | relative_url }}">Inventory Management</a></li>
+            <li><a href="{{ '/reporting' | relative_url }}">Reporting</a></li>
+            <li><a href="{{ '/mobile-cmms' | relative_url }}">Mobile App</a></li>
+            <li><a href="{{ '/compliance-software' | relative_url }}">Checklists & Inspections</a></li>
+            <li><a href="{{ '/features' | relative_url }}">All Features</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#"><span>Resources</span> <i class="fa-solid fa-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="{{ site.support_url }}" target="_blank">Support <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-            <li><a href="{{ '/cmms-demo-video' | relative_url }}">Demo Video</a></li>
-            <li><a href="{{ '/free-guide-choosing-your-cmms-vendors' | relative_url }}">Free CMMS Selection Guide</a></li>
+            <li class="dropdown-label">Learn</li>
+            <li><a href="{{ '/blog-what-is-cmms' | relative_url }}">What is a CMMS?</a></li>
+            <li><a href="{{ '/free-guide-choosing-your-cmms-vendors' | relative_url }}">CMMS Selection Guide</a></li>
             <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/cmms-demo-video' | relative_url }}">Demo Video</a></li>
+            <li><a href="{{ site.support_url }}" target="_blank">Support <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li class="dropdown-label">Compare</li>
+            <li><a href="{{ '/maintainx-alternative' | relative_url }}">Smartspanner vs MaintainX</a></li>
+            <li><a href="{{ '/limble-alternative' | relative_url }}">Smartspanner vs Limble</a></li>
+            <li><a href="{{ '/fiix-alternative' | relative_url }}">Smartspanner vs Fiix</a></li>
+            <li><a href="{{ '/upkeep-alternative' | relative_url }}">Smartspanner vs UpKeep</a></li>
           </ul>
         </li>
-        <li><a href="{{ '/about' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a></li>
-        <li><a href="{{ '/contact' | relative_url }}"{% if page.url == '/contact/' %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/pricing' | relative_url }}"{% if page.url == '/pricing/' %} class="active"{% endif %}>Pricing</a></li>
+        <li><a href="{{ '/book-a-demo' | relative_url }}" class="nav-cta">Book a Demo</a></li>
         <li><a href="{{ site.signup_url }}">Free Trial</a></li>
         <li><a href="{{ site.app_url }}">Login</a></li>
       </ul>
