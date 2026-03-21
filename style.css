@@ -206,16 +206,17 @@ img {
 .header {
   z-index: 997;
   position: absolute;
-  padding: 30px 40px;
+  padding: 15px 40px;
   top: 0;
   left: 0;
   right: 0;
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .header.scrolled {
   position: fixed;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 12px 40px;
 }
 
 .header .logo {
