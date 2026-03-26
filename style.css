@@ -1653,6 +1653,144 @@ section {
   margin-left: 5px;
 }
 
+/* Blog Category Cards */
+.blog-category-card {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  border-top: 3px solid var(--color-primary);
+}
+
+.blog-category-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+}
+
+.blog-category-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.blog-category-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-category-card ul li {
+  padding: 4px 0;
+}
+
+.blog-category-card ul li a {
+  font-size: 14px;
+  color: var(--color-default);
+  transition: 0.3s;
+}
+
+.blog-category-card ul li a:hover {
+  color: var(--color-primary);
+}
+
+.blog-category-card ul li a i {
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+/* Blog Article Page */
+.blog-article {
+  padding: 60px 0;
+}
+
+.blog-article-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.blog-article-subtitle {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.blog-article-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.blog-article-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.blog-article-content p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.blog-article-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.blog-article-content ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.blog-article-content ul li i {
+  color: var(--color-primary);
+  margin-right: 10px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.blog-article-cta-box {
+  background: #f5f6f7;
+  border-left: 4px solid var(--color-primary);
+  padding: 30px;
+  margin: 40px 0;
+}
+
+.blog-article-cta-box h3 {
+  margin-top: 0;
+}
+
+.blog-article-related {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #dee2e6;
+}
+
+.blog-article-related h3 {
+  margin-top: 0;
+}
+
+.blog-article-related ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-article-related ul li {
+  padding: 6px 0;
+}
+
+.blog-article-related ul li a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .blog-list-item {
     flex-direction: column;

@@ -1,99 +1,216 @@
 ---
-layout: page
-title: Maintenance Blog
-description: Smartspanner maintenance blog with articles on CMMS, maintenance strategies, and best practices
-keywords: maintenance app, mobile maintenance app, cloud maintenance software
-hero_image: /assets/img/breadcrumbs-bg.jpg
+layout: default
+title: Maintenance Management Blog
+description: "Maintenance management guides and resources. Learn how to improve maintenance operations, reduce downtime, and implement smarter maintenance strategies."
+keywords: maintenance blog, cmms guides, maintenance management resources, preventive maintenance tips, maintenance strategy
 ---
 
-<section id="blog" class="blog">
-  <div class="container">
-    <div class="blog-list">
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/blog-1.webp' | relative_url }}" alt="Cloud Software for SMEs">
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="info d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>Maintenance Management Guides & Resources</h1>
         </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">February 2022</span>
-          <h3><a href="{{ '/blog-cloud-software-for-small-business' | relative_url }}">Cloud Software for Small to Medium Business (SMEs)</a></h3>
-          <p>The adoption of digital technologies is widespread at the consumer level. For example you have probably used your smartphone to order food, manage your bank account and shop online.</p>
-          <a href="{{ '/blog-cloud-software-for-small-business' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/cmms-support.webp' | relative_url }}" alt="Unlimited Support">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">December 2021</span>
-          <h3><a href="{{ '/blog-unlimited-support' | relative_url }}">Why we offer Unlimited Support</a></h3>
-          <p>If unlimited free support sounds too good to true, there is a good reason for it (and its not some marketing trick). When Smartspanner was created, I wanted to do things differently.</p>
-          <a href="{{ '/blog-unlimited-support' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/compliance-maintenance.webp' | relative_url }}" alt="Compliance">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">May 2021</span>
-          <h3><a href="{{ '/blog-compliance-risks' | relative_url }}">Don't Take Risks with Compliance</a></h3>
-          <p>Depending on your business, compliance means many different things. All companies should understand that it has to be managed well in order to meet regulatory requirements.</p>
-          <a href="{{ '/blog-compliance-risks' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/welder.jpg' | relative_url }}" alt="Maintenance Strategies">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">January 2021</span>
-          <h3><a href="{{ '/blog-maintenance-strategies' | relative_url }}">Maintenance Strategies</a></h3>
-          <p>CMMS which means Computerised maintenance management system, is a software application designed to manage and schedule maintenance tasks, assets and resources.</p>
-          <a href="{{ '/blog-maintenance-strategies' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/cmms-benefits.webp' | relative_url }}" alt="Benefits of CMMS">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">October 2020</span>
-          <h3><a href="{{ '/blog-cmms-benefits' | relative_url }}">5 Benefits of CMMS</a></h3>
-          <p>For many of our customers, implementing a CMMS system is the first step into managing maintenance with a purpose built application.</p>
-          <a href="{{ '/blog-cmms-benefits' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/cmms-selection.webp' | relative_url }}" alt="CMMS Selection">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">September 2020</span>
-          <h3><a href="{{ '/blog-cmms-selection' | relative_url }}">CMMS Selection</a></h3>
-          <p>The core functions of CMMS applications are the same and all applications should be able to manage the essential maintenance requirements. The market has many different options to choose from.</p>
-          <a href="{{ '/blog-cmms-selection' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-list-item">
-        <div class="blog-list-img">
-          <img src="{{ '/assets/img/blog/what-is-cmms.webp' | relative_url }}" alt="What is CMMS">
-        </div>
-        <div class="blog-list-content">
-          <span class="blog-list-date">August 2020</span>
-          <h3><a href="{{ '/blog-what-is-cmms' | relative_url }}">What is CMMS?</a></h3>
-          <p>CMMS which means Computerised maintenance management system, is a software application designed to manage and schedule maintenance tasks, assets, team members and other resources.</p>
-          <a href="{{ '/blog-what-is-cmms' | relative_url }}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
+      </div>
+      <p>Learn how to improve maintenance operations, reduce downtime, and implement smarter maintenance strategies.</p>
     </div>
   </div>
+
+  <div class="carousel" id="hero-carousel">
+    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/compliance-maintenance.jpg' | relative_url }})"></div>
+  </div>
 </section>
+
+<main id="main">
+
+  <!-- Category Grid -->
+  <section id="categories" class="section-bg">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="blog-category-card">
+            <h3>CMMS & Maintenance Basics</h3>
+            <p>Understand the fundamentals of maintenance management and CMMS systems.</p>
+            <ul>
+              <li><a href="{{ '/blog/what-is-cmms' | relative_url }}">What is a CMMS? <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/cmms-benefits' | relative_url }}">Benefits of CMMS Software <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/how-to-choose-cmms' | relative_url }}">How to Choose the Right CMMS <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="blog-category-card">
+            <h3>Maintenance Strategy</h3>
+            <p>Learn how to optimise maintenance processes and improve performance.</p>
+            <ul>
+              <li><a href="{{ '/blog/preventive-maintenance-checklist' | relative_url }}">Preventive Maintenance Checklist <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/reactive-vs-preventive-maintenance' | relative_url }}">Reactive vs Preventive Maintenance <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/maintenance-kpis' | relative_url }}">Maintenance KPIs That Matter <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="blog-category-card">
+            <h3>Industry Guides</h3>
+            <p>Explore maintenance best practices for specific industries.</p>
+            <ul>
+              <li><a href="{{ '/blog/cmms-for-manufacturing-guide' | relative_url }}">CMMS for Manufacturing <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/facility-maintenance-guide' | relative_url }}">Facility Maintenance Guide <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/maintenance-for-small-business' | relative_url }}">Maintenance for Small Business <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="blog-category-card">
+            <h3>IoT & Smart Maintenance</h3>
+            <p>Discover how IoT and data-driven maintenance improve operations.</p>
+            <ul>
+              <li><a href="{{ '/blog/what-is-predictive-maintenance' | relative_url }}">What is Predictive Maintenance? <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/iot-condition-monitoring-guide' | relative_url }}">IoT Condition Monitoring Guide <i class="fa-solid fa-arrow-right"></i></a></li>
+              <li><a href="{{ '/blog/condition-based-vs-time-based-maintenance' | relative_url }}">Condition-Based vs Time-Based <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Articles -->
+  <section id="articles">
+    <div class="container">
+      <div class="section-header">
+        <h2>All Articles</h2>
+      </div>
+
+      <div class="row gy-4">
+        <!-- CMMS & Basics -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">CMMS Basics</span>
+            <h3><a href="{{ '/blog/what-is-cmms' | relative_url }}" style="color: var(--color-secondary);">What is a CMMS?</a></h3>
+            <p>A complete guide to Computerised Maintenance Management Systems and how they help organisations manage maintenance.</p>
+            <a href="{{ '/blog/what-is-cmms' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">CMMS Basics</span>
+            <h3><a href="{{ '/blog/cmms-benefits' | relative_url }}" style="color: var(--color-secondary);">Benefits of CMMS Software</a></h3>
+            <p>Discover the key benefits of implementing CMMS software and how it improves maintenance operations.</p>
+            <a href="{{ '/blog/cmms-benefits' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">CMMS Basics</span>
+            <h3><a href="{{ '/blog/how-to-choose-cmms' | relative_url }}" style="color: var(--color-secondary);">How to Choose the Right CMMS</a></h3>
+            <p>Key factors to consider when selecting a CMMS system for your organisation.</p>
+            <a href="{{ '/blog/how-to-choose-cmms' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Maintenance Strategy -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Strategy</span>
+            <h3><a href="{{ '/blog/preventive-maintenance-checklist' | relative_url }}" style="color: var(--color-secondary);">Preventive Maintenance Checklist</a></h3>
+            <p>A practical checklist to help your team implement and maintain a preventive maintenance programme.</p>
+            <a href="{{ '/blog/preventive-maintenance-checklist' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Strategy</span>
+            <h3><a href="{{ '/blog/reactive-vs-preventive-maintenance' | relative_url }}" style="color: var(--color-secondary);">Reactive vs Preventive Maintenance</a></h3>
+            <p>Understand the differences between reactive and preventive maintenance and when to use each approach.</p>
+            <a href="{{ '/blog/reactive-vs-preventive-maintenance' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Strategy</span>
+            <h3><a href="{{ '/blog/maintenance-kpis' | relative_url }}" style="color: var(--color-secondary);">Maintenance KPIs That Matter</a></h3>
+            <p>The key performance indicators every maintenance team should be tracking.</p>
+            <a href="{{ '/blog/maintenance-kpis' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Industry Guides -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Industry</span>
+            <h3><a href="{{ '/blog/cmms-for-manufacturing-guide' | relative_url }}" style="color: var(--color-secondary);">CMMS for Manufacturing</a></h3>
+            <p>How manufacturing teams use CMMS to reduce downtime and improve equipment reliability.</p>
+            <a href="{{ '/blog/cmms-for-manufacturing-guide' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Industry</span>
+            <h3><a href="{{ '/blog/facility-maintenance-guide' | relative_url }}" style="color: var(--color-secondary);">Facility Maintenance Guide</a></h3>
+            <p>Best practices for managing maintenance across buildings and facilities.</p>
+            <a href="{{ '/blog/facility-maintenance-guide' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">Industry</span>
+            <h3><a href="{{ '/blog/maintenance-for-small-business' | relative_url }}" style="color: var(--color-secondary);">Maintenance for Small Business</a></h3>
+            <p>How small businesses can implement effective maintenance management without complexity.</p>
+            <a href="{{ '/blog/maintenance-for-small-business' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- IoT & Smart -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">IoT</span>
+            <h3><a href="{{ '/blog/what-is-predictive-maintenance' | relative_url }}" style="color: var(--color-secondary);">What is Predictive Maintenance?</a></h3>
+            <p>How IoT and data-driven insights enable organisations to predict and prevent equipment failures.</p>
+            <a href="{{ '/blog/what-is-predictive-maintenance' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">IoT</span>
+            <h3><a href="{{ '/blog/iot-condition-monitoring-guide' | relative_url }}" style="color: var(--color-secondary);">IoT Condition Monitoring Guide</a></h3>
+            <p>A practical guide to implementing IoT-based condition monitoring for maintenance.</p>
+            <a href="{{ '/blog/iot-condition-monitoring-guide' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-category-card">
+            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-primary); font-weight: 700;">IoT</span>
+            <h3><a href="{{ '/blog/condition-based-vs-time-based-maintenance' | relative_url }}" style="color: var(--color-secondary);">Condition-Based vs Time-Based Maintenance</a></h3>
+            <p>When to use condition-based maintenance versus time-based scheduling.</p>
+            <a href="{{ '/blog/condition-based-vs-time-based-maintenance' | relative_url }}" style="color: var(--color-primary); font-weight: 500;">Read article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="get-started section-bg">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 20px;">Ready to Simplify Your Maintenance?</h3>
+      <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">See how Smartspanner can help your team manage maintenance more effectively.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
+
+</main>

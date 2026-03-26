@@ -1,0 +1,418 @@
+---
+layout: blog-article
+title: Condition-Based vs Time-Based Maintenance
+description: "A detailed comparison of condition-based and time-based maintenance — how each works, pros and cons, when to use each, and how to combine both strategies effectively."
+keywords: condition based maintenance, time based maintenance, cbm vs tbm, maintenance scheduling strategy
+subtitle: Understand the differences between condition-based and time-based maintenance, when to use each approach, and how to combine them for the best results.
+permalink: /blog/condition-based-vs-time-based-maintenance/
+related_links:
+  - title: Preventative Maintenance Software
+    url: /preventative-maintenance-software/
+  - title: IoT Maintenance Software
+    url: /iot-maintenance-software/
+  - title: Maintenance Scheduling Software
+    url: /maintenance-scheduling-software/
+---
+
+<p>
+  Choosing the right maintenance strategy is one of the most impactful decisions a
+  maintenance team can make. Two of the most common approaches are time-based
+  maintenance (TBM) and condition-based maintenance (CBM). Both aim to prevent
+  unexpected failures, but they work in fundamentally different ways.
+</p>
+<p>
+  This article explains how each strategy works, compares them side by side, and
+  helps you decide when to use one, the other, or both together.
+</p>
+
+<h2>What is Time-Based Maintenance?</h2>
+
+<p>
+  Time-based maintenance (TBM) is the traditional form of preventive maintenance.
+  Tasks are scheduled at fixed intervals — every 30 days, every 500 operating hours,
+  or every quarter — regardless of the current condition of the equipment.
+</p>
+<p>
+  The schedule is typically based on:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Manufacturer recommendations for service intervals</li>
+  <li><i class="fa-solid fa-check-double"></i> Industry standards and regulatory requirements</li>
+  <li><i class="fa-solid fa-check-double"></i> Historical experience with how often equipment fails</li>
+  <li><i class="fa-solid fa-check-double"></i> Calendar-based intervals (weekly, monthly, annually)</li>
+  <li><i class="fa-solid fa-check-double"></i> Usage-based intervals (operating hours, production cycles, mileage)</li>
+</ul>
+<p>
+  TBM is straightforward to implement and manage. You define a schedule, assign
+  tasks, and your team executes them on time. A
+  <a href="{{ '/maintenance-scheduling-software' | relative_url }}">maintenance scheduling system</a>
+  automates the generation and tracking of these recurring tasks.
+</p>
+<p>
+  This approach has been the backbone of preventive maintenance programmes for
+  decades, and it remains effective for many types of equipment and maintenance
+  activities.
+</p>
+
+<h3>Examples of Time-Based Maintenance</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Changing oil in a gearbox every 3,000 operating hours</li>
+  <li><i class="fa-solid fa-check-double"></i> Replacing air filters every 90 days</li>
+  <li><i class="fa-solid fa-check-double"></i> Inspecting fire safety equipment annually</li>
+  <li><i class="fa-solid fa-check-double"></i> Lubricating bearings every two weeks</li>
+  <li><i class="fa-solid fa-check-double"></i> Testing emergency backup generators monthly</li>
+  <li><i class="fa-solid fa-check-double"></i> Calibrating instruments every six months</li>
+  <li><i class="fa-solid fa-check-double"></i> Servicing HVAC systems at the start of each season</li>
+</ul>
+
+<h2>What is Condition-Based Maintenance?</h2>
+
+<p>
+  Condition-based maintenance (CBM) schedules maintenance only when monitoring data
+  indicates that equipment condition has deteriorated to a point where intervention
+  is needed. Instead of maintaining on a fixed calendar, maintenance is triggered by
+  actual evidence of wear, degradation, or abnormality.
+</p>
+<p>
+  The fundamental principle behind CBM is that most equipment does not fail on a
+  predictable schedule. Wear rates vary depending on load, operating conditions,
+  environment, and dozens of other factors. By measuring actual condition, you
+  intervene at exactly the right time.
+</p>
+<p>
+  CBM relies on:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Sensors that continuously or periodically measure equipment parameters</li>
+  <li><i class="fa-solid fa-check-double"></i> Defined thresholds that indicate when action is required</li>
+  <li><i class="fa-solid fa-check-double"></i> Analysis of trends to detect gradual degradation before it reaches critical levels</li>
+  <li><i class="fa-solid fa-check-double"></i> Integration with a CMMS to turn alerts into work orders automatically</li>
+</ul>
+<p>
+  The parameters monitored depend on the equipment type and failure mode. Common
+  measurements include vibration, temperature, pressure, flow rate, electrical
+  current, and oil condition.
+</p>
+
+<h3>Examples of Condition-Based Maintenance</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Replacing a bearing when vibration levels exceed a defined threshold</li>
+  <li><i class="fa-solid fa-check-double"></i> Servicing a compressor when discharge pressure drops below acceptable levels</li>
+  <li><i class="fa-solid fa-check-double"></i> Changing oil when analysis shows contamination or degradation beyond limits</li>
+  <li><i class="fa-solid fa-check-double"></i> Cleaning a heat exchanger when temperature differential indicates fouling</li>
+  <li><i class="fa-solid fa-check-double"></i> Replacing a filter when differential pressure reaches a set limit</li>
+  <li><i class="fa-solid fa-check-double"></i> Investigating a motor when current draw increases beyond normal range</li>
+  <li><i class="fa-solid fa-check-double"></i> Tightening electrical connections when thermal imaging shows hot spots</li>
+</ul>
+
+<h2>Comparison: Condition-Based vs Time-Based Maintenance</h2>
+
+<p>
+  The table below provides a direct comparison across the factors that matter most
+  when choosing a maintenance strategy.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 30px 0;">
+  <thead>
+    <tr style="background: var(--color-primary); color: #fff;">
+      <th style="padding: 12px 20px; text-align: left;">Factor</th>
+      <th style="padding: 12px 20px; text-align: left;">Time-Based (TBM)</th>
+      <th style="padding: 12px 20px; text-align: left;">Condition-Based (CBM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Maintenance trigger</td>
+      <td style="padding: 12px 20px;">Fixed schedule or interval</td>
+      <td style="padding: 12px 20px;">Actual equipment condition</td>
+    </tr>
+    <tr style="background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Implementation cost</td>
+      <td style="padding: 12px 20px;">Low — no sensors or monitoring systems needed</td>
+      <td style="padding: 12px 20px;">Higher — requires sensors, connectivity, and software</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Ongoing cost</td>
+      <td style="padding: 12px 20px;">May include unnecessary maintenance tasks</td>
+      <td style="padding: 12px 20px;">Maintenance only when needed, reducing waste</td>
+    </tr>
+    <tr style="background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Downtime risk</td>
+      <td style="padding: 12px 20px;">Moderate — failures can still occur between intervals</td>
+      <td style="padding: 12px 20px;">Lower — problems detected as they develop</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Over-maintenance risk</td>
+      <td style="padding: 12px 20px;">High — parts replaced regardless of condition</td>
+      <td style="padding: 12px 20px;">Low — intervention only when data justifies it</td>
+    </tr>
+    <tr style="background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Under-maintenance risk</td>
+      <td style="padding: 12px 20px;">Possible if intervals are set too long</td>
+      <td style="padding: 12px 20px;">Low — continuous monitoring catches degradation early</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Data requirements</td>
+      <td style="padding: 12px 20px;">Minimal — just a schedule and task list</td>
+      <td style="padding: 12px 20px;">Continuous sensor data and threshold analysis</td>
+    </tr>
+    <tr style="background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Technical complexity</td>
+      <td style="padding: 12px 20px;">Low — familiar to most maintenance teams</td>
+      <td style="padding: 12px 20px;">Moderate — requires sensor setup and threshold configuration</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dee2e6;">
+      <td style="padding: 12px 20px; font-weight: 600;">Equipment life impact</td>
+      <td style="padding: 12px 20px;">Average — some over-servicing, some under-servicing</td>
+      <td style="padding: 12px 20px;">Extended — intervention timed precisely to actual need</td>
+    </tr>
+    <tr style="background: #f8f9fa;">
+      <td style="padding: 12px 20px; font-weight: 600;">Best suited for</td>
+      <td style="padding: 12px 20px;">Standard equipment with known, consistent wear patterns</td>
+      <td style="padding: 12px 20px;">Critical, high-value, or variable-use assets</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Neither strategy is universally better. The right choice depends on the specific
+  asset, its criticality, its failure behaviour, and the consequences of downtime.
+</p>
+
+<h2>Pros and Cons of Time-Based Maintenance</h2>
+
+<h3>Advantages</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Simple to plan, schedule, and execute with standard tools</li>
+  <li><i class="fa-solid fa-check-double"></i> Low implementation cost — no sensors or monitoring technology needed</li>
+  <li><i class="fa-solid fa-check-double"></i> Predictable workload and resource requirements for planning purposes</li>
+  <li><i class="fa-solid fa-check-double"></i> Easy to demonstrate compliance with regulatory or warranty requirements</li>
+  <li><i class="fa-solid fa-check-double"></i> Works well for assets with well-understood, consistent wear patterns</li>
+  <li><i class="fa-solid fa-check-double"></i> Familiar to maintenance teams — requires minimal training to adopt</li>
+  <li><i class="fa-solid fa-check-double"></i> Provides a structured foundation for teams transitioning from reactive maintenance</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Leads to over-maintenance — replacing parts that still have useful life remaining</li>
+  <li><i class="fa-solid fa-check-double"></i> Does not account for varying operating conditions or load patterns</li>
+  <li><i class="fa-solid fa-check-double"></i> Failures can still occur between scheduled intervals if degradation is faster than expected</li>
+  <li><i class="fa-solid fa-check-double"></i> Wastes labour, parts, and consumables on equipment that does not need attention</li>
+  <li><i class="fa-solid fa-check-double"></i> Maintenance frequency is a compromise — too often wastes resources, too infrequent risks failure</li>
+  <li><i class="fa-solid fa-check-double"></i> No visibility into actual equipment health between scheduled tasks</li>
+</ul>
+
+<h2>Pros and Cons of Condition-Based Maintenance</h2>
+
+<h3>Advantages</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Maintenance happens only when data justifies it, reducing waste and unnecessary interventions</li>
+  <li><i class="fa-solid fa-check-double"></i> Catches problems that develop between fixed schedule intervals</li>
+  <li><i class="fa-solid fa-check-double"></i> Extends equipment life by avoiding unnecessary intervention and precisely timing repairs</li>
+  <li><i class="fa-solid fa-check-double"></i> Provides real-time visibility into asset health across the entire operation</li>
+  <li><i class="fa-solid fa-check-double"></i> Reduces unplanned downtime by detecting degradation early and allowing planned response</li>
+  <li><i class="fa-solid fa-check-double"></i> Builds a data history that improves decision-making over time</li>
+  <li><i class="fa-solid fa-check-double"></i> Enables better spare parts planning — you know what is needed before it fails</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Higher upfront cost for sensors, connectivity, and monitoring software</li>
+  <li><i class="fa-solid fa-check-double"></i> Requires technical knowledge to set up thresholds and interpret data correctly</li>
+  <li><i class="fa-solid fa-check-double"></i> Not all failure modes are detectable through monitoring — some are sudden and random</li>
+  <li><i class="fa-solid fa-check-double"></i> Sensors need their own maintenance — batteries, calibration, and connectivity checks</li>
+  <li><i class="fa-solid fa-check-double"></i> Initial baseline period needed before the system provides reliable alerts</li>
+  <li><i class="fa-solid fa-check-double"></i> Risk of alert fatigue if thresholds are not properly configured and maintained</li>
+</ul>
+
+<h2>When to Use Time-Based Maintenance</h2>
+
+<p>
+  Time-based maintenance remains the right choice in several common scenarios. It is
+  not outdated — it is simply better suited to certain types of equipment and
+  requirements.
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Regulatory or compliance tasks</strong> — inspections, testing, and certifications that must happen on a defined schedule regardless of equipment condition</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Low-cost, replaceable assets</strong> — where the cost of monitoring exceeds the cost of the asset itself or its replacement</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Consumables and wear items</strong> — filters, belts, and lubricants with well-known replacement intervals that are cheap to replace proactively</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Equipment with consistent, predictable wear</strong> — assets that degrade at a steady rate under stable operating conditions</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Simple maintenance tasks</strong> — lubrication, cleaning, and visual inspections that are quick, inexpensive, and provide value regardless of condition</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Assets without monitorable parameters</strong> — some equipment does not have failure modes that lend themselves to sensor-based detection</li>
+</ul>
+<p>
+  For many organisations, time-based maintenance is the foundation of their
+  <a href="{{ '/preventative-maintenance-software' | relative_url }}">preventive maintenance programme</a>.
+  It provides structure, ensures nothing is overlooked, and is accessible to
+  teams at any level of technical maturity.
+</p>
+
+<h2>When to Use Condition-Based Maintenance</h2>
+
+<p>
+  Condition-based maintenance delivers the most value when applied to assets where
+  failure consequences are high and wear rates are variable or unpredictable.
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Critical production equipment</strong> — where downtime directly impacts revenue, output, or customer commitments</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>High-value assets</strong> — where extending life and avoiding secondary damage justify the monitoring investment</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Variable operating conditions</strong> — equipment that runs at different loads, speeds, or in different environments from day to day</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Remote or hard-to-access equipment</strong> — where sending a technician for routine checks is impractical, expensive, or slow</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Assets with unpredictable failure patterns</strong> — equipment that does not fail on a consistent, predictable schedule</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Safety-critical systems</strong> — where failure could endanger personnel, the public, or the environment</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Equipment with long lead-time spares</strong> — where early warning allows time to order parts that would otherwise cause extended downtime</li>
+</ul>
+
+<h2>Combining Both Approaches</h2>
+
+<p>
+  In practice, the best maintenance programmes use both strategies together. The
+  goal is to match the right strategy to each asset based on its criticality,
+  failure behaviour, and the cost of monitoring versus the cost of failure.
+</p>
+<p>
+  A combined approach typically looks like this:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Critical assets</strong> — condition-based monitoring with IoT sensors, supplemented by essential scheduled inspections</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Important assets</strong> — time-based preventive maintenance with periodic condition checks during scheduled tasks</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Standard assets</strong> — time-based maintenance only, following manufacturer recommendations</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Low-value assets</strong> — run-to-failure with reactive maintenance when they break</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Compliance tasks</strong> — time-based scheduling to meet regulatory deadlines, regardless of asset criticality</li>
+</ul>
+<p>
+  This tiered approach ensures you invest monitoring resources where they deliver
+  the greatest return, while still maintaining a solid preventive programme for
+  everything else.
+</p>
+
+<h3>How Asset Criticality Guides the Decision</h3>
+<p>
+  The first step in combining strategies is to classify your assets by criticality.
+  A simple three-tier model works well for most organisations:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> <strong>High criticality</strong> — failure causes major production loss, safety risk, or regulatory breach. These assets justify the investment in condition monitoring.</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Medium criticality</strong> — failure causes moderate disruption but the operation can continue in a reduced capacity. Time-based preventive maintenance is usually sufficient.</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Low criticality</strong> — failure has minimal impact and the asset is cheap to repair or replace. Run-to-failure or basic time-based maintenance is appropriate.</li>
+</ul>
+<p>
+  Once you have classified your assets, the strategy for each tier becomes clear.
+  You are not choosing between CBM and TBM — you are choosing the right tool for
+  each job.
+</p>
+
+<h3>How a CMMS Supports a Combined Strategy</h3>
+<p>
+  Managing both time-based and condition-based maintenance in a single system is
+  essential for a combined strategy to work. A
+  <a href="{{ '/cmms-software' | relative_url }}">CMMS platform</a> lets you:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Schedule recurring preventive tasks based on time or usage intervals</li>
+  <li><i class="fa-solid fa-check-double"></i> Receive and act on condition-based alerts from IoT sensors</li>
+  <li><i class="fa-solid fa-check-double"></i> View all maintenance activity — scheduled and condition-triggered — in one place</li>
+  <li><i class="fa-solid fa-check-double"></i> Track asset history to evaluate whether each strategy is delivering results</li>
+  <li><i class="fa-solid fa-check-double"></i> Adjust schedules and thresholds based on real performance data</li>
+  <li><i class="fa-solid fa-check-double"></i> Assign, track, and report on all work orders regardless of how they were generated</li>
+</ul>
+<p>
+  Without a central system, time-based tasks and condition-based alerts exist in
+  separate silos. This creates confusion about what has been done, what is pending,
+  and what is being duplicated. A unified CMMS eliminates these problems.
+</p>
+
+<h2>The Role of Technology</h2>
+
+<p>
+  Technology is the enabler that makes condition-based maintenance practical and
+  cost-effective at scale. Several developments have lowered the barrier to
+  adoption in recent years.
+</p>
+
+<h3>IoT Sensors</h3>
+<p>
+  Wireless IoT sensors are now affordable, easy to install, and capable of measuring
+  vibration, temperature, humidity, pressure, current, and more. Battery life has
+  improved to multiple years in many cases, and wireless protocols like LoRaWAN allow
+  sensors to operate across large facilities without extensive network infrastructure.
+</p>
+<p>
+  The cost per monitoring point has dropped significantly, making it feasible to
+  monitor assets that would not have justified the investment five years ago.
+</p>
+
+<h3>Cloud Platforms</h3>
+<p>
+  Cloud-based CMMS and monitoring platforms eliminate the need for on-premise servers
+  and specialist IT support. Data from sensors is transmitted to the cloud, where it
+  is stored, analysed, and made accessible from any device with an internet connection.
+</p>
+<p>
+  Cloud platforms also handle software updates, data backups, and security — reducing
+  the IT burden on the maintenance team and the organisation.
+</p>
+
+<h3>Automated Alerting</h3>
+<p>
+  Modern platforms allow you to define alert rules that automatically notify the right
+  people or create work orders when thresholds are breached. This removes the need for
+  someone to manually review dashboards and decide when to act, which is unreliable
+  during busy periods or shift handovers.
+</p>
+
+<h3>Mobile Access</h3>
+<p>
+  Technicians can receive alerts, view live sensor data, and complete work orders from
+  their phone or tablet. This means faster response times and better information at
+  the point of work. A technician can see the current vibration readings on a machine
+  before they even walk over to inspect it.
+</p>
+
+<h2>Making the Transition</h2>
+
+<p>
+  If your organisation currently relies entirely on time-based maintenance and wants
+  to introduce condition-based monitoring, a gradual transition is the most practical
+  path. Trying to implement CBM across all assets at once is expensive, complex, and
+  unnecessary.
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 1:</strong> Rank your assets by criticality and identify the top 5-10 where unplanned failure has the greatest impact</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 2:</strong> For those assets, identify the primary failure modes and select appropriate monitoring sensors</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 3:</strong> Install sensors and run them alongside your existing time-based schedule for a baseline period of two to four weeks</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 4:</strong> Configure alert thresholds and integrate with your <a href="{{ '/cmms-software' | relative_url }}">CMMS</a> so alerts generate work orders</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 5:</strong> Once condition monitoring is providing reliable data, review whether time-based tasks on those specific assets can be reduced, extended, or eliminated</li>
+  <li><i class="fa-solid fa-check-double"></i> <strong>Step 6:</strong> Measure results — downtime reduction, cost savings, false alarm rates — and use the evidence to expand monitoring to additional assets</li>
+</ul>
+<p>
+  The transition does not mean abandoning time-based maintenance entirely. It means
+  being smarter about where you apply each strategy, using data to guide the decision
+  rather than applying the same approach to every asset regardless of its needs.
+</p>
+<p>
+  Many organisations find that after introducing condition monitoring on critical
+  assets, they can safely extend time-based intervals on those same assets —
+  reducing preventive maintenance costs while actually improving reliability.
+</p>
+
+<h2>Key Takeaways</h2>
+
+<p>
+  Neither time-based nor condition-based maintenance is universally better. Each has
+  a clear role depending on the asset, the failure mode, and the consequences of
+  downtime. Here are the essential points to remember:
+</p>
+<ul>
+  <li><i class="fa-solid fa-check-double"></i> Time-based maintenance is simple, low-cost, and effective for assets with predictable wear or compliance requirements</li>
+  <li><i class="fa-solid fa-check-double"></i> Condition-based maintenance reduces waste and catches problems earlier, but requires monitoring technology and configuration</li>
+  <li><i class="fa-solid fa-check-double"></i> The best maintenance programmes combine both strategies, matched to each asset's criticality and failure behaviour</li>
+  <li><i class="fa-solid fa-check-double"></i> IoT sensors and cloud-based CMMS have made condition-based maintenance more accessible and affordable than ever</li>
+  <li><i class="fa-solid fa-check-double"></i> A <a href="{{ '/preventative-maintenance-software' | relative_url }}">preventive maintenance platform</a> that supports both scheduled and condition-triggered tasks is essential for a combined approach</li>
+  <li><i class="fa-solid fa-check-double"></i> Start with your most critical assets for condition monitoring and expand based on measurable results</li>
+</ul>
+<p>
+  Start by understanding your assets and their failure patterns. Apply the right
+  strategy to each one, manage everything in a single system, and use data to
+  continuously improve your maintenance outcomes.
+</p>
