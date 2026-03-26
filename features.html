@@ -1,49 +1,407 @@
 ---
-layout: page
-title: Features
-description: "Complete CMMS features: work orders, asset management, preventative maintenance, mobile apps, IoT monitoring and more. Book a free demo today."
-keywords: cmms features, maintenance software features, work order management, asset management software, preventative maintenance software
-hero_image: /assets/img/machinery.jpg
+layout: default
+title: CMMS Features
+description: "Complete CMMS features for real-world maintenance. Work orders, asset management, preventive maintenance, IoT monitoring, mobile access, and more. Book a demo today."
+keywords: cmms features, maintenance software features, work order management, asset management software, preventative maintenance software, cmms capabilities
 ---
 
-<!-- Services/Features Section -->
-<section id="services" class="services section-bg">
-  <div class="container">
-    <div class="row gy-4">
-      {% for feature in site.data.features %}
-      <div class="col-lg-4 col-md-6">
-        <div class="service-item">
-          <div class="icon">
-            <i class="{{ feature.icon }}"></i>
-          </div>
-          <h3><a href="{{ feature.link | relative_url }}">{{ feature.title }}</a></h3>
-          <p>{{ feature.description }}</p>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="info d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>CMMS Features Designed for Real-World Maintenance</h1>
         </div>
       </div>
-      {% endfor %}
+      <p>Smartspanner brings together everything you need to manage maintenance operations in one simple, connected platform.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">BOOK A DEMO</a>
+      <a href="{{ site.signup_url }}" class="btn-get-started">Start Free Trial</a>
     </div>
+  </div>
+
+  <div class="carousel" id="hero-carousel">
+    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }})"></div>
   </div>
 </section>
 
-<!-- Get Started Section -->
-<section id="get-started" class="get-started section-bg">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="content">
-          <h3>Cloud Deployment</h3>
-          <h4>Get started with a <a href="{{ site.signup_url }}">14 day free trial.</a><br>You will be up and running in less than 5 minutes.</h4>
-          <ul class="list-unstyled mt-4">
-            <li><i class="fa-solid fa-check-double"></i> Multi-site deployment</li>
-            <li><i class="fa-solid fa-check-double"></i> Unlimited storage</li>
-            <li><i class="fa-solid fa-check-double"></i> Free telephone and online support</li>
-            <li><i class="fa-solid fa-check-double"></i> Mobile apps for iOS and Android devices</li>
-          </ul>
+<main id="main">
+
+  <!-- Intro -->
+  <section class="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p>From work orders and asset tracking to IoT monitoring and performance insights, our CMMS is designed to help teams reduce downtime, improve efficiency, and stay in control.</p>
         </div>
       </div>
-      <div class="col-lg-6">
-        <img src="{{ '/assets/img/laptop.png' | relative_url }}" class="img-fluid" alt="Laptop">
+    </div>
+  </section>
+
+  <!-- Work & Maintenance Management -->
+  <section class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/work-order.png' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Work & Maintenance Management</h3>
+          <p>Plan, assign, and track all maintenance work in one place.</p>
+
+          <div class="icon-box">
+            <i class="fa-regular fa-calendar-days"></i>
+            <div>
+              <h4><a href="{{ '/work-order-management-software' | relative_url }}">Work Order Management</a></h4>
+              <p>Create, assign, and track maintenance tasks from start to completion.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-list-check"></i>
+            <div>
+              <h4><a href="{{ '/maintenance-scheduling-software' | relative_url }}">Maintenance Scheduling</a></h4>
+              <p>Plan and organise maintenance activities efficiently across your team.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div>
+              <h4><a href="{{ '/preventative-maintenance-software' | relative_url }}">Preventive Maintenance</a></h4>
+              <p>Automate recurring schedules to prevent breakdowns and reduce downtime.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <div>
+              <h4><a href="{{ '/compliance-software' | relative_url }}">Checklists & Inspections</a></h4>
+              <p>Create digital checklists for routine inspections and compliance.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Asset & Equipment Management -->
+  <section class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Asset & Equipment Management</h3>
+          <p>Keep complete visibility over your equipment and maintenance history.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-industry"></i>
+            <div>
+              <h4><a href="{{ '/asset-management-software' | relative_url }}">Asset Tracking</a></h4>
+              <p>Centralised register of all equipment with full maintenance history.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div>
+              <h4>Maintenance History</h4>
+              <p>Automatically record all maintenance, repairs, and inspections against each asset.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-sitemap"></i>
+            <div>
+              <h4>Asset Hierarchy & Locations</h4>
+              <p>Organise assets by site, location, and hierarchy for easy navigation.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-folder-open"></i>
+            <div>
+              <h4>Equipment Documentation</h4>
+              <p>Store manuals, images, and key documents for every asset.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/asset-record.png' | relative_url }}); background-size: contain;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventory & Spare Parts -->
+  <section class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/spare-part.png' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Inventory & Spare Parts Management</h3>
+          <p>Ensure the right parts are available when needed.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-gears"></i>
+            <div>
+              <h4><a href="{{ '/spare-part-inventory-software' | relative_url }}">Spare Parts Tracking</a></h4>
+              <p>Track spare parts inventory with full stock visibility.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-bell"></i>
+            <div>
+              <h4>Stock Level Alerts</h4>
+              <p>Low stock alerts on your dashboard so you never run out of critical parts.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <div>
+              <h4>Inventory Management</h4>
+              <p>Manage stock across locations and link parts directly to assets and work orders.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <div>
+              <h4><a href="{{ '/maintenance-purchase-orders' | relative_url }}">Purchasing Support</a></h4>
+              <p>Built-in purchasing for spare parts and goods receipts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monitoring & Smart Maintenance -->
+  <section class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Monitoring & Smart Maintenance</h3>
+          <p>Move beyond reactive maintenance with real-time monitoring and alerts.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div>
+              <h4><a href="{{ '/condition-based-monitoring' | relative_url }}">Condition Monitoring</a></h4>
+              <p>Monitor equipment parameters to decide when to perform maintenance.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-microchip"></i>
+            <div>
+              <h4><a href="{{ '/iot-maintenance-software' | relative_url }}">IoT-Enabled Sensors</a></h4>
+              <p>Vibration, temperature, power, and flow monitoring as a cloud subscription.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-bell"></i>
+            <div>
+              <h4>Real-Time Alerts</h4>
+              <p>Automated alerts when issues are detected or thresholds are exceeded.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+            <div>
+              <h4>Data-Driven Maintenance</h4>
+              <p>Use insights to improve planning, scheduling, and decision-making.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/vibration.png' | relative_url }}); background-size: contain;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reporting & Performance -->
+  <section class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/dashboard.png' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Reporting & Performance Insights</h3>
+          <p>Track performance and make better decisions with real-time data.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-gauge"></i>
+            <div>
+              <h4><a href="{{ '/cmms-dashboard' | relative_url }}">Maintenance Dashboards</a></h4>
+              <p>Real-time dashboard to track overdue work, requests, and performance.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-chart-simple"></i>
+            <div>
+              <h4><a href="{{ '/cmms-kpi-performance-indicators' | relative_url }}">KPI Tracking</a></h4>
+              <p>Monitor key performance indicators across your maintenance operations.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-file-lines"></i>
+            <div>
+              <h4><a href="{{ '/reporting' | relative_url }}">Performance Reporting</a></h4>
+              <p>Generate reports on work orders, assets, labour, and costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operations & Scalability -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Operations & Scalability</h2>
+        <p>Manage maintenance across teams, sites, and operations.</p>
+      </div>
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3><a href="{{ '/multi-site-maintenance-software' | relative_url }}">Multi-Site Management</a></h3>
+            <p>Manage multiple locations in one system with site-specific or global views.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>User Roles & Permissions</h3>
+            <p>Set permissions for your team at each site to control access and visibility.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-people-arrows"></i>
+            </div>
+            <h3><a href="{{ '/subcontractors' | relative_url }}">Contractor Management</a></h3>
+            <p>Track subcontractor costs and integrate external teams into your workflows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile & Accessibility -->
+  <section class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/iphone.png' | relative_url }});"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Mobile & Accessibility</h3>
+          <p>Access Smartspanner anywhere, anytime.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div>
+              <h4><a href="{{ '/mobile-cmms' | relative_url }}">Mobile-Friendly Interface</a></h4>
+              <p>Native apps for iOS and Android plus full browser access.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-cloud"></i>
+            <div>
+              <h4>Cloud-Based Access</h4>
+              <p>No installation required — login from anywhere with an internet connection.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <h4>Real-Time Updates</h4>
+              <p>Changes sync instantly across all devices and users.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-qrcode"></i>
+            <div>
+              <h4>QR Code Scanning</h4>
+              <p>Scan assets to instantly access details, history, and linked work orders.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Different -->
+  <section id="why-different">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Smartspanner is Different</h2>
+        <p>Powerful maintenance management without unnecessary complexity.</p>
+      </div>
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-display"></i>
+            </div>
+            <h3 style="font-size: 18px;">Simple & Easy to Use</h3>
+            <p>Designed for real maintenance teams, not just administrators.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 style="font-size: 18px;">Fast Implementation</h3>
+            <p>Up and running in under an hour — no complex setup.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h3 style="font-size: 18px;">Complete System</h3>
+            <p>CMMS + IoT monitoring in one integrated platform.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <h3 style="font-size: 18px;">Unlimited Support</h3>
+            <p>Full support included at no extra cost.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="get-started section-bg">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 20px;">Ready to Improve Your Maintenance Operations?</h3>
+      <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">See how Smartspanner's features work together to simplify maintenance management.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
+
+</main>
