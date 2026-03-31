@@ -1,6 +1,6 @@
 plans:
   - name: Basic
-    price: 13
+    price: 15
     currency: £
     period: per user/month
     features:
@@ -15,7 +15,7 @@ plans:
       - Mobile apps
 
   - name: Standard
-    price: 19
+    price: 21
     currency: £
     period: per user/month
     features:
@@ -35,7 +35,7 @@ plans:
       - Asset Labels
 
   - name: Advanced
-    price: 26
+    price: 27
     currency: £
     period: per user/month
     features:
