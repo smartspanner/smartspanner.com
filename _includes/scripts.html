@@ -23,13 +23,20 @@
   // Scroll to top
   const scrollTop = document.getElementById('scroll-top');
   
+  let scrollTicking = false;
   window.addEventListener('scroll', function() {
-    if (window.scrollY > 100) {
-      scrollTop.classList.add('active');
-      document.getElementById('header').classList.add('scrolled');
-    } else {
-      scrollTop.classList.remove('active');
-      document.getElementById('header').classList.remove('scrolled');
+    if (!scrollTicking) {
+      requestAnimationFrame(function() {
+        if (window.scrollY > 100) {
+          scrollTop.classList.add('active');
+          document.getElementById('header').classList.add('scrolled');
+        } else {
+          scrollTop.classList.remove('active');
+          document.getElementById('header').classList.remove('scrolled');
+        }
+        scrollTicking = false;
+      });
+      scrollTicking = true;
     }
   });
   
