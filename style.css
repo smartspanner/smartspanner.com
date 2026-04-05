@@ -1166,14 +1166,10 @@ section {
   display: block;
 }
 
-.pricing h4 .price-value {
-  font-size: 48px;
-  color: var(--color-secondary);
-  display: inline;
-}
-
-.pricing h4 .price-symbol {
-  font-size: 28px;
+.pricing h4 span.price-value {
+  font-size: 48px !important;
+  color: var(--color-secondary) !important;
+  display: inline !important;
 }
 
 .pricing ul {
