@@ -1166,6 +1166,16 @@ section {
   display: block;
 }
 
+.pricing h4 .price-value {
+  font-size: 48px;
+  color: var(--color-secondary);
+  display: inline;
+}
+
+.pricing h4 .price-symbol {
+  font-size: 28px;
+}
+
 .pricing ul {
   padding: 20px 0;
   list-style: none;
