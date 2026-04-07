@@ -33,7 +33,6 @@ plans:
       - Subcontractors
       - Failure Codes
       - Asset Labels
-      - API Access
 
   - name: Advanced
     price: 27
@@ -60,7 +59,6 @@ plans:
       - Statistics
       - Purchasing
       - Asset Lockout
-      - API Access
       - "Risk Assessments *coming soon"
 
 all_plans_include:
