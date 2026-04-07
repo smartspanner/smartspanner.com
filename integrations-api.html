@@ -1,0 +1,224 @@
+---
+layout: default
+title: "Integrations & API"
+description: "Connect Power BI, Excel, Python, or any tool to your Smartspanner data. Pull live work orders, asset history, costs, and KPIs via our REST API."
+keywords: cmms api, cmms integrations, maintenance software api, cmms power bi, rest api cmms, smartspanner api
+---
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="info d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>Your Maintenance Data, Everywhere You Need It</h1>
+        </div>
+      </div>
+      <p>Connect Power BI, Excel, Python, or any tool directly to your Smartspanner account. Pull live work order data, asset history, costs, and KPIs — no manual exports needed.</p>
+      <a href="{{ site.support_url }}/api/" target="_blank" class="btn-get-started">View Documentation</a>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">Book a Demo</a>
+    </div>
+  </div>
+
+  <div class="carousel" id="hero-carousel">
+    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }})"></div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Integration Tiles -->
+  <section id="integrations" class="services section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Your Tools</h2>
+        <p>Smartspanner works with the tools your team already uses.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <h3>Power BI</h3>
+            <p>Build live maintenance dashboards. Data refreshes automatically from your Smartspanner account.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(29, 158, 117, 0.15); color: #1D9E75; text-transform: uppercase;">Guide available</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-table"></i>
+            </div>
+            <h3>Excel / Power Query</h3>
+            <p>Pull asset and work order data directly into spreadsheets via a live data feed.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(29, 158, 117, 0.15); color: #1D9E75; text-transform: uppercase;">Guide available</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>REST API</h3>
+            <p>Full programmatic access to your tenant data. JSON responses, standard authentication.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(29, 158, 117, 0.25); color: #1D9E75; text-transform: uppercase;">Full documentation</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3>Zapier / Make</h3>
+            <p>Trigger automated workflows from work order events — notifications, tickets, approvals and more.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(254, 185, 0, 0.15); color: var(--color-primary); text-transform: uppercase;">Coming soon</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <h3>Python / R</h3>
+            <p>Sample scripts for data analysts and engineers. Ideal for predictive maintenance modelling.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(29, 158, 117, 0.15); color: #1D9E75; text-transform: uppercase;">Examples available</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h3>Custom Integration</h3>
+            <p>Building something bespoke? Our team can advise on the right approach for your use case.</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(82, 86, 94, 0.15); color: #6c757d; text-transform: uppercase;">Contact us</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Connect Your Data -->
+  <section id="why-connect" class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/dashboard.png' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Why Connect Your Data?</h3>
+          <p>Smartspanner is built as a platform, not just an application. Every work order, asset record, cost entry, and maintenance log is available via API — so your data works wherever your business needs it.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+            <div>
+              <h4>Real-Time Reporting</h4>
+              <p>No more CSV exports. Connect once and your dashboards stay current.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-sliders"></i>
+            <div>
+              <h4>Your Tools, Your Way</h4>
+              <p>Use Power BI, Excel, or any analytics platform your team is already comfortable with.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-building"></i>
+            <div>
+              <h4>Built for Enterprise</h4>
+              <p>Tenant-scoped access, reliable uptime, and structured JSON responses designed for production use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Details -->
+  <section id="api-details" class="get-started section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="content">
+            <h3>Simple, Secure REST API</h3>
+            <h4>Access your maintenance data programmatically</h4>
+            <ul>
+              <li><i class="fa-solid fa-check-double"></i> Assets, work orders, PM schedules, inventory and more</li>
+              <li><i class="fa-solid fa-check-double"></i> Standard REST architecture with JSON responses</li>
+              <li><i class="fa-solid fa-check-double"></i> Secure token-based authentication</li>
+              <li><i class="fa-solid fa-check-double"></i> Tenant-scoped — you can only access your own data</li>
+              <li><i class="fa-solid fa-check-double"></i> HTTPS required for all requests</li>
+            </ul>
+            <p style="margin-top: 15px;">No complex integration projects — just connect and build.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="{{ '/assets/img/laptop.png' | relative_url }}" class="img-fluid" alt="Smartspanner API" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Site -->
+  <section id="multi-site">
+    <div class="container">
+      <div class="section-header">
+        <h2>Designed for Multi-Site Operations</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p style="text-align: center;">If you're managing multiple facilities, data fragmentation becomes a real problem. Smartspanner's API allows you to consolidate data from all sites into a single reporting view.</p>
+        </div>
+      </div>
+      <div class="row gy-4 justify-content-center" style="margin-top: 30px;">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 style="font-size: 18px;">Centralise Site Data</h3>
+            <p>Pull data from all sites into a central BI tool.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 style="font-size: 18px;">Standardise Reporting</h3>
+            <p>Consistent KPIs and metrics across regions.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div class="icon" style="margin: 0 auto 20px;">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 style="font-size: 18px;">Benchmark Globally</h3>
+            <p>Compare performance across your entire operation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation CTA -->
+  <section id="cta" class="get-started section-bg">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 10px;">Ready to Connect?</h3>
+      <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">Full API documentation and step-by-step integration guides are available to all Smartspanner customers.</p>
+      <a href="{{ site.signup_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Get Started with Smartspanner</a>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <p style="margin-top: 20px;"><a href="{{ site.support_url }}/api/" target="_blank" style="color: var(--color-primary);">Already a customer? Access the docs <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </section>
+
+</main>
