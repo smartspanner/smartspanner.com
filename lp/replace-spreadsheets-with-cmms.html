@@ -545,7 +545,9 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
       <h2>Download the guide</h2>
     </div>
     <div class="lp-form-box">
-      <form>
+      <form action="https://formspree.io/f/mnqegjqo" method="POST">
+        <input type="hidden" name="_next" value="{{ '/lp/replace-spreadsheets-with-cmms/thank-you' | absolute_url }}">
+        <input type="hidden" name="Form-Type" value="30-Day CMMS Guide Download">
         <div class="form-group">
           <label for="first-name">First Name *</label>
           <input type="text" id="first-name" name="FirstName" required>
