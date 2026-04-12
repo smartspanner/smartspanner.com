@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <!-- Minimal header: logo only -->
+  <header class="lp-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner">
+      </a>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <!-- Slim footer -->
+  <footer class="lp-footer">
+    <div class="container">
+      &copy; {{ site.time | date: '%Y' }} {{ site.company.name }}. All Rights Reserved.
+    </div>
+  </footer>
+
+  <div class="scroll-top" id="scroll-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  {% include scripts.html %}
+</body>
+</html>
