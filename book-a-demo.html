@@ -1,65 +1,639 @@
 ---
-layout: page
+layout: default
 title: Book a Free CMMS Demo
 description: Book a free 45-minute CMMS demo. See how Smartspanner simplifies maintenance management, asset tracking and compliance. No obligation, expert guidance.
-keywords: cmms demo, maintenance software demo, cmms demonstration, free cmms demo
-hero_image: /assets/img/services.jpg
+keywords: cmms demo, maintenance software demo, cmms demonstration, free cmms demo, book cmms demo
 ---
 
-<section id="contact" class="contact">
+<style>
+/* Hero */
+.demo-hero {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 120px 0 60px;
+  color: #fff;
+}
+
+.demo-hero .row {
+  align-items: center;
+}
+
+.demo-hero-text h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.demo-hero-text .demo-hero-sub {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.demo-hero-text .demo-hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.demo-hero-text .demo-hero-bullets li {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 0;
+}
+
+.demo-hero-text .demo-hero-bullets li i {
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+
+.demo-hero-text .demo-hero-micro {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 12px;
+}
+
+.demo-hero-visual img {
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Social proof strip */
+.demo-proof {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.demo-proof span {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 13px;
+  color: var(--color-secondary);
+}
+
+.demo-proof span i {
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+/* Demo features grid */
+.demo-features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.demo-feature-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 24px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  flex: 1 1 calc(50% - 24px);
+  min-width: 280px;
+  max-width: 520px;
+}
+
+.demo-feature-card .demo-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #fff8e1;
+  color: var(--color-primary);
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.demo-feature-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+}
+
+.demo-feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Audience section */
+.demo-audience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.demo-audience-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(50% - 16px);
+  min-width: 260px;
+}
+
+.demo-audience-item i {
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-right: 14px;
+  min-width: 24px;
+}
+
+.demo-audience-item span {
+  font-size: 15px;
+  color: var(--color-default);
+}
+
+/* Steps */
+.demo-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.demo-step {
+  text-align: center;
+  flex: 1 1 calc(20% - 20px);
+  min-width: 150px;
+}
+
+.demo-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.demo-step p {
+  font-size: 14px;
+  color: var(--color-default);
+  margin: 0;
+}
+
+/* Outcomes */
+.demo-outcomes {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.demo-outcomes li {
+  padding: 8px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.demo-outcomes li i {
+  color: var(--color-primary);
+  margin-right: 12px;
+  font-size: 18px;
+  min-width: 24px;
+}
+
+/* FAQ */
+.demo-faq {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.demo-faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.demo-faq-item:last-child {
+  border-bottom: none;
+}
+
+.demo-faq-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+}
+
+.demo-faq-item p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Form section */
+.demo-form-section {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+}
+
+.demo-form-section .section-header h2 {
+  color: #fff;
+}
+
+.demo-form-section .section-header h2:before,
+.demo-form-section .section-header h2:after {
+  background: var(--color-primary);
+}
+
+.demo-form-section .section-header p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.demo-form-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.demo-form-box .form-group {
+  margin-bottom: 18px;
+}
+
+.demo-form-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--color-default);
+  font-size: 14px;
+}
+
+.demo-form-box input,
+.demo-form-box select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 6px;
+  font-family: var(--font-default);
+  background: #fff;
+}
+
+.demo-form-box input:focus,
+.demo-form-box select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.demo-form-box .demo-form-micro {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.demo-form-box .demo-form-micro i {
+  margin-right: 4px;
+}
+
+/* Final CTA */
+.demo-final-cta {
+  text-align: center;
+}
+
+.demo-final-cta h2 {
+  margin-bottom: 15px;
+}
+
+.demo-final-cta p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+  color: var(--color-secondary);
+}
+
+/* Footer trust */
+.demo-footer-trust {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.demo-footer-trust span {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 13px;
+  color: #999;
+}
+
+.demo-footer-trust span i {
+  margin-right: 5px;
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo-hero {
+    padding: 60px 0 40px;
+    text-align: center;
+  }
+
+  .demo-hero-text h1 {
+    font-size: 28px;
+  }
+
+  .demo-hero-text .demo-hero-sub {
+    font-size: 16px;
+  }
+
+  .demo-hero-visual {
+    margin-top: 30px;
+  }
+
+  .demo-feature-card {
+    flex: 1 1 100%;
+  }
+
+  .demo-audience-item {
+    flex: 1 1 100%;
+  }
+
+  .demo-step {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .demo-proof span {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .demo-form-box {
+    padding: 25px;
+  }
+
+  .demo-footer-trust span {
+    display: block;
+    margin: 4px 0;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="demo-hero">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="contact-form-box">
-          <h3 class="text-center">Request a Free Demo</h3>
-          <p class="text-center mb-4">Our free online demo usually takes about 45 mins using an online meeting. We'll show you how Smartspanner can help manage your maintenance tasks and answer any questions you have.</p>
-
-          <form action="https://formspree.io/f/meqpyeea" method="POST" class="contact-form">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="name">Name *</label>
-                  <input type="text" name="Name" id="name" required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="email">Email address *</label>
-                  <input type="email" name="Email" id="email" required>
-                  <small>We'll never share your email with anyone else.</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="company">Company</label>
-                  <input type="text" name="Company" id="company">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="telephone">Telephone</label>
-                  <input type="tel" name="Telephone" id="telephone">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message (optional)</label>
-              <textarea id="message" name="Message" rows="4" placeholder="Tell us about your maintenance needs..."></textarea>
-            </div>
-
-            <input type="hidden" name="Form-Type" value="Demo Request">
-
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Request Demo</button>
-              <p class="mt-3" style="font-size: 12px; color: #666;">By requesting a demo you are accepting the terms of our <a href="{{ '/privacy-policy' | relative_url }}">privacy policy</a>.</p>
-            </div>
-          </form>
-        </div>
+    <div class="row">
+      <div class="col-lg-6 demo-hero-text">
+        <h1>See How Smartspanner Simplifies Maintenance in 45 Minutes</h1>
+        <p class="demo-hero-sub">Get a practical, no-fluff walkthrough of how to set up, manage, and scale your maintenance operations — using your real-world scenarios.</p>
+        <ul class="demo-hero-bullets">
+          <li><i class="fa-solid fa-check"></i> Live system walkthrough (not a sales pitch)</li>
+          <li><i class="fa-solid fa-check"></i> Tailored to your industry and workflows</li>
+          <li><i class="fa-solid fa-check"></i> Learn how to go from spreadsheets to CMMS fast</li>
+        </ul>
+        <a href="#book" class="btn btn-primary" style="padding: 14px 36px; border-radius: 50px; font-size: 16px;">Book Your Demo</a>
+        <p class="demo-hero-micro">No commitment. No pressure. Just a practical session.</p>
+      </div>
+      <div class="col-lg-6 demo-hero-visual">
+        <img src="{{ '/assets/img/features/dashboard.png' | relative_url }}" alt="Smartspanner CMMS Dashboard" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
+
+<!-- Social Proof Strip -->
+<div class="demo-proof">
+  <span><i class="fa-solid fa-shield-check"></i> Trusted by manufacturing, facilities and industrial teams</span>
+  <span><i class="fa-solid fa-bolt"></i> "We were up and running within days"</span>
+  <span><i class="fa-solid fa-table-columns"></i> "Replaced spreadsheets immediately"</span>
+</div>
+
+<main id="main">
+
+  <!-- What You'll See -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>What You'll Learn in 30-45 Minutes</h2>
+      </div>
+      <div class="demo-features-grid">
+        <div class="demo-feature-card">
+          <div class="demo-feature-icon"><i class="fa-solid fa-sitemap"></i></div>
+          <h4>System Setup</h4>
+          <p>How to structure assets, locations, and hierarchies. Best-practice setup for fast adoption by your team.</p>
+        </div>
+        <div class="demo-feature-card">
+          <div class="demo-feature-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h4>Work Order Management</h4>
+          <p>Creating, assigning, and tracking jobs. Managing reactive and planned maintenance in one place.</p>
+        </div>
+        <div class="demo-feature-card">
+          <div class="demo-feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h4>Preventive Maintenance</h4>
+          <p>How to automate schedules to reduce breakdowns and improve equipment reliability.</p>
+        </div>
+        <div class="demo-feature-card">
+          <div class="demo-feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <h4>Reporting &amp; Insights</h4>
+          <p>Track performance, downtime, and costs. Make better decisions with real maintenance data.</p>
+        </div>
+        <div class="demo-feature-card">
+          <div class="demo-feature-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h4>Getting Started Quickly</h4>
+          <p>How most teams go live in days, not months. What your first week looks like with Smartspanner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Is This Demo Right for You?</h2>
+      </div>
+      <div class="demo-audience-grid">
+        <div class="demo-audience-item">
+          <i class="fa-solid fa-wrench"></i>
+          <span>Maintenance managers replacing spreadsheets</span>
+        </div>
+        <div class="demo-audience-item">
+          <i class="fa-solid fa-gears"></i>
+          <span>Operations teams looking to reduce downtime</span>
+        </div>
+        <div class="demo-audience-item">
+          <i class="fa-solid fa-arrow-up-right-dots"></i>
+          <span>Businesses scaling maintenance processes</span>
+        </div>
+        <div class="demo-audience-item">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <span>Teams evaluating CMMS software</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>What to Expect</h2>
+      </div>
+      <div class="demo-steps">
+        <div class="demo-step">
+          <div class="demo-step-num">1</div>
+          <p>Book a time that suits you</p>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">2</div>
+          <p>Tell us about your operation</p>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">3</div>
+          <p>Join a live 30-45 min session</p>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">4</div>
+          <p>See Smartspanner applied to your use case</p>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">5</div>
+          <p>Ask questions and explore your setup</p>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top: 30px; color: var(--color-secondary); font-style: italic;">You'll leave with a clear understanding of how Smartspanner fits your business.</p>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>What You'll Walk Away With</h2>
+      </div>
+      <ul class="demo-outcomes">
+        <li><i class="fa-solid fa-circle-check"></i> Clear view of how a CMMS works in practice</li>
+        <li><i class="fa-solid fa-circle-check"></i> Understanding of how to structure your system</li>
+        <li><i class="fa-solid fa-circle-check"></i> Confidence to get started quickly</li>
+        <li><i class="fa-solid fa-circle-check"></i> Answers to your specific challenges</li>
+        <li><i class="fa-solid fa-circle-check"></i> A realistic implementation path</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Common Questions</h2>
+      </div>
+      <div class="demo-faq">
+        <div class="demo-faq-item">
+          <h4>Is this a sales call?</h4>
+          <p>No. It's a practical walkthrough focused on your needs. We show you the system and answer your questions.</p>
+        </div>
+        <div class="demo-faq-item">
+          <h4>Do I need to prepare anything?</h4>
+          <p>No — but if you have examples of your assets or workflows, we can tailor the session further.</p>
+        </div>
+        <div class="demo-faq-item">
+          <h4>What happens after the demo?</h4>
+          <p>You decide next steps. No pressure, no follow-up calls unless you want them.</p>
+        </div>
+        <div class="demo-faq-item">
+          <h4>How technical is it?</h4>
+          <p>We keep it simple and practical — no technical background required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Demo Form -->
+  <section id="book" class="demo-form-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book Your Demo</h2>
+        <p>Sessions are kept small and focused. Choose a time that works for you.</p>
+      </div>
+      <div class="demo-form-box">
+        <form action="https://formspree.io/f/meqpyeea" method="POST">
+          <input type="hidden" name="Form-Type" value="Demo Request">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="demo-name">Name *</label>
+                <input type="text" id="demo-name" name="Name" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="demo-email">Work Email *</label>
+                <input type="email" id="demo-email" name="Email" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="demo-company">Company</label>
+                <input type="text" id="demo-company" name="Company">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="demo-role">Your Role</label>
+                <select id="demo-role" name="Role">
+                  <option value="">Select...</option>
+                  <option value="Maintenance Manager">Maintenance Manager</option>
+                  <option value="Operations Manager">Operations Manager</option>
+                  <option value="Facilities Manager">Facilities Manager</option>
+                  <option value="Engineering Manager">Engineering Manager</option>
+                  <option value="IT / Systems">IT / Systems</option>
+                  <option value="Director / Owner">Director / Owner</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; border-radius: 50px; font-size: 17px;">Book Your Free Demo</button>
+            <p class="demo-form-micro"><i class="fa-solid fa-lock"></i> No spam. No obligation. We'll be in touch within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="demo-final-cta">
+    <div class="container">
+      <div class="section-header">
+        <h2>Start Managing Maintenance the Right Way</h2>
+      </div>
+      <p>If you're still relying on spreadsheets or disconnected systems, this demo will show you a better way — clearly and practically.</p>
+      <a href="#book" class="btn btn-primary" style="padding: 14px 36px; border-radius: 50px; font-size: 16px;">Book Your Demo Now</a>
+      <div class="demo-footer-trust">
+        <span><i class="fa-solid fa-circle-check"></i> No obligation</span>
+        <span><i class="fa-solid fa-lock"></i> Secure booking</span>
+        <span><i class="fa-solid fa-headset"></i> Real humans, real support</span>
+        <span><i class="fa-solid fa-shield-halved"></i> <a href="{{ '/privacy-policy' | relative_url }}" style="color: #999;">Privacy policy</a></span>
+      </div>
+    </div>
+  </section>
+
+</main>
