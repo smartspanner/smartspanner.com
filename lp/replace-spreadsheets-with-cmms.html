@@ -24,75 +24,179 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   border-top: 1px solid #eee;
 }
 
-/* Hero */
+/* Hero — two-column */
 .lp-hero {
   background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
-  padding: 100px 0 80px;
-  text-align: center;
+  padding: 80px 0 60px;
   color: #fff;
 }
 
-.lp-hero h1 {
-  font-size: 42px;
+.lp-hero .row {
+  align-items: center;
+}
+
+.lp-hero-text h1 {
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #fff;
+  line-height: 1.2;
 }
 
-.lp-hero .lp-hero-sub {
-  font-size: 20px;
+.lp-hero-text .lp-hero-sub {
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 640px;
-  margin: 0 auto 30px;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-.lp-hero .lp-hero-bullets {
+.lp-hero-text .lp-hero-bullets {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  margin: 0 0 28px;
 }
 
-.lp-hero .lp-hero-bullets li {
-  font-size: 16px;
+.lp-hero-text .lp-hero-bullets li {
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.9);
+  padding: 5px 0;
 }
 
-.lp-hero .lp-hero-bullets li i {
-  color: var(--color-primary);
-  margin-right: 8px;
-}
-
-/* Problem columns */
-.lp-problem-col h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--color-secondary);
-}
-
-.lp-problem-col h4 i {
+.lp-hero-text .lp-hero-bullets li i {
   color: var(--color-primary);
   margin-right: 10px;
 }
 
-.lp-problem-col ul {
-  list-style: none;
-  padding: 0;
+/* Guide preview card */
+.lp-guide-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
-.lp-problem-col ul li {
-  padding: 6px 0;
-  font-size: 15px;
+.lp-guide-card-header {
+  background: var(--color-primary);
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.lp-guide-card-header h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lp-guide-card-body {
+  padding: 25px;
+}
+
+.lp-guide-card-stat {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.lp-guide-card-stat:last-child {
+  border-bottom: none;
+}
+
+.lp-guide-card-stat i {
+  color: var(--color-primary);
+  font-size: 18px;
+  margin-right: 12px;
+  min-width: 24px;
+}
+
+.lp-guide-card-stat span {
+  font-size: 14px;
   color: var(--color-default);
 }
 
-.lp-problem-col ul li i {
-  color: #dc3545;
-  margin-right: 10px;
+.lp-guide-card-footer {
+  padding: 0 25px 25px;
+  text-align: center;
+}
+
+.lp-guide-card-footer .btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 15px;
+}
+
+.lp-guide-card-footer small {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #999;
+}
+
+/* Trust bar */
+.lp-trust-bar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.lp-trust-bar span {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 13px;
+  color: var(--color-secondary);
+  letter-spacing: 0.3px;
+}
+
+.lp-trust-bar span i {
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+/* Numbered pain points */
+.lp-pain-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.lp-pain-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 260px;
+  max-width: 360px;
+}
+
+.lp-pain-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.lp-pain-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+}
+
+.lp-pain-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Solution items */
@@ -171,6 +275,77 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   }
 }
 
+/* Locked preview */
+.lp-preview {
+  background: #1a2a3a;
+  color: #fff;
+}
+
+.lp-preview .section-header h2 {
+  color: #fff;
+}
+
+.lp-preview .section-header h2:before,
+.lp-preview .section-header h2:after {
+  background: var(--color-primary);
+}
+
+.lp-preview-steps {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.lp-preview-step {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lp-preview-step-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 36px;
+}
+
+.lp-preview-step span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lp-preview-locked {
+  position: relative;
+}
+
+.lp-preview-locked .lp-preview-step {
+  filter: blur(4px);
+  user-select: none;
+}
+
+.lp-preview-unlock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 42, 58, 0.7);
+  z-index: 1;
+}
+
+.lp-preview-unlock i {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.lp-preview-unlock p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 /* Checklist */
 .lp-checklist {
   list-style: none;
@@ -231,7 +406,117 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   margin-right: 10px;
 }
 
-/* Form section */
+/* Modal form */
+.lp-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lp-modal-overlay.active {
+  display: flex;
+}
+
+.lp-modal {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 440px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  animation: lp-modal-in 0.3s ease;
+}
+
+@keyframes lp-modal-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lp-modal-header {
+  background: var(--color-primary);
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.lp-modal-header h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.lp-modal-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+.lp-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.lp-modal-close:hover {
+  opacity: 0.7;
+}
+
+.lp-modal-body {
+  padding: 30px 25px;
+}
+
+.lp-modal-body .form-group {
+  margin-bottom: 18px;
+}
+
+.lp-modal-body label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--color-default);
+  font-size: 14px;
+}
+
+.lp-modal-body input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.lp-modal-body input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.lp-modal-body .btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  font-size: 17px;
+}
+
+.lp-modal-micro {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Inline form section (kept for bottom of page) */
 .lp-form-section {
   background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
   color: #fff;
@@ -314,20 +599,39 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   transform: translateY(0);
 }
 
+/* CTA inline buttons */
+.lp-inline-cta {
+  text-align: center;
+  margin-top: 35px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .lp-hero h1 {
+  .lp-hero {
+    padding: 60px 0 40px;
+    text-align: center;
+  }
+
+  .lp-hero-text h1 {
     font-size: 28px;
   }
 
-  .lp-hero .lp-hero-sub {
-    font-size: 17px;
+  .lp-hero-text .lp-hero-sub {
+    font-size: 16px;
   }
 
-  .lp-hero .lp-hero-bullets {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+  .lp-guide-card {
+    margin-top: 30px;
+    max-width: 300px;
+  }
+
+  .lp-trust-bar span {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .lp-pain-item {
+    flex: 1 1 100%;
   }
 
   .lp-form-box {
@@ -340,19 +644,59 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
 }
 </style>
 
-<!-- Section 1: Hero -->
+<!-- Section 1: Hero — two-column with guide preview card -->
 <section class="lp-hero">
   <div class="container">
-    <h1>Still Managing Maintenance in Spreadsheets?</h1>
-    <p class="lp-hero-sub">Replace spreadsheets with a modern CMMS in just 30 days — without disrupting your operations.</p>
-    <ul class="lp-hero-bullets">
-      <li><i class="fa-solid fa-check"></i> Eliminate manual tracking</li>
-      <li><i class="fa-solid fa-check"></i> Gain real-time visibility</li>
-      <li><i class="fa-solid fa-check"></i> Implement without complexity</li>
-    </ul>
-    <a href="#download" class="btn btn-primary" style="padding: 14px 40px; border-radius: 50px; font-size: 17px;">Download the 30-Day CMMS Guide</a>
+    <div class="row">
+      <div class="col-lg-6 lp-hero-text">
+        <h1>Still Managing Maintenance in Spreadsheets?</h1>
+        <p class="lp-hero-sub">Replace spreadsheets with a modern CMMS in just 30 days — without disrupting your operations.</p>
+        <ul class="lp-hero-bullets">
+          <li><i class="fa-solid fa-check"></i> Eliminate manual tracking</li>
+          <li><i class="fa-solid fa-check"></i> Gain real-time visibility</li>
+          <li><i class="fa-solid fa-check"></i> Implement without complexity</li>
+        </ul>
+        <a href="#" class="btn btn-primary lp-open-modal" style="padding: 14px 36px; border-radius: 50px; font-size: 16px;">Download the Free Guide</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="lp-guide-card">
+          <div class="lp-guide-card-header">
+            <h3>Free Implementation Guide</h3>
+          </div>
+          <div class="lp-guide-card-body">
+            <div class="lp-guide-card-stat">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>30-day step-by-step plan</span>
+            </div>
+            <div class="lp-guide-card-stat">
+              <i class="fa-solid fa-list-check"></i>
+              <span>Ready-to-use checklists</span>
+            </div>
+            <div class="lp-guide-card-stat">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Practical workflow templates</span>
+            </div>
+            <div class="lp-guide-card-stat">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>Common pitfalls to avoid</span>
+            </div>
+          </div>
+          <div class="lp-guide-card-footer">
+            <a href="#" class="btn btn-primary lp-open-modal">Get the Free Guide</a>
+            <small><i class="fa-solid fa-lock"></i> No spam. Just practical insights.</small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Trust bar -->
+<div class="lp-trust-bar">
+  <span><i class="fa-solid fa-shield-check"></i> Trusted by maintenance teams across the UK</span>
+  <span><i class="fa-solid fa-clock"></i> Up and running in under 1 hour</span>
+  <span><i class="fa-solid fa-headset"></i> Unlimited support included</span>
+</div>
 
 <!-- Section 2: Trust + Relevance -->
 <section class="section-bg">
@@ -375,37 +719,46 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   </div>
 </section>
 
-<!-- Section 3: Problem Agitation -->
+<!-- Section 3: Problem Agitation — numbered cards -->
 <section>
   <div class="container">
     <div class="section-header">
       <h2>The hidden cost of spreadsheet-based maintenance</h2>
     </div>
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 lp-problem-col">
-        <h4><i class="fa-solid fa-gears"></i> Operational Impact</h4>
-        <ul>
-          <li><i class="fa-solid fa-xmark"></i> Missed preventive maintenance</li>
-          <li><i class="fa-solid fa-xmark"></i> Poor job tracking</li>
-          <li><i class="fa-solid fa-xmark"></i> Reactive workflows</li>
-        </ul>
+    <div class="lp-pain-grid">
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">01</div>
+        <h4>Missed Preventive Maintenance</h4>
+        <p>Without automated scheduling, planned maintenance slips through the cracks — leading to reactive firefighting and equipment failure.</p>
       </div>
-      <div class="col-lg-4 col-md-6 lp-problem-col">
-        <h4><i class="fa-solid fa-sterling-sign"></i> Financial Impact</h4>
-        <ul>
-          <li><i class="fa-solid fa-xmark"></i> Increased downtime</li>
-          <li><i class="fa-solid fa-xmark"></i> Inefficient labour usage</li>
-          <li><i class="fa-solid fa-xmark"></i> Unplanned repair costs</li>
-        </ul>
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">02</div>
+        <h4>Poor Job Tracking</h4>
+        <p>No clear visibility into who's doing what, when it was completed, or what's still outstanding across your team.</p>
       </div>
-      <div class="col-lg-4 col-md-6 lp-problem-col">
-        <h4><i class="fa-solid fa-chart-line"></i> Strategic Impact</h4>
-        <ul>
-          <li><i class="fa-solid fa-xmark"></i> No scalability</li>
-          <li><i class="fa-solid fa-xmark"></i> No integrations</li>
-          <li><i class="fa-solid fa-xmark"></i> No data-driven decisions</li>
-        </ul>
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">03</div>
+        <h4>Increased Downtime</h4>
+        <p>Reactive workflows and missed maintenance directly increase unplanned downtime and emergency repair costs.</p>
       </div>
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">04</div>
+        <h4>Inefficient Labour Usage</h4>
+        <p>Without proper scheduling, technicians waste time on low-priority tasks while critical work goes unassigned.</p>
+      </div>
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">05</div>
+        <h4>No Scalability</h4>
+        <p>Spreadsheets that work for 10 assets break down at 100. Growth demands a system that scales with you.</p>
+      </div>
+      <div class="lp-pain-item">
+        <div class="lp-pain-number">06</div>
+        <h4>No Data-Driven Decisions</h4>
+        <p>Without centralised reporting, you're making decisions based on gut feel instead of real maintenance data.</p>
+      </div>
+    </div>
+    <div class="lp-inline-cta">
+      <a href="#" class="btn btn-primary lp-open-modal" style="padding: 12px 36px; border-radius: 50px; font-size: 16px;">Get the Guide — Fix These Problems</a>
     </div>
   </div>
 </section>
@@ -447,35 +800,53 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   </div>
 </section>
 
-<!-- Section 5: 30-Day Plan -->
-<section>
+<!-- Section 5: 30-Day Plan with locked preview -->
+<section class="lp-preview">
   <div class="container">
     <div class="section-header">
       <h2>A practical 30-day implementation plan</h2>
-      <p>This guide walks you through a proven, step-by-step approach:</p>
+      <p style="color: rgba(255,255,255,0.7);">This guide walks you through a proven, step-by-step approach. Here's a preview:</p>
     </div>
-    <div class="lp-timeline">
-      <div class="lp-timeline-line"></div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 lp-timeline-item">
-          <div class="lp-timeline-icon"><i class="fa-solid fa-database"></i></div>
-          <h4>Week 1</h4>
-          <p>Build your asset foundation</p>
+    <div class="lp-preview-steps">
+      <!-- Visible steps -->
+      <div class="lp-preview-step">
+        <span class="lp-preview-step-num">01</span>
+        <span>Audit your current maintenance processes and pain points</span>
+      </div>
+      <div class="lp-preview-step">
+        <span class="lp-preview-step-num">02</span>
+        <span>Define your asset hierarchy and location structure</span>
+      </div>
+      <div class="lp-preview-step">
+        <span class="lp-preview-step-num">03</span>
+        <span>Import your asset register into the CMMS</span>
+      </div>
+      <div class="lp-preview-step">
+        <span class="lp-preview-step-num">04</span>
+        <span>Set up work order categories and priority levels</span>
+      </div>
+      <div class="lp-preview-step">
+        <span class="lp-preview-step-num">05</span>
+        <span>Migrate open jobs from spreadsheets to digital work orders</span>
+      </div>
+      <!-- Locked steps -->
+      <div class="lp-preview-locked">
+        <div class="lp-preview-step">
+          <span class="lp-preview-step-num">06</span>
+          <span>Configure preventive maintenance schedules and triggers</span>
         </div>
-        <div class="col-lg-3 col-md-6 lp-timeline-item">
-          <div class="lp-timeline-icon"><i class="fa-solid fa-list-check"></i></div>
-          <h4>Week 2</h4>
-          <p>Replace spreadsheet job tracking</p>
+        <div class="lp-preview-step">
+          <span class="lp-preview-step-num">07</span>
+          <span>Set up automated notifications and escalation rules</span>
         </div>
-        <div class="col-lg-3 col-md-6 lp-timeline-item">
-          <div class="lp-timeline-icon"><i class="fa-solid fa-wrench"></i></div>
-          <h4>Week 3</h4>
-          <p>Implement preventive maintenance</p>
+        <div class="lp-preview-step">
+          <span class="lp-preview-step-num">08</span>
+          <span>Connect reporting dashboards and KPI tracking</span>
         </div>
-        <div class="col-lg-3 col-md-6 lp-timeline-item">
-          <div class="lp-timeline-icon"><i class="fa-solid fa-chart-bar"></i></div>
-          <h4>Week 4</h4>
-          <p>Introduce reporting and integrations</p>
+        <div class="lp-preview-unlock">
+          <i class="fa-solid fa-lock"></i>
+          <p>Unlock all 15 steps</p>
+          <a href="#" class="btn btn-primary lp-open-modal" style="padding: 10px 30px; border-radius: 50px;">Download the Full Guide</a>
         </div>
       </div>
     </div>
@@ -496,8 +867,8 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
       <li><i class="fa-solid fa-circle-check"></i> 30-day implementation checklist (ready to use)</li>
       <li><i class="fa-solid fa-circle-check"></i> Templates to accelerate your rollout</li>
     </ul>
-    <div class="text-center" style="margin-top: 30px;">
-      <a href="#download" class="btn btn-primary" style="padding: 12px 36px; border-radius: 50px; font-size: 16px;">Download the Checklist + Guide</a>
+    <div class="lp-inline-cta">
+      <a href="#" class="btn btn-primary lp-open-modal" style="padding: 12px 36px; border-radius: 50px; font-size: 16px;">Download the Checklist + Guide</a>
     </div>
   </div>
 </section>
@@ -535,10 +906,13 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
         </ul>
       </div>
     </div>
+    <div class="lp-inline-cta">
+      <a href="#" class="btn btn-primary lp-open-modal" style="padding: 12px 36px; border-radius: 50px; font-size: 16px;">Get the Free Implementation Guide</a>
+    </div>
   </div>
 </section>
 
-<!-- Section 9: Lead Capture Form -->
+<!-- Section 9: Lead Capture Form (inline fallback for bottom of page) -->
 <section id="download" class="lp-form-section">
   <div class="container">
     <div class="section-header">
@@ -549,16 +923,16 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
         <input type="hidden" name="_next" value="{{ '/lp/replace-spreadsheets-with-cmms/thank-you/' | absolute_url }}">
         <input type="hidden" name="Form-Type" value="30-Day CMMS Guide Download">
         <div class="form-group">
-          <label for="first-name">First Name *</label>
-          <input type="text" id="first-name" name="FirstName" required>
+          <label for="first-name-inline">First Name *</label>
+          <input type="text" id="first-name-inline" name="FirstName" required>
         </div>
         <div class="form-group">
-          <label for="work-email">Work Email *</label>
-          <input type="email" id="work-email" name="WorkEmail" required>
+          <label for="work-email-inline">Work Email *</label>
+          <input type="email" id="work-email-inline" name="WorkEmail" required>
         </div>
         <div class="form-group">
-          <label for="company-name">Company Name</label>
-          <input type="text" id="company-name" name="CompanyName">
+          <label for="company-name-inline">Company Name</label>
+          <input type="text" id="company-name-inline" name="CompanyName">
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; border-radius: 50px; font-size: 17px;">Get the Guide + Checklist</button>
@@ -577,28 +951,90 @@ keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance ma
   </div>
 </section>
 
+<!-- Modal Form -->
+<div class="lp-modal-overlay" id="lp-modal">
+  <div class="lp-modal">
+    <button class="lp-modal-close" id="lp-modal-close">&times;</button>
+    <div class="lp-modal-header">
+      <h3>Get the Free CMMS Guide</h3>
+      <p>30-day implementation plan + checklists + templates</p>
+    </div>
+    <div class="lp-modal-body">
+      <form action="https://formspree.io/f/mnqegjqo" method="POST">
+        <input type="hidden" name="_next" value="{{ '/lp/replace-spreadsheets-with-cmms/thank-you/' | absolute_url }}">
+        <input type="hidden" name="Form-Type" value="30-Day CMMS Guide Download">
+        <div class="form-group">
+          <label for="modal-first-name">First Name *</label>
+          <input type="text" id="modal-first-name" name="FirstName" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-work-email">Work Email *</label>
+          <input type="email" id="modal-work-email" name="WorkEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-company-name">Company Name</label>
+          <input type="text" id="modal-company-name" name="CompanyName">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Get the Guide + Checklist</button>
+        </div>
+      </form>
+      <p class="lp-modal-micro"><i class="fa-solid fa-lock"></i> No spam. Just practical insights.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Sticky CTA Bar -->
 <div class="lp-sticky-bar" id="lp-sticky-bar">
   <div class="container">
-    <a href="#download" class="btn btn-primary" style="padding: 10px 30px; border-radius: 50px;">Download the 30-Day CMMS Guide</a>
+    <a href="#" class="btn btn-primary lp-open-modal" style="padding: 10px 30px; border-radius: 50px;">Download the 30-Day CMMS Guide</a>
   </div>
 </div>
 
 <script>
 (function() {
+  // Modal
+  var modal = document.getElementById('lp-modal');
+  var closeBtn = document.getElementById('lp-modal-close');
+  var triggers = document.querySelectorAll('.lp-open-modal');
+
+  triggers.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Sticky bar
   var stickyBar = document.getElementById('lp-sticky-bar');
   var hero = document.querySelector('.lp-hero');
-  var formSection = document.getElementById('download');
   var ticking = false;
 
   window.addEventListener('scroll', function() {
     if (!ticking) {
       requestAnimationFrame(function() {
         var heroBottom = hero.getBoundingClientRect().bottom;
-        var formTop = formSection.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (heroBottom < 0 && formTop > windowHeight) {
+        if (heroBottom < 0) {
           stickyBar.classList.add('visible');
         } else {
           stickyBar.classList.remove('visible');
