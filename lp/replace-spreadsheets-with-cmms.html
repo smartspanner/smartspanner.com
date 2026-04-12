@@ -1,0 +1,355 @@
+---
+layout: landing
+title: "How to Replace Spreadsheets with a CMMS in 30 Days"
+description: "A practical guide to replacing spreadsheets with a CMMS in 30 days. Improve visibility, reduce downtime, and modernise your maintenance operations."
+keywords: "CMMS implementation, replace spreadsheets maintenance, maintenance management system, CMMS guide, maintenance software"
+---
+
+<style>
+/* Landing page layout */
+.lp-header {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 0;
+}
+
+.lp-header .logo img {
+  max-height: 36px;
+}
+
+.lp-footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 13px;
+  color: #6c757d;
+  border-top: 1px solid #eee;
+}
+
+/* Hero */
+.lp-hero {
+  background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  color: #fff;
+}
+
+.lp-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.lp-hero .lp-hero-sub {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 640px;
+  margin: 0 auto 30px;
+}
+
+.lp-hero .lp-hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.lp-hero .lp-hero-bullets li {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lp-hero .lp-hero-bullets li i {
+  color: var(--color-primary);
+  margin-right: 8px;
+}
+
+/* Problem columns */
+.lp-problem-col h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--color-secondary);
+}
+
+.lp-problem-col h4 i {
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+
+.lp-problem-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lp-problem-col ul li {
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--color-default);
+}
+
+.lp-problem-col ul li i {
+  color: #dc3545;
+  margin-right: 10px;
+}
+
+/* Solution items */
+.lp-solution-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.lp-solution-item i {
+  color: var(--color-primary);
+  font-size: 24px;
+  margin-right: 15px;
+  min-width: 30px;
+  margin-top: 2px;
+}
+
+.lp-solution-item span {
+  font-size: 16px;
+}
+
+/* Timeline */
+.lp-timeline {
+  position: relative;
+}
+
+.lp-timeline-item {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.lp-timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto 15px;
+}
+
+.lp-timeline-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.lp-timeline-item p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.lp-timeline-line {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .lp-timeline-line {
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    background: var(--color-primary);
+    z-index: 0;
+  }
+
+  .lp-timeline-item {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Checklist */
+.lp-checklist {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.lp-checklist li {
+  padding: 10px 0;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+
+.lp-checklist li i {
+  color: var(--color-primary);
+  margin-right: 12px;
+  font-size: 20px;
+  min-width: 24px;
+}
+
+/* Outcome list */
+.lp-outcomes {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.lp-outcomes li {
+  padding: 8px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.lp-outcomes li i {
+  color: var(--color-primary);
+  margin-right: 12px;
+  font-size: 18px;
+  min-width: 24px;
+}
+
+/* Credibility list */
+.lp-credibility ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lp-credibility ul li {
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+.lp-credibility ul li i {
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+
+/* Form section */
+.lp-form-section {
+  background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+  color: #fff;
+}
+
+.lp-form-section .section-header h2 {
+  color: #fff;
+}
+
+.lp-form-section .section-header h2:before,
+.lp-form-section .section-header h2:after {
+  background: var(--color-primary);
+}
+
+.lp-form-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.lp-form-box .form-group {
+  margin-bottom: 20px;
+}
+
+.lp-form-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--color-default);
+}
+
+.lp-form-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.lp-form-box input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.lp-form-box .lp-form-micro {
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Secondary CTA */
+.lp-secondary-cta {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.lp-secondary-cta h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Sticky CTA bar */
+.lp-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  text-align: center;
+  z-index: 999;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.lp-sticky-bar.visible {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lp-hero h1 {
+    font-size: 28px;
+  }
+
+  .lp-hero .lp-hero-sub {
+    font-size: 17px;
+  }
+
+  .lp-hero .lp-hero-bullets {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .lp-form-box {
+    padding: 25px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+}
+</style>
+
+<!-- Section 1: Hero -->
+<section class="lp-hero">
+  <div class="container">
+    <h1>Still Managing Maintenance in Spreadsheets?</h1>
+    <p class="lp-hero-sub">Replace spreadsheets with a modern CMMS in just 30 days — without disrupting your operations.</p>
+    <ul class="lp-hero-bullets">
+      <li><i class="fa-solid fa-check"></i> Eliminate manual tracking</li>
+      <li><i class="fa-solid fa-check"></i> Gain real-time visibility</li>
+      <li><i class="fa-solid fa-check"></i> Implement without complexity</li>
+    </ul>
+    <a href="#download" class="btn btn-primary" style="padding: 14px 40px; border-radius: 50px; font-size: 17px;">Download the 30-Day CMMS Guide</a>
+  </div>
+</section>
