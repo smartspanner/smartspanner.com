@@ -44,6 +44,10 @@ defaults:
       path: "lp/replace-spreadsheets-with-cmms/thank-you.html"
     values:
       sitemap: false
+  - scope:
+      path: "error.html"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
