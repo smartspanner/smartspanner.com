@@ -1,6 +1,9 @@
 # robots.txt for smartspanner.com
 User-agent: *
 Allow: /
+Disallow: /error/
+Disallow: /book-a-demo-thank-you/
+Disallow: /lp/replace-spreadsheets-with-cmms/thank-you/
 
 # Sitemap location
 Sitemap: https://www.smartspanner.com/sitemap.xml
