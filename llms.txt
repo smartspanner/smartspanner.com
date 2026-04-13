@@ -1,0 +1,84 @@
+# Smartspanner CMMS
+
+> Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
+
+## About
+
+Smartspanner is a simple, affordable CMMS platform designed for maintenance teams in manufacturing, facilities management, and industrial sectors. It helps teams move from spreadsheets and reactive maintenance to structured, data-driven operations.
+
+Based in Gateshead, United Kingdom.
+
+- Website: https://www.smartspanner.com
+- App: https://app.smartspanner.com
+- Support: https://support.smartspanner.com
+- Contact: sales@smartspanner.com
+- Phone: +44 (0) 191 300 1217
+
+## Key Features
+
+- Work order management (reactive and planned)
+- Preventive maintenance scheduling and automation
+- Asset management with hierarchy and location structure
+- Multi-site deployment
+- Spare parts and inventory tracking
+- Mobile apps (iOS and Android)
+- Reporting and dashboards
+- Subcontractor management
+- Checklists and inspections
+- IoT condition monitoring (vibration, temperature, energy, flow meters)
+- Failure codes and root cause tracking
+- Purchasing and purchase orders
+- API access and integrations (Power BI, ERP systems)
+- Lockout/tagout (LOTO) procedures
+
+## Pricing
+
+All prices are per user, per month. 14-day free trial included. No credit card required.
+
+- Basic: £15/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
+- Standard: £21/user/month — Adds procedures, subcontractors, failure codes, asset labels
+- Advanced: £27/user/month — Adds checklists, condition monitoring, statistics, purchasing, API access
+
+All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
+
+## Industries Served
+
+- Manufacturing
+- Injection moulding
+- Facilities management
+- Energy and utilities
+- Logistics and warehousing
+- Industrial maintenance
+
+## Key Pages
+
+- Homepage: https://www.smartspanner.com/
+- CMMS Software: https://www.smartspanner.com/cmms-software/
+- Features: https://www.smartspanner.com/features/
+- Pricing: https://www.smartspanner.com/pricing/
+- Book a Demo: https://www.smartspanner.com/book-a-demo/
+- Industries: https://www.smartspanner.com/industries/
+- Preventive Maintenance: https://www.smartspanner.com/preventative-maintenance-software/
+- Work Order Management: https://www.smartspanner.com/work-order-management-software/
+- Asset Management: https://www.smartspanner.com/asset-management-software/
+- Mobile CMMS: https://www.smartspanner.com/mobile-cmms/
+- IoT Condition Monitoring: https://www.smartspanner.com/iot-condition-monitoring/
+- Integrations & API: https://www.smartspanner.com/integrations-api/
+- Blog: https://www.smartspanner.com/blog/
+
+## Comparisons
+
+- Smartspanner vs MaintainX: https://www.smartspanner.com/maintainx-alternative/
+- Smartspanner vs Limble: https://www.smartspanner.com/limble-alternative/
+- Smartspanner vs Fiix: https://www.smartspanner.com/fiix-alternative/
+- Smartspanner vs UpKeep: https://www.smartspanner.com/upkeep-alternative/
+- Best CMMS Software: https://www.smartspanner.com/best-cmms-software/
+
+## Differentiators
+
+- Fast implementation — up and running in under an hour
+- Simple to use — designed for technicians, not just administrators
+- Affordable — starting from £15/user/month
+- Unlimited support — telephone and online support included at no extra cost
+- Mobile-first — native iOS and Android apps for field use
+- IoT-ready — optional wireless sensor monitoring with AI-powered machine health
