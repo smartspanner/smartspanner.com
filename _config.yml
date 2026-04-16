@@ -33,6 +33,7 @@ permalink: pretty
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Sitemap defaults - exclude noindex pages
 defaults:
