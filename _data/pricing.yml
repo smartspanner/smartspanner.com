@@ -33,6 +33,7 @@ plans:
       - Subcontractors
       - Failure Codes
       - Asset Labels
+      - Leave Management
 
   - name: Advanced
     price: 27
@@ -51,6 +52,7 @@ plans:
       - Procedures
       - Subcontractors
       - Failure Codes
+      - Leave Management
     highlighted:
       - Asset Labels
       - Spare Part Labels
