@@ -399,10 +399,25 @@ img {
     display: block;
   }
   
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header.scrolled {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header .container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .mobile-nav-toggle {
     display: block;
   }
-  
+
   .mobile-nav-show {
     display: block;
   }
@@ -421,6 +436,12 @@ img {
   
   .mobile-nav-active .mobile-nav-hide {
     display: block;
+  }
+
+  /* Push hero content clear of the absolute-positioned navbar */
+  .hero .info {
+    padding-top: 90px;
+    padding-bottom: 20px;
   }
 }
 
@@ -529,7 +550,7 @@ img {
 
 @media (max-width: 991px) {
   .hero-split {
-    padding: 80px 0 50px;
+    padding: 140px 0 50px;
   }
 
   .hero-split .row {
@@ -557,7 +578,7 @@ img {
 
 @media (max-width: 576px) {
   .hero-split {
-    padding: 70px 0 40px;
+    padding: 130px 0 40px;
   }
 
   .hero-split-text h1 {
@@ -1196,8 +1217,8 @@ section {
 
 .pricing .badge-new {
   display: inline-block;
-  background: var(--color-primary);
-  color: #000;
+  background: #dc3545;
+  color: #fff;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 8px;
@@ -2115,6 +2136,11 @@ section {
 
   .section-header h2 {
     font-size: 26px;
+  }
+
+  .section-header h2:before,
+  .section-header h2:after {
+    display: none;
   }
 
   .section-header p {
