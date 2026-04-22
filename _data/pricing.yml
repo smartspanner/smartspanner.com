@@ -61,6 +61,7 @@ plans:
       - Statistics
       - Purchasing
       - Asset Lockout
+      - Fire Risk Assessments
       - "Risk Assessments *coming soon"
 
 all_plans_include:
