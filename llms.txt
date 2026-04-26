@@ -25,6 +25,7 @@ Based in Gateshead, United Kingdom.
 - Reporting and dashboards
 - Subcontractor management
 - Checklists and inspections
+- Fire risk assessments (UK-compliant, multi-site, with photo evidence and work-order actions)
 - IoT condition monitoring (vibration, temperature, energy, flow meters)
 - Failure codes and root cause tracking
 - Purchasing and purchase orders
@@ -64,6 +65,8 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/
 - IoT Condition Monitoring: https://www.smartspanner.com/iot-condition-monitoring/
 - Integrations & API: https://www.smartspanner.com/integrations-api/
+- Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/
+- Fire Risk Assessment Software: https://www.smartspanner.com/fire-risk-assessment-software/
 - Blog: https://www.smartspanner.com/blog/
 
 ## Comparisons
