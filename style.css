@@ -339,6 +339,22 @@ img {
   background: #e5a700 !important;
 }
 
+.navbar a.nav-secondary-cta {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  padding: 5px 14px;
+}
+
+.navbar a.nav-secondary-cta:hover {
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.navbar a.nav-login {
+  color: rgba(255, 255, 255, 0.45);
+}
+
 .navbar .dropdown-indicator {
   font-size: 10px;
   margin-left: 5px;
@@ -347,9 +363,16 @@ img {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1279px) {
@@ -415,11 +438,11 @@ img {
   }
 
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .mobile-nav-show {
-    display: block;
+    display: flex;
   }
   
   .mobile-nav-hide {
@@ -574,15 +597,19 @@ img {
   .hero-split-visual {
     margin-top: 40px;
   }
+
+  .hero-split-img {
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-split {
-    padding: 130px 0 40px;
+    padding: 118px 0 36px;
   }
 
   .hero-split-text h1 {
-    font-size: 30px;
+    font-size: 29px;
   }
 
   .hero-split-sub {
@@ -596,6 +623,8 @@ img {
   .hero-split-ctas .btn {
     width: 100%;
     text-align: center;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .proof-bar-items {
@@ -2331,6 +2360,10 @@ section {
 
   .navbar a.nav-cta {
     margin-top: 5px;
+    display: inline-block;
+  }
+
+  .navbar a.nav-secondary-cta {
     display: inline-block;
   }
 }

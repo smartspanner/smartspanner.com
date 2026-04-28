@@ -1,11 +1,15 @@
 <header id="header" class="header d-flex align-items-center">
   <div class="container-fluid d-flex align-items-center justify-content-between">
     <a href="{{ '/' | relative_url }}" class="logo">
-      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner CMMS" width="970" height="218">
     </a>
 
-    <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide fa-solid fa-xmark"></i>
+    <button type="button" class="mobile-nav-toggle mobile-nav-show" aria-label="Open navigation" aria-controls="navbar" aria-expanded="false">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="mobile-nav-toggle mobile-nav-hide" aria-label="Close navigation" aria-controls="navbar" aria-expanded="true">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
 
     <nav id="navbar" class="navbar">
       <ul>
@@ -63,7 +67,7 @@
             <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
             <li><a href="{{ '/free-guide-choosing-your-cmms-vendors' | relative_url }}">CMMS Selection Guide</a></li>
             <li><a href="{{ '/cmms-demo-video' | relative_url }}">Demo Video</a></li>
-            <li><a href="{{ site.support_url }}" target="_blank">Support <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="{{ site.support_url }}" target="_blank" rel="noopener">Support <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
             <li class="dropdown-label">Compare CMMS</li>
             <li><a href="{{ '/best-cmms-software' | relative_url }}">Best CMMS Software</a></li>
             <li><a href="{{ '/maintainx-alternative' | relative_url }}">Smartspanner vs MaintainX</a></li>
@@ -75,8 +79,8 @@
         <li><a href="{{ '/integrations-api' | relative_url }}"{% if page.url == '/integrations-api/' %} class="active"{% endif %}>Integrations</a></li>
         <li><a href="{{ '/pricing' | relative_url }}"{% if page.url == '/pricing/' %} class="active"{% endif %}>Pricing</a></li>
         <li><a href="{{ '/book-a-demo' | relative_url }}" class="nav-cta">Book a Demo</a></li>
-        <li><a href="{{ site.signup_url }}">Free Trial</a></li>
-        <li><a href="{{ site.app_url }}">Login</a></li>
+        <li><a href="{{ site.signup_url }}" class="nav-secondary-cta">Free Trial</a></li>
+        <li><a href="{{ site.app_url }}" class="nav-login">Login</a></li>
       </ul>
     </nav>
   </div>

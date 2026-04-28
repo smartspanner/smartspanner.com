@@ -1,15 +1,28 @@
 <script>
   // Mobile Navigation Toggle
-  document.querySelector('.mobile-nav-show').addEventListener('click', function() {
-    document.body.classList.add('mobile-nav-active');
-    document.querySelector('#navbar').classList.add('active');
-  });
-  
-  document.querySelector('.mobile-nav-hide').addEventListener('click', function() {
-    document.body.classList.remove('mobile-nav-active');
-    document.querySelector('#navbar').classList.remove('active');
-  });
-  
+  const navShow = document.querySelector('.mobile-nav-show');
+  const navHide = document.querySelector('.mobile-nav-hide');
+  const navbar = document.querySelector('#navbar');
+  const header = document.getElementById('header');
+
+  function setMobileNav(isOpen) {
+    document.body.classList.toggle('mobile-nav-active', isOpen);
+    if (navbar) navbar.classList.toggle('active', isOpen);
+    if (navShow) navShow.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  if (navShow) {
+    navShow.addEventListener('click', function() {
+      setMobileNav(true);
+    });
+  }
+
+  if (navHide) {
+    navHide.addEventListener('click', function() {
+      setMobileNav(false);
+    });
+  }
+
   // Dropdown toggle for mobile
   document.querySelectorAll('.navbar .dropdown > a').forEach(function(el) {
     el.addEventListener('click', function(e) {
@@ -29,10 +42,10 @@
       requestAnimationFrame(function() {
         if (window.scrollY > 100) {
           scrollTop.classList.add('active');
-          document.getElementById('header').classList.add('scrolled');
+          if (header) header.classList.add('scrolled');
         } else {
           scrollTop.classList.remove('active');
-          document.getElementById('header').classList.remove('scrolled');
+          if (header) header.classList.remove('scrolled');
         }
         scrollTicking = false;
       });
