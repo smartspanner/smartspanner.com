@@ -1,0 +1,158 @@
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+{% assign page_url = page.url | absolute_url %}
+{% assign page_image = page.image | default: page.hero_image | default: '/assets/img/features/dashboard.png' %}
+{% assign page_type = 'WebPage' %}
+{% if page.url == '/' %}
+  {% assign page_type = 'WebSite' %}
+{% elsif page.layout == 'blog-article' or page.url contains '/blog/' %}
+  {% assign page_type = 'Article' %}
+{% endif %}
+
+<!-- Structured data for search engines and AI answer engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.company.name | default: 'Smartspanner' }}",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/img/logo.png' | absolute_url }}"
+      },
+      "description": {{ site.description | jsonify }},
+      "foundingDate": "2013",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.company.address.line1 }}, {{ site.company.address.line2 }}",
+        "addressLocality": "{{ site.company.address.city }}",
+        "postalCode": "{{ site.company.address.postcode }}",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ site.company.phone }}",
+        "contactType": "sales",
+        "email": "{{ site.company.email }}",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "{{ site.twitter }}",
+        "{{ site.linkedin }}"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "{{ site.url }}/#software",
+      "name": "Smartspanner CMMS",
+      "alternateName": "Smartspanner",
+      "url": "{{ site.url }}",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Computerized Maintenance Management System",
+      "operatingSystem": "Web, iOS, Android",
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Maintenance teams, facilities managers, manufacturing operations, energy and utilities teams, logistics and warehousing teams"
+      },
+      "areaServed": [
+        "GB",
+        "US",
+        "AU",
+        "NZ"
+      ],
+      "featureList": [
+        "Work order management",
+        "Preventive maintenance scheduling",
+        "Asset management",
+        "Multi-site maintenance management",
+        "Spare parts and inventory tracking",
+        "Mobile CMMS apps for iOS and Android",
+        "Maintenance reporting and dashboards",
+        "Checklists and inspections",
+        "Subcontractor management",
+        "Failure code tracking",
+        "Purchase orders",
+        "Lockout tagout tracking",
+        "IoT condition monitoring",
+        "API access and integrations"
+      ],
+      "softwareHelp": "{{ site.support_url }}",
+      "downloadUrl": [
+        "https://apps.apple.com/gb/app/smartspanner/id1195653428",
+        "https://play.google.com/store/apps/details?id=com.smartspanner.mobile.android"
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "15",
+        "highPrice": "27",
+        "priceCurrency": "GBP",
+        "offerCount": "3",
+        "url": "{{ '/pricing/' | absolute_url }}"
+      }
+    },
+    {
+      "@type": "{{ page_type }}",
+      "@id": "{{ page_url }}#webpage",
+      "url": "{{ page_url }}",
+      "name": {{ page_title | append: ' - ' | append: site.title | jsonify }},
+      "headline": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "image": "{{ page_image | absolute_url }}",
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      },
+      "about": {
+        "@id": "{{ site.url }}/#software"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "inLanguage": "en"
+      {% if page.layout == 'blog-article' or page.url contains '/blog/' %},
+      "mainEntityOfPage": "{{ page_url }}",
+      "author": {
+        "@id": "{{ site.url }}/#organization"
+      }
+      {% endif %}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title }}",
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}/"
+        }
+        {% if page.url != '/' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page_title | jsonify }},
+          "item": "{{ page_url }}"
+        }
+        {% endif %}
+      ]
+    }
+  ]
+}
+</script>

@@ -7,3 +7,7 @@ Disallow: /lp/replace-spreadsheets-with-cmms/thank-you/
 
 # Sitemap location
 Sitemap: https://www.smartspanner.com/sitemap.xml
+
+# LLM crawler context
+LLMs: https://www.smartspanner.com/llms.txt
+LLMs-Full: https://www.smartspanner.com/llms-full.txt

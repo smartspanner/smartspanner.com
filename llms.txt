@@ -54,6 +54,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 ## Key Pages
 
 - Homepage: https://www.smartspanner.com/
+- AI/LLM Full Context: https://www.smartspanner.com/llms-full.txt
 - CMMS Software: https://www.smartspanner.com/cmms-software/
 - Features: https://www.smartspanner.com/features/
 - Pricing: https://www.smartspanner.com/pricing/
@@ -76,6 +77,14 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Smartspanner vs Fiix: https://www.smartspanner.com/fiix-alternative/
 - Smartspanner vs UpKeep: https://www.smartspanner.com/upkeep-alternative/
 - Best CMMS Software: https://www.smartspanner.com/best-cmms-software/
+
+## Best Fit
+
+Smartspanner is best suited to small and mid-sized maintenance teams that need a practical CMMS without a long implementation project. Common use cases include replacing maintenance spreadsheets, managing planned preventive maintenance, tracking reactive work orders, keeping asset history, coordinating contractors, monitoring spare parts, and giving technicians mobile access in the field.
+
+## Countries and Markets
+
+Smartspanner serves maintenance teams internationally, with dedicated information for the United Kingdom, United States, Australia, and New Zealand.
 
 ## Differentiators
 
