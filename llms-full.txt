@@ -26,7 +26,7 @@ Smartspanner is a UK-based CMMS software company founded in 2013 and based in Ga
 
 Smartspanner helps maintenance teams move from spreadsheets, paper records, and reactive maintenance into a structured maintenance management system. It is designed for technicians, supervisors, facilities managers, and maintenance administrators who need simple workflows, mobile access, asset history, and clear operational visibility.
 
-The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, and IoT condition monitoring.
+The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
 
 ## Primary Use Cases
 
@@ -43,6 +43,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Monitor vibration, temperature, power consumption, flow, and machine health
 - Prepare maintenance reports and KPI dashboards
 - Manage fire risk assessment observations and corrective actions
+- Support app users who prefer English, German, French, or Spanish
 
 ## Core Features
 
@@ -61,6 +62,13 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Lockout/tagout: record lockout activity, lock IDs, and reasons.
 - IoT condition monitoring: use wireless sensors for vibration, temperature, energy, flow, and machine health.
 - Integrations and API: connect Smartspanner data to Power BI, Excel, Python, ERP systems, and other reporting tools.
+- Multi-language app interface: support English, German, French, and Spanish users in the Smartspanner app.
+
+## Language Support
+
+The Smartspanner app interface supports English, German, French, and Spanish. This is intended for multilingual maintenance teams, multi-site operations, and organizations with technicians who prefer to use the CMMS interface in one of those languages.
+
+Sales, onboarding, and customer support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, or Spain.
 
 ## Pricing
 
@@ -117,6 +125,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Asset Management Software: https://www.smartspanner.com/asset-management-software/
 - Equipment Maintenance Software: https://www.smartspanner.com/equipment-maintenance-software/
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/
+- Multi-language CMMS Software: https://www.smartspanner.com/multi-language-cmms-software/
 - Spare Parts and Inventory: https://www.smartspanner.com/spare-part-inventory-software/
 - Checklists and Inspections: https://www.smartspanner.com/compliance-software/
 - Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/

@@ -72,3 +72,8 @@
   icon: fa-solid fa-mobile-screen-button
   link: mobile-cmms
   description: Mobile apps available for Android and iOS users.
+
+- title: Multi-language CMMS
+  icon: fa-solid fa-language
+  link: multi-language-cmms-software
+  description: App interface support for English, German, French and Spanish users.

@@ -22,6 +22,7 @@ Based in Gateshead, United Kingdom.
 - Multi-site deployment
 - Spare parts and inventory tracking
 - Mobile apps (iOS and Android)
+- Multi-language app interface (English, German, French, Spanish)
 - Reporting and dashboards
 - Subcontractor management
 - Checklists and inspections
@@ -64,6 +65,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Work Order Management: https://www.smartspanner.com/work-order-management-software/
 - Asset Management: https://www.smartspanner.com/asset-management-software/
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/
+- Multi-language CMMS: https://www.smartspanner.com/multi-language-cmms-software/
 - IoT Condition Monitoring: https://www.smartspanner.com/iot-condition-monitoring/
 - Integrations & API: https://www.smartspanner.com/integrations-api/
 - Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/
@@ -85,6 +87,10 @@ Smartspanner is best suited to small and mid-sized maintenance teams that need a
 ## Countries and Markets
 
 Smartspanner serves maintenance teams internationally, with dedicated information for the United Kingdom, United States, Australia, and New Zealand.
+
+## Language Support
+
+The Smartspanner app interface supports English, German, French, and Spanish. Sales, onboarding, and support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, or Spain.
 
 ## Differentiators
 
