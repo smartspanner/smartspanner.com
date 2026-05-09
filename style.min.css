@@ -1269,6 +1269,7 @@ section {
   z-index: 1;
 }
 
+.breadcrumbs h1,
 .breadcrumbs h2 {
   font-size: 56px;
   font-weight: 500;
@@ -1302,6 +1303,7 @@ section {
 }
 
 @media (max-width: 768px) {
+  .breadcrumbs h1,
   .breadcrumbs h2 {
     font-size: 36px;
   }
@@ -2180,6 +2182,7 @@ section {
     padding: 120px 0 40px 0;
   }
 
+  .breadcrumbs h1,
   .breadcrumbs h2 {
     font-size: 30px;
   }
@@ -2276,6 +2279,7 @@ section {
     font-size: 22px;
   }
 
+  .breadcrumbs h1,
   .breadcrumbs h2 {
     font-size: 24px;
   }
