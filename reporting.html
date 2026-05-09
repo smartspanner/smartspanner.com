@@ -1,34 +1,499 @@
 ---
-layout: feature
-title: CMMS Reporting & Analytics
-description: CMMS reporting and analytics. Generate reports on work order completion, asset performance, labour costs, and spare parts usage with Smartspanner.
-keywords: cmms reporting, maintenance reporting software, maintenance analytics, maintenance kpi reports
+layout: default
+title: CMMS Reporting & KPI Dashboards
+description: "CMMS reporting and KPI dashboards for maintenance teams. Export work orders, assets, spares, purchasing data, site reports, downtime, MTTR, PM compliance, and on-time completion metrics."
+keywords: cmms reporting, maintenance reporting software, maintenance kpi dashboard, maintenance analytics, mttr reporting, downtime reporting, pm compliance
 ---
 
-<section id="service-details" class="service-details">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-      <div class="col-lg-4">
-        <div class="services-list">
-          <ul>
-            <li><i class="bi bi-check-circle"></i> <span>Mean time between Breakdowns (failures)</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Reliability ranked assets by frequency and breakdown time</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Workload distribution for your team</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Total downtime</span></li>
-          </ul>
+<style>
+  .reporting-hero {
+    background: linear-gradient(135deg, #f8fbfd 0%, #eef4f7 100%);
+    padding: 130px 0 80px;
+  }
+
+  .reporting-hero h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+
+  .reporting-hero p {
+    font-size: 18px;
+    color: #56616a;
+    margin-bottom: 28px;
+  }
+
+  .reporting-product-panel {
+    background: #fff;
+    border: 1px solid #e5edf2;
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(14, 39, 55, 0.12);
+    overflow: hidden;
+  }
+
+  .reporting-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #e9eef2;
+    background: #fbfcfd;
+  }
+
+  .reporting-product-header strong {
+    color: var(--color-secondary);
+    font-size: 17px;
+  }
+
+  .reporting-filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border: 1px solid #dce5ea;
+    border-radius: 6px;
+    color: #4c5963;
+    font-size: 13px;
+    background: #fff;
+  }
+
+  .reporting-product-body {
+    padding: 20px;
+  }
+
+  .reporting-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .reporting-kpi-card {
+    border: 1px solid #e7edf1;
+    border-radius: 8px;
+    padding: 14px;
+    background: #fff;
+  }
+
+  .reporting-kpi-card i {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .reporting-kpi-card strong {
+    display: block;
+    color: var(--color-secondary);
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .reporting-kpi-card span {
+    color: #687782;
+    font-size: 13px;
+  }
+
+  .reporting-chart {
+    height: 170px;
+    border: 1px solid #e7edf1;
+    border-radius: 8px;
+    background:
+      linear-gradient(to right, transparent 0, transparent 24%, #eef3f6 24%, #eef3f6 25%, transparent 25%, transparent 49%, #eef3f6 49%, #eef3f6 50%, transparent 50%, transparent 74%, #eef3f6 74%, #eef3f6 75%, transparent 75%),
+      linear-gradient(to bottom, transparent 0, transparent 32%, #eef3f6 32%, #eef3f6 33%, transparent 33%, transparent 66%, #eef3f6 66%, #eef3f6 67%, transparent 67%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reporting-chart::after {
+    content: "";
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    top: 36px;
+    bottom: 34px;
+    background: linear-gradient(135deg, transparent 0 18%, #f4ae00 18% 21%, transparent 21% 34%, #f4ae00 34% 37%, transparent 37% 54%, #f4ae00 54% 57%, transparent 57% 74%, #f4ae00 74% 77%, transparent 77%);
+    opacity: 0.9;
+  }
+
+  .reporting-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .reporting-chip {
+    border: 1px solid #e2e9ee;
+    border-radius: 6px;
+    padding: 9px 12px;
+    background: #fff;
+    color: #4d5a63;
+    font-size: 13px;
+  }
+
+  .reporting-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .reporting-list-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #e5edf2;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .reporting-list-item h4 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: var(--color-secondary);
+  }
+
+  .reporting-list-item p {
+    margin: 0;
+    color: #65717a;
+  }
+
+  .reporting-action {
+    align-self: center;
+    white-space: nowrap;
+    color: #2c3d4a;
+    background: #f7c948;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .reporting-mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background: #fff;
+    border: 1px solid #e5edf2;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .reporting-mini-table th,
+  .reporting-mini-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #edf2f5;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .reporting-mini-table th {
+    background: #f7fafb;
+    color: var(--color-secondary);
+    font-weight: 700;
+  }
+
+  .reporting-mini-table td {
+    color: #5d6b75;
+  }
+
+  @media (max-width: 991px) {
+    .reporting-hero {
+      padding-top: 110px;
+    }
+
+    .reporting-hero h1 {
+      font-size: 36px;
+    }
+
+    .reporting-product-panel {
+      margin-top: 32px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .reporting-kpi-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reporting-list-item,
+    .reporting-product-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="reporting-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1>Maintenance Reporting and KPI Dashboards</h1>
+        <p>Smartspanner brings operational reports, exports, and performance KPIs into one reporting centre, so maintenance teams can understand what is happening across work orders, assets, spares, purchasing, sites, and downtime.</p>
+        <div>
+          <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin-right: 10px; padding: 12px 34px; border-radius: 50px;">Book a Demo</a>
+          <a href="{{ site.signup_url }}" class="btn btn-secondary" style="padding: 12px 34px; border-radius: 50px;">Start Free Trial</a>
         </div>
       </div>
-
-      <div class="col-lg-8">
-        <img src="{{ '/assets/img/features/reporting.png' | relative_url }}" alt="CMMS reporting" class="img-fluid services-img" loading="lazy">
-        <h3>Comprehensive reporting tools to analyse your maintenance performance</h3>
-        <p>
-          Our reporting tools allow you to define the criteria and date range for your report and export to Excel. Track key metrics, analyse trends, and make data-driven decisions to improve your maintenance operations.
-        </p>
-        <p>
-          Generate reports on work order completion rates, asset reliability, labour costs, spare parts usage, and much more. Use the data to optimise your maintenance strategy and reduce costs.
-        </p>
+      <div class="col-lg-6">
+        <div class="reporting-product-panel">
+          <div class="reporting-product-header">
+            <strong>Performance KPIs</strong>
+            <span class="reporting-filter-pill"><i class="fa-solid fa-calendar-days"></i> Last 12 months</span>
+          </div>
+          <div class="reporting-product-body">
+            <div class="reporting-kpi-grid">
+              <div class="reporting-kpi-card">
+                <i class="fa-solid fa-clock" style="color: #e74c3c;"></i>
+                <strong>42</strong>
+                <span>Overdue</span>
+              </div>
+              <div class="reporting-kpi-card">
+                <i class="fa-solid fa-power-off" style="color: #9b59b6;"></i>
+                <strong>128h</strong>
+                <span>Downtime</span>
+              </div>
+              <div class="reporting-kpi-card">
+                <i class="fa-solid fa-circle-check" style="color: #27ae60;"></i>
+                <strong>91%</strong>
+                <span>PM Compliance</span>
+              </div>
+            </div>
+            <div class="reporting-chart" aria-label="Representative KPI trend chart"></div>
+            <div class="reporting-chip-row">
+              <span class="reporting-chip">All Sites</span>
+              <span class="reporting-chip">Site ranking</span>
+              <span class="reporting-chip">Trend chart</span>
+              <span class="reporting-chip">Export ready</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<main id="main">
+
+  <!-- Reporting Centre -->
+  <section id="reporting-centre" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Reporting Centre</h2>
+        <p>Generate PDF reports, export data to Excel, and drill into the areas that drive maintenance performance.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-wrench"></i></div>
+            <h3>Work Order Reports</h3>
+            <p>View detailed work order reporting, PM time variance, weekly site performance, activity reports, and complete work order exports.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-box"></i></div>
+            <h3>Asset Reports</h3>
+            <p>Export asset inventories, generate PDF asset lists by site, and analyse asset downtime over selected date ranges.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Spare Parts Reports</h3>
+            <p>Export spare parts inventory, produce PDF stock reports, and identify parts below minimum stock levels.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>Purchasing Reports</h3>
+            <p>Export purchase orders and purchase order line items with suppliers, references, dates, status, and total values.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Detail -->
+  <section id="report-types" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Reports Built Around Real Maintenance Workflows</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="reporting-list">
+            <div class="reporting-list-item">
+              <div>
+                <h4>Work Order Reporting</h4>
+                <p>Filter and review maintenance work with a graphical summary before exporting or drilling further into work order activity.</p>
+              </div>
+              <span class="reporting-action">View</span>
+            </div>
+
+            <div class="reporting-list-item">
+              <div>
+                <h4>PM Time Variance</h4>
+                <p>Compare preventive maintenance time by site and identify where planned maintenance is taking longer than expected.</p>
+              </div>
+              <span class="reporting-action">View</span>
+            </div>
+
+            <div class="reporting-list-item">
+              <div>
+                <h4>Weekly Site Performance</h4>
+                <p>Generate a site-level PDF covering open work orders, completed work orders, and overdue trends.</p>
+              </div>
+              <span class="reporting-action">Generate</span>
+            </div>
+
+            <div class="reporting-list-item">
+              <div>
+                <h4>Activity Report</h4>
+                <p>Create a PDF report of completed work orders with a summary chart and detailed work order cards for a selected site and date range.</p>
+              </div>
+              <span class="reporting-action">Generate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI Dashboard -->
+  <section id="kpi-dashboard" class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="reporting-product-panel">
+            <div class="reporting-product-header">
+              <strong>KPI Dashboard</strong>
+              <span class="reporting-filter-pill"><i class="fa-solid fa-location-dot"></i> All Sites</span>
+            </div>
+            <div class="reporting-product-body">
+              <table class="reporting-mini-table">
+                <thead>
+                  <tr>
+                    <th>Site</th>
+                    <th>Country</th>
+                    <th>Compliance</th>
+                    <th>Total PM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>North Plant</td>
+                    <td>UK</td>
+                    <td>94%</td>
+                    <td>186</td>
+                  </tr>
+                  <tr>
+                    <td>Assembly Line 2</td>
+                    <td>UK</td>
+                    <td>89%</td>
+                    <td>142</td>
+                  </tr>
+                  <tr>
+                    <td>Warehouse</td>
+                    <td>UK</td>
+                    <td>87%</td>
+                    <td>74</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="reporting-chip-row">
+                <span class="reporting-chip">Date range</span>
+                <span class="reporting-chip">Site filter</span>
+                <span class="reporting-chip">Paginated tables</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Performance KPIs That Match the App</h3>
+          <p>The v3 Smartspanner KPI area lets teams switch between live performance views, filter by date range and site, and review trend charts with site breakdown tables.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Overdue and Average Days Late</h4>
+              <p>Track overdue work order pressure and see which sites are most affected by late completion.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-power-off"></i>
+            <div>
+              <h4>Downtime and MTTR</h4>
+              <p>Measure completed breakdown downtime and mean time to repair across the selected period.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <h4>PM Compliance and On-Time Completion</h4>
+              <p>Monitor how reliably planned maintenance and deadline-based work are being completed on time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exports -->
+  <section id="exports" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Flexible Exports for Managers and Teams</h2>
+        <p>Smartspanner supports both quick exports and report generation flows with site and date range selection.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-file-excel"></i></div>
+            <h3>Excel Exports</h3>
+            <p>Export work orders, assets, spares, purchase orders, line items, and downtime data for further analysis.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3>PDF Reports</h3>
+            <p>Generate shareable PDF reports for site performance, asset lists, spare parts, and activity summaries.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-filter"></i></div>
+            <h3>Site and Date Filters</h3>
+            <p>Select specific sites and reporting periods using presets such as month to date, year to date, and last 12 months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="get-started">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 20px;">Turn Maintenance Data Into Clear Actions</h3>
+      <p style="font-size: 18px; max-width: 620px; margin: 0 auto 30px;">Use Smartspanner reporting and KPI dashboards to spot overdue work, downtime, repair trends, PM compliance issues, and stock or purchasing activity.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
+
+</main>
