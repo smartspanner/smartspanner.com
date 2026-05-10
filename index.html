@@ -5,142 +5,292 @@ description: Cloud-based CMMS software for maintenance management and asset trac
 keywords: cmms software, maintenance software, maintenance management software, facilities management software, asset management, preventive maintenance
 ---
 
-<section id="home-hero" style="padding: 150px 0 70px;">
+<!-- Hero Section -->
+<section id="hero-split" class="hero-split">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <p style="font-size: 13px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0; margin-bottom: 14px;">Maintenance management software</p>
-        <h1 style="font-size: 48px; line-height: 1.12; font-weight: 700; color: var(--color-secondary); max-width: 760px; margin-bottom: 22px;">Maintenance software your team sets up <em style="color: var(--color-primary); font-style: italic;">before lunch</em></h1>
-        <p style="font-size: 18px; line-height: 1.7; color: #5f6871; max-width: 760px;">Most CMMS software takes weeks to deploy and months for teams to actually use. Smartspanner is live in under an hour. After a 45-minute demo, you can run your first site — including a multi-site rollout — the same day.</p>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px;">
-          <a href="{{ site.signup_url }}" class="btn btn-primary" style="padding: 13px 30px; border-radius: 50px; font-size: 16px;">Start 14-day free trial</a>
-          <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-secondary" style="padding: 13px 30px; border-radius: 50px; font-size: 16px;">Book a 45-min demo</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 hero-split-text">
+        <h1>Maintenance Software Your Team Sets Up Before Lunch</h1>
+        <p class="hero-split-sub">Most CMMS software takes weeks to deploy and months for teams to actually use. Smartspanner is live in under an hour. After a 45-minute demo, you can run your first site the same day.</p>
+        <div class="hero-split-ctas">
+          <a href="{{ site.signup_url }}" class="btn btn-primary hero-split-btn-primary">Start 14-Day Free Trial</a>
+          <a href="{{ '/book-a-demo' | relative_url }}" class="btn hero-split-btn-secondary">Book a 45-Min Demo</a>
         </div>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; color: #6c757d; font-size: 14px;">
-          <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i>No credit card required</span>
-          <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i>Unlimited support included</span>
-          <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i>UK-hosted &amp; UK-supported</span>
-        </div>
+        <p class="hero-split-trust">No credit card required. Unlimited support included. UK-hosted and UK-supported.</p>
+      </div>
+      <div class="col-lg-6 hero-split-visual">
+        <img src="{{ '/assets/img/features/dashboard.png' | relative_url }}" alt="Smartspanner CMMS Dashboard" class="hero-split-img">
       </div>
     </div>
   </div>
 </section>
 
-<section id="proof" class="section-bg" style="padding: 34px 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+<!-- Proof Bar -->
+<section class="proof-bar">
   <div class="container">
-    <div class="row gy-4 text-center">
-      <div class="col-lg-3 col-md-6">
-        <div style="font-size: 38px; font-weight: 700; color: var(--color-primary); line-height: 1;">45 min</div>
-        <p style="max-width: 220px; margin: 12px auto 0; color: #6c757d;">Average demo to live deployment — not weeks</p>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div style="font-size: 38px; font-weight: 700; color: var(--color-primary); line-height: 1;">£15</div>
-        <p style="max-width: 220px; margin: 12px auto 0; color: #6c757d;">Per user/month. No hidden tiers, no support fees</p>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div style="font-size: 38px; font-weight: 700; color: var(--color-primary); line-height: 1;">4</div>
-        <p style="max-width: 220px; margin: 12px auto 0; color: #6c757d;">Continents. Hotels to aerospace, SMEs to PLCs</p>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div style="font-size: 38px; font-weight: 700; color: var(--color-primary); line-height: 1;">2013</div>
-        <p style="max-width: 220px; margin: 12px auto 0; color: #6c757d;">Founded by an operator who needed this himself</p>
-      </div>
+    <div class="proof-bar-items">
+      <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> 45-minute demo to live deployment</span>
+      <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> Pricing from £15/user/month</span>
+      <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> Founded in 2013 by a maintenance operator</span>
     </div>
   </div>
 </section>
 
 <main id="main">
 
-  <section id="features" class="services">
+  <!-- Problem Section -->
+  <section id="problem" class="section-bg">
     <div class="container">
       <div class="section-header">
-        <p style="font-size: 13px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0; margin-bottom: 10px;">Why teams switch to Smartspanner</p>
-        <h2>The features you need. Nothing you don't.</h2>
-        <p>Most CMMS platforms are built for enterprise procurement teams, not the people actually doing maintenance. Smartspanner is designed for technicians who need to log a job quickly on their phone — and managers who need to see what's happening across sites.</p>
+        <h2>Maintenance Shouldn't Take Months to Modernise</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p>Maintenance teams often know they need to move beyond spreadsheets, paper forms, and disconnected systems. The blocker is usually implementation: too much setup, too much training, and too little adoption from the people doing the work.</p>
+          <ul>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Spreadsheets that only one person understands</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Work orders updated after the job, not while it happens</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Poor visibility across assets, sites, parts, and costs</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Systems that ask technicians to change how they work</li>
+            <li><i class="fa-solid fa-xmark" style="color: #dc3545; margin-right: 10px;"></i> Reporting that takes longer than the maintenance itself</li>
+          </ul>
+          <div style="margin-top: 25px;">
+            <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="padding: 10px 30px; border-radius: 50px; font-size: 14px;">See the 45-Minute Setup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution" class="alt-services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/iphone.png' | relative_url }});"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Built for Technicians First, Managers Second</h3>
+          <p>Smartspanner is designed for the people actually doing maintenance. Technicians can scan an asset, update a job, add photos, record parts, and move on. Managers get the live view they need without chasing updates.</p>
+          <p>The result is a CMMS that can start small, prove value quickly, and scale across multiple sites without a long consulting project.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <div>
+              <h4><a href="{{ '/work-order-management-software' | relative_url }}">Work Orders That Get Updated</a></h4>
+              <p>Create, assign, and track jobs in real time with labour, parts, photos, and costs attached.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div>
+              <h4><a href="{{ '/mobile-cmms' | relative_url }}">Native Mobile Apps</a></h4>
+              <p>Technicians update jobs on iOS and Android while managers see progress instantly on desktop.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-qrcode"></i>
+            <div>
+              <h4><a href="{{ '/asset-management-software' | relative_url }}">QR Code Asset Lookup</a></h4>
+              <p>Scan any asset to view service history, open jobs, spare parts, and linked documents.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <h4>Support Included</h4>
+              <p>Online and telephone support are included at no extra cost, from our UK-based team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities -->
+  <section id="capabilities" class="services section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Features You Need. Nothing You Don't.</h2>
+        <p>Smartspanner covers the core work maintenance teams need to manage every day.</p>
       </div>
 
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
-            <h3>Work orders</h3>
+            <div class="icon">
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            <h3>Work Orders</h3>
             <p>Create, assign, and track jobs in real time. Log labour, parts, photos, and costs against each one.</p>
+            <a href="{{ '/work-order-management-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
-            <h3>Preventive maintenance</h3>
-            <p>Recurring schedules that generate automatically when the previous job closes — no manual chasing required.</p>
+            <div class="icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3>Preventive Maintenance</h3>
+            <p>Recurring schedules generate automatically when the previous job closes, so planned work keeps moving.</p>
+            <a href="{{ '/preventative-maintenance-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-            <h3>Mobile-first</h3>
-            <p>Native iOS and Android apps. Technicians update jobs on the floor; managers see it instantly on desktop.</p>
+            <div class="icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>Mobile-First</h3>
+            <p>Native iOS and Android apps let technicians update work from the floor, field, or plant room.</p>
+            <a href="{{ '/mobile-cmms' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-qrcode"></i></div>
-            <h3>QR code asset lookup</h3>
-            <p>Scan any asset to pull up its full service history, open jobs, and spare parts — no searching required.</p>
+            <div class="icon">
+              <i class="fa-solid fa-qrcode"></i>
+            </div>
+            <h3>QR Code Asset Lookup</h3>
+            <p>Scan assets to open service history, active jobs, spare parts, and documentation without searching.</p>
+            <a href="{{ '/asset-management-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-box"></i></div>
-            <h3>Spare parts inventory</h3>
-            <p>Link parts to assets and work orders. Low stock alerts before you run out, not after a breakdown.</p>
+            <div class="icon">
+              <i class="fa-solid fa-box"></i>
+            </div>
+            <h3>Spare Parts Inventory</h3>
+            <p>Link parts to assets and work orders with low-stock alerts before a missing part stops a repair.</p>
+            <a href="{{ '/spare-part-inventory-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
-            <h3>IoT condition monitoring</h3>
-            <p>Real-time vibration, temperature, and energy sensors. Alerts and auto-triggered maintenance — no separate platform needed.</p>
+            <div class="icon">
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <h3>IoT Condition Monitoring</h3>
+            <p>Monitor vibration, temperature, and energy data with alerts and maintenance triggers in the same system.</p>
+            <a href="{{ '/iot-condition-monitoring' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="industries" class="section-bg">
+  <!-- Industries Section -->
+  <section id="industries" class="constructions">
     <div class="container">
       <div class="section-header">
-        <p style="font-size: 13px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0; margin-bottom: 10px;">Who uses Smartspanner</p>
-        <h2>Built to adapt. Proven across industries.</h2>
-        <p>Smartspanner was built by someone who ran maintenance across three countries. That shows in how it handles multi-site, multi-industry deployments without needing a consultant or a lengthy implementation project.</p>
+        <h2>Built to Adapt. Proven Across Industries.</h2>
+        <p>Smartspanner was built by someone who ran maintenance across three countries. That shows in how it handles multi-site, multi-industry deployments without needing a lengthy implementation project.</p>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <a href="{{ '/manufacturing-maintenance-software' | relative_url }}" class="btn btn-secondary" style="border-radius: 50px;">Manufacturing</a>
-        <span class="btn btn-secondary" style="border-radius: 50px;">Hotels &amp; hospitality</span>
-        <a href="{{ '/facility-management-software' | relative_url }}" class="btn btn-secondary" style="border-radius: 50px;">Facilities management</a>
-        <span class="btn btn-secondary" style="border-radius: 50px;">Aerospace</span>
-        <a href="{{ '/energy-and-resources-maintenance' | relative_url }}" class="btn btn-secondary" style="border-radius: 50px;">Wind &amp; biomass energy</a>
-        <a href="{{ '/distribution-fleet-maintenance' | relative_url }}" class="btn btn-secondary" style="border-radius: 50px;">Fleet &amp; distribution</a>
-        <span class="btn btn-secondary" style="border-radius: 50px;">Food &amp; beverage</span>
-        <a href="{{ '/energy-and-resources-maintenance' | relative_url }}" class="btn btn-secondary" style="border-radius: 50px;">Mining &amp; utilities</a>
-        <span class="btn btn-secondary" style="border-radius: 50px;">Theme parks</span>
-        <span class="btn btn-secondary" style="border-radius: 50px;">Fisheries</span>
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/manufacturing-maintenance.jpg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/manufacturing-maintenance-software' | relative_url }}">Manufacturing</a></h4>
+              <p>Reduce downtime, manage planned work, and keep production assets visible across the site.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/hero-carousel/production-maintenance.JPG' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/cmms-for-injection-moulding' | relative_url }}">Injection Moulding</a></h4>
+              <p>Track moulds, cycle-based maintenance, tooling history, breakdowns, and spare parts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/apartments.jpg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/facility-management-software' | relative_url }}">Facilities Management</a></h4>
+              <p>Manage building maintenance, compliance routines, contractors, and multi-site operations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-item">
+            <div class="card-bg" style="background-image: url({{ '/assets/img/energy.jpeg' | relative_url }});"></div>
+            <div class="card-body">
+              <h4><a href="{{ '/energy-and-resources-maintenance' | relative_url }}">Energy & Utilities</a></h4>
+              <p>Maintain critical equipment across wind, biomass, water, mining, agriculture, and utilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="{{ '/industries' | relative_url }}" class="btn btn-primary">See All Industries</a>
       </div>
     </div>
   </section>
 
-  <section id="testimonials" class="services section-bg">
+  <!-- Differentiators -->
+  <section id="why-smartspanner" class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/laptop.png' | relative_url }});"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>Why Teams Stay With Smartspanner</h3>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-stopwatch"></i>
+            <div>
+              <h4>Live the Same Day</h4>
+              <p>A 45-minute demo is enough to set up your account and get the first site running.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <div>
+              <h4>Built by an Operator</h4>
+              <p>Smartspanner was founded in 2013 by someone who needed practical maintenance software himself.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Multi-Site Without the Drag</h4>
+              <p>Roll out site by site with shared controls, local views, and clear permissions.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <h4>No Support Fees</h4>
+              <p>Support is included, so teams can ask for help without worrying about extra charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="customer-quotes" class="services">
     <div class="container">
       <div class="section-header">
-        <p style="font-size: 13px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0; margin-bottom: 10px;">What customers say</p>
-        <h2>Heard from real users, not press releases</h2>
+        <h2>Heard From Real Users, Not Press Releases</h2>
       </div>
 
       <div class="row gy-4">
@@ -168,19 +318,97 @@ keywords: cmms software, maintenance software, maintenance management software, 
     </div>
   </section>
 
-  <section id="cta" style="border-top: 1px solid #e5e7eb;">
+  <!-- How It Works -->
+  <section id="how-it-works" class="section-bg">
     <div class="container">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7">
-          <h2 style="font-size: 32px; font-weight: 700; color: var(--color-secondary); margin-bottom: 12px;">See it running in 45 minutes</h2>
-          <p style="font-size: 18px; color: #5f6871; margin-bottom: 0;">Our demo isn't a sales presentation — it's enough time to actually set up your account and get your team started. No follow-up calls required unless you want them.</p>
+      <div class="section-header">
+        <h2>How Smartspanner Gets You Moving</h2>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: var(--color-primary); margin-bottom: 15px;">1</div>
+            <h3 style="font-size: 18px;">Set Up the First Site</h3>
+            <p>Start with assets, locations, users, and the work your team already understands.</p>
+          </div>
         </div>
-        <div class="col-lg-5 text-lg-end">
-          <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-secondary" style="margin: 8px; padding: 12px 32px; border-radius: 50px; font-size: 16px;">Book a demo</a>
-          <a href="{{ site.signup_url }}" class="btn btn-primary" style="margin: 8px; padding: 12px 32px; border-radius: 50px; font-size: 16px;">Start free trial</a>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: var(--color-primary); margin-bottom: 15px;">2</div>
+            <h3 style="font-size: 18px;">Create Work Orders</h3>
+            <p>Assign jobs, add schedules, and let recurring maintenance generate automatically.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: var(--color-primary); margin-bottom: 15px;">3</div>
+            <h3 style="font-size: 18px;">Use the Mobile App</h3>
+            <p>Technicians scan assets, update jobs, add photos, and record parts on site.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-item" style="padding: 30px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: var(--color-primary); margin-bottom: 15px;">4</div>
+            <h3 style="font-size: 18px;">Scale Across Sites</h3>
+            <p>Bring more sites online when the first workflow is working for the team.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Comparison Section -->
+  <section id="compare">
+    <div class="container">
+      <div class="section-header">
+        <h2>Comparing CMMS Software?</h2>
+        <p>See how Smartspanner compares when your priorities are fast setup, practical workflows, and included support.</p>
+      </div>
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <a href="{{ '/maintainx-alternative' | relative_url }}" style="display: block; background: #fff; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.06); transition: 0.3s; height: 100%;">
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--color-secondary); margin-bottom: 8px;">Smartspanner vs MaintainX</h4>
+            <p style="font-size: 13px; color: #6c757d; margin: 0;">Compare features <i class="fa-solid fa-arrow-right" style="color: var(--color-primary);"></i></p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="{{ '/limble-alternative' | relative_url }}" style="display: block; background: #fff; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.06); transition: 0.3s; height: 100%;">
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--color-secondary); margin-bottom: 8px;">Smartspanner vs Limble</h4>
+            <p style="font-size: 13px; color: #6c757d; margin: 0;">Compare features <i class="fa-solid fa-arrow-right" style="color: var(--color-primary);"></i></p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="{{ '/fiix-alternative' | relative_url }}" style="display: block; background: #fff; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.06); transition: 0.3s; height: 100%;">
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--color-secondary); margin-bottom: 8px;">Smartspanner vs Fiix</h4>
+            <p style="font-size: 13px; color: #6c757d; margin: 0;">Compare features <i class="fa-solid fa-arrow-right" style="color: var(--color-primary);"></i></p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="{{ '/upkeep-alternative' | relative_url }}" style="display: block; background: #fff; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.06); transition: 0.3s; height: 100%;">
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--color-secondary); margin-bottom: 8px;">Smartspanner vs UpKeep</h4>
+            <p style="font-size: 13px; color: #6c757d; margin: 0;">Compare features <i class="fa-solid fa-arrow-right" style="color: var(--color-primary);"></i></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="{{ '/best-cmms-software' | relative_url }}" class="btn btn-primary">See Full CMMS Comparison</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="cta" class="get-started section-bg">
+    <div class="container text-center">
+      <h3 style="font-size: 36px; color: var(--color-secondary); font-weight: 600; margin-bottom: 20px;">See It Running in 45 Minutes</h3>
+      <p style="font-size: 18px; max-width: 650px; margin: 0 auto 30px;">Our demo is enough time to set up your account and get your team started. No follow-up calls required unless you want them.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
 </main>
