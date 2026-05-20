@@ -225,10 +225,8 @@ img {
 }
 
 .header .logo img {
-  height: 55px;
-  vertical-align: middle;
-  position: relative;
-  top: 6px;
+  display: block;
+  height: 64px;
 }
 
 /* Navigation */
