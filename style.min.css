@@ -585,6 +585,19 @@ img {
   overflow: hidden;
 }
 
+.app-store-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-store-badges img {
+  display: block;
+  width: auto;
+  height: 50px;
+}
+
 /* Proof Bar */
 .proof-bar {
   padding: 10px 0;
@@ -632,6 +645,10 @@ img {
   .screenshot-lightbox img {
     max-width: 96vw;
     max-height: 84vh;
+  }
+
+  .app-store-badges img {
+    height: 44px;
   }
 }
 
