@@ -1,14 +1,20 @@
 <script>
   // Mobile Navigation Toggle
-  document.querySelector('.mobile-nav-show').addEventListener('click', function() {
-    document.body.classList.add('mobile-nav-active');
-    document.querySelector('#navbar').classList.add('active');
-  });
-  
-  document.querySelector('.mobile-nav-hide').addEventListener('click', function() {
-    document.body.classList.remove('mobile-nav-active');
-    document.querySelector('#navbar').classList.remove('active');
-  });
+  const mobileNavShow = document.querySelector('.mobile-nav-show');
+  const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  const navbar = document.querySelector('#navbar');
+
+  if (mobileNavShow && mobileNavHide && navbar) {
+    mobileNavShow.addEventListener('click', function() {
+      document.body.classList.add('mobile-nav-active');
+      navbar.classList.add('active');
+    });
+
+    mobileNavHide.addEventListener('click', function() {
+      document.body.classList.remove('mobile-nav-active');
+      navbar.classList.remove('active');
+    });
+  }
   
   // Dropdown toggle for mobile
   document.querySelectorAll('.navbar .dropdown > a').forEach(function(el) {
@@ -22,25 +28,105 @@
   
   // Scroll to top
   const scrollTop = document.getElementById('scroll-top');
+  const header = document.getElementById('header');
   
   let scrollTicking = false;
   window.addEventListener('scroll', function() {
     if (!scrollTicking) {
       requestAnimationFrame(function() {
-        if (window.scrollY > 100) {
-          scrollTop.classList.add('active');
-          document.getElementById('header').classList.add('scrolled');
-        } else {
-          scrollTop.classList.remove('active');
-          document.getElementById('header').classList.remove('scrolled');
+        if (scrollTop) {
+          scrollTop.classList.toggle('active', window.scrollY > 100);
         }
+
+        if (header) {
+          header.classList.toggle('scrolled', window.scrollY > 100);
+        }
+
         scrollTicking = false;
       });
       scrollTicking = true;
     }
   });
   
-  scrollTop.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (scrollTop) {
+    scrollTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Click-to-expand product screenshots
+  (function() {
+    const imageModal = document.createElement('div');
+    imageModal.className = 'screenshot-lightbox';
+    imageModal.setAttribute('aria-hidden', 'true');
+    imageModal.innerHTML = '<button class="screenshot-lightbox-close" type="button" aria-label="Close image view">&times;</button><img src="" alt="">';
+    document.body.appendChild(imageModal);
+
+    const modalImage = imageModal.querySelector('img');
+    const closeButton = imageModal.querySelector('button');
+
+    function openLightbox(src, alt) {
+      modalImage.src = src;
+      modalImage.alt = alt || 'Smartspanner screenshot';
+      imageModal.classList.add('active');
+      imageModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('screenshot-lightbox-open');
+    }
+
+    function closeLightbox() {
+      imageModal.classList.remove('active');
+      imageModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('screenshot-lightbox-open');
+      modalImage.removeAttribute('src');
+    }
+
+    document.querySelectorAll('main img[src*="/assets/img/"], .hero-split-img').forEach(function(img) {
+      if (img.closest('a')) {
+        return;
+      }
+
+      img.classList.add('screenshot-expandable');
+      img.addEventListener('click', function() {
+        openLightbox(img.currentSrc || img.src, img.alt);
+      });
+    });
+
+    document.querySelectorAll('.img-bg').forEach(function(panel) {
+      const backgroundImage = window.getComputedStyle(panel).backgroundImage;
+      const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+
+      if (!match || !match[1] || match[1].indexOf('/assets/img/') === -1) {
+        return;
+      }
+
+      panel.classList.add('screenshot-expandable');
+      panel.setAttribute('role', 'button');
+      panel.setAttribute('tabindex', '0');
+      panel.setAttribute('aria-label', 'View screenshot');
+
+      function activatePanel() {
+        openLightbox(match[1], panel.getAttribute('aria-label'));
+      }
+
+      panel.addEventListener('click', activatePanel);
+      panel.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          activatePanel();
+        }
+      });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    imageModal.addEventListener('click', function(event) {
+      if (event.target === imageModal) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && imageModal.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  })();
 </script>
