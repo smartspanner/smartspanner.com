@@ -44,6 +44,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Prepare maintenance reports and KPI dashboards
 - Manage fire risk assessment observations and corrective actions
 - Support app users who prefer English, German, French, Spanish, Portuguese, Lithuanian, Thai, or Malay
+- Translate supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, into each user's app language while keeping the original accessible
 
 ## Core Features
 
@@ -63,10 +64,13 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - IoT condition monitoring: use wireless sensors for vibration, temperature, energy, flow, and machine health.
 - Integrations and API: connect Smartspanner data to Power BI, Excel, Python, ERP systems, and other reporting tools.
 - Multi-language app interface: support English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay users in the Smartspanner app.
+- In-app translation: supported procedures, checklists, instructions, descriptions, and comments can be shown in each user's selected language while retaining access to the original text.
 
 ## Language Support
 
 The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay. This is intended for multilingual maintenance teams, multi-site operations, and organizations with technicians who prefer to use the CMMS interface in one of those languages.
+
+Smartspanner also supports in-app translation for supported user-entered maintenance content. Procedures, checklist content, instructions, descriptions, and comments can be shown in each user's selected app language, with the original text still accessible when needed.
 
 Sales, onboarding, and customer support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, or Malaysia.
 

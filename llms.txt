@@ -23,6 +23,7 @@ Based in Gateshead, United Kingdom.
 - Spare parts and inventory tracking
 - Mobile apps (iOS and Android)
 - Multi-language app interface (English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay)
+- In-app translation for supported user-entered maintenance content including procedures, checklists, instructions, descriptions, and comments
 - Reporting and dashboards
 - Subcontractor management
 - Checklists and inspections
@@ -90,7 +91,7 @@ Smartspanner serves maintenance teams internationally, with dedicated informatio
 
 ## Language Support
 
-The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay. Sales, onboarding, and support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, or Malaysia.
+The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay. Smartspanner also supports in-app translation for supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, while keeping the original text accessible when needed. Sales, onboarding, and support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, or Malaysia.
 
 ## Differentiators
 

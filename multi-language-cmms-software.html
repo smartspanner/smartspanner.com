@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Multi-language CMMS Software
-description: "Smartspanner CMMS supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay app interfaces for multilingual maintenance teams. Sales and support are currently provided in English."
-keywords: multi-language cmms software, multilingual maintenance software, cmms german interface, cmms french interface, cmms spanish interface, cmms portuguese interface, cmms lithuanian interface, cmms thai interface, cmms malay interface, multilingual cmms
+description: "Smartspanner CMMS supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, and Malay app interfaces, with in-app translation for maintenance procedures, checklists, instructions, descriptions, and comments."
+keywords: multi-language cmms software, multilingual maintenance software, cmms german interface, cmms french interface, cmms spanish interface, cmms portuguese interface, cmms lithuanian interface, cmms thai interface, cmms malay interface, in-app translation cmms, multilingual cmms
 ---
 
 <style>
@@ -15,6 +15,39 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
     border-radius: 6px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
     object-fit: cover;
+  }
+
+  .translation-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .translation-step {
+    background: #fff;
+    padding: 28px;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .translation-step i {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .translation-step h3 {
+    color: var(--color-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 991px) {
+    .translation-flow {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
@@ -70,7 +103,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/gb.svg' | relative_url }}" alt="United Kingdom flag">
             </div>
             <h3>English</h3>
-            <p>The default language for the Smartspanner website, sales process, onboarding, and support.</p>
           </div>
         </div>
 
@@ -80,7 +112,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/de.svg' | relative_url }}" alt="Germany flag">
             </div>
             <h3>German</h3>
-            <p>German app interface support for teams using Smartspanner across German-speaking sites.</p>
           </div>
         </div>
 
@@ -90,7 +121,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/fr.svg' | relative_url }}" alt="France flag">
             </div>
             <h3>French</h3>
-            <p>French app interface support for maintenance teams that prefer to work in French.</p>
           </div>
         </div>
 
@@ -100,7 +130,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/es.svg' | relative_url }}" alt="Spain flag">
             </div>
             <h3>Spanish</h3>
-            <p>Spanish app interface support for multilingual maintenance and operations teams.</p>
           </div>
         </div>
 
@@ -110,7 +139,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/pt.svg' | relative_url }}" alt="Portugal flag">
             </div>
             <h3>Portuguese</h3>
-            <p>Portuguese app interface support for maintenance teams working across Portuguese-speaking sites.</p>
           </div>
         </div>
 
@@ -120,7 +148,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/lt.svg' | relative_url }}" alt="Lithuania flag">
             </div>
             <h3>Lithuanian</h3>
-            <p>Lithuanian app interface support for maintenance teams with Lithuanian-speaking users.</p>
           </div>
         </div>
 
@@ -130,7 +157,6 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/th.svg' | relative_url }}" alt="Thailand flag">
             </div>
             <h3>Thai</h3>
-            <p>Thai app interface support for maintenance teams with Thai-speaking users.</p>
           </div>
         </div>
 
@@ -140,8 +166,44 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
               <img class="language-flag" src="{{ '/assets/img/flags/my.svg' | relative_url }}" alt="Malaysia flag">
             </div>
             <h3>Malay</h3>
-            <p>Malay app interface support for maintenance teams with Malay-speaking users.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-App Translation -->
+  <section id="in-app-translation">
+    <div class="container">
+      <div class="section-header">
+        <h2>In-App Translation for Maintenance Content</h2>
+        <p>Smartspanner can translate the maintenance information your team creates, not just the fixed app menus.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p>Procedures, checklists, instructions, descriptions, and comments can be shown in each user's selected language, so technicians can work from the same source information without needing every note to be rewritten manually.</p>
+          <p>The original text remains accessible when needed, helping supervisors and multilingual teams check the source wording while giving each user a more practical day-to-day view.</p>
+        </div>
+      </div>
+
+      <div class="translation-flow">
+        <div class="translation-step">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <h3>Create Once</h3>
+          <p>Add procedures, checklist items, work instructions, asset descriptions, and comments in the language your team uses at the source.</p>
+        </div>
+
+        <div class="translation-step">
+          <i class="fa-solid fa-language"></i>
+          <h3>View Locally</h3>
+          <p>Users see supported maintenance content in their own app language setting, reducing friction for multilingual teams and multi-site operations.</p>
+        </div>
+
+        <div class="translation-step">
+          <i class="fa-solid fa-file-lines"></i>
+          <h3>Keep the Original</h3>
+          <p>The original wording stays available for reference, audit, review, and cases where exact source text matters.</p>
         </div>
       </div>
     </div>
