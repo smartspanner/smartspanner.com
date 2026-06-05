@@ -17,6 +17,40 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
     object-fit: cover;
   }
 
+  .language-grid {
+    margin-top: 34px;
+  }
+
+  .language-card {
+    display: flex;
+    min-height: 150px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 28px 20px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .language-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .language-card h3 {
+    color: var(--color-default);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #ebedef;
+  }
+
   .translation-flow {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -123,9 +157,9 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
       </div>
 
-      <div class="row gy-4 justify-content-center">
+      <div class="language-grid row gy-4 justify-content-center">
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/gb.svg' | relative_url }}" alt="United Kingdom flag">
             </div>
@@ -134,7 +168,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/de.svg' | relative_url }}" alt="Germany flag">
             </div>
@@ -143,7 +177,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/fr.svg' | relative_url }}" alt="France flag">
             </div>
@@ -152,7 +186,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/es.svg' | relative_url }}" alt="Spain flag">
             </div>
@@ -161,7 +195,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/pt.svg' | relative_url }}" alt="Portugal flag">
             </div>
@@ -170,7 +204,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/lt.svg' | relative_url }}" alt="Lithuania flag">
             </div>
@@ -179,7 +213,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/th.svg' | relative_url }}" alt="Thailand flag">
             </div>
@@ -188,7 +222,7 @@ keywords: multi-language cmms software, multilingual maintenance software, cmms 
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="service-item">
+          <div class="language-card">
             <div class="icon">
               <img class="language-flag" src="{{ '/assets/img/flags/my.svg' | relative_url }}" alt="Malaysia flag">
             </div>
