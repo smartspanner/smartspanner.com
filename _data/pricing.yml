@@ -33,6 +33,7 @@ plans:
       - Subcontractors
       - Failure Codes
       - Asset Labels
+      - Spare Part Labels
       - Technician Leave
 
   - name: Advanced
@@ -52,10 +53,10 @@ plans:
       - Procedures
       - Subcontractors
       - Failure Codes
-      - Technician Leave
-    highlighted:
       - Asset Labels
       - Spare Part Labels
+      - Technician Leave
+    highlighted:
       - Check Lists
       - Condition Monitoring
       - Statistics
