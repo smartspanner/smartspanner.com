@@ -39,8 +39,8 @@ Based in Gateshead, United Kingdom.
 All prices are per user, per month. 14-day free trial included. No credit card required.
 
 - Basic: £15/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
-- Standard: £21/user/month — Adds procedures, subcontractors, failure codes, asset labels
-- Advanced: £27/user/month — Adds checklists, condition monitoring, statistics, purchasing, API access
+- Standard: £21/user/month — Adds procedures, subcontractors, failure codes, asset labels, technician leave
+- Advanced: £27/user/month — Adds checklists, condition monitoring, statistics, purchasing, work permits, API access
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 

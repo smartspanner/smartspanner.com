@@ -79,8 +79,8 @@ Sales, onboarding, and customer support are currently provided in English from t
 Smartspanner pricing is per user per month and includes a 14-day free trial with no credit card required.
 
 - Basic: GBP 15/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
-- Standard: GBP 21/user/month. Adds procedures, subcontractors, failure codes, and asset labels.
-- Advanced: GBP 27/user/month. Adds checklists, condition monitoring, statistics, purchasing, and API access.
+- Standard: GBP 21/user/month. Adds procedures, subcontractors, failure codes, asset labels, and technician leave.
+- Advanced: GBP 27/user/month. Adds checklists, condition monitoring, statistics, purchasing, work permits, and API access.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 

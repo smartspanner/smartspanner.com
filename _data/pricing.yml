@@ -33,7 +33,7 @@ plans:
       - Subcontractors
       - Failure Codes
       - Asset Labels
-      - Technician Availability
+      - Technician Leave
 
   - name: Advanced
     price: 27
@@ -52,7 +52,7 @@ plans:
       - Procedures
       - Subcontractors
       - Failure Codes
-      - Technician Availability
+      - Technician Leave
     highlighted:
       - Asset Labels
       - Spare Part Labels
@@ -60,6 +60,7 @@ plans:
       - Condition Monitoring
       - Statistics
       - Purchasing
+      - Work Permits
       - Asset Lockout
       - Fire Risk Assessments
       - "Risk Assessments *coming soon"
