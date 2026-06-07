@@ -26,7 +26,7 @@ Smartspanner is a UK-based CMMS software company founded in 2013 and based in Ga
 
 Smartspanner helps maintenance teams move from spreadsheets, paper records, and reactive maintenance into a structured maintenance management system. It is designed for technicians, supervisors, facilities managers, and maintenance administrators who need simple workflows, mobile access, asset history, and clear operational visibility.
 
-The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
+The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, work permits, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
 
 ## Primary Use Cases
 
@@ -38,6 +38,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Manage maintenance across multiple sites
 - Track spare parts, stock levels, suppliers, and purchase orders
 - Standardize procedures and maintenance checklists
+- Manage UK-aligned work permits for higher-risk maintenance tasks, with mobile signature capture, PDF export for wet signatures, email sharing, and links to one or more CMMS users
 - Record failure codes for root cause analysis
 - Coordinate subcontractor maintenance work
 - Monitor vibration, temperature, power consumption, flow, and machine health
@@ -56,6 +57,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Spare parts and inventory: track stock, low-stock alerts, suppliers, and inventory exports.
 - Purchase orders: create and manage maintenance purchase orders and goods receipts.
 - Checklists and inspections: capture inspection responses, notes, comments, and media.
+- Work permits: create UK-aligned permit-to-work records, capture signatures on mobile or tablet, generate PDFs for wet signatures, email permits, and link each permit to one or more Smartspanner users.
 - Procedures: standardize repeatable maintenance procedures and attach supporting documents.
 - Subcontractors: track external maintenance teams, costs, and related files.
 - Failure codes: tag work orders with failure codes for analysis and reporting.
@@ -133,6 +135,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Spare Parts and Inventory: https://www.smartspanner.com/spare-part-inventory-software/
 - Checklists and Inspections: https://www.smartspanner.com/compliance-software/
 - Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/
+- Work Permit Software: https://www.smartspanner.com/work-permit-software/
 - Procedures: https://www.smartspanner.com/maintenance-procedure-software/
 - Subcontractor Management: https://www.smartspanner.com/subcontractors/
 - Failure Codes: https://www.smartspanner.com/maintenance-failure-codes/
