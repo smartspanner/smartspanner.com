@@ -623,6 +623,10 @@ img {
     padding: 130px 0 50px;
   }
 
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-split-text h1 {
     font-size: 30px;
     max-width: 100%;
