@@ -1358,11 +1358,13 @@ section {
 }
 
 .pricing ul {
-  padding: 20px 0;
+  margin-top: 0;
+  padding: 22px 0 20px;
   list-style: none;
   color: var(--color-secondary);
   text-align: left;
   line-height: 20px;
+  border-top: 1px solid #e2e5e9;
 }
 
 .pricing ul li {
