@@ -86,11 +86,6 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
       </div>
     </div>
 
-    <div class="text-center mt-5">
-      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary mx-1">Book a Demo</a>
-      <a href="{{ site.signup_url }}" class="btn btn-secondary mx-1">Start Free Trial</a>
-    </div>
-
     <div class="text-center mt-4">
       <p>UK sales are subject to VAT.</p>
     </div>
@@ -127,46 +122,51 @@ document.querySelectorAll('.currency-btn').forEach(function(btn) {
 });
 </script>
 
-<!-- IoT Section -->
-<section id="get-started" class="get-started section-bg">
+<!-- Pricing Support Section -->
+<section id="pricing-support" class="pricing-support section-bg">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="content">
-          <h3>IoT Condition Monitoring</h3>
-          <h4>Wireless sensors with cloud AI machine monitoring</h4>
-          <p>Smartspanner provides IoT condition monitoring services for vibration, temperature, energy management and flow meters. A fully subscription based system and easy plug and play wireless sensors enables 24/7 monitoring of critical plant.</p>
-          <p>With AI monitoring your systems in the cloud, a machine health algorithm provides alerts and fault diagnosis. We can also include alert integration into your Smartspanner account or provide IoT monitoring as a separate product without the need for a CMMS subscription.</p>
-          <ul class="list-unstyled mt-4">
-            <li><i class="fa-regular fa-circle-check"></i> Temperature</li>
-            <li><i class="fa-regular fa-circle-check"></i> 3 Axis Vibration</li>
-            <li><i class="fa-regular fa-circle-check"></i> Power Consumption</li>
-            <li><i class="fa-regular fa-circle-check"></i> Flow Meters</li>
-          </ul>
-          <div class="mt-4">
-            <a href="{{ '/iot-condition-monitoring' | relative_url }}" class="btn btn-secondary mx-1">Learn More</a>
-            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary mx-1">Talk to Us</a>
-          </div>
+    <div class="section-header">
+      <h2>Included With Every Plan</h2>
+      <p>Smartspanner pricing includes the practical services maintenance teams need after signup, not just the software license.</p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-support-item">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Unlimited Free Online Support</h3>
+          <p>Get help from the Smartspanner team without support ticket bundles, paid onboarding packages, or surprise service fees.</p>
         </div>
       </div>
-      <div class="col-lg-6">
-        <img src="{{ '/assets/img/features/sensors.png' | relative_url }}" class="img-fluid" alt="IoT Sensors" loading="lazy">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-support-item">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          <h3>Automatic Updates and Backups</h3>
+          <p>Feature updates, maintenance releases, and daily backups are handled for you, so your team can stay focused on maintenance work.</p>
+        </div>
       </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-support-item">
+          <i class="fa-solid fa-lock"></i>
+          <h3>Secure Cloud Access</h3>
+          <p>Use Smartspanner through a secure browser connection with mobile access for technicians and desktop access for managers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-demo-cta">
+      <div>
+        <h3>Not sure which plan fits your team?</h3>
+        <p>Book a demo and we will walk through your maintenance process, team size, and feature needs before you choose a package.</p>
+      </div>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary">Book a Demo</a>
     </div>
   </div>
 </section>
 
 {% include faq.html %}
-
-<!-- Post-FAQ CTA -->
-<section class="get-started section-bg">
-  <div class="container text-center">
-    <h3 style="font-size: 28px; color: var(--color-secondary); font-weight: 600; margin-bottom: 15px;">Ready to Get Started?</h3>
-    <p style="font-size: 16px; max-width: 500px; margin: 0 auto 25px;">See Smartspanner in action with a free demo, or start your 14-day trial today.</p>
-    <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
-    <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
-  </div>
-</section>
 
 <!-- FAQ Schema for SEO -->
 <script type="application/ld+json">
