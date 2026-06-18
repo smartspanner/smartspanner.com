@@ -1369,6 +1369,20 @@ section {
 .pricing ul li {
   padding: 10px 0 10px 30px;
   position: relative;
+  font-weight: 400;
+}
+
+.pricing ul li strong {
+  font-weight: 400;
+}
+
+.pricing ul li a {
+  color: inherit;
+}
+
+.pricing ul li a:hover {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .pricing ul i {
