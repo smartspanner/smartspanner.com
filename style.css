@@ -1428,6 +1428,13 @@ section {
   padding-bottom: 36px;
 }
 
+.pricing-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 420px));
+  justify-content: center;
+  gap: 24px;
+}
+
 .pricing-support-item {
   height: 100%;
   padding: 30px;
@@ -1457,14 +1464,16 @@ section {
 
 .pricing-demo-cta {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
   margin-top: 36px;
   padding: 30px;
   background: #ffffff;
   border: 1px solid #e7e9ee;
   box-shadow: 0 8px 28px -22px rgba(20, 45, 100, 0.5);
+  text-align: center;
 }
 
 .pricing-demo-cta h3 {
@@ -1477,7 +1486,7 @@ section {
 .pricing-demo-cta p {
   color: var(--color-secondary);
   line-height: 1.55;
-  margin: 0;
+  margin: 0 auto;
   max-width: 680px;
 }
 
@@ -2403,9 +2412,12 @@ section {
     min-height: auto;
   }
 
+  .pricing-support-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .pricing-demo-cta {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .pricing-demo-cta .btn {
