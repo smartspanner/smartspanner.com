@@ -1319,7 +1319,6 @@ section {
   border: 2px solid var(--color-primary);
   border-top: 6px solid var(--color-primary);
   box-shadow: 0 18px 42px -14px rgba(20, 45, 100, 0.55);
-  transform: translateY(-10px) scale(1.03);
 }
 
 .pricing .box.plan-most-popular h3 {
