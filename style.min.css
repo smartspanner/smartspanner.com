@@ -1267,6 +1267,10 @@ section {
   padding-top: 20px;
 }
 
+.pricing > .container > .row {
+  padding-top: 18px;
+}
+
 .pricing .plan-description {
   min-height: 66px;
   margin: -4px 0 18px;
@@ -1288,11 +1292,13 @@ section {
 }
 
 .pricing .popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: center;
-  margin: -12px auto 18px;
   padding: 7px 18px;
   border-radius: 999px;
   background: var(--color-primary);
