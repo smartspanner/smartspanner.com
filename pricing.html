@@ -39,7 +39,11 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
           <h3>Basic</h3>
           <p class="plan-description">Ideal for small maintenance teams getting started with CMMS.</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="15" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">15</span><span>per user/month</span></h4>
-          <p class="plan-includes-note">Includes the shared core maintenance features.</p>
+          <ul>
+            {% for item in site.data.pricing.all_plans_include %}
+            <li><i class="fa-regular fa-circle-check"></i> <strong>{{ item }}</strong></li>
+            {% endfor %}
+          </ul>
           <div class="text-center" style="margin-top: 20px;">
             <a href="{{ site.signup_url }}" class="btn btn-primary" style="padding: 10px 30px; border-radius: 50px; font-size: 14px;">Start Free Trial</a>
           </div>

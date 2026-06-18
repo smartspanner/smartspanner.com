@@ -1312,17 +1312,6 @@ section {
   line-height: 1.45;
 }
 
-.pricing .plan-includes-note {
-  margin: 20px 0 0;
-  padding: 14px 16px;
-  border-radius: 6px;
-  background: #f8f9fb;
-  color: #52565e;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.45;
-}
-
 .pricing .box.plan-most-popular {
   position: relative;
   z-index: 2;
