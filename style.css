@@ -1258,6 +1258,112 @@ section {
   border-top-color: var(--color-primary);
 }
 
+.pricing .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing .box > .text-center {
+  margin-top: auto !important;
+  padding-top: 20px;
+}
+
+.pricing .all-plans-panel {
+  max-width: 920px;
+  margin: 0 auto 30px;
+  padding: 22px 28px;
+  border: 1px solid #e7e9ee;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px -22px rgba(20, 45, 100, 0.5);
+  text-align: center;
+}
+
+.pricing .all-plans-panel h3 {
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pricing .all-plans-panel ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing .all-plans-panel li {
+  padding: 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.pricing .all-plans-panel i {
+  position: static;
+  margin-right: 8px;
+  color: var(--color-primary);
+}
+
+.pricing .plan-description {
+  min-height: 66px;
+  margin: -4px 0 18px;
+  color: #52565e;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.pricing .plan-includes-note {
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: #f8f9fb;
+  color: #52565e;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.pricing .box.plan-most-popular {
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--color-primary);
+  border-top: 6px solid var(--color-primary);
+  box-shadow: 0 14px 34px -10px rgba(20, 45, 100, 0.42);
+  transform: translateY(-10px) scale(1.03);
+}
+
+.pricing .box.plan-most-popular h3 {
+  font-weight: 700;
+}
+
+.pricing .popular-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.7);
+}
+
+.pricing .box.plan-most-popular .popular-cta {
+  box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  padding: 12px 34px !important;
+}
+
 .pricing h3 {
   font-weight: 500;
   margin-bottom: 15px;
@@ -2245,6 +2351,19 @@ section {
   .pricing .box {
     max-width: 90%;
     margin: 0 auto 30px;
+  }
+
+  .pricing .box.plan-most-popular {
+    transform: none;
+    margin-top: 18px;
+  }
+
+  .pricing .all-plans-panel ul {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing .plan-description {
+    min-height: auto;
   }
 
   /* Hero */

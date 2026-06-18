@@ -3,32 +3,15 @@ plans:
     price: 15
     currency: £
     period: per user/month
-    features:
-      - Works order management
-      - Preventative maintenance scheduling
-      - Dashboard
-      - Email reminders
-      - Asset management & hierarchy
-      - Multi-site Deployment
-      - Spare parts
-      - Excel reporting
-      - Mobile apps
+    description: Ideal for small maintenance teams getting started with CMMS.
+    differentiators: []
 
   - name: Standard
     price: 21
     currency: £
     period: per user/month
-    features:
-      - Works Order Management
-      - Preventative Maintenance scheduling
-      - Dashboard
-      - Email reminders and team notifications
-      - Asset Management & hierarchy
-      - Multi-site Deployment
-      - Spare Parts
-      - Excel Reporting
-      - Mobile Apps
-    highlighted:
+    description: For growing businesses requiring procedures and contractor management.
+    differentiators:
       - Procedures
       - Subcontractors
       - Failure Codes
@@ -40,37 +23,22 @@ plans:
     price: 27
     currency: £
     period: per user/month
-    features:
-      - Works Order Management
-      - Preventative Maintenance scheduling
-      - Dashboard
-      - Email reminders and team notifications
-      - Asset Management & hierarchy
-      - Multi-site Deployment
-      - Spare Parts
-      - Excel Reporting
-      - Mobile Apps
-      - Procedures
-      - Subcontractors
-      - Failure Codes
-      - Asset Labels
-      - Spare Part Labels
-      - Technician Leave
-    highlighted:
+    description: Complete maintenance management with purchasing, condition monitoring and analytics.
+    differentiators:
       - Check Lists
       - Condition Monitoring
       - Statistics
       - Purchasing
       - Permits to Work
       - Asset Lockout
+      - API Access
       - Fire Risk Assessments
       - "Risk Assessments *coming soon"
 
 all_plans_include:
-  - Unlimited works orders
-  - Unlimited file storage (10Mb per file limit)
-  - Automatic updates of features
-  - Daily Backup
-  - Online credit card billing
-  - Unlimited telephone and online support
-  - 14 days free trial
+  - Work Orders
+  - PM Scheduling
+  - Asset Management
+  - Mobile Apps
+  - Spare Parts
+  - Multi-site Support

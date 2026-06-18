@@ -10,7 +10,16 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
 <section id="pricing" class="pricing">
   <div class="container">
     <div class="section-header text-center">
-      <p>Choose one of our packages below that suits your needs. Prices are per user, per month.<br>We take care of all the updates, backups and security so you can focus on running your business.</p>
+      <p>Used by 100+ companies worldwide from fisheries, to theme parks to aerospace.</p>
+    </div>
+
+    <div class="all-plans-panel">
+      <h3>All Plans Include</h3>
+      <ul>
+        {% for item in site.data.pricing.all_plans_include %}
+        <li><i class="fa-regular fa-circle-check"></i> {{ item }}</li>
+        {% endfor %}
+      </ul>
     </div>
 
     <!-- Currency Selector -->
@@ -28,18 +37,9 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
       <div class="col-lg-4">
         <div class="box featured">
           <h3>Basic</h3>
+          <p class="plan-description">Ideal for small maintenance teams getting started with CMMS.</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="15" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">15</span><span>per user/month</span></h4>
-          <ul>
-            <li><i class="fa-regular fa-circle-check"></i> Works order management</li>
-            <li><i class="fa-regular fa-circle-check"></i> Preventative maintenance scheduling</li>
-            <li><i class="fa-regular fa-circle-check"></i> Dashboard</li>
-            <li><i class="fa-regular fa-circle-check"></i> Email reminders</li>
-            <li><i class="fa-regular fa-circle-check"></i> Asset management & hierarchy</li>
-            <li><i class="fa-regular fa-circle-check"></i> Multi-site Deployment</li>
-            <li><i class="fa-regular fa-circle-check"></i> Spare parts</li>
-            <li><i class="fa-regular fa-circle-check"></i> Excel reporting</li>
-            <li><i class="fa-regular fa-circle-check"></i> Mobile apps</li>
-          </ul>
+          <p class="plan-includes-note">Includes the shared core maintenance features.</p>
           <div class="text-center" style="margin-top: 20px;">
             <a href="{{ site.signup_url }}" class="btn btn-primary" style="padding: 10px 30px; border-radius: 50px; font-size: 14px;">Start Free Trial</a>
           </div>
@@ -49,17 +49,9 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
       <div class="col-lg-4">
         <div class="box featured">
           <h3>Standard</h3>
+          <p class="plan-description">For growing businesses requiring procedures and contractor management.</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="21" data-usd="28" data-eur="25" data-aud="41" data-nzd="49">21</span><span>per user/month</span></h4>
           <ul>
-            <li><i class="fa-regular fa-circle-check"></i> Works Order Management</li>
-            <li><i class="fa-regular fa-circle-check"></i> Preventative Maintenance scheduling</li>
-            <li><i class="fa-regular fa-circle-check"></i> Dashboard</li>
-            <li><i class="fa-regular fa-circle-check"></i> Email reminders and team notifications</li>
-            <li><i class="fa-regular fa-circle-check"></i> Asset Management & hierarchy</li>
-            <li><i class="fa-regular fa-circle-check"></i> Multi-site Deployment</li>
-            <li><i class="fa-regular fa-circle-check"></i> Spare Parts</li>
-            <li><i class="fa-regular fa-circle-check"></i> Excel Reporting</li>
-            <li><i class="fa-regular fa-circle-check"></i> Mobile Apps</li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Procedures</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Subcontractors</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Failure Codes</strong></li>
@@ -74,25 +66,12 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
       </div>
 
       <div class="col-lg-4">
-        <div class="box featured">
+        <div class="box featured plan-most-popular">
+          <div class="popular-badge">Most Popular</div>
           <h3>Advanced</h3>
+          <p class="plan-description">Complete maintenance management with purchasing, condition monitoring and analytics.</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="27" data-usd="36" data-eur="31" data-aud="52" data-nzd="63">27</span><span>per user/month</span></h4>
           <ul>
-            <li><i class="fa-regular fa-circle-check"></i> Works Order Management</li>
-            <li><i class="fa-regular fa-circle-check"></i> Preventative Maintenance scheduling</li>
-            <li><i class="fa-regular fa-circle-check"></i> Dashboard</li>
-            <li><i class="fa-regular fa-circle-check"></i> Email reminders and team notifications</li>
-            <li><i class="fa-regular fa-circle-check"></i> Asset Management & hierarchy</li>
-            <li><i class="fa-regular fa-circle-check"></i> Multi-site Deployment</li>
-            <li><i class="fa-regular fa-circle-check"></i> Spare Parts</li>
-            <li><i class="fa-regular fa-circle-check"></i> Excel Reporting</li>
-            <li><i class="fa-regular fa-circle-check"></i> Mobile Apps</li>
-            <li><i class="fa-regular fa-circle-check"></i> Procedures</li>
-            <li><i class="fa-regular fa-circle-check"></i> Subcontractors</li>
-            <li><i class="fa-regular fa-circle-check"></i> Failure Codes</li>
-            <li><i class="fa-regular fa-circle-check"></i> Asset Labels</li>
-            <li><i class="fa-regular fa-circle-check"></i> Spare Part Labels</li>
-            <li><i class="fa-regular fa-circle-check"></i> Technician Leave</li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Check Lists</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Condition Monitoring</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Statistics</strong></li>
@@ -104,7 +83,7 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
             <li><i class="fa-regular fa-circle-check"></i> <strong>Risk Assessments *coming soon</strong></li>
           </ul>
           <div class="text-center" style="margin-top: 20px;">
-            <a href="{{ site.signup_url }}" class="btn btn-primary" style="padding: 10px 30px; border-radius: 50px; font-size: 14px;">Start Free Trial</a>
+            <a href="{{ site.signup_url }}" class="btn btn-primary popular-cta" style="padding: 10px 30px; border-radius: 50px; font-size: 14px;">Start Free Trial</a>
           </div>
         </div>
       </div>
@@ -119,14 +98,6 @@ hero_image: /assets/img/compressed-air-maintenance.JPG
       <p>UK sales are subject to VAT.</p>
     </div>
 
-    <div class="section-header text-center mt-5">
-      <h3>All Plans Include:</h3>
-      <ul class="list-unstyled mt-3">
-        {% for item in site.data.pricing.all_plans_include %}
-        <li><i class="fa-regular fa-circle-check"></i> {{ item }}</li>
-        {% endfor %}
-      </ul>
-    </div>
   </div>
 </section>
 
