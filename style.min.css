@@ -1431,9 +1431,10 @@ section {
 
 .pricing-support-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 340px));
-  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .pricing-support-item {
@@ -2411,10 +2412,6 @@ section {
     min-height: auto;
   }
 
-  .pricing-support-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
   .pricing-demo-cta {
     align-items: center;
   }
@@ -2537,6 +2534,23 @@ section {
 
 /* Responsive adjustments - Small phones */
 @media (max-width: 576px) {
+  .pricing-support-item {
+    padding: 16px 14px;
+  }
+
+  .pricing-support-item i {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .pricing-support-item h3 {
+    font-size: 15px;
+  }
+
+  .pricing-support-item p {
+    font-size: 13px;
+  }
+
   .alt-services .img-bg {
     min-height: 200px;
   }
