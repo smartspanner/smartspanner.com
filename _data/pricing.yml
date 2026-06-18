@@ -36,9 +36,12 @@ plans:
       - "Risk Assessments *coming soon"
 
 all_plans_include:
-  - Work Orders
-  - PM Scheduling
-  - Asset Management
+  - Works order management
+  - Preventative maintenance scheduling
+  - Dashboard
+  - Email reminders
+  - Asset management & hierarchy
+  - Multi-site Deployment
+  - Spare parts
+  - Excel reporting
   - Mobile Apps
-  - Spare Parts
-  - Multi-site Support
