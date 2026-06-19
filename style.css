@@ -524,6 +524,18 @@ img {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
+.hero-video-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.hero-video-trigger i {
+  font-size: 12px;
+}
+
 .hero-split-trust {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
@@ -540,6 +552,63 @@ img {
   height: auto;
   border-radius: 14px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.hero-video-modal.active {
+  display: flex;
+}
+
+.hero-video-modal-dialog {
+  position: relative;
+  width: min(960px, 96vw);
+}
+
+.hero-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+}
+
+.hero-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hero-video-modal-close {
+  position: absolute;
+  top: -52px;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hero-video-modal-open {
+  overflow: hidden;
 }
 
 .screenshot-expandable {

@@ -54,6 +54,53 @@
     });
   }
 
+  // Hero introduction video modal
+  (function() {
+    const videoTrigger = document.querySelector('.hero-video-trigger');
+    const videoModal = document.querySelector('.hero-video-modal');
+
+    if (!videoTrigger || !videoModal) {
+      return;
+    }
+
+    const iframe = videoModal.querySelector('iframe');
+    const closeButton = videoModal.querySelector('.hero-video-modal-close');
+    let lastFocusedElement = null;
+
+    function openVideoModal() {
+      lastFocusedElement = document.activeElement;
+      iframe.src = videoTrigger.dataset.videoSrc;
+      videoModal.classList.add('active');
+      videoModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('hero-video-modal-open');
+      closeButton.focus();
+    }
+
+    function closeVideoModal() {
+      videoModal.classList.remove('active');
+      videoModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('hero-video-modal-open');
+      iframe.removeAttribute('src');
+
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    videoTrigger.addEventListener('click', openVideoModal);
+    closeButton.addEventListener('click', closeVideoModal);
+    videoModal.addEventListener('click', function(event) {
+      if (event.target === videoModal) {
+        closeVideoModal();
+      }
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && videoModal.classList.contains('active')) {
+        closeVideoModal();
+      }
+    });
+  })();
+
   // Click-to-expand product screenshots
   (function() {
     const imageModal = document.createElement('div');
