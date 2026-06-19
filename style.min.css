@@ -234,6 +234,7 @@ img {
   display: block;
   width: 260px;
   height: auto;
+  transform: translateY(4px);
 }
 
 /* Navigation */
