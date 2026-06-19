@@ -232,7 +232,8 @@ img {
 
 .header .logo img {
   display: block;
-  height: 58px;
+  width: 260px;
+  height: auto;
 }
 
 /* Navigation */
