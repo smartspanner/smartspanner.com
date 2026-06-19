@@ -496,10 +496,10 @@ img {
   background: var(--color-primary) !important;
   color: #000 !important;
   border: 2px solid var(--color-primary) !important;
-  padding: 14px 28px !important;
+  padding: 13px 25px !important;
   border-radius: 8px !important;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .hero-split-btn-primary:hover {
