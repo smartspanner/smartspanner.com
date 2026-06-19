@@ -21,6 +21,7 @@
 <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}">
 
 {% include structured-data.html %}
+{% assign css_version = site.time | date: '%s' %}
 
 <!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,7 @@
 <link rel="preload" as="image" href="{{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }}" fetchpriority="high">
 
 <!-- Preload critical CSS -->
-<link rel="preload" href="{{ '/style.min.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" as="style">
 
 <!-- Google Fonts - reduced weights, display swap for faster text rendering -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -53,4 +54,4 @@
 <script src="https://t.contentsquare.net/uxa/15dfb80347065.js"></script>
 
 <!-- Main stylesheet (minified) -->
-<link href="{{ '/style.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">
