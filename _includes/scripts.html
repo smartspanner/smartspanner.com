@@ -156,7 +156,7 @@
     }
 
     document.querySelectorAll('main img[src*="/assets/img/"], .hero-split-img').forEach(function(img) {
-      if (img.closest('a')) {
+      if (img.closest('a') || img.classList.contains('no-lightbox')) {
         return;
       }
 
@@ -167,6 +167,10 @@
     });
 
     document.querySelectorAll('.img-bg').forEach(function(panel) {
+      if (panel.classList.contains('no-lightbox')) {
+        return;
+      }
+
       const backgroundImage = window.getComputedStyle(panel).backgroundImage;
       const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
 
