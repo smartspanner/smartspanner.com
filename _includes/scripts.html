@@ -112,8 +112,36 @@
     const modalImage = imageModal.querySelector('img');
     const closeButton = imageModal.querySelector('button');
 
+    function resolveFullSizeScreenshot(src) {
+      let url;
+
+      try {
+        url = new URL(src, window.location.href);
+      } catch (error) {
+        return src;
+      }
+
+      const featureMatch = url.pathname.match(/^(.*\/assets\/img\/features\/)([^/]+)-thumb\.webp$/);
+      if (featureMatch) {
+        url.pathname = featureMatch[1] + featureMatch[2] + (featureMatch[2] === 'purchasing' ? '.jpg' : '.png');
+        url.search = '';
+        url.hash = '';
+        return url.href;
+      }
+
+      const laptopMatch = url.pathname.match(/^(.*\/assets\/img\/)laptop-thumb\.webp$/);
+      if (laptopMatch) {
+        url.pathname = laptopMatch[1] + 'laptop.png';
+        url.search = '';
+        url.hash = '';
+        return url.href;
+      }
+
+      return src;
+    }
+
     function openLightbox(src, alt) {
-      modalImage.src = src;
+      modalImage.src = resolveFullSizeScreenshot(src);
       modalImage.alt = alt || 'Smartspanner screenshot';
       imageModal.classList.add('active');
       imageModal.setAttribute('aria-hidden', 'false');
