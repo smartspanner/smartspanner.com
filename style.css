@@ -1080,6 +1080,55 @@ section {
   color: var(--color-primary);
 }
 
+.implementation-quote-card {
+  position: relative;
+  min-height: 300px;
+  margin: 0;
+  padding: 56px 48px 48px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #fff8df 100%);
+  border: 1px solid rgba(82, 86, 94, 0.14);
+  border-left: 6px solid var(--color-primary);
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(82, 86, 94, 0.12);
+  overflow: hidden;
+}
+
+.implementation-quote-card:after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  width: 190px;
+  height: 190px;
+  background: rgba(254, 185, 0, 0.16);
+  border-radius: 50%;
+}
+
+.implementation-quote-mark {
+  position: absolute;
+  top: 12px;
+  left: 28px;
+  color: rgba(254, 185, 0, 0.38);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 118px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.implementation-quote-card blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
 /* Industries Cards */
 .constructions .card-item {
   border: 1px solid rgba(82, 86, 94, 0.2);
@@ -2429,6 +2478,11 @@ section {
     margin-top: 20px;
   }
 
+  .implementation-quote-card {
+    min-height: 220px;
+    margin-top: 28px;
+  }
+
   /* Tables - make scrollable */
   table {
     display: block;
@@ -2468,6 +2522,19 @@ section {
 
   .section-header p {
     max-width: 100%;
+  }
+
+  .implementation-quote-card {
+    padding: 44px 28px 34px;
+  }
+
+  .implementation-quote-mark {
+    left: 18px;
+    font-size: 88px;
+  }
+
+  .implementation-quote-card blockquote {
+    font-size: 26px;
   }
 
   .pricing .box {
