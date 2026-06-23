@@ -1,38 +1,179 @@
 ---
-layout: feature
-title: Spare Parts & Inventory
-description: "Spare parts and inventory management software. Track stock levels, manage suppliers, and reduce downtime with Smartspanner CMMS."
-keywords: spare parts software, inventory management, maintenance spares
-hero_image: /assets/img/header-features.png
+layout: default
+title: Spare Parts Inventory Software
+description: "Spare parts inventory software for maintenance teams. Track critical spares, stock levels, suppliers, photos, low-stock alerts, and work order parts usage in Smartspanner."
+keywords: spare parts software, spare part inventory software, maintenance inventory software, spare parts management, CMMS inventory management
 ---
 
-<section id="service-details" class="service-details">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4">
-        <div class="services-list">
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="info d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>Spare Parts Inventory Software</h1>
+        </div>
+      </div>
+      <p>Track maintenance spares, critical parts, suppliers, stock levels, photos, and parts consumed on work orders in one CMMS.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn-get-started">Start Free Trial</a>
+    </div>
+  </div>
+
+  <div class="carousel" id="hero-carousel">
+    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/machine-maintenace.JPG' | relative_url }})"></div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Intro -->
+  <section class="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-header">
+            <h2>Keep Critical Spares Under Control</h2>
+          </div>
+          <p>Maintenance inventory is different from general stock control. The important question is not just how many items are on the shelf, but whether the right spare part is available when equipment fails or planned work is due.</p>
+          <p>Smartspanner keeps spare parts connected to assets, work orders, suppliers, and low-stock reporting so maintenance teams can see what they have, where it is used, and when it needs attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="alt-services section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/spare-part-thumb.webp' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-5 d-flex flex-column">
+          <h3>How Smartspanner Inventory Works</h3>
+          <p>Create a practical spare parts list, then connect parts to the maintenance work that consumes them.</p>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <div>
+              <h4>Build Your Spares List</h4>
+              <p>Store part names, stock quantities, locations, suppliers, alternatives, and photos in one searchable list.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-star"></i>
+            <div>
+              <h4>Mark Critical Spares</h4>
+              <p>Flag the parts that matter most for downtime, safety, production, or compliance.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-link"></i>
+            <div>
+              <h4>Connect Parts to Assets</h4>
+              <p>View relevant spares from the asset record so technicians know what belongs with each machine or system.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <div>
+              <h4>Consume Parts on Work Orders</h4>
+              <p>Record parts used during maintenance so stock and job cost visibility stay tied to real work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="capabilities" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Inventory Capabilities</h2>
+        <p>Focused controls for the spares maintenance teams actually depend on.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-list"></i></div>
+            <h3>Spares List</h3>
+            <p>Keep a central list of spare parts with practical maintenance details.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3>Critical Spare Parts</h3>
+            <p>Filter and prioritise spares that carry the highest operational risk.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-bell"></i></div>
+            <h3>Low Stock Alerts</h3>
+            <p>See low-stock parts on the dashboard and in weekly low-stock report emails.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>Part Photos</h3>
+            <p>Add a photograph to each spare so technicians can identify the correct item quickly.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-truck-field"></i></div>
+            <h3>Suppliers and Alternatives</h3>
+            <p>Record suppliers, alternative parts, and alternative suppliers for each spare.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Multi-Site Inventory</h3>
+            <p>Manage spare parts across multiple locations without losing site-level visibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Orders -->
+  <section id="work-orders" class="section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-header">
+            <h2>Inventory Connected to Work Orders</h2>
+          </div>
+          <p>Spare parts become more useful when they are linked to maintenance activity. Smartspanner lets teams consume parts against <a href="{{ '/work-order-management-software' | relative_url }}">work orders</a>, view spares from asset records, and keep maintenance history tied to the parts used.</p>
           <ul>
-            <li><i class="fa-solid fa-circle-check"></i> Spares list</li>
-            <li><i class="fa-solid fa-circle-check"></i> Critical spare parts</li>
-            <li><i class="fa-solid fa-circle-check"></i> Low stock alerts on dashboard</li>
-            <li><i class="fa-solid fa-circle-check"></i> Weekly low stock report email</li>
-            <li><i class="fa-solid fa-circle-check"></i> Photograph of each spare part</li>
-            <li><i class="fa-solid fa-circle-check"></i> Multi-site inventory management</li>
+            <li><i class="fa-solid fa-check-double"></i> See relevant spares from the asset record page</li>
+            <li><i class="fa-solid fa-check-double"></i> Record parts used during reactive and planned work</li>
+            <li><i class="fa-solid fa-check-double"></i> Use mobile apps to manage spares on site</li>
           </ul>
         </div>
       </div>
-
-      <div class="col-lg-8">
-        <img src="{{ '/assets/img/features/spare-part-thumb.webp' | relative_url }}" alt="Spare Parts" class="img-fluid services-img" loading="lazy">
-        <h3>Never run out of spare parts again with inventory management software.</h3>
-        <p>Store all spare parts in Smartspanner and identify your critical spare parts. Parts are consumed by adding them to works orders and manage your inventory with weekly automated reports and dashboard alerts.</p>
-        <ul>
-          <li><i class="fa-solid fa-circle-check"></i> Filter out critical spares</li>
-          <li><i class="fa-solid fa-circle-check"></i> View spares per asset from the asset record page</li>
-          <li><i class="fa-solid fa-circle-check"></i> Alternative spares and alternative suppliers for each spare</li>
-          <li><i class="fa-solid fa-circle-check"></i> Manage spares with our mobile apps</li>
-        </ul>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="get-started">
+    <div class="container text-center">
+      <h3 style="font-size: 32px; color: var(--color-secondary); font-weight: 600; margin-bottom: 18px;">Know What Parts You Have Before Work Starts</h3>
+      <p style="font-size: 17px; max-width: 620px; margin: 0 auto 28px;">Track spares, critical items, suppliers, low-stock alerts, and parts consumed on work orders in Smartspanner.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+    </div>
+  </section>
+
+</main>
