@@ -4,6 +4,7 @@ title: Contact Smartspanner
 description: Contact Smartspanner for general enquiries, support direction, sales questions, and account help. Product demos can be booked through our dedicated demo page.
 keywords: smartspanner, smartspanner cmms, cmms system uk
 hero_image: /assets/img/contact-header.jpg
+whatsapp_badge: true
 ---
 
 <!-- Contact Section -->
@@ -28,6 +29,14 @@ hero_image: /assets/img/contact-header.jpg
             <div>
               <h4>Email</h4>
               <p><a href="mailto:sales@smartspanner.com">sales@smartspanner.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/{{ site.whatsapp.number }}?text={{ site.whatsapp.message | uri_escape }}" target="_blank" rel="noopener">{{ site.whatsapp.display }}</a></p>
             </div>
           </div>
 
@@ -58,7 +67,8 @@ hero_image: /assets/img/contact-header.jpg
           <h3>General Enquiries</h3>
           <p>For anything else, email or call us directly and we will route your enquiry to the right person.</p>
           <p style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:sales@smartspanner.com">sales@smartspanner.com</a></p>
-          <p style="margin-bottom: 0;"><strong>Phone:</strong> <a href="tel:+441913001217">+44 (0) 191 300 1217</a></p>
+          <p style="margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+441913001217">+44 (0) 191 300 1217</a></p>
+          <p style="margin-bottom: 0;"><strong>WhatsApp:</strong> <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ site.whatsapp.message | uri_escape }}" target="_blank" rel="noopener">{{ site.whatsapp.display }}</a></p>
         </div>
       </div>
     </div>

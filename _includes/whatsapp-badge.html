@@ -1,0 +1,13 @@
+{% if site.whatsapp.number and page.whatsapp_badge %}
+{% assign whatsapp_message = page.whatsapp_message | default: site.whatsapp.message %}
+<a
+  href="https://wa.me/{{ site.whatsapp.number }}?text={{ whatsapp_message | uri_escape }}"
+  class="whatsapp-badge"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contact Smartspanner on WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  <span>WhatsApp us</span>
+</a>
+{% endif %}

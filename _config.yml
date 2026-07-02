@@ -21,6 +21,12 @@ app_url: https://app.smartspanner.com
 signup_url: https://app.smartspanner.com/signup
 support_url: https://support.smartspanner.com
 
+# WhatsApp contact
+whatsapp:
+  number: "447487591419"
+  display: "+44 7487 591419"
+  message: "Hi, I have a question about Smartspanner."
+
 # Social
 twitter: https://twitter.com/smartspanner
 linkedin: https://www.linkedin.com/company/smartspanner

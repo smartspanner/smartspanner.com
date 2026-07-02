@@ -2370,6 +2370,61 @@ section {
   opacity: 1;
 }
 
+/* WhatsApp contact badge */
+.whatsapp-badge {
+  position: fixed;
+  right: 15px;
+  bottom: 72px;
+  z-index: 99998;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 16px;
+  border-radius: 6px;
+  background: #25d366;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-badge:hover,
+.whatsapp-badge:focus {
+  background: #1ebe5d;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.whatsapp-badge i {
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .whatsapp-badge {
+    right: 12px;
+    bottom: 70px;
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    padding: 0;
+    border-radius: 6px;
+  }
+
+  .whatsapp-badge span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
+
 /* Service Details */
 .service-details .services-list {
   padding: 10px 30px;
