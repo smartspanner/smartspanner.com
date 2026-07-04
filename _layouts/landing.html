@@ -4,9 +4,9 @@
   {% include head.html %}
 </head>
 <body>
-  <!-- Minimal header: logo only -->
-  <header class="lp-header">
-    <div class="container">
+  <!-- Main-site header shell, logo only for focused landing pages -->
+  <header id="header" class="header landing-header d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
       <a href="{{ '/' | relative_url }}" class="logo">
         <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Smartspanner">
       </a>

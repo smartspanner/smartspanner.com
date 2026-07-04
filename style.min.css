@@ -237,6 +237,10 @@ img {
   transform: translateY(4px);
 }
 
+.landing-header {
+  position: relative;
+}
+
 /* Navigation */
 .navbar {
   display: flex;
