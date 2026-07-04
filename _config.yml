@@ -52,7 +52,15 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "lp/director/audit-ready-maintenance-checklist/thank-you.html"
+    values:
+      sitemap: false
+  - scope:
       path: "assets/resources/audit-ready-maintenance-checklist.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/resources/audit-ready-maintenance-checklist-for-manufacturers.html"
     values:
       sitemap: false
   - scope:
