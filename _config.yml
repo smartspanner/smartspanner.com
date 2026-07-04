@@ -52,6 +52,10 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "assets/resources/audit-ready-maintenance-checklist.html"
+    values:
+      sitemap: false
+  - scope:
       path: "error.html"
     values:
       sitemap: false
