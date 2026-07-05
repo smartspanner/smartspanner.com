@@ -5,6 +5,7 @@ Disallow: /error/
 Disallow: /book-a-demo-thank-you/
 Disallow: /lp/replace-spreadsheets-with-cmms/thank-you/
 Disallow: /audit-ready-maintenance-checklist/thank-you/
+Disallow: /maintenance-compliance-software/thank-you/
 Disallow: /lp/director/audit-ready-maintenance-checklist/thank-you/
 Disallow: /assets/resources/audit-ready-maintenance-checklist.html
 Disallow: /assets/resources/audit-ready-maintenance-checklist-for-manufacturers.html

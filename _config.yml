@@ -56,6 +56,10 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "maintenance-compliance-software/thank-you.html"
+    values:
+      sitemap: false
+  - scope:
       path: "assets/resources/audit-ready-maintenance-checklist.html"
     values:
       sitemap: false
