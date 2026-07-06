@@ -208,4 +208,125 @@
       }
     });
   })();
+
+  // HubSpot lead-generation forms. Keeps local styling while submitting to the shared HubSpot form.
+  (function() {
+    const leadForms = document.querySelectorAll('.js-hubspot-lead-form');
+
+    if (!leadForms.length) {
+      return;
+    }
+
+    function getCookie(name) {
+      const match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
+      return match ? decodeURIComponent(match[2]) : '';
+    }
+
+    function getValue(form, names) {
+      for (const name of names) {
+        const field = form.querySelector('[name="' + name + '"]');
+        if (field && field.value.trim()) {
+          return field.value.trim();
+        }
+      }
+
+      return '';
+    }
+
+    function buildFields(form) {
+      const fields = [
+        { name: 'firstname', value: getValue(form, ['FirstName', 'Name']) },
+        { name: 'email', value: getValue(form, ['WorkEmail', 'Email']) },
+        { name: 'company', value: getValue(form, ['CompanyName', 'Company']) },
+        { name: 'lead_gen_name', value: form.dataset.leadGenName || '' }
+      ];
+
+      return fields.filter(function(field) {
+        return field.value;
+      });
+    }
+
+    function showError(form) {
+      let error = form.querySelector('.hubspot-form-error');
+
+      if (!error) {
+        error = document.createElement('p');
+        error.className = 'hubspot-form-error';
+        error.style.color = '#b42318';
+        error.style.fontSize = '13px';
+        error.style.marginTop = '12px';
+        error.textContent = 'Sorry, something went wrong. Please try again or email sales@smartspanner.com.';
+        form.appendChild(error);
+      }
+
+      error.hidden = false;
+    }
+
+    function hideError(form) {
+      const error = form.querySelector('.hubspot-form-error');
+
+      if (error) {
+        error.hidden = true;
+      }
+    }
+
+    leadForms.forEach(function(form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        hideError(form);
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const portalId = form.dataset.hubspotPortalId;
+        const formId = form.dataset.hubspotFormId;
+        const region = form.dataset.hubspotRegion || 'na1';
+        const redirectUrl = form.dataset.hubspotRedirect;
+        const submitButton = form.querySelector('[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent : '';
+        const hutk = getCookie('hubspotutk');
+        const payload = {
+          fields: buildFields(form),
+          context: {
+            pageUri: window.location.href,
+            pageName: document.title
+          }
+        };
+
+        if (hutk) {
+          payload.context.hutk = hutk;
+        }
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Submitting...';
+        }
+
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+          .then(function(response) {
+            if (!response.ok) {
+              throw new Error('HubSpot form submission failed');
+            }
+
+            window.location.href = redirectUrl;
+          })
+          .catch(function() {
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalButtonText;
+            }
+
+            showError(form);
+          });
+      });
+    });
+  })();
 </script>
