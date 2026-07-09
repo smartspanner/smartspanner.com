@@ -1,13 +1,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+{% assign title_tag = page.meta_title | default: nil %}
+{% unless title_tag %}
+  {% capture title_tag %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
+{% endunless %}
+<title>{{ title_tag }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
 
 <!-- Open Graph / Social -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+<meta property="og:title" content="{{ title_tag }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">
