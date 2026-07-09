@@ -60,6 +60,26 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "facilities-management-software.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "privacy-policy.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "terms-of-service.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/resources/CMMS-Vendor-Selection.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/resources/spreadsheets-to-cmms-30-day-guide.html"
+    values:
+      sitemap: false
+  - scope:
       path: "assets/resources/audit-ready-maintenance-checklist.html"
     values:
       sitemap: false
