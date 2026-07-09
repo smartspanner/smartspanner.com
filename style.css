@@ -1821,6 +1821,70 @@ section {
   margin-right: 8px;
 }
 
+.demo-request-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 6px;
+  font-family: var(--font-default);
+  resize: vertical;
+}
+
+.demo-request-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.demo-request-form .demo-form-intro {
+  margin: 8px 0 18px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  color: var(--color-secondary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.demo-request-form .demo-choice-group {
+  display: grid;
+  gap: 10px;
+}
+
+.demo-request-form .demo-choice {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: var(--color-default);
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+}
+
+.demo-request-form .demo-choice input {
+  width: auto;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.demo-request-form .demo-choice:has(input:checked) {
+  border-color: var(--color-primary);
+  background: #fff8e1;
+}
+
+.demo-request-form .demo-choice-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 576px) {
+  .demo-request-form .demo-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Forms */
 .php-email-form {
   background: #fff;

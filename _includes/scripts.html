@@ -209,11 +209,11 @@
     });
   })();
 
-  // HubSpot lead-generation forms. Keeps local styling while submitting to the shared HubSpot form.
+  // HubSpot forms. Keeps local styling while submitting to HubSpot's Forms API.
   (function() {
-    const leadForms = document.querySelectorAll('.js-hubspot-lead-form');
+    const hubspotForms = document.querySelectorAll('.js-hubspot-lead-form, .js-hubspot-demo-form');
 
-    if (!leadForms.length) {
+    if (!hubspotForms.length) {
       return;
     }
 
@@ -233,16 +233,47 @@
       return '';
     }
 
-    function buildFields(form) {
-      const fields = [
+    function getCheckedValues(form, name) {
+      return Array.from(form.querySelectorAll('[name="' + name + '"]:checked'))
+        .map(function(field) {
+          return field.value.trim();
+        })
+        .filter(Boolean)
+        .join(';');
+    }
+
+    function buildLeadFields(form) {
+      return [
         { name: 'firstname', value: getValue(form, ['FirstName', 'Name']) },
         { name: 'email', value: getValue(form, ['WorkEmail', 'Email']) },
         { name: 'lead_gen_name', value: form.dataset.leadGenName || '' }
-      ];
-
-      return fields.filter(function(field) {
+      ].filter(function(field) {
         return field.value;
       });
+    }
+
+    function buildDemoFields(form) {
+      return [
+        { name: 'firstname', value: getValue(form, ['FirstName']) },
+        { name: 'lastname', value: getValue(form, ['LastName']) },
+        { name: 'email', value: getValue(form, ['Email']) },
+        { name: 'phone', value: getValue(form, ['Telephone']) },
+        { name: 'preferred_contact_method', value: getCheckedValues(form, 'PreferredContactMethod') },
+        { name: 'expected_number_of_users', value: getValue(form, ['ExpectedUsers']) },
+        { name: 'demo_reason', value: getCheckedValues(form, 'DemoReason') },
+        { name: 'demo_reason_other', value: getValue(form, ['DemoReasonOther']) },
+        { name: 'message', value: getValue(form, ['Message']) }
+      ].filter(function(field) {
+        return field.value;
+      });
+    }
+
+    function buildFields(form) {
+      if (form.classList.contains('js-hubspot-demo-form')) {
+        return buildDemoFields(form);
+      }
+
+      return buildLeadFields(form);
     }
 
     function showError(form) {
@@ -269,7 +300,7 @@
       }
     }
 
-    leadForms.forEach(function(form) {
+    hubspotForms.forEach(function(form) {
       form.addEventListener('submit', function(event) {
         event.preventDefault();
         hideError(form);
