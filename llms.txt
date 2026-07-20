@@ -4,7 +4,7 @@
 
 ## About
 
-Smartspanner is a simple, affordable CMMS platform designed for maintenance teams in manufacturing, facilities management, and industrial sectors. It helps teams move from spreadsheets and reactive maintenance to structured, data-driven operations.
+Smartspanner combines SME-friendly simplicity with enterprise-ready capability for maintenance teams in manufacturing, facilities management, and industrial sectors. Teams can start with straightforward CMMS workflows and introduce multi-site controls, inventory governance, reporting, APIs, and other advanced capabilities as requirements grow.
 
 Based in Gateshead, United Kingdom.
 
@@ -20,7 +20,7 @@ Based in Gateshead, United Kingdom.
 - Preventive maintenance scheduling and automation
 - Asset management with hierarchy and location structure
 - Multi-site deployment
-- Spare parts and inventory tracking
+- Multi-site inventory and stock control with categories, BIN locations, replenishment rules, intelligent perpetual counting, site-level Stock Control, and organisation-wide Inventory Performance
 - Mobile apps (iOS and Android)
 - Multi-language app interface (English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese)
 - In-app translation for supported user-entered maintenance content including procedures, checklists, instructions, descriptions, and comments
@@ -66,6 +66,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Preventive Maintenance: https://www.smartspanner.com/preventative-maintenance-software/
 - Work Order Management: https://www.smartspanner.com/work-order-management-software/
 - Asset Management: https://www.smartspanner.com/asset-management-software/
+- Inventory Management: https://www.smartspanner.com/spare-part-inventory-software/
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/
 - Multi-language CMMS: https://www.smartspanner.com/multi-language-cmms-software/
 - IoT Condition Monitoring: https://www.smartspanner.com/iot-condition-monitoring/
@@ -85,7 +86,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 
 ## Best Fit
 
-Smartspanner is best suited to small and mid-sized maintenance teams that need a practical CMMS without a long implementation project. Common use cases include replacing maintenance spreadsheets, managing planned preventive maintenance, tracking reactive work orders, keeping asset history, coordinating contractors, monitoring spare parts, controlling higher-risk work with permits to work, and giving technicians mobile access in the field.
+Smartspanner is suited to organisations ranging from small maintenance teams to global, multi-site companies. It keeps core workflows practical and quick to implement while providing enterprise-ready controls when required. Common use cases include replacing maintenance spreadsheets, managing planned preventive maintenance, tracking reactive work orders, keeping asset history, coordinating contractors, controlling multi-site inventory, managing higher-risk work with permits to work, and giving technicians mobile access in the field.
 
 ## Countries and Markets
 
@@ -99,6 +100,7 @@ The Smartspanner app interface supports English, German, French, Spanish, Portug
 
 - Fast implementation — up and running in under an hour
 - Simple to use — designed for technicians, not just administrators
+- Scalable by requirement — use straightforward core workflows or introduce advanced multi-site controls without changing systems
 - Affordable — starting from £15/user/month
 - Unlimited support — telephone and online support included at no extra cost
 - Mobile-first — native iOS and Android apps for field use

@@ -24,7 +24,7 @@ Smartspanner is a UK-based CMMS software company founded in 2013 and based in Ga
 
 ## Product Summary
 
-Smartspanner helps maintenance teams move from spreadsheets, paper records, and reactive maintenance into a structured maintenance management system. It is designed for technicians, supervisors, facilities managers, and maintenance administrators who need simple workflows, mobile access, asset history, and clear operational visibility.
+Smartspanner helps maintenance teams move from spreadsheets, paper records, and reactive maintenance into a structured maintenance management system. It combines SME-friendly simplicity with enterprise-ready capability, allowing organisations to introduce multi-site controls, inventory governance, reporting, APIs, and other advanced features according to their requirements.
 
 The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, permits to work, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
 
@@ -36,7 +36,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Track equipment, assets, sites, locations, and asset history
 - Give technicians mobile access to maintenance tasks
 - Manage maintenance across multiple sites
-- Track spare parts, stock levels, suppliers, and purchase orders
+- Control spare parts and consumables across sites with categories, BIN locations, replenishment rules, intelligent perpetual counting, inventory health, and purchase orders
 - Standardize procedures and maintenance checklists
 - Manage UK-aligned permits to work for higher-risk maintenance tasks, with mobile signature capture, PDF export for wet signatures, email sharing, and links to one or more CMMS users
 - Record failure codes for root cause analysis
@@ -54,7 +54,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Asset management: maintain asset records, hierarchy, locations, history, linked parts, and documents.
 - Mobile CMMS: iOS and Android apps for technicians in the field.
 - Multi-site maintenance: deploy across multiple sites with site-level permissions and dashboards.
-- Spare parts and inventory: track stock, low-stock alerts, suppliers, and inventory exports.
+- Spare parts and inventory: structure stock with categories and BIN locations, apply replenishment and verification rules, automate daily cycle-counting workloads, monitor site Stock Control, and compare organisation-wide Inventory Performance.
 - Purchase orders: create and manage maintenance purchase orders and goods receipts.
 - Checklists and inspections: capture inspection responses, notes, comments, and media.
 - Permits to work: create UK-aligned permit-to-work records, capture signatures on mobile or tablet, generate PDFs for wet signatures, email permits, and link each permit to one or more Smartspanner users.
@@ -90,7 +90,7 @@ Pricing page: https://www.smartspanner.com/pricing/
 
 ## Ideal Customers
 
-Smartspanner is most relevant for small and mid-sized maintenance teams that need a practical CMMS with quick setup and low complexity. It is useful when teams are moving away from spreadsheets or paper-based processes and need a system technicians will actually use.
+Smartspanner is relevant for organisations ranging from small and mid-sized maintenance teams to global companies managing multiple sites. It is useful when teams need quick setup and straightforward daily workflows alongside the option to introduce more structured, enterprise-ready controls as operations grow.
 
 Primary audiences include maintenance managers, facilities managers, operations managers, asset managers, reliability engineers, production managers, and business owners responsible for maintenance operations.
 
@@ -113,6 +113,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 
 - Fast implementation: teams can be up and running quickly, often in under an hour.
 - Simple user experience: designed for technicians and supervisors, not only administrators.
+- Scalable by requirement: organisations can introduce advanced multi-site, inventory, reporting, compliance, and integration capabilities without replacing the core CMMS.
 - Affordable pricing: entry plan starts from GBP 15/user/month.
 - Unlimited support: telephone and online support are included.
 - Mobile-first field workflow: native iOS and Android apps support technicians away from a desk.

@@ -16,7 +16,7 @@
 - title: Spare Parts & Inventory
   icon: fa-solid fa-gears
   link: spare-part-inventory-software
-  description: Spares part inventory management, Low stock alerts on dashboard. Export stock report to excel.
+  description: Multi-site stock control with categories, BIN locations, replenishment rules, intelligent cycle counting, inventory health and performance reporting.
 
 - title: Condition Based Monitoring
   icon: fa-solid fa-chart-line

@@ -1,179 +1,675 @@
 ---
 layout: default
-title: Spare Parts Inventory Software
-description: "Spare parts inventory software for maintenance teams. Track spares, stock levels, suppliers, photos, low-stock alerts, and work order parts usage."
-keywords: spare parts software, spare part inventory software, maintenance inventory software, spare parts management, CMMS inventory management
+title: CMMS Inventory Management Software
+description: "Control spare parts and consumables across sites with BIN locations, replenishment rules, intelligent cycle counting, inventory health and performance reporting."
+keywords: cmms inventory management software, spare parts inventory software, maintenance inventory software, multi-site stock control, perpetual inventory counting
+image: /assets/img/features/inventory/inventory-performance.webp
 ---
 
-<!-- Hero Section -->
-<section id="hero" class="hero">
-  <div class="info d-flex align-items-center">
-    <div class="container text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h1>Spare Parts Inventory Software</h1>
+<style>
+  .inventory-hero {
+    background: linear-gradient(135deg, #f8fbfd 0%, #eef4f7 100%);
+    padding: 132px 0 82px;
+    overflow: hidden;
+  }
+
+  .inventory-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #7a5b00;
+    background: #fff6d8;
+    border: 1px solid #f4d56c;
+    border-radius: 50px;
+    padding: 7px 13px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .inventory-hero h1 {
+    color: var(--color-secondary);
+    font-size: 48px;
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .inventory-hero .lead {
+    color: #56616a;
+    font-size: 19px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .inventory-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+    color: #3f4b54;
+    font-size: 14px;
+  }
+
+  .inventory-hero-points i {
+    color: #16884a;
+    margin-right: 6px;
+  }
+
+  .inventory-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 4px 8px 4px 0;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+
+  .inventory-product-shot {
+    background: #fff;
+    border: 1px solid #dde6eb;
+    border-radius: 12px;
+    box-shadow: 0 22px 55px rgba(14, 39, 55, 0.16);
+    overflow: hidden;
+  }
+
+  .inventory-product-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .inventory-kpi-strip {
+    margin-top: -38px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .inventory-kpi-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #e4ebef;
+    border-top: 4px solid var(--color-primary);
+    border-radius: 9px;
+    box-shadow: 0 12px 32px rgba(14, 39, 55, 0.09);
+    padding: 24px;
+  }
+
+  .inventory-kpi-card h3 {
+    color: var(--color-secondary);
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .inventory-kpi-card p {
+    color: #65727b;
+    margin: 0;
+  }
+
+  .inventory-audience-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #e3eaee;
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  .inventory-audience-card .icon {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5d1;
+    color: #8a6500;
+    border-radius: 8px;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .inventory-audience-card h3 {
+    color: var(--color-secondary);
+    font-size: 24px;
+  }
+
+  .inventory-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+  }
+
+  .inventory-check-list li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 11px;
+    color: #54616a;
+  }
+
+  .inventory-check-list i {
+    color: #16884a;
+    margin-top: 5px;
+  }
+
+  .inventory-section-copy h2 {
+    color: var(--color-secondary);
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .inventory-section-copy h3 {
+    color: var(--color-secondary);
+    font-size: 21px;
+    margin-top: 22px;
+  }
+
+  .inventory-section-copy p {
+    color: #5f6b74;
+    line-height: 1.75;
+  }
+
+  .inventory-step {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #e2e9ed;
+    border-radius: 9px;
+    padding: 24px;
+  }
+
+  .inventory-step-number {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #1f2d36;
+    background: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .inventory-step h3 {
+    font-size: 19px;
+    color: var(--color-secondary);
+  }
+
+  .inventory-step p {
+    color: #64717a;
+    margin: 0;
+  }
+
+  .inventory-metric-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #e2e9ed;
+    border-radius: 9px;
+    padding: 28px;
+  }
+
+  .inventory-metric-card i {
+    color: #a17400;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .inventory-metric-card h3 {
+    color: var(--color-secondary);
+    font-size: 21px;
+  }
+
+  .inventory-health-scale {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .inventory-health-band {
+    border-radius: 7px;
+    padding: 14px 12px;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .inventory-health-band.excellent { background: #178847; }
+  .inventory-health-band.good { background: #43a653; }
+  .inventory-health-band.attention { background: #df8100; }
+  .inventory-health-band.critical { background: #dc3545; }
+
+  .inventory-link-card {
+    height: 100%;
+    border: 1px solid #e2e9ed;
+    border-radius: 9px;
+    padding: 24px;
+    background: #fff;
+  }
+
+  .inventory-link-card h3 {
+    font-size: 19px;
+    color: var(--color-secondary);
+  }
+
+  .inventory-link-card a {
+    font-weight: 600;
+  }
+
+  .inventory-faq details {
+    background: #fff;
+    border: 1px solid #e1e8ec;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+  }
+
+  .inventory-faq summary {
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-weight: 700;
+    padding: 18px 30px 18px 0;
+  }
+
+  .inventory-faq details p {
+    color: #5f6b74;
+    padding-bottom: 18px;
+    margin: 0;
+  }
+
+  @media (max-width: 991px) {
+    .inventory-hero { padding-top: 112px; }
+    .inventory-hero h1 { font-size: 39px; }
+    .inventory-product-shot { margin-top: 34px; }
+    .inventory-kpi-strip { margin-top: 0; padding-top: 28px; }
+    .inventory-section-copy { margin-top: 28px; }
+  }
+
+  @media (max-width: 767px) {
+    .inventory-hero h1 { font-size: 34px; }
+    .inventory-health-scale { grid-template-columns: 1fr 1fr; }
+    .inventory-section-copy h2 { font-size: 30px; }
+  }
+</style>
+
+<section class="inventory-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <span class="inventory-eyebrow"><i class="fa-solid fa-boxes-stacked"></i> Inventory and Stock Control</span>
+        <h1>Multi-Site Inventory Management for Maintenance Teams</h1>
+        <p class="lead">Control spare parts and consumables across every site with structured replenishment, intelligent cycle counting and organisation-wide inventory performance.</p>
+        <ul class="inventory-hero-points">
+          <li><i class="fa-solid fa-circle-check"></i> Site-level stock control</li>
+          <li><i class="fa-solid fa-circle-check"></i> Automated daily checks</li>
+          <li><i class="fa-solid fa-circle-check"></i> Global performance visibility</li>
+        </ul>
+        <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary inventory-btn">Book an Inventory Demo</a>
+        <a href="{{ site.signup_url }}" class="btn btn-secondary inventory-btn">Start Free Trial</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="inventory-product-shot">
+          <img src="{{ '/assets/img/features/inventory/inventory-performance.webp' | relative_url }}" alt="Smartspanner Inventory Performance dashboard comparing value, accuracy and health across countries and sites" width="1600" height="1000" fetchpriority="high">
         </div>
       </div>
-      <p>Track maintenance spares, critical parts, suppliers, stock levels, photos, and parts consumed on work orders in one CMMS.</p>
-      <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">Book a Demo</a>
-      <a href="{{ site.signup_url }}" class="btn-get-started">Start Free Trial</a>
     </div>
-  </div>
-
-  <div class="carousel" id="hero-carousel">
-    <div class="carousel-item active" style="background-image: url({{ '/assets/img/hero-carousel/machine-maintenace.JPG' | relative_url }})"></div>
   </div>
 </section>
 
 <main id="main">
-
-  <!-- Intro -->
-  <section class="about">
+  <section class="inventory-kpi-strip">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-header">
-            <h2>Keep Critical Spares Under Control</h2>
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="inventory-kpi-card">
+            <h3>Inventory Value</h3>
+            <p>Understand the value held at each site and compare normalised values across the organisation.</p>
           </div>
-          <p>Maintenance inventory is different from general stock control. The important question is not just how many items are on the shelf, but whether the right spare part is available when equipment fails or planned work is due.</p>
-          <p>Smartspanner keeps spare parts connected to assets, work orders, suppliers, and low-stock reporting so maintenance teams can see what they have, where it is used, and when it needs attention.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="alt-services section-bg">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/spare-part-thumb.webp' | relative_url }}); background-size: contain;"></div>
-        <div class="col-lg-5 d-flex flex-column">
-          <h3>How Smartspanner Inventory Works</h3>
-          <p>Create a practical spare parts list, then connect parts to the maintenance work that consumes them.</p>
-
-          <div class="icon-box">
-            <i class="fa-solid fa-boxes-stacked"></i>
-            <div>
-              <h4>Build Your Spares List</h4>
-              <p>Store part names, stock quantities, locations, suppliers, alternatives, and photos in one searchable list.</p>
-            </div>
+        <div class="col-lg-4">
+          <div class="inventory-kpi-card">
+            <h3>Inventory Accuracy</h3>
+            <p>Measure recorded quantities against physical counts completed during the last 90 days.</p>
           </div>
-
-          <div class="icon-box">
-            <i class="fa-solid fa-star"></i>
-            <div>
-              <h4>Mark Critical Spares</h4>
-              <p>Flag the parts that matter most for downtime, safety, production, or compliance.</p>
-            </div>
-          </div>
-
-          <div class="icon-box">
-            <i class="fa-solid fa-link"></i>
-            <div>
-              <h4>Connect Parts to Assets</h4>
-              <p>View relevant spares from the asset record so technicians know what belongs with each machine or system.</p>
-            </div>
-          </div>
-
-          <div class="icon-box">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <div>
-              <h4>Consume Parts on Work Orders</h4>
-              <p>Record parts used during maintenance so stock and job cost visibility stay tied to real work.</p>
-            </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="inventory-kpi-card">
+            <h3>Inventory Health</h3>
+            <p>See the operational risks affecting stock at each site through one clear, explainable score.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Capabilities -->
-  <section id="capabilities" class="services">
+  <section class="services" style="padding-top: 90px;">
     <div class="container">
       <div class="section-header">
-        <h2>Inventory Capabilities</h2>
-        <p>Focused controls for the spares maintenance teams actually depend on.</p>
+        <h2>Local Control. Organisation-Wide Visibility.</h2>
+        <p>Smartspanner gives stores teams a focused daily workspace and management a consistent view across every site.</p>
       </div>
-
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-list"></i></div>
-            <h3>Spares List</h3>
-            <p>Keep a central list of spare parts with practical maintenance details.</p>
+        <div class="col-lg-6">
+          <div class="inventory-audience-card">
+            <span class="icon"><i class="fa-solid fa-warehouse"></i></span>
+            <h3>Stock Control for Site Teams</h3>
+            <p>Stores personnel can see what needs attention today, complete priority checks and understand the issues reducing their site's Inventory Health.</p>
+            <ul class="inventory-check-list">
+              <li><i class="fa-solid fa-check"></i><span>Automatically calculated daily verification workload</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Planned and overdue checks in one prioritised queue</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Recorded quantity, location, BIN and category at the point of checking</span></li>
+            </ul>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-            <h3>Critical Spare Parts</h3>
-            <p>Filter and prioritise spares that carry the highest operational risk.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-bell"></i></div>
-            <h3>Low Stock Alerts</h3>
-            <p>See low-stock parts on the dashboard and in weekly low-stock report emails.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-camera"></i></div>
-            <h3>Part Photos</h3>
-            <p>Add a photograph to each spare so technicians can identify the correct item quickly.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-truck-field"></i></div>
-            <h3>Suppliers and Alternatives</h3>
-            <p>Record suppliers, alternative parts, and alternative suppliers for each spare.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-            <h3>Multi-Site Inventory</h3>
-            <p>Manage spare parts across multiple locations without losing site-level visibility.</p>
+        <div class="col-lg-6">
+          <div class="inventory-audience-card">
+            <span class="icon"><i class="fa-solid fa-chart-column"></i></span>
+            <h3>Inventory Performance for Management</h3>
+            <p>Managers can compare value, accuracy and health across the organisation, filter by country and drill into the sites that need attention.</p>
+            <ul class="inventory-check-list">
+              <li><i class="fa-solid fa-check"></i><span>Comparable site values in the company base currency</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Country summaries and site-level performance</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Lowest-health sites brought to the top of the league table</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Work Orders -->
-  <section id="work-orders" class="section-bg">
+  <section id="site-stock-control" class="section-bg">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-header">
-            <h2>Inventory Connected to Work Orders</h2>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="inventory-product-shot">
+            <img src="{{ '/assets/img/features/inventory/stock-control.webp' | relative_url }}" alt="Smartspanner Stock Control page showing site inventory value, accuracy, health and today's inventory checks" width="1600" height="1000" loading="lazy">
           </div>
-          <p>Spare parts become more useful when they are linked to maintenance activity. Smartspanner lets teams consume parts against <a href="{{ '/work-order-management-software' | relative_url }}">work orders</a>, view spares from asset records, and keep maintenance history tied to the parts used.</p>
-          <ul>
-            <li><i class="fa-solid fa-check-double"></i> See relevant spares from the asset record page</li>
-            <li><i class="fa-solid fa-check-double"></i> Record parts used during reactive and planned work</li>
-            <li><i class="fa-solid fa-check-double"></i> Use mobile apps to manage spares on site</li>
+        </div>
+        <div class="col-lg-5 inventory-section-copy">
+          <span class="inventory-eyebrow">For stores teams</span>
+          <h2>A Daily Stock Control Workspace for Every Site</h2>
+          <p>Select the site you manage, save it as your default and work through a queue calculated around that site's inventory and working week.</p>
+          <ul class="inventory-check-list">
+            <li><i class="fa-solid fa-check"></i><span>View inventory value in the site's configured currency</span></li>
+            <li><i class="fa-solid fa-check"></i><span>See today's planned checks alongside anything overdue</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Review the factors affecting Inventory Health</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Work efficiently across hundreds or thousands of outstanding checks</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="get-started">
-    <div class="container text-center">
-      <h3 style="font-size: 32px; color: var(--color-secondary); font-weight: 600; margin-bottom: 18px;">Know What Parts You Have Before Work Starts</h3>
-      <p style="font-size: 17px; max-width: 620px; margin: 0 auto 28px;">Track spares, critical items, suppliers, low-stock alerts, and parts consumed on work orders in Smartspanner.</p>
-      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Book a Demo</a>
-      <a href="{{ site.signup_url }}" class="btn btn-secondary" style="margin: 10px; padding: 12px 40px; border-radius: 50px; font-size: 16px;">Start Free Trial</a>
+  <section id="perpetual-counting">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center inventory-section-copy">
+          <span class="inventory-eyebrow">Intelligent Perpetual Counting</span>
+          <h2>Replace the Disruptive Annual Stocktake with Manageable Daily Checks</h2>
+          <p>Smartspanner continuously prioritises the inventory that should be verified next. Older, higher-value and higher-priority items move up the queue, while each category's maximum interval ensures nothing can be postponed indefinitely.</p>
+        </div>
+      </div>
+      <div class="row gy-4 mt-3">
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-step">
+            <span class="inventory-step-number">1</span>
+            <h3>Set the Policy</h3>
+            <p>Choose the verification method, priority and maximum count interval for each category.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-step">
+            <span class="inventory-step-number">2</span>
+            <h3>Calculate the Workload</h3>
+            <p>The number of eligible records, count intervals and site working week determine the daily requirement.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-step">
+            <span class="inventory-step-number">3</span>
+            <h3>Verify the Stock</h3>
+            <p>Confirm the recorded quantity or enter the amount physically counted, with optional QR confirmation.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-step">
+            <span class="inventory-step-number">4</span>
+            <h3>Improve Accuracy</h3>
+            <p>Differences create stock adjustments and become part of the site's accuracy and health history.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <section id="categories-and-bins" class="section-bg">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5 inventory-section-copy">
+          <span class="inventory-eyebrow">Structure and replenishment</span>
+          <h2>Apply the Right Rules to Every Type of Inventory</h2>
+          <p>Create categories such as Critical Spares, Fasteners, Electrical Components, PPE or General Consumables. Parts in a category share the same replenishment and verification policy.</p>
+          <h3>Minimum Stock Level</h3>
+          <p>Generate an alert when available quantity falls below the minimum recorded against that stock item.</p>
+          <h3>On Demand</h3>
+          <p>Support items replenished in response to a stores, kiosk, mobile or QR-led request rather than an automatic alert.</p>
+          <h3>BIN Locations</h3>
+          <p>Add a free-text BIN reference within each site and stock location. Export and update BINs in bulk using the spreadsheet import tool.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="inventory-product-shot">
+            <img src="{{ '/assets/img/features/inventory/inventory-categories.webp' | relative_url }}" alt="Smartspanner spare parts list filtered by inventory category" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory-kpis">
+    <div class="container">
+      <div class="section-header">
+        <h2>Three KPIs with the Detail Behind Them</h2>
+        <p>Headline measures make performance easy to understand, while every result remains connected to the underlying inventory records.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="inventory-metric-card">
+            <i class="fa-solid fa-coins"></i>
+            <h3>Inventory Value</h3>
+            <p>Positive stock quantities are multiplied by base unit cost. Site pages use the site's currency, while organisation-wide reporting normalises values into the company base currency.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="inventory-metric-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Inventory Accuracy</h3>
+            <p>A quantity-based measure comparing expected and physically counted quantities during the last 90 days. Larger differences have a proportionally greater effect.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="inventory-metric-card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Inventory Health</h3>
+            <p>One score covering overdue counts, negative stock, missing categories, low-stock items and missing BINs when BIN compliance is enabled.</p>
+          </div>
+        </div>
+      </div>
+      <div class="inventory-health-scale">
+        <div class="inventory-health-band excellent">95–100<br>Excellent</div>
+        <div class="inventory-health-band good">85–94<br>Good</div>
+        <div class="inventory-health-band attention">70–84<br>Needs Attention</div>
+        <div class="inventory-health-band critical">Below 70<br>Critical</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory-performance" class="section-bg">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <div class="inventory-product-shot">
+            <img src="{{ '/assets/img/features/inventory/inventory-performance.webp' | relative_url }}" alt="Organisation-wide Smartspanner Inventory Performance page with country summaries and site league table" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 inventory-section-copy">
+          <span class="inventory-eyebrow">For operations management</span>
+          <h2>Compare Inventory Performance Across Sites and Countries</h2>
+          <p>Review the whole organisation or filter by country. Country summaries and individual sites use the company base currency, making international inventory values directly comparable.</p>
+          <p>Sites with the weakest Inventory Health appear first, helping management find risk quickly and drill directly into the relevant Stock Control page.</p>
+          <p><a href="{{ '/reporting' | relative_url }}">Explore Smartspanner reporting and KPI dashboards <i class="fa-solid fa-arrow-right"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory-verification">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5 inventory-section-copy">
+          <span class="inventory-eyebrow">Fast, accountable checks</span>
+          <h2>Verify Stock Where the Work Happens</h2>
+          <p>Stores staff can complete checks from the desktop Stock Control page or the mobile Inventory Checks workflow. The recorded quantity is shown before the user confirms it or enters a physical count.</p>
+          <p>QR confirmation can help verify that the correct part has been located. Every difference creates a traceable stock adjustment and feeds back into inventory accuracy.</p>
+          <p><a href="{{ '/mobile-cmms' | relative_url }}">See the Smartspanner mobile CMMS <i class="fa-solid fa-arrow-right"></i></a></p>
+        </div>
+        <div class="col-lg-7">
+          <div class="inventory-product-shot">
+            <img src="{{ '/assets/img/features/inventory/stock-verification.webp' | relative_url }}" alt="Smartspanner stock verification dialog for confirming a physically counted part quantity" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="connected-inventory" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Inventory Connected to the Rest of Your CMMS</h2>
+        <p>Stock control is most useful when it remains connected to the assets, maintenance work and purchasing activity that drive demand.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-link-card">
+            <h3>Assets</h3>
+            <p>Connect spare parts to the equipment they support.</p>
+            <a href="{{ '/asset-management-software' | relative_url }}">Asset management <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-link-card">
+            <h3>Work Orders</h3>
+            <p>Record parts consumed during planned and reactive work.</p>
+            <a href="{{ '/work-order-management-software' | relative_url }}">Work order management <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-link-card">
+            <h3>Purchasing</h3>
+            <p>Raise purchase orders and receive goods into stock.</p>
+            <a href="{{ '/maintenance-purchase-orders' | relative_url }}">Maintenance purchasing <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="inventory-link-card">
+            <h3>Multi-Site Operations</h3>
+            <p>Give every site local visibility with central oversight.</p>
+            <a href="{{ '/multi-site-maintenance-software' | relative_url }}">Multi-site CMMS <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory-faq" class="inventory-faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Inventory Management Questions</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <details>
+            <summary>What is intelligent perpetual inventory counting?</summary>
+            <p>It is an ongoing cycle-counting programme that prioritises stock using time since the last count, category priority, inventory value and the maximum permitted interval between checks. It distributes verification across normal working days instead of relying on one disruptive annual stocktake.</p>
+          </details>
+          <details>
+            <summary>How is the daily inventory-check requirement calculated?</summary>
+            <p>Smartspanner calculates the workload from the number of eligible stock records, their required counting intervals and the site's configured working week. There is no daily target for an administrator to maintain manually.</p>
+          </details>
+          <details>
+            <summary>How does Smartspanner calculate Inventory Accuracy?</summary>
+            <p>Inventory Accuracy compares expected quantities with physically counted quantities from the last 90 days. It is quantity-based, so a larger discrepancy affects the result more than a small one.</p>
+          </details>
+          <details>
+            <summary>What affects Inventory Health?</summary>
+            <p>The score considers overdue counts, negative stock, parts without a category, items below their minimum stock level and missing BIN locations when BIN compliance has been enabled.</p>
+          </details>
+          <details>
+            <summary>Can inventory be compared across countries and currencies?</summary>
+            <p>Yes. A site can show its inventory value in its configured currency, while organisation-wide Inventory Performance converts site values into the Company Profile base currency for consistent comparison.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="get-started">
+    <div class="container text-center">
+      <h2 style="font-size: 34px; color: var(--color-secondary); font-weight: 700; margin-bottom: 18px;">Enterprise-Ready Inventory Control Without Enterprise Complexity</h2>
+      <p style="font-size: 17px; max-width: 720px; margin: 0 auto 28px;">Start with the stock controls your team needs today, then add structured verification and organisation-wide visibility as your operation grows.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary inventory-btn">Book an Inventory Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary inventory-btn">Start Free Trial</a>
+    </div>
+  </section>
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is intelligent perpetual inventory counting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is an ongoing cycle-counting programme that prioritises stock using time since the last count, category priority, inventory value and the maximum permitted interval between checks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the daily inventory-check requirement calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smartspanner calculates the workload from the number of eligible stock records, their required counting intervals and the site's configured working week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Smartspanner calculate Inventory Accuracy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inventory Accuracy compares expected quantities with physically counted quantities from the last 90 days and weights the result by quantity variance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What affects Inventory Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The score considers overdue counts, negative stock, parts without a category, items below their minimum stock level and missing BIN locations when BIN compliance is enabled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can inventory be compared across countries and currencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Organisation-wide Inventory Performance converts site values into the Company Profile base currency for consistent comparison."
+      }
+    }
+  ]
+}
+</script>
