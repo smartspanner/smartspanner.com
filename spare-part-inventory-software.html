@@ -259,19 +259,52 @@ image: /assets/img/features/inventory/inventory-performance.webp
     font-weight: 600;
   }
 
+  .inventory-faq .col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
   .inventory-faq details {
+    display: block;
+    width: 100%;
+    min-width: 0;
     background: #fff;
     border: 1px solid #e1e8ec;
     border-radius: 8px;
     margin-bottom: 12px;
     padding: 0 20px;
+    overflow: hidden;
   }
 
   .inventory-faq summary {
+    display: block;
+    position: relative;
+    width: 100%;
+    list-style: none;
     color: var(--color-secondary);
     cursor: pointer;
     font-weight: 700;
     padding: 18px 30px 18px 0;
+  }
+
+  .inventory-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .inventory-faq summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 22px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  .inventory-faq details[open] summary::after {
+    content: "−";
   }
 
   .inventory-faq details p {
@@ -286,6 +319,7 @@ image: /assets/img/features/inventory/inventory-performance.webp
     .inventory-product-shot { margin-top: 34px; }
     .inventory-kpi-strip { margin-top: 0; padding-top: 28px; }
     .inventory-section-copy { margin-top: 28px; }
+    .inventory-faq .col-lg-9 { flex-basis: 100%; max-width: 100%; }
   }
 
   @media (max-width: 767px) {
