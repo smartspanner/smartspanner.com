@@ -283,7 +283,7 @@ img {
 }
 
 .navbar > ul > li {
-  padding: 10px 0 10px 26.5px;
+  padding: 10px 0 10px 24px;
 }
 
 .navbar a {
@@ -306,7 +306,7 @@ img {
 .navbar .dropdown ul {
   display: none;
   position: absolute;
-  left: 26.5px;
+  left: 24px;
   top: 100%;
   margin: 0;
   padding: 6px 0;
