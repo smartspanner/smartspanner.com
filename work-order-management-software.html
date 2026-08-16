@@ -1,10 +1,37 @@
 ---
 layout: default
 title: Work Order Management Software
-description: "Work order management software for maintenance teams. Create, assign, track, and complete work orders with Smartspanner."
+description: "Work order management software for maintenance teams. Set Critical, High, Medium or Low priority, assign technicians, track progress and complete jobs."
 keywords: work order management software, work order system, maintenance work order software, work order tracking, work order automation, digital work orders
 whatsapp_badge: true
 ---
+
+<style>
+  .work-order-priority-card {
+    height: 100%;
+    padding: 28px 24px;
+    border: 1px solid #e4e7ea;
+    border-top: 5px solid var(--priority-color);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(54, 77, 89, 0.08);
+  }
+
+  .work-order-priority-card h3 {
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+    font-size: 22px;
+  }
+
+  .work-order-priority-card p {
+    margin-bottom: 0;
+  }
+
+  .work-order-priority-card.critical { --priority-color: #c0392b; }
+  .work-order-priority-card.high { --priority-color: #e67e22; }
+  .work-order-priority-card.medium { --priority-color: #feb900; }
+  .work-order-priority-card.low { --priority-color: #5b7c8d; }
+</style>
 
 <!-- Hero Section -->
 <section id="hero" class="hero">
@@ -15,7 +42,7 @@ whatsapp_badge: true
           <h1>Work Order Management Software</h1>
         </div>
       </div>
-      <p>Create, assign, track, and complete maintenance work orders with asset history, parts usage, mobile updates, and clear job ownership.</p>
+      <p>Create, prioritise, assign, and complete maintenance work orders with asset history, parts usage, mobile updates, and clear job ownership.</p>
       <a href="{{ '/book-a-demo' | relative_url }}" class="btn-get-started">Book a Demo</a>
       <a href="{{ site.signup_url }}" class="btn-get-started">Start Free Trial</a>
     </div>
@@ -47,7 +74,7 @@ whatsapp_badge: true
   <section class="alt-services section-bg">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/work-order-thumb.webp' | relative_url }}); background-size: contain;"></div>
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/work-order-calendar-thumb.webp' | relative_url }}); background-size: contain;"></div>
         <div class="col-lg-5 d-flex flex-column">
           <h3>How Smartspanner Work Orders Work</h3>
           <p>Use work orders for reactive jobs, planned maintenance, inspection follow-up, safety actions, and improvement work.</p>
@@ -56,7 +83,7 @@ whatsapp_badge: true
             <i class="fa-solid fa-file-circle-plus"></i>
             <div>
               <h4>Create the Job</h4>
-              <p>Raise a work order with the asset, site, priority, description, instructions, and files the technician needs.</p>
+              <p>Raise a work order with the asset, site, Critical, High, Medium or Low priority, description, instructions, and files the technician needs.</p>
             </div>
           </div>
 
@@ -88,8 +115,48 @@ whatsapp_badge: true
     </div>
   </section>
 
+  <!-- Priority Levels -->
+  <section id="work-order-priorities" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Give Every Work Order a Clear Priority</h2>
+        <p>Set every job as Critical, High, Medium or Low so technicians and managers can distinguish immediate risks from routine work without relying on notes, spreadsheets or local conventions.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="work-order-priority-card critical">
+            <h3>Critical</h3>
+            <p>Immediate safety, compliance or operational risk requiring urgent attention.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="work-order-priority-card high">
+            <h3>High</h3>
+            <p>Urgent maintenance work that should receive prompt attention.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="work-order-priority-card medium">
+            <h3>Medium</h3>
+            <p>Important work managed through the team's normal planning process.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="work-order-priority-card low">
+            <h3>Low</h3>
+            <p>Routine, minor or improvement work that can be planned accordingly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Capabilities -->
-  <section id="capabilities" class="services">
+  <section id="capabilities" class="services section-bg">
     <div class="container">
       <div class="section-header">
         <h2>Work Order Capabilities</h2>
