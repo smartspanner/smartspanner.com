@@ -5,6 +5,84 @@ description: "CMMS software for manufacturing. Reduce downtime, improve asset re
 keywords: cmms for manufacturing, manufacturing cmms software, maintenance software for manufacturing, cmms for factories, manufacturing maintenance system
 ---
 
+<style>
+  .manufacturing-sector-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .manufacturing-sector-card {
+    flex: 1 1 180px;
+    max-width: 210px;
+    min-height: 170px;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e4e7ea;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(54, 77, 89, 0.08);
+  }
+
+  .manufacturing-sector-card .sector-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    background: rgba(254, 185, 0, 0.18);
+    border-radius: 50%;
+  }
+
+  .manufacturing-sector-card .sector-icon i {
+    font-size: 26px;
+  }
+
+  .manufacturing-sector-card h3 {
+    margin: 0;
+    color: var(--color-default);
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .manufacturing-sector-card h3 a {
+    color: inherit;
+  }
+
+  .manufacturing-sector-card h3 a:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 1199px) {
+    .manufacturing-sector-card {
+      flex: 0 1 calc(33.333% - 14px);
+      max-width: calc(33.333% - 14px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .manufacturing-sector-card {
+      flex-basis: calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 575px) {
+    .manufacturing-sector-card {
+      flex-basis: 100%;
+      max-width: 100%;
+      min-height: 145px;
+    }
+  }
+</style>
+
 <!-- Hero Section -->
 <section id="hero" class="hero">
   <div class="info d-flex align-items-center">
@@ -254,46 +332,30 @@ keywords: cmms for manufacturing, manufacturing cmms software, maintenance softw
         <h2>Who Uses CMMS in Manufacturing?</h2>
         <p>Smartspanner supports a wide range of manufacturing sectors. Any production environment relying on equipment can benefit from a CMMS.</p>
       </div>
-      <div class="row gy-4 justify-content-center">
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item" style="padding: 30px; text-align: center;">
-            <div class="icon" style="margin: 0 auto 20px;">
-              <i class="fa-solid fa-gear"></i>
-            </div>
-            <h3 style="font-size: 18px;"><a href="{{ '/cmms-for-injection-moulding' | relative_url }}" style="color: var(--color-default);">Injection Moulding</a></h3>
-          </div>
+      <div class="manufacturing-sector-grid">
+        <div class="manufacturing-sector-card">
+          <div class="sector-icon" aria-hidden="true"><i class="fa-solid fa-gear"></i></div>
+          <h3><a href="{{ '/cmms-for-injection-moulding' | relative_url }}">Injection Moulding</a></h3>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item" style="padding: 30px; text-align: center;">
-            <div class="icon" style="margin: 0 auto 20px;">
-              <i class="fa-solid fa-car"></i>
-            </div>
-            <h3 style="font-size: 18px;">Automotive</h3>
-          </div>
+
+        <div class="manufacturing-sector-card">
+          <div class="sector-icon" aria-hidden="true"><i class="fa-solid fa-car"></i></div>
+          <h3>Automotive</h3>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item" style="padding: 30px; text-align: center;">
-            <div class="icon" style="margin: 0 auto 20px;">
-              <i class="fa-solid fa-utensils"></i>
-            </div>
-            <h3 style="font-size: 18px;">Food & Beverage</h3>
-          </div>
+
+        <div class="manufacturing-sector-card">
+          <div class="sector-icon" aria-hidden="true"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Food &amp; Beverage</h3>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item" style="padding: 30px; text-align: center;">
-            <div class="icon" style="margin: 0 auto 20px;">
-              <i class="fa-solid fa-box"></i>
-            </div>
-            <h3 style="font-size: 18px;">Packaging</h3>
-          </div>
+
+        <div class="manufacturing-sector-card">
+          <div class="sector-icon" aria-hidden="true"><i class="fa-solid fa-box"></i></div>
+          <h3>Packaging</h3>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item" style="padding: 30px; text-align: center;">
-            <div class="icon" style="margin: 0 auto 20px;">
-              <i class="fa-solid fa-microchip"></i>
-            </div>
-            <h3 style="font-size: 18px;">Electronics Manufacturing</h3>
-          </div>
+
+        <div class="manufacturing-sector-card">
+          <div class="sector-icon" aria-hidden="true"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Electronics Manufacturing</h3>
         </div>
       </div>
     </div>
