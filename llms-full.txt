@@ -154,7 +154,6 @@ Primary audiences include maintenance managers, facilities managers, operations 
 ## Industry Pages
 
 - Industries overview: https://www.smartspanner.com/industries/
-- Manufacturing Maintenance Software: https://www.smartspanner.com/manufacturing-maintenance-software/
 - CMMS for Manufacturing: https://www.smartspanner.com/cmms-for-manufacturing/
 - CMMS for Injection Moulding: https://www.smartspanner.com/cmms-for-injection-moulding/
 - Facility Management Software: https://www.smartspanner.com/facility-management-software/
