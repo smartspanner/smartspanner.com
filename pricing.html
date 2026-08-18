@@ -33,7 +33,7 @@ whatsapp_badge: true
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="15" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">15</span><span>per user/month</span></h4>
           <ul>
             {% for item in site.data.pricing.all_plans_include %}
-            <li><i class="fa-regular fa-circle-check"></i> <strong>{{ item }}</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</strong></li>
             {% endfor %}
           </ul>
           <div class="text-center" style="margin-top: 20px;">
@@ -49,11 +49,11 @@ whatsapp_badge: true
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="21" data-usd="28" data-eur="25" data-aud="41" data-nzd="49">21</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Basic features</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Procedures</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Subcontractors</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Failure Codes</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Asset Labels</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Spare Part Labels</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-procedure-software' | relative_url }}">Procedures</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/subcontractors' | relative_url }}">Subcontractors</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-failure-codes' | relative_url }}">Failure Codes</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/asset-management-software' | relative_url }}">Asset Labels</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/spare-part-inventory-software' | relative_url }}">Spare Part Labels</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Technician Leave</strong></li>
           </ul>
           <div class="text-center" style="margin-top: 20px;">
@@ -70,15 +70,15 @@ whatsapp_badge: true
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="27" data-usd="36" data-eur="31" data-aud="52" data-nzd="63">27</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Standard features</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Checklists</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/compliance-software' | relative_url }}">Checklists</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/equipment-check-software' | relative_url }}">Equipment Checks</a></strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Condition Monitoring</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Statistics</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Purchasing</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/condition-based-monitoring' | relative_url }}">Condition Monitoring</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/cmms-kpi-performance-indicators' | relative_url }}">Statistics</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-purchase-orders' | relative_url }}">Purchasing</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/permit-to-work-software' | relative_url }}">Permits to Work</a></strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Asset Lockout</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>API Access</strong></li>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>Fire Risk Assessments</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/lockout-tagout' | relative_url }}">Asset Lockout</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/integrations-api' | relative_url }}">API Access</a></strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/fire-risk-assessment-software' | relative_url }}">Fire Risk Assessments</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Risk Assessments *coming soon</strong></li>
           </ul>
           <div class="text-center" style="margin-top: 20px;">

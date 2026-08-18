@@ -37,12 +37,20 @@ plans:
       - "Risk Assessments *coming soon"
 
 all_plans_include:
-  - Works order management
-  - Preventative maintenance scheduling
-  - Dashboard
-  - Email reminders
-  - Asset management & hierarchy
-  - Multi-site Deployment
-  - Spare parts
-  - Excel reporting
-  - Mobile Apps
+  - name: Works order management
+    url: /work-order-management-software/
+  - name: Preventative maintenance scheduling
+    url: /preventative-maintenance-software/
+  - name: Dashboard
+    url: /cmms-dashboard/
+  - name: Email reminders
+  - name: Asset management & hierarchy
+    url: /asset-management-software/
+  - name: Multi-site Deployment
+    url: /multi-site-maintenance-software/
+  - name: Spare parts
+    url: /spare-part-inventory-software/
+  - name: Excel reporting
+    url: /reporting/
+  - name: Mobile Apps
+    url: /mobile-cmms/
