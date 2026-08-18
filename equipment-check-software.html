@@ -1,0 +1,866 @@
+---
+layout: default
+title: Equipment Check Software for Pre-Use Inspections
+meta_title: Equipment Check Software | Pre-Use & Walkaround Checks
+description: "Run pre-use equipment checks and vehicle walkarounds on mobile. Scan assets, capture evidence and raise work orders when checks find a problem."
+keywords: equipment check software, pre-use inspection software, pre-start checklist app, vehicle walkaround check app, equipment inspection software, digital equipment checklist, plant inspection app
+permalink: /equipment-check-software/
+image: /assets/img/features/checklists-thumb.webp
+whatsapp_badge: true
+---
+
+<style>
+  .equipment-hero {
+    padding: 132px 0 82px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8fbfd 0%, #eef4f7 100%);
+  }
+
+  .equipment-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 13px;
+    margin-bottom: 18px;
+    color: #725500;
+    background: #fff5d1;
+    border: 1px solid #f0d36d;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+
+  .equipment-hero h1 {
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 48px;
+    line-height: 1.12;
+  }
+
+  .equipment-hero .lead {
+    margin-bottom: 26px;
+    color: #56616a;
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .equipment-hero-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    padding: 0;
+    margin: 0 0 30px;
+    list-style: none;
+    color: #3f4b54;
+    font-size: 14px;
+  }
+
+  .equipment-hero-points i {
+    margin-right: 7px;
+    color: #16884a;
+  }
+
+  .equipment-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 4px 8px 4px 0;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+
+  .equipment-product-shot {
+    overflow: hidden;
+    background: #17191b;
+    border: 1px solid #dce4e8;
+    border-radius: 12px;
+    box-shadow: 0 22px 55px rgba(14, 39, 55, .17);
+  }
+
+  .equipment-product-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment-product-caption {
+    padding: 13px 16px;
+    margin: 0;
+    color: #dce2e6;
+    font-size: 13px;
+  }
+
+  .equipment-proof-strip {
+    position: relative;
+    z-index: 2;
+    margin-top: -38px;
+  }
+
+  .equipment-proof-card,
+  .equipment-feature-card,
+  .equipment-use-card,
+  .equipment-related-card {
+    height: 100%;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #e2e9ed;
+    border-radius: 9px;
+  }
+
+  .equipment-proof-card {
+    border-top: 4px solid var(--color-primary);
+    box-shadow: 0 12px 32px rgba(14, 39, 55, .09);
+  }
+
+  .equipment-proof-card h3,
+  .equipment-feature-card h3,
+  .equipment-use-card h3,
+  .equipment-related-card h3 {
+    color: var(--color-secondary);
+    font-size: 20px;
+  }
+
+  .equipment-proof-card p,
+  .equipment-feature-card p,
+  .equipment-use-card p,
+  .equipment-related-card p {
+    margin-bottom: 0;
+    color: #62707a;
+  }
+
+  .equipment-section-copy h2 {
+    margin-bottom: 18px;
+    color: var(--color-secondary);
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .equipment-section-copy p,
+  .equipment-section-copy li {
+    color: #5f6b74;
+    line-height: 1.75;
+  }
+
+  .equipment-check-list {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+  }
+
+  .equipment-check-list li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 11px;
+  }
+
+  .equipment-check-list i {
+    margin-top: 6px;
+    color: #16884a;
+  }
+
+  .equipment-workflow {
+    position: relative;
+  }
+
+  .equipment-step {
+    height: 100%;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #e1e8ec;
+    border-radius: 9px;
+  }
+
+  .equipment-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 15px;
+    color: #1f2d36;
+    background: var(--color-primary);
+    border-radius: 50%;
+    font-weight: 700;
+  }
+
+  .equipment-step h3 {
+    color: var(--color-secondary);
+    font-size: 20px;
+  }
+
+  .equipment-step p {
+    margin: 0;
+    color: #64717a;
+  }
+
+  .equipment-feature-card .icon,
+  .equipment-use-card .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 17px;
+    color: #7d5d00;
+    background: #fff4cf;
+    border-radius: 8px;
+    font-size: 21px;
+  }
+
+  .equipment-qr-shot {
+    padding: 22px;
+    background: #f6f8f9;
+    border: 1px solid #e0e7eb;
+    border-radius: 12px;
+  }
+
+  .equipment-qr-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment-callout {
+    padding: 30px;
+    background: #18242c;
+    border-radius: 12px;
+    color: #fff;
+  }
+
+  .equipment-callout h2,
+  .equipment-callout h3 {
+    color: #fff;
+  }
+
+  .equipment-callout p {
+    color: #d9e0e4;
+  }
+
+  .equipment-regulation {
+    height: 100%;
+    padding: 26px;
+    background: #fff;
+    border: 1px solid #e0e7eb;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 8px;
+  }
+
+  .equipment-regulation h3 {
+    color: var(--color-secondary);
+    font-size: 21px;
+  }
+
+  .equipment-regulation p {
+    color: #5f6b74;
+  }
+
+  .equipment-regulation a {
+    font-weight: 600;
+  }
+
+  .equipment-comparison-wrap {
+    overflow-x: auto;
+  }
+
+  .equipment-comparison {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #dfe6ea;
+  }
+
+  .equipment-comparison th,
+  .equipment-comparison td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e4eaed;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .equipment-comparison thead th {
+    color: #1f2d36;
+    background: var(--color-primary);
+  }
+
+  .equipment-comparison tbody tr:nth-child(even) {
+    background: #f7f9fa;
+  }
+
+  .equipment-note {
+    padding: 20px 22px;
+    margin-top: 26px;
+    color: #4f5b64;
+    background: #fff8df;
+    border: 1px solid #efd67c;
+    border-radius: 8px;
+  }
+
+  .equipment-faq details {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e1e8ec;
+    border-radius: 8px;
+  }
+
+  .equipment-faq summary {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 18px 30px 18px 0;
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .equipment-faq summary::-webkit-details-marker { display: none; }
+
+  .equipment-faq summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 21px;
+  }
+
+  .equipment-faq details[open] summary::after { content: "−"; }
+
+  .equipment-faq details p {
+    padding: 0 0 18px;
+    margin: 0;
+    color: #606d76;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 991px) {
+    .equipment-hero { padding: 112px 0 74px; }
+    .equipment-hero h1 { font-size: 40px; }
+    .equipment-product-shot { margin-top: 34px; }
+    .equipment-proof-strip { margin-top: 0; padding-top: 35px; }
+  }
+
+  @media (max-width: 575px) {
+    .equipment-hero h1 { font-size: 34px; }
+    .equipment-hero-points { grid-template-columns: 1fr; }
+    .equipment-section-copy h2 { font-size: 30px; }
+  }
+</style>
+
+<section class="equipment-hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="equipment-eyebrow"><i class="fa-solid fa-clipboard-check"></i> Included with the Advanced plan</span>
+        <h1>Equipment Checks That Start at the Asset</h1>
+        <p class="lead">Run pre-use checks, pre-shift inspections and vehicle walkarounds without filling the work-order list with routine checks. Operators select or scan the equipment, follow the right routine and raise action when something is wrong.</p>
+        <ul class="equipment-hero-points">
+          <li><i class="fa-solid fa-circle-check"></i> Desktop and mobile workflow</li>
+          <li><i class="fa-solid fa-circle-check"></i> Asset QR code scanning</li>
+          <li><i class="fa-solid fa-circle-check"></i> Photos, files and notes</li>
+          <li><i class="fa-solid fa-circle-check"></i> Alerts or follow-up work orders</li>
+        </ul>
+        <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary equipment-btn">Book a Demo</a>
+        <a href="{{ site.signup_url }}" class="btn btn-secondary equipment-btn">Start Free Trial</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="equipment-product-shot">
+          <img src="{{ '/assets/img/features/checklists-thumb.webp' | relative_url }}" alt="Smartspanner checklist template used to create equipment check routines" width="960" height="600" fetchpriority="high">
+          <p class="equipment-product-caption">Create reusable routines from published checklist templates, including failure actions for each question.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <section class="equipment-proof-strip">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="equipment-proof-card">
+            <h3>Make the Right Check Easy</h3>
+            <p>Associate each routine with the assets it applies to so operators do not have to choose from irrelevant forms.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="equipment-proof-card">
+            <h3>Act on Defects Immediately</h3>
+            <p>A negative response can create a dashboard alert or a follow-up work order while the problem is still in front of the operator.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="equipment-proof-card">
+            <h3>Keep Evidence With the Asset</h3>
+            <p>Completed, in-progress and abandoned checks remain connected to the equipment, operator, responses and completion time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="purpose">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 equipment-section-copy">
+          <h2>Routine Checks Should Not Disappear Into Paper—or Bury Maintenance Teams in Work Orders</h2>
+          <p>Pre-use equipment checks are different from scheduled maintenance. They are short, operator-led checks performed when equipment is about to be used, at the beginning of a shift or as part of a daily walkaround.</p>
+          <p>Putting every routine check into the work-order queue makes genuine maintenance demand harder to see. Keeping checks in a separate inspection app creates a different problem: defects and evidence sit outside the <a href="{{ '/cmms-software' | relative_url }}">CMMS</a> that manages the asset and corrective work.</p>
+          <p>Smartspanner gives equipment checks their own workflow while keeping the resulting history, alerts and work orders connected to maintenance.</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="equipment-callout">
+            <h3>Check first. Create work only when work is needed.</h3>
+            <p>A passed check becomes evidence. A failed question becomes an alert or assigned work. The maintenance queue contains the exceptions—not hundreds of routine confirmations.</p>
+            <a href="{{ '/work-order-management-software' | relative_url }}" class="btn btn-primary">See Work Order Management</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow" class="section-bg equipment-workflow">
+    <div class="container">
+      <div class="section-header">
+        <h2>How Smartspanner Equipment Checks Work</h2>
+        <p>Configure centrally, complete at the equipment and keep every finding connected to the maintenance process.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-step">
+            <span class="equipment-step-number">1</span>
+            <h3>Build the Checklist</h3>
+            <p>Create and publish a checklist template using structured responses, text answers or photo and file evidence. Decide which responses should raise an alert or work order.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-step">
+            <span class="equipment-step-number">2</span>
+            <h3>Create a Routine</h3>
+            <p>Give the routine a clear name and instructions, select the published template and assign it to one or many active assets.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-step">
+            <span class="equipment-step-number">3</span>
+            <h3>Select or Scan</h3>
+            <p>The operator finds the asset on desktop or mobile, or scans its QR label. Smartspanner shows only the routines available for that equipment.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-step">
+            <span class="equipment-step-number">4</span>
+            <h3>Submit and Follow Up</h3>
+            <p>Every item must be answered before submission. The result is recorded as Passed or Action Required, with defects moved into the appropriate follow-up workflow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scan-equipment">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <div class="equipment-qr-shot">
+            <img src="{{ '/assets/img/asset_qr_code.png' | relative_url }}" alt="Smartspanner mobile asset list and QR equipment label" width="824" height="571" loading="lazy">
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 equipment-section-copy">
+          <h2>Scan the Asset and Start the Right Walkaround</h2>
+          <p>QR access reduces the friction that makes paper checks unreliable. The operator scans the label already attached to the asset, confirms the available routine and starts the check beside the equipment.</p>
+          <ul class="equipment-check-list">
+            <li><i class="fa-solid fa-check"></i><span>Confirm the correct asset rather than relying on a handwritten description.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Choose from the active routines assigned to that equipment.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Resume an existing in-progress check instead of accidentally starting another.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Review recent equipment-check history from the asset record.</span></li>
+          </ul>
+          <p><a href="{{ '/mobile-cmms' | relative_url }}">Explore the Smartspanner mobile CMMS</a> or learn more about <a href="{{ '/asset-management-software' | relative_url }}">QR-enabled asset management</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Equipment Check Capabilities</h2>
+        <p>Practical controls for operators completing checks and managers responsible for the response.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-repeat"></i></span>
+            <h3>Reusable Routines</h3>
+            <p>Apply one published checklist to multiple relevant assets and update the routine centrally when requirements change.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-list-check"></i></span>
+            <h3>Structured Responses</h3>
+            <p>Use Yes/No/NA, Pass/Fail/NA, Safe/At risk/NA, Good/Poor/Fair, text answers, photos or files.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-camera"></i></span>
+            <h3>Evidence at the Point of Check</h3>
+            <p>Add a photograph, document or written observation while the operator is still beside the equipment.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-bell"></i></span>
+            <h3>Failure Alerts</h3>
+            <p>Negative findings are not buried in a completed form. Smartspanner raises an alert when a response needs attention.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3>Corrective Work Orders</h3>
+            <p>Configure important failures to create follow-up work that can be prioritised, assigned and tracked through completion.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-feature-card">
+            <span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <h3>Searchable Check History</h3>
+            <p>Review passed, action-required, active and abandoned checks with the equipment, operator and timing kept together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <h2>Where Equipment Check Software Is Useful</h2>
+        <p>Use asset-specific routines wherever a safe or reliable start depends on the operator checking condition before use.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-truck-ramp-box"></i></span>
+            <h3>Forklifts and Lift Trucks</h3>
+            <p>Document pre-shift checks covering tyres, forks, chains, hydraulics, warning devices, brakes, steering and operator restraints.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-truck"></i></span>
+            <h3>Commercial Vehicle Walkarounds</h3>
+            <p>Give drivers a consistent daily defect-reporting route for HGVs, trailers, vans, buses, coaches and site vehicles.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-tractor"></i></span>
+            <h3>Mobile Plant and Access Equipment</h3>
+            <p>Check excavators, loaders, telehandlers, MEWPs and other plant before operation, based on risk assessment and manufacturer guidance.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-link"></i></span>
+            <h3>Lifting Accessories</h3>
+            <p>Guide visual pre-use checks for chains, slings and accessories while keeping statutory thorough examinations as a separate control.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-industry"></i></span>
+            <h3>Production Machinery</h3>
+            <p>Confirm guards, interlocks, emergency stops, leaks, utilities and visible condition before starting machinery or a production line.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="equipment-use-card">
+            <span class="icon"><i class="fa-solid fa-warehouse"></i></span>
+            <h3>Warehouse and Facilities Equipment</h3>
+            <p>Standardise checks for loading docks, compactors, powered doors, cleaning machinery, generators and other frequently used assets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="uk-guidance" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Equipment Checks and UK Regulatory Guidance</h2>
+        <p>Digital records support a well-designed inspection system, but the required check, frequency and competence still depend on the equipment and risk.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="equipment-regulation">
+            <h3>PUWER: Risk-Based Work Equipment Inspection</h3>
+            <p>HSE says work equipment should be inspected in line with risk assessment. In many cases a quick visual check before use is sufficient; where a formal inspection is required, its result should be recorded and kept at least until the next inspection.</p>
+            <p>HSE also warns against collecting unnecessary detail that turns checks into superficial tick-box activity. Smartspanner routines should therefore be tailored to the equipment and what is necessary for safety.</p>
+            <a href="https://www.hse.gov.uk/work-equipment-machinery/inspection.htm" target="_blank" rel="noopener">Read HSE guidance on inspection of work equipment <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="equipment-regulation">
+            <h3>Lift Trucks: Documented Pre-Shift Checks</h3>
+            <p>HSE's rider-operated lift-truck guidance calls for a documented pre-shift check, a defect-reporting and remedial-work system, planned maintenance and periodic thorough examination. The operator should check the truck at the beginning of each shift and report safety defects.</p>
+            <p>An asset-specific routine can make that check consistent and route negative responses into maintenance follow-up.</p>
+            <a href="https://www.hse.gov.uk/pubns/priced/l117.pdf" target="_blank" rel="noopener">Read HSE lift-truck guidance (L117) <i class="fa-solid fa-file-pdf"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="equipment-regulation">
+            <h3>LOLER: Checks Do Not Replace Thorough Examination</h3>
+            <p>HSE notes that users may need simple pre-use checks for lifting chains and slings or daily checks for lift trucks. These routine checks complement maintenance and statutory thorough examination—they do not replace examination by a competent person where LOLER requires it.</p>
+            <a href="https://www.hse.gov.uk/work-equipment-machinery/thorough-examinations-lifting-equipment.htm" target="_blank" rel="noopener">Read HSE lifting-equipment guidance <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="equipment-regulation">
+            <h3>DVSA: Daily Walkarounds and Defect Records</h3>
+            <p>Commercial vehicle operators must have meaningful daily walkaround checks and a process for reporting defects or nil defects. DVSA's roadworthiness guidance says driver defect reports and rectification records must be retained for at least 15 months.</p>
+            <a href="https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles" target="_blank" rel="noopener">Read the DVSA roadworthiness guide <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="equipment-note">
+        <strong>Important:</strong> Smartspanner is a record-keeping and workflow tool, not engineering, health and safety or legal advice. Your organisation remains responsible for deciding what must be checked, how often, by whom, what constitutes a failed check and when equipment must be taken out of service.
+        HSE guidance cited above applies to Great Britain; organisations in Northern Ireland should also refer to the <a href="https://www.hseni.gov.uk/articles/provision-and-use-work-equipment-regulations-northern-ireland-1999-puwer" target="_blank" rel="noopener">Health and Safety Executive for Northern Ireland's PUWER guidance</a>.
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <h2>Paper, Standalone Inspection App or CMMS Equipment Checks?</h2>
+        <p>The key difference is what happens after the operator finds a defect.</p>
+      </div>
+      <div class="equipment-comparison-wrap">
+        <table class="equipment-comparison">
+          <thead>
+            <tr>
+              <th>Requirement</th>
+              <th>Paper or Spreadsheet</th>
+              <th>Standalone Inspection App</th>
+              <th>Smartspanner Equipment Checks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identify the equipment</strong></td>
+              <td>Handwritten or typed reference</td>
+              <td>Form or asset selected in a separate system</td>
+              <td>Select or scan the existing CMMS asset</td>
+            </tr>
+            <tr>
+              <td><strong>Use the right routine</strong></td>
+              <td>Operator finds the latest form</td>
+              <td>Template library or assigned inspection</td>
+              <td>Only active routines assigned to that asset</td>
+            </tr>
+            <tr>
+              <td><strong>Capture evidence</strong></td>
+              <td>Separate notes and photographs</td>
+              <td>Digital responses and media</td>
+              <td>Digital responses and media tied to asset history</td>
+            </tr>
+            <tr>
+              <td><strong>Handle a defect</strong></td>
+              <td>Phone call, email or manual re-entry</td>
+              <td>Action may remain outside maintenance</td>
+              <td>Dashboard alert or connected follow-up work order</td>
+            </tr>
+            <tr>
+              <td><strong>Review maintenance context</strong></td>
+              <td>Search multiple files</td>
+              <td>Inspection history may be separate</td>
+              <td>Checks, work orders and asset records stay connected</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="setup" class="section-bg">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 equipment-section-copy">
+          <h2>Start With One High-Value Routine</h2>
+          <p>A useful equipment-check programme does not begin by digitising every paper form. Start with a check that is repeated frequently, has a clear owner and produces meaningful action when something fails.</p>
+          <ul class="equipment-check-list">
+            <li><i class="fa-solid fa-check"></i><span>Choose one asset class, such as lift trucks or mobile plant.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Build questions from the risk assessment, manufacturer instructions and competent operational knowledge.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Define the negative responses and whether each should alert or create work.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Pilot the routine with operators and remove unnecessary questions.</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Review whether defects are being closed, not just whether forms are being completed.</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="equipment-callout">
+            <span class="equipment-eyebrow"><i class="fa-solid fa-star"></i> Advanced plan</span>
+            <h2>Equipment Checks are included from £27/user/month</h2>
+            <p>The Advanced plan also includes checklist templates, condition monitoring, statistics, purchasing, permits to work, API access and other advanced maintenance controls.</p>
+            <a href="{{ '/pricing' | relative_url }}" class="btn btn-primary">Compare Pricing Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="related">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Checks to the Rest of Maintenance</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-related-card">
+            <h3><a href="{{ '/maintenance-checklists' | relative_url }}">Maintenance Checklists</a></h3>
+            <p>Learn how to design checklists that operators can complete consistently.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-related-card">
+            <h3><a href="{{ '/maintenance-compliance-software' | relative_url }}">Maintenance Compliance</a></h3>
+            <p>Bring inspection evidence, work orders, permits and reports into one audit-ready system.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-related-card">
+            <h3><a href="{{ '/cmms-for-manufacturing' | relative_url }}">Manufacturing CMMS</a></h3>
+            <p>Connect shop-floor checks with production asset maintenance and reliability.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="equipment-related-card">
+            <h3><a href="{{ '/distribution-fleet-maintenance' | relative_url }}">Fleet Maintenance</a></h3>
+            <p>Manage maintenance records for logistics, warehouse and fleet assets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-bg equipment-faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Equipment Check Software FAQs</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <details>
+            <summary>What is equipment check software?</summary>
+            <p>Equipment check software replaces paper pre-use forms and walkaround sheets with structured digital routines. Operators identify the equipment, answer the required questions, add evidence and submit a timestamped result. Problems can then be escalated for maintenance action.</p>
+          </details>
+          <details>
+            <summary>Can an operator start a check by scanning a QR code?</summary>
+            <p>Yes. Smartspanner users can scan an asset QR code from the equipment-check workflow. The system identifies the asset and presents the active check routines assigned to it.</p>
+          </details>
+          <details>
+            <summary>How is an equipment check different from a work order?</summary>
+            <p>An equipment check is an on-demand operator inspection used to confirm condition before use or at the start of a shift. A work order records maintenance work that needs planning, assignment or completion. Smartspanner keeps routine checks separate and creates work orders only when a configured response requires follow-up.</p>
+          </details>
+          <details>
+            <summary>What happens when an equipment check fails?</summary>
+            <p>Negative responses such as No, Fail, At risk or Poor mark the check as Action Required. Depending on the checklist configuration, the response raises a dashboard alert or creates a follow-up work order.</p>
+          </details>
+          <details>
+            <summary>Does equipment check software make us PUWER compliant?</summary>
+            <p>No software can guarantee compliance. Smartspanner helps organisations implement and evidence the inspection process they have defined. The organisation remains responsible for its risk assessments, inspection scope and frequency, competent people, safe systems of work and decisions about whether equipment is safe to use.</p>
+          </details>
+          <details>
+            <summary>Do pre-use checks replace LOLER thorough examinations?</summary>
+            <p>No. Routine operator checks and statutory thorough examinations have different purposes. Pre-use checks may help identify visible defects between examinations, but they do not replace a thorough examination by a competent person where LOLER requires one.</p>
+          </details>
+          <details>
+            <summary>Which Smartspanner plan includes Equipment Checks?</summary>
+            <p>Equipment Checks are included in the Advanced plan, currently priced from £27 per user per month. Advanced also includes checklist templates and the follow-up maintenance features used by the equipment-check workflow.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="get-started">
+    <div class="container text-center">
+      <h2 style="font-size: 34px; color: var(--color-secondary); font-weight: 650; margin-bottom: 18px;">See Equipment Checks in Smartspanner</h2>
+      <p style="font-size: 17px; max-width: 690px; margin: 0 auto 28px;">Book a demo to see routine setup, QR asset selection, the mobile check runner and automatic action from failed responses.</p>
+      <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary equipment-btn">Book a Demo</a>
+      <a href="{{ site.signup_url }}" class="btn btn-secondary equipment-btn">Start Free Trial</a>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is equipment check software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Equipment check software replaces paper pre-use forms and walkaround sheets with structured digital routines. Operators identify the equipment, answer required questions, add evidence and submit a timestamped result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an operator start a check by scanning a QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Smartspanner users can scan an asset QR code and select an active equipment-check routine assigned to that asset."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is an equipment check different from a work order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An equipment check is an on-demand operator inspection. A work order records maintenance work that needs planning, assignment or completion. Smartspanner keeps routine checks separate and creates work orders when configured failures require follow-up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when an equipment check fails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Negative responses mark the check as Action Required and can raise a dashboard alert or create a follow-up work order, depending on the checklist configuration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does equipment check software make us PUWER compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No software can guarantee compliance. Smartspanner helps organisations implement and evidence the inspection process they define, while the organisation remains responsible for risk assessment, inspection requirements, competence and safe use decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do pre-use checks replace LOLER thorough examinations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Routine operator checks do not replace a statutory thorough examination by a competent person where LOLER requires one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Smartspanner plan includes Equipment Checks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Equipment Checks are included in the Advanced plan, currently priced from £27 per user per month."
+      }
+    }
+  ]
+}
+</script>

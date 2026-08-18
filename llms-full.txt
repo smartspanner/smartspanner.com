@@ -38,6 +38,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Manage maintenance across multiple sites
 - Control spare parts and consumables across sites with categories, BIN locations, replenishment rules, intelligent perpetual counting, inventory health, and purchase orders
 - Standardize procedures and maintenance checklists
+- Run on-demand pre-use equipment checks and walkarounds by selecting or scanning assets, with photo evidence, alerts, follow-up work orders, and asset-level history
 - Manage UK-aligned permits to work for higher-risk maintenance tasks, with mobile signature capture, PDF export for wet signatures, email sharing, and links to one or more CMMS users
 - Record failure codes for root cause analysis
 - Coordinate subcontractor maintenance work
@@ -57,6 +58,7 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Spare parts and inventory: structure stock with categories and BIN locations, apply replenishment and verification rules, automate daily cycle-counting workloads, monitor site Stock Control, and compare organisation-wide Inventory Performance.
 - Purchase orders: create and manage maintenance purchase orders and goods receipts.
 - Checklists and inspections: capture inspection responses, notes, comments, and media.
+- Equipment checks: create reusable routines from published checklists, assign them to relevant assets, start checks by search or QR scan, and turn negative responses into alerts or follow-up work orders.
 - Permits to work: create UK-aligned permit-to-work records, capture signatures on mobile or tablet, generate PDFs for wet signatures, email permits, and link each permit to one or more Smartspanner users.
 - Procedures: standardize repeatable maintenance procedures and attach supporting documents.
 - Subcontractors: track external maintenance teams, costs, and related files.
@@ -82,7 +84,7 @@ Smartspanner pricing is per user per month and includes a 14-day free trial with
 
 - Basic: GBP 15/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
 - Standard: GBP 21/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
-- Advanced: GBP 27/user/month. Adds checklists, condition monitoring, statistics, purchasing, permits to work, and API access.
+- Advanced: GBP 27/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
@@ -117,6 +119,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Affordable pricing: entry plan starts from GBP 15/user/month.
 - Unlimited support: telephone and online support are included.
 - Mobile-first field workflow: native iOS and Android apps support technicians away from a desk.
+- On-demand equipment checks: operators can select or scan assets, complete pre-use routines, capture evidence, and raise alerts or follow-up work orders without adding every routine check to the work-order list.
 - Multi-site support: suitable for teams managing assets across multiple locations.
 - IoT-ready: optional sensor monitoring supports condition-based maintenance.
 - Practical reporting: dashboards and API access support operational visibility and business reporting.
@@ -135,6 +138,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Multi-language CMMS Software: https://www.smartspanner.com/multi-language-cmms-software/
 - Spare Parts and Inventory: https://www.smartspanner.com/spare-part-inventory-software/
 - Checklists and Inspections: https://www.smartspanner.com/compliance-software/
+- Equipment Check Software: https://www.smartspanner.com/equipment-check-software/
 - Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/
 - Permit to Work Software: https://www.smartspanner.com/permit-to-work-software/
 - Procedures: https://www.smartspanner.com/maintenance-procedure-software/

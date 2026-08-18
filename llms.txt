@@ -27,6 +27,7 @@ Based in Gateshead, United Kingdom.
 - Reporting and dashboards
 - Subcontractor management
 - Checklists and inspections
+- Equipment checks for pre-use inspections and walkarounds, with asset QR scanning, photo evidence, alerts, follow-up work orders, and asset-level history (Advanced plan)
 - Permits to work (UK-aligned permit-to-work workflows, mobile signature capture, PDF export for wet signatures, email sharing, and linked CMMS users)
 - Fire risk assessments (UK-compliant, multi-site, with photo evidence and work-order actions)
 - IoT condition monitoring (vibration, temperature, energy, flow meters)
@@ -41,7 +42,7 @@ All prices are per user, per month. 14-day free trial included. No credit card r
 
 - Basic: £15/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
 - Standard: £21/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
-- Advanced: £27/user/month — Adds checklists, condition monitoring, statistics, purchasing, permits to work, API access
+- Advanced: £27/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
@@ -72,6 +73,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - IoT Condition Monitoring: https://www.smartspanner.com/iot-condition-monitoring/
 - Integrations & API: https://www.smartspanner.com/integrations-api/
 - Maintenance Checklists Guide: https://www.smartspanner.com/maintenance-checklists/
+- Equipment Check Software: https://www.smartspanner.com/equipment-check-software/
 - Permit to Work Software: https://www.smartspanner.com/permit-to-work-software/
 - Fire Risk Assessment Software: https://www.smartspanner.com/fire-risk-assessment-software/
 - Blog: https://www.smartspanner.com/blog/

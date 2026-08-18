@@ -23,9 +23,10 @@ plans:
     price: 27
     currency: £
     period: per user/month
-    description: Complete maintenance management with purchasing, condition monitoring and analytics.
+    description: Complete maintenance management with equipment checks, purchasing, condition monitoring and analytics.
     differentiators:
-      - Check Lists
+      - Checklists
+      - Equipment Checks
       - Condition Monitoring
       - Statistics
       - Purchasing
