@@ -3894,19 +3894,6 @@ section {
   font-size: 13px;
 }
 
-.case-study-feature-quote-dark {
-  background: var(--color-secondary);
-}
-
-.case-study-feature-quote-dark blockquote,
-.case-study-feature-quote-dark figcaption strong {
-  color: #fff;
-}
-
-.case-study-feature-quote-dark figcaption span {
-  color: rgba(255, 255, 255, 0.62);
-}
-
 .case-study-video {
   aspect-ratio: 240 / 426;
   background: #000;
