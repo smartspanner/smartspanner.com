@@ -31,7 +31,7 @@
 - title: Multi-Site
   icon: fa-solid fa-location-dot
   link: multi-site-maintenance-software
-  description: Quickly deploy across multi-site companies. Set permissions for your team at each site. Site specific or global dashboard views.
+  description: Manage sites across currencies and languages with site-based permissions, local KPI views and organisation-wide rankings.
 
 - title: Performance and Statistics
   icon: fa-solid fa-chart-simple

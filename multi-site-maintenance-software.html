@@ -1,33 +1,876 @@
 ---
-layout: feature
+layout: default
 title: Multi-Site Maintenance Software
-description: Multi-site cloud hosted maintenance software by Smartspanner CMMS.
-keywords: multi-site maintenance, cloud cmms, maintenance software
-hero_image: /assets/img/header-features.png
+meta_title: Multi-Site Maintenance Software | Smartspanner CMMS
+description: "Manage maintenance across sites, countries, currencies and languages with site permissions, local KPI views and global performance rankings."
+keywords: multi-site maintenance software, multi-site CMMS, global maintenance software, multi-location maintenance management, international CMMS, multi-site maintenance reporting, site maintenance software
+image: /assets/img/features/kpi-pm-compliance.png
+parent: Features
+parent_url: /features/
 ---
 
-<section id="service-details" class="service-details">
+<style>
+  .multisite-hero {
+    background: linear-gradient(135deg, #f8fbfd 0%, #edf3f6 100%);
+    overflow: hidden;
+    padding: 142px 0 88px;
+  }
+
+  .multisite-eyebrow {
+    color: #9a7000;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  .multisite-hero h1 {
+    color: var(--color-secondary);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.12;
+    margin-bottom: 22px;
+  }
+
+  .multisite-hero-copy > p {
+    color: #56636c;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 650px;
+  }
+
+  .multisite-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .multisite-hero-actions .btn,
+  .multisite-final-actions .btn {
+    border-radius: 50px;
+    font-weight: 700;
+    padding: 12px 30px;
+  }
+
+  .multisite-hero-actions .btn-primary,
+  .multisite-final-actions .btn-primary {
+    color: #25282e;
+  }
+
+  .multisite-final-actions .btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    color: #fff;
+  }
+
+  .multisite-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 18px;
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+  }
+
+  .multisite-hero-points li {
+    color: #5f6c75;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .multisite-hero-points i {
+    color: #9a7000;
+    margin-right: 6px;
+  }
+
+  .multisite-network {
+    background: #17191c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 24px 58px rgba(29, 36, 42, 0.2);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .multisite-network-header {
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 22px;
+  }
+
+  .multisite-network-header strong {
+    font-size: 16px;
+  }
+
+  .multisite-network-header span {
+    background: rgba(254, 185, 0, 0.14);
+    border: 1px solid rgba(254, 185, 0, 0.3);
+    border-radius: 50px;
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 10px;
+  }
+
+  .multisite-network-body {
+    padding: 22px;
+  }
+
+  .multisite-network-summary {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 14px;
+  }
+
+  .multisite-network-summary div {
+    background: #222529;
+    border-radius: 9px;
+    padding: 13px;
+  }
+
+  .multisite-network-summary strong {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .multisite-network-summary span {
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 11px;
+  }
+
+  .multisite-site-list {
+    display: grid;
+    gap: 9px;
+  }
+
+  .multisite-site-row {
+    align-items: center;
+    background: #222529;
+    border-left: 3px solid var(--color-primary);
+    border-radius: 9px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 13px 14px;
+  }
+
+  .multisite-site-row strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .multisite-site-row small {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+  }
+
+  .multisite-site-row > span {
+    color: #d6d8da;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .multisite-principles {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 34px;
+  }
+
+  .multisite-principle {
+    background: #fff;
+    border: 1px solid #e5eaed;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(39, 49, 57, 0.08);
+    padding: 34px;
+  }
+
+  .multisite-principle-icon,
+  .multisite-feature-icon,
+  .multisite-step-number {
+    align-items: center;
+    background: rgba(254, 185, 0, 0.18);
+    border-radius: 50%;
+    color: #8f6800;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px;
+  }
+
+  .multisite-principle h3 {
+    color: #2e3035;
+    font-size: 24px;
+    margin: 20px 0 12px;
+  }
+
+  .multisite-principle p,
+  .multisite-feature p,
+  .multisite-step p,
+  .multisite-access-card p {
+    color: #637079;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .multisite-feature-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .multisite-feature {
+    background: #fff;
+    border: 1px solid #e5eaed;
+    border-radius: 12px;
+    height: 100%;
+    padding: 27px;
+  }
+
+  .multisite-feature-icon {
+    height: 42px;
+    width: 42px;
+  }
+
+  .multisite-feature h3 {
+    color: #2e3035;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 18px 0 10px;
+  }
+
+  .multisite-feature a,
+  .multisite-copy a {
+    color: #8f6800;
+    font-weight: 700;
+  }
+
+  .multisite-product-shot {
+    background: #fff;
+    border: 1px solid #dfe5e8;
+    border-radius: 14px;
+    box-shadow: 0 18px 44px rgba(36, 41, 47, 0.14);
+    overflow: hidden;
+  }
+
+  .multisite-product-shot img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .multisite-copy h2 {
+    color: #2e3035;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 18px;
+  }
+
+  .multisite-copy > p {
+    color: #58656e;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .multisite-check-list {
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+  }
+
+  .multisite-check-list li {
+    color: #53616a;
+    display: flex;
+    gap: 11px;
+    line-height: 1.55;
+    margin-bottom: 13px;
+  }
+
+  .multisite-check-list i {
+    color: #9a7000;
+    margin-top: 4px;
+  }
+
+  .multisite-language-panel {
+    background: var(--color-secondary);
+    border-radius: 16px;
+    color: #fff;
+    margin-top: 54px;
+    padding: 38px;
+  }
+
+  .multisite-language-panel h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .multisite-language-panel p {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .multisite-language-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .multisite-language-list span {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+
+  .multisite-language-panel a {
+    color: var(--color-primary);
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 22px;
+  }
+
+  .multisite-access-grid {
+    display: grid;
+    gap: 15px;
+  }
+
+  .multisite-access-card {
+    background: #fff;
+    border: 1px solid #e4e9ec;
+    border-radius: 11px;
+    padding: 23px;
+  }
+
+  .multisite-access-card span {
+    color: #9a7000;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  .multisite-access-card h3 {
+    color: #2e3035;
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+
+  .multisite-rollout {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 32px;
+  }
+
+  .multisite-step {
+    background: #fff;
+    border: 1px solid #e4e9ec;
+    border-radius: 12px;
+    padding: 25px;
+  }
+
+  .multisite-step-number {
+    font-size: 16px;
+    font-weight: 800;
+    height: 40px;
+    width: 40px;
+  }
+
+  .multisite-step h3 {
+    color: #2e3035;
+    font-size: 17px;
+    margin: 17px 0 9px;
+  }
+
+  .multisite-faq {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .multisite-faq details {
+    background: #fff;
+    border: 1px solid #e2e7ea;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 22px;
+  }
+
+  .multisite-faq summary {
+    color: #2e3035;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+    padding: 20px 34px 20px 0;
+    position: relative;
+  }
+
+  .multisite-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .multisite-faq summary::after {
+    color: #9a7000;
+    content: "+";
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 14px;
+  }
+
+  .multisite-faq details[open] summary::after {
+    content: "−";
+  }
+
+  .multisite-faq details p {
+    color: #5f6c75;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0 0 20px;
+  }
+
+  .multisite-final-cta {
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 84px 0;
+  }
+
+  .multisite-final-cta h2 {
+    color: #fff;
+    font-size: 38px;
+    margin: 10px 0 15px;
+  }
+
+  .multisite-final-cta p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 auto 28px;
+    max-width: 700px;
+  }
+
+  .multisite-final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .multisite-hero {
+      padding-top: 120px;
+    }
+
+    .multisite-hero h1 {
+      font-size: 39px;
+    }
+
+    .multisite-network,
+    .multisite-product-shot {
+      margin-top: 38px;
+    }
+
+    .multisite-feature-grid,
+    .multisite-rollout {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .multisite-hero {
+      padding: 112px 0 65px;
+    }
+
+    .multisite-hero h1 {
+      font-size: 34px;
+      letter-spacing: -0.5px;
+    }
+
+    .multisite-principles,
+    .multisite-feature-grid,
+    .multisite-rollout {
+      grid-template-columns: 1fr;
+    }
+
+    .multisite-principle,
+    .multisite-language-panel {
+      padding: 28px;
+    }
+
+    .multisite-copy h2,
+    .multisite-final-cta h2 {
+      font-size: 29px;
+    }
+
+    .multisite-network-summary {
+      grid-template-columns: 1fr;
+    }
+
+    .multisite-hero-actions .btn,
+    .multisite-final-actions .btn {
+      text-align: center;
+      width: 100%;
+    }
+  }
+</style>
+
+<section class="multisite-hero">
   <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4">
-        <div class="services-list">
-          <ul>
-            <li><i class="fa-solid fa-circle-check"></i> Cloud deployment; instant and global</li>
-            <li><i class="fa-solid fa-circle-check"></i> Set user permissions for each site</li>
-            <li><i class="fa-solid fa-circle-check"></i> Dashboards per site</li>
-            <li><i class="fa-solid fa-circle-check"></i> Data import of spares and assets</li>
-            <li><i class="fa-solid fa-circle-check"></i> Site-level Stock Control workspaces</li>
-            <li><i class="fa-solid fa-circle-check"></i> Organisation-wide Inventory Performance</li>
-          </ul>
+    <div class="row align-items-center">
+      <div class="col-lg-6 multisite-hero-copy">
+        <span class="multisite-eyebrow">Multi-site CMMS</span>
+        <h1>One Maintenance System. Every Site in View.</h1>
+        <p>Give each location the maintenance tools, currency, language and access it needs while management keeps a consistent view across the organisation.</p>
+        <div class="multisite-hero-actions">
+          <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Book a Multi-Site Demo</a>
+          <a href="{{ site.signup_url }}" class="btn btn-secondary">Start Free Trial</a>
         </div>
+        <ul class="multisite-hero-points" aria-label="Multi-site capabilities">
+          <li><i class="fa-solid fa-user-shield" aria-hidden="true"></i> Site-based permissions</li>
+          <li><i class="fa-solid fa-coins" aria-hidden="true"></i> Multiple currencies</li>
+          <li><i class="fa-solid fa-language" aria-hidden="true"></i> Nine app languages</li>
+          <li><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Global site rankings</li>
+        </ul>
       </div>
 
-      <div class="col-lg-8">
-        <img src="{{ '/assets/img/features/sites.png' | relative_url }}" alt="Multi-Site" class="img-fluid services-img" loading="lazy">
-        <h3>Smartspanner CMMS can be deployed globally across different time zones, instantly.</h3>
-        <p>Multi-site features mean you can set permissions for your team in each location while retaining central visibility across the organisation.</p>
-        <p>With <a href="{{ '/spare-part-inventory-software' | relative_url }}">multi-site inventory management</a>, stores teams work from their own Stock Control page while management compares inventory value, accuracy and health across sites and countries.</p>
+      <div class="col-lg-6">
+        <div class="multisite-network" aria-label="Example multi-site maintenance overview">
+          <div class="multisite-network-header">
+            <strong>Global Operations</strong>
+            <span>EXAMPLE VIEW</span>
+          </div>
+          <div class="multisite-network-body">
+            <div class="multisite-network-summary">
+              <div><strong>12</strong><span>Sites</span></div>
+              <div><strong>4</strong><span>Countries</span></div>
+              <div><strong>92%</strong><span>PM compliance</span></div>
+            </div>
+            <div class="multisite-site-list">
+              <div class="multisite-site-row">
+                <div><strong>Newcastle Plant</strong><small>United Kingdom</small></div>
+                <span>GBP · 96%</span>
+              </div>
+              <div class="multisite-site-row">
+                <div><strong>Hamburg Facility</strong><small>Germany</small></div>
+                <span>EUR · 93%</span>
+              </div>
+              <div class="multisite-site-row">
+                <div><strong>Kuala Lumpur Hub</strong><small>Malaysia</small></div>
+                <span>MYR · 89%</span>
+              </div>
+              <div class="multisite-site-row">
+                <div><strong>Auckland Workshop</strong><small>New Zealand</small></div>
+                <span>NZD · 87%</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<main id="main">
+  <section id="local-global">
+    <div class="container">
+      <div class="section-header">
+        <h2>Local Control. Organisation-Wide Visibility.</h2>
+        <p>Multi-site maintenance should give local teams a practical daily workspace without creating separate information silos for management.</p>
+      </div>
+
+      <div class="multisite-principles">
+        <article class="multisite-principle">
+          <span class="multisite-principle-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+          <h3>Work in the Site Context</h3>
+          <p>Assets, work orders, planned maintenance, inventory and users remain connected to the location where the work happens. Teams can focus on their own responsibilities without searching through unrelated sites.</p>
+        </article>
+        <article class="multisite-principle">
+          <span class="multisite-principle-icon"><i class="fa-solid fa-earth-europe" aria-hidden="true"></i></span>
+          <h3>Manage the Whole Organisation</h3>
+          <p>Switch to global views when you need to compare performance, identify sites requiring attention and understand maintenance across countries from the same live system.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="multi-site-capabilities" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for Multi-Site and International Operations</h2>
+        <p>Keep shared oversight at company level while respecting the practical differences between locations.</p>
+      </div>
+
+      <div class="multisite-feature-grid">
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></span>
+          <h3>Site-Based Permissions</h3>
+          <p>Control which locations each user can access, so local teams see the sites relevant to their work while authorised managers retain wider visibility.</p>
+        </article>
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></span>
+          <h3>Multiple Currencies</h3>
+          <p>Use the appropriate currency at each site and normalise organisation-wide inventory values into the company base currency for meaningful comparison.</p>
+        </article>
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-language" aria-hidden="true"></i></span>
+          <h3><a href="{{ '/multi-language-cmms-software/' | relative_url }}">Multiple Languages</a></h3>
+          <p>Let users work in one of nine app languages, with in-app translation for supported procedures, checklists, instructions, descriptions and comments.</p>
+        </article>
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i></span>
+          <h3>Global Site Rankings</h3>
+          <p>Use site breakdowns and rankings for most maintenance KPIs to find stronger performance, emerging risk and locations requiring support.</p>
+        </article>
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+          <h3><a href="{{ '/reporting/' | relative_url }}">Site-Specific KPI Views</a></h3>
+          <p>Filter performance to a selected site and reporting period, then review its trends and underlying maintenance activity in local context.</p>
+        </article>
+        <article class="multisite-feature">
+          <span class="multisite-feature-icon"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i></span>
+          <h3><a href="{{ '/spare-part-inventory-software/' | relative_url }}">Inventory by Site</a></h3>
+          <p>Give stores teams a site-level Stock Control workspace while management compares inventory value, accuracy and health across countries and sites.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="site-performance">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="multisite-product-shot">
+            <img src="{{ '/assets/img/features/kpi-pm-compliance.png' | relative_url }}" alt="Smartspanner performance KPI dashboard showing PM compliance trend and rankings by site" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+        <div class="col-lg-5 multisite-copy">
+          <span class="multisite-eyebrow">Performance across locations</span>
+          <h2>Compare Sites Without Losing the Local Detail</h2>
+          <p>The Performance KPI area supports both all-site and site-specific analysis. Managers can see the organisation-wide result, review the trend and use site tables to understand where the difference comes from.</p>
+          <ul class="multisite-check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Switch between all sites and a selected location</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Rank sites for most KPIs and drill into the underlying work</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Review overdue work, downtime, MTTR, MTBF, PM compliance and on-time completion</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Change the reporting period to compare recent and longer-term performance</span></li>
+          </ul>
+          <p><a href="{{ '/reporting/' | relative_url }}">Explore Smartspanner reporting and KPI dashboards <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="international-operations" class="section-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 multisite-copy">
+          <span class="multisite-eyebrow">International operations</span>
+          <h2>Currencies That Work Locally and Add Up Globally</h2>
+          <p>Site teams need costs and values in the currency they actually use. Management needs a consistent basis for comparison across countries.</p>
+          <p>Smartspanner supports a configured site currency, while organisation-wide Inventory Performance converts site values into the Company Profile base currency. That keeps the local view familiar and the global comparison consistent.</p>
+          <ul class="multisite-check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Inventory value in the site's configured currency</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Company base currency for cross-site inventory reporting</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Country summaries and individual site performance</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <div class="multisite-product-shot">
+            <img src="{{ '/assets/img/features/inventory/inventory-performance.webp' | relative_url }}" alt="Smartspanner Inventory Performance comparing value, accuracy and health across countries and sites" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="multisite-language-panel">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <span class="multisite-eyebrow" style="color: var(--color-primary);">Language for each user</span>
+            <h3>One CMMS for Multilingual Teams</h3>
+            <p>The interface is available in nine languages. Supported maintenance content can also be translated in the app while preserving the original wording for reference.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="multisite-language-list" aria-label="Supported Smartspanner app languages">
+              <span>English</span><span>German</span><span>French</span><span>Spanish</span><span>Portuguese</span><span>Lithuanian</span><span>Thai</span><span>Malay</span><span>Japanese</span>
+            </div>
+            <a href="{{ '/multi-language-cmms-software/' | relative_url }}">See multi-language Smartspanner <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="site-access">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 multisite-copy">
+          <span class="multisite-eyebrow">Access and accountability</span>
+          <h2>Give People Access to the Sites They Actually Manage</h2>
+          <p>Site-based permissions help distributed organisations maintain appropriate visibility without creating separate CMMS accounts or duplicating records.</p>
+          <p>Users can be given access at each relevant site. This supports local maintenance teams, managers responsible for several locations and organisation-wide roles from the same tenant.</p>
+          <ul class="multisite-check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Limit access and visibility by site</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Support people responsible for one, several or all locations</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Keep shared reporting within one organisation account</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="multisite-access-grid" aria-label="Examples of site access patterns">
+            <article class="multisite-access-card">
+              <span>Organisation-wide access</span>
+              <h3>Central Operations</h3>
+              <p>Review maintenance and performance across every authorised site.</p>
+            </article>
+            <article class="multisite-access-card">
+              <span>Several selected sites</span>
+              <h3>Regional or Area Responsibility</h3>
+              <p>Work across the group of locations assigned to that user.</p>
+            </article>
+            <article class="multisite-access-card">
+              <span>Local site access</span>
+              <h3>Site Maintenance Team</h3>
+              <p>Focus on the assets, work orders and records belonging to the local operation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rollout" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Start With One Site. Add the Next When You Are Ready.</h2>
+        <p>Use a working local process as the foundation, then extend the same maintenance structure across the organisation.</p>
+      </div>
+      <div class="multisite-rollout">
+        <article class="multisite-step">
+          <span class="multisite-step-number">1</span>
+          <h3>Set Up the First Site</h3>
+          <p>Add its locations, assets, users and planned maintenance.</p>
+        </article>
+        <article class="multisite-step">
+          <span class="multisite-step-number">2</span>
+          <h3>Define Local Access</h3>
+          <p>Give each person visibility of the sites relevant to their role.</p>
+        </article>
+        <article class="multisite-step">
+          <span class="multisite-step-number">3</span>
+          <h3>Configure Local Context</h3>
+          <p>Use the appropriate currency, language and site-level working view.</p>
+        </article>
+        <article class="multisite-step">
+          <span class="multisite-step-number">4</span>
+          <h3>Compare and Improve</h3>
+          <p>Bring more sites online and use global rankings to target support.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {% include case-study-promo.html slug="nadon-thai" %}
+
+  <section id="multi-site-faq" class="section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Multi-Site CMMS Questions</h2>
+      </div>
+      <div class="multisite-faq">
+        <details>
+          <summary>Can users be limited to particular sites?</summary>
+          <p>Yes. Site-based permissions control which locations a user can access and see. A user can be given access to one site, several selected sites or wider organisation-level visibility as required.</p>
+        </details>
+        <details>
+          <summary>Can different sites use different currencies?</summary>
+          <p>Yes. Sites can use their configured currency. For organisation-wide Inventory Performance, site values are converted into the Company Profile base currency so locations in different countries can be compared consistently.</p>
+        </details>
+        <details>
+          <summary>Does Smartspanner support multiple languages?</summary>
+          <p>Yes. The app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay and Japanese. Supported procedures, checklists, instructions, descriptions and comments can also be translated in the app.</p>
+        </details>
+        <details>
+          <summary>Can we compare maintenance KPIs between sites?</summary>
+          <p>Yes. Most Performance KPI views include site breakdowns or rankings, and the same area can be filtered to an individual site and date range for local analysis.</p>
+        </details>
+        <details>
+          <summary>Do we need a separate Smartspanner account for every site?</summary>
+          <p>No. Multiple sites are managed within the same organisation account, allowing local site working and organisation-wide reporting without maintaining disconnected systems.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="multisite-final-cta">
+    <div class="container text-center">
+      <span class="multisite-eyebrow" style="color: var(--color-primary);">Your sites, one maintenance system</span>
+      <h2>See Your Multi-Site Operation in Smartspanner</h2>
+      <p>Book a 45-minute walkthrough and we will show you how site access, currencies, languages, KPI rankings and local maintenance workflows fit together.</p>
+      <div class="multisite-final-actions">
+        <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Book a Multi-Site Demo</a>
+        <a href="{{ site.signup_url }}" class="btn btn-secondary">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can users be limited to particular sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Site-based permissions control which locations a user can access and see. A user can be given access to one site, several selected sites or wider organisation-level visibility as required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can different sites use different currencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sites can use their configured currency. For organisation-wide Inventory Performance, site values are converted into the Company Profile base currency so locations in different countries can be compared consistently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Smartspanner support multiple languages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay and Japanese. Supported procedures, checklists, instructions, descriptions and comments can also be translated in the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we compare maintenance KPIs between sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most Performance KPI views include site breakdowns or rankings, and the same area can be filtered to an individual site and date range for local analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need a separate Smartspanner account for every site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Multiple sites are managed within the same organisation account, allowing local site working and organisation-wide reporting without maintaining disconnected systems."
+      }
+    }
+  ]
+}
+</script>
