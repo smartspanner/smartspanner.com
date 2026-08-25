@@ -20,7 +20,7 @@ layout: default
           <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary case-study-hero-cta">Book a Smartspanner Demo</a>
         </div>
 
-        <aside class="case-study-hero-panel" aria-label="Nadon Thai case study overview">
+        <aside class="case-study-hero-panel" aria-label="{{ page.customer }} case study overview">
           <span class="case-study-panel-label">At a glance</span>
           {% if page.logo %}
           <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo">
@@ -75,10 +75,16 @@ layout: default
             <span class="case-study-sidebar-label">Relevant solutions</span>
             <h2>Explore the tools behind the story</h2>
             <ul>
+              {% if page.related_solutions %}
+              {% for solution in page.related_solutions %}
+              <li><a href="{{ solution.url | relative_url }}">{{ solution.title }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+              {% endfor %}
+              {% else %}
               <li><a href="{{ '/maintenance-compliance-software/' | relative_url }}">Maintenance compliance <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
               <li><a href="{{ '/multi-site-maintenance-software/' | relative_url }}">Multi-site maintenance <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
               <li><a href="{{ '/maintenance-scheduling-software/' | relative_url }}">Maintenance scheduling <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
               <li><a href="{{ '/work-order-management-software/' | relative_url }}">Corrective work orders <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+              {% endif %}
             </ul>
           </div>
         </aside>

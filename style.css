@@ -3876,6 +3876,24 @@ section {
   color: rgba(255, 255, 255, 0.62);
 }
 
+.case-study-video {
+  aspect-ratio: 240 / 426;
+  background: #000;
+  border-radius: 14px;
+  box-shadow: 0 16px 38px rgba(36, 41, 47, 0.14);
+  margin: 38px auto;
+  max-width: 360px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.case-study-video iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .case-study-results {
   display: grid;
   gap: 16px;
