@@ -24,7 +24,7 @@ layout: default
           <span class="case-study-panel-label">At a glance</span>
           {% if page.logo %}
           <div class="case-study-logo-surface case-study-client-logo-surface">
-            <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo">
+            <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo no-lightbox">
           </div>
           {% else %}
           <h2>{{ page.customer }}</h2>
