@@ -41,7 +41,8 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
 <!-- Preload critical hero image for LCP -->
-<link rel="preload" as="image" href="{{ '/assets/img/hero-carousel/facilities-management.jpg' | relative_url }}" fetchpriority="high">
+{% assign critical_hero_image = page.hero_image | default: '/assets/img/hero-carousel/facilities-management.jpg' %}
+<link rel="preload" as="image" href="{{ critical_hero_image | relative_url }}" fetchpriority="high">
 
 <!-- Preload critical CSS -->
 <link rel="preload" href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" as="style">

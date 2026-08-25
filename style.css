@@ -3851,6 +3851,26 @@ section {
   margin-bottom: 7px;
 }
 
+.case-study-photo {
+  margin: 38px auto;
+  max-width: 620px;
+}
+
+.case-study-photo img {
+  border-radius: 14px;
+  box-shadow: 0 16px 38px rgba(36, 41, 47, 0.14);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.case-study-photo figcaption {
+  color: #6c757d;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 12px 4px 0;
+}
+
 .case-study-process {
   align-items: center;
   background: var(--color-secondary);
