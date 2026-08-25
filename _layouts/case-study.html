@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
+{% assign case_study_hero_image = page.hero_image | default: '/assets/img/breadcrumbs-bg.jpg' %}
 <main id="main" class="case-study-page">
-  <section class="case-study-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ '/assets/img/breadcrumbs-bg.jpg' | relative_url }}');">
+  <section class="case-study-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ case_study_hero_image | relative_url }}');">
     <div class="container">
       <nav class="case-study-breadcrumbs" aria-label="Breadcrumb">
         <ol>
