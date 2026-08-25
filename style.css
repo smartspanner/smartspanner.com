@@ -3828,6 +3828,10 @@ section {
   max-width: 620px;
 }
 
+.case-study-photo-compact {
+  max-width: 480px;
+}
+
 .case-study-photo img {
   border-radius: 14px;
   box-shadow: 0 16px 38px rgba(36, 41, 47, 0.14);
