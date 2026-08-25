@@ -2,7 +2,7 @@
 layout: default
 ---
 <main id="main" class="case-study-page">
-  <section class="case-study-hero">
+  <section class="case-study-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ '/assets/img/breadcrumbs-bg.jpg' | relative_url }}');">
     <div class="container">
       <nav class="case-study-breadcrumbs" aria-label="Breadcrumb">
         <ol>
@@ -23,7 +23,9 @@ layout: default
         <aside class="case-study-hero-panel" aria-label="{{ page.customer }} case study overview">
           <span class="case-study-panel-label">At a glance</span>
           {% if page.logo %}
-          <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo">
+          <div class="case-study-logo-surface case-study-client-logo-surface">
+            <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo">
+          </div>
           {% else %}
           <h2>{{ page.customer }}</h2>
           {% endif %}

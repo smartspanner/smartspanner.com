@@ -16,7 +16,9 @@
       </div>
       <figure class="case-study-promo-quote">
         {% if featured_study.logo %}
-        <img src="{{ featured_study.logo | relative_url }}" alt="{{ featured_study.customer }}" class="case-study-promo-logo" loading="lazy">
+        <div class="case-study-logo-surface case-study-promo-logo-surface">
+          <img src="{{ featured_study.logo | relative_url }}" alt="{{ featured_study.customer }}" class="case-study-promo-logo" loading="lazy">
+        </div>
         {% endif %}
         <span class="case-study-quote-mark" aria-hidden="true">&ldquo;</span>
         <blockquote>{{ featured_study.quote }}</blockquote>

@@ -8,7 +8,7 @@ permalink: /case-studies/
 ---
 
 <main id="main" class="case-studies-index">
-  <section class="case-studies-index-hero">
+  <section class="case-studies-index-hero breadcrumbs" style="background-image: url('{{ '/assets/img/breadcrumbs-bg.jpg' | relative_url }}');">
     <div class="container text-center">
       <span class="case-study-eyebrow">Customer stories</span>
       <h1>How teams put Smartspanner to work</h1>
@@ -28,7 +28,9 @@ permalink: /case-studies/
           <div class="case-study-index-card-top">
             <span class="case-study-eyebrow">{{ study.industry }}</span>
             {% if study.logo %}
-            <img src="{{ study.logo | relative_url }}" alt="{{ study.customer }}" class="case-study-index-logo" loading="lazy">
+            <div class="case-study-logo-surface case-study-index-logo-surface">
+              <img src="{{ study.logo | relative_url }}" alt="{{ study.customer }}" class="case-study-index-logo" loading="lazy">
+            </div>
             {% else %}
             <span class="case-study-customer-mark" aria-hidden="true">{{ study.customer | slice: 0 }}</span>
             {% endif %}

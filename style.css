@@ -3410,7 +3410,7 @@ section {
 
 .case-study-promo-card {
   align-items: stretch;
-  background: #292d33;
+  background: var(--color-secondary);
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(31, 35, 40, 0.16);
   color: #fff;
@@ -3499,7 +3499,7 @@ section {
 
 .case-study-promo-quote {
   align-content: center;
-  background: #353a42;
+  background: rgba(0, 0, 0, 0.16);
   display: grid;
   margin: 0;
   padding: 54px 48px;
@@ -3507,10 +3507,12 @@ section {
 }
 
 .case-study-promo-logo {
+  display: block;
   height: auto;
-  margin: 0 0 26px;
-  max-width: 210px;
-  width: 100%;
+  margin: 0;
+  max-height: 82px;
+  max-width: 100%;
+  width: auto;
 }
 
 .case-study-quote-mark {
@@ -3548,9 +3550,9 @@ section {
 }
 
 .case-study-hero {
-  background:
-    radial-gradient(circle at 82% 20%, rgba(254, 185, 0, 0.13), transparent 30%),
-    linear-gradient(135deg, #22262c 0%, #353a42 100%);
+  background-color: var(--color-secondary);
+  background-position: center;
+  background-size: cover;
   color: #fff;
   padding: 150px 0 86px;
   position: relative;
@@ -3643,8 +3645,32 @@ section {
 .case-study-client-logo {
   display: block;
   height: auto;
+  margin: 0;
+  max-height: 86px;
+  max-width: 100%;
+  width: auto;
+}
+
+.case-study-logo-surface {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e2e5e8;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(36, 41, 47, 0.08);
+  display: flex;
+  justify-content: center;
+  padding: 16px 18px;
+}
+
+.case-study-client-logo-surface {
   margin: 18px 0 28px;
-  max-width: 215px;
+  min-height: 112px;
+  width: 100%;
+}
+
+.case-study-promo-logo-surface {
+  margin: 0 0 26px;
+  min-height: 110px;
   width: 100%;
 }
 
@@ -3818,7 +3844,7 @@ section {
 
 .case-study-process {
   align-items: center;
-  background: #292d33;
+  background: var(--color-secondary);
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
@@ -3864,7 +3890,7 @@ section {
 }
 
 .case-study-feature-quote-dark {
-  background: #30343b;
+  background: var(--color-secondary);
 }
 
 .case-study-feature-quote-dark blockquote,
@@ -3979,7 +4005,7 @@ section {
 }
 
 .case-study-final-cta {
-  background: #292d33;
+  background: var(--color-secondary);
   color: #fff;
   padding: 84px 0;
 }
@@ -4008,7 +4034,9 @@ section {
 }
 
 .case-studies-index-hero {
-  background: #292d33;
+  background-color: var(--color-secondary);
+  background-position: center;
+  background-size: cover;
   padding: 160px 0 90px;
 }
 
@@ -4047,9 +4075,8 @@ section {
 
 .case-study-index-card-top {
   align-items: center;
-  background:
-    radial-gradient(circle at 86% 22%, rgba(254, 185, 0, 0.22), transparent 35%),
-    #30343b;
+  background: #eeeeee;
+  border-bottom: 1px solid #e2e5e8;
   display: flex;
   justify-content: space-between;
   min-height: 150px;
@@ -4057,7 +4084,7 @@ section {
 }
 
 .case-study-index-card-top .case-study-eyebrow {
-  color: var(--color-primary);
+  color: #8f6800;
 }
 
 .case-study-customer-mark {
@@ -4074,9 +4101,17 @@ section {
 }
 
 .case-study-index-logo {
+  display: block;
   height: auto;
-  max-width: 210px;
-  width: 42%;
+  margin: 0;
+  max-height: 72px;
+  max-width: 100%;
+  width: auto;
+}
+
+.case-study-index-logo-surface {
+  min-height: 104px;
+  width: 46%;
 }
 
 .case-study-index-card-body {
