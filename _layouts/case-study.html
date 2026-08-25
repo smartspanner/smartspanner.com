@@ -1,0 +1,94 @@
+---
+layout: default
+---
+<main id="main" class="case-study-page">
+  <section class="case-study-hero">
+    <div class="container">
+      <nav class="case-study-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/case-studies/' | relative_url }}">Customer Stories</a></li>
+          <li aria-current="page">{{ page.customer }}</li>
+        </ol>
+      </nav>
+
+      <div class="case-study-hero-grid">
+        <div class="case-study-hero-copy">
+          <span class="case-study-eyebrow">Customer story <span aria-hidden="true">·</span> {{ page.industry }}</span>
+          <h1>{{ page.hero_title }}</h1>
+          <p class="case-study-standfirst">{{ page.standfirst }}</p>
+          <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary case-study-hero-cta">Book a Smartspanner Demo</a>
+        </div>
+
+        <aside class="case-study-hero-panel" aria-label="Nadon Thai case study overview">
+          <span class="case-study-panel-label">At a glance</span>
+          <h2>{{ page.customer }}</h2>
+          <dl>
+            <div>
+              <dt>Industry</dt>
+              <dd>{{ page.industry }}</dd>
+            </div>
+            <div>
+              <dt>Locations</dt>
+              <dd>{{ page.locations }}</dd>
+            </div>
+            <div>
+              <dt>Operating model</dt>
+              <dd>{{ page.operating_model }}</dd>
+            </div>
+            <div>
+              <dt>Primary use</dt>
+              <dd>{{ page.primary_use }}</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study-outcomes" aria-label="Case study outcomes">
+    <div class="container">
+      <div class="case-study-outcome-grid">
+        {% for outcome in page.outcomes %}
+        <div class="case-study-outcome">
+          <i class="fa-solid {{ outcome.icon }}" aria-hidden="true"></i>
+          <span>{{ outcome.text }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <article class="case-study-article">
+    <div class="container">
+      <div class="case-study-article-grid">
+        <div class="case-study-article-body">
+          {{ content }}
+        </div>
+
+        <aside class="case-study-sidebar" aria-label="Related Smartspanner solutions">
+          <div class="case-study-sidebar-card">
+            <span class="case-study-sidebar-label">Relevant solutions</span>
+            <h2>Explore the tools behind the story</h2>
+            <ul>
+              <li><a href="{{ '/maintenance-compliance-software/' | relative_url }}">Maintenance compliance <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="{{ '/multi-site-maintenance-software/' | relative_url }}">Multi-site maintenance <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="{{ '/maintenance-scheduling-software/' | relative_url }}">Maintenance scheduling <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="{{ '/work-order-management-software/' | relative_url }}">Corrective work orders <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <section class="case-study-final-cta">
+    <div class="container text-center">
+      <span class="case-study-eyebrow">Your maintenance, in one place</span>
+      <h2>Could Smartspanner do the same for your business?</h2>
+      <p>See how planned maintenance, compliance inspections, corrective actions and supporting records work together in one system.</p>
+      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Book a Smartspanner Demo</a>
+      <a href="{{ '/case-studies/' | relative_url }}" class="case-study-all-link">View all customer stories</a>
+    </div>
+  </section>
+</main>

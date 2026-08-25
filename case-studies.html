@@ -1,0 +1,54 @@
+---
+layout: default
+title: Customer Stories
+meta_title: Smartspanner Customer Stories & Case Studies
+description: See how Smartspanner customers manage maintenance, compliance, inspections and corrective actions across their sites.
+keywords: Smartspanner case studies, CMMS customer stories, maintenance software case studies
+permalink: /case-studies/
+---
+
+<main id="main" class="case-studies-index">
+  <section class="case-studies-index-hero">
+    <div class="container text-center">
+      <span class="case-study-eyebrow">Customer stories</span>
+      <h1>How teams put Smartspanner to work</h1>
+      <p>Practical stories from organisations using Smartspanner to keep maintenance visible, repeatable and ready for scrutiny.</p>
+    </div>
+  </section>
+
+  <section class="case-studies-list section-bg" aria-labelledby="case-studies-list-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="case-studies-list-title">Customer Stories</h2>
+      </div>
+
+      <div class="case-studies-grid">
+        {% for study in site.data.case_studies %}
+        <article class="case-study-index-card">
+          <div class="case-study-index-card-top">
+            <span class="case-study-eyebrow">{{ study.industry }}</span>
+            <span class="case-study-customer-mark" aria-hidden="true">{{ study.customer | slice: 0 }}</span>
+          </div>
+          <div class="case-study-index-card-body">
+            <h2><a href="{{ study.url | relative_url }}">{{ study.title }}</a></h2>
+            <p>{{ study.summary }}</p>
+            <div class="case-study-index-facts">
+              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ study.locations }}</span>
+              <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ study.operating_model }}</span>
+            </div>
+            <a href="{{ study.url | relative_url }}" class="case-study-text-link">Read customer story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study-final-cta">
+    <div class="container text-center">
+      <h2>See what Smartspanner could look like in your operation</h2>
+      <p>Book a 45-minute walkthrough tailored to the sites, assets and maintenance processes you manage.</p>
+      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Book a Demo</a>
+    </div>
+  </section>
+</main>

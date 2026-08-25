@@ -1,0 +1,28 @@
+{% assign featured_study = site.data.case_studies | where: "featured", true | first %}
+{% if featured_study %}
+<section class="case-study-promo{% if include.section_bg %} section-bg{% endif %}" aria-labelledby="case-study-promo-title">
+  <div class="container">
+    <div class="case-study-promo-card">
+      <div class="case-study-promo-copy">
+        <span class="case-study-eyebrow">Customer story <span aria-hidden="true">·</span> {{ featured_study.industry }}</span>
+        <h2 id="case-study-promo-title">{{ featured_study.title }}</h2>
+        <p>{{ featured_study.summary }}</p>
+        <div class="case-study-promo-facts" aria-label="Case study summary">
+          <span><strong>{{ featured_study.locations }}</strong></span>
+          <span><strong>{{ featured_study.operating_model }}</strong></span>
+          <span>{{ featured_study.primary_use }}</span>
+        </div>
+        <a href="{{ featured_study.url | relative_url }}" class="case-study-text-link">Read the Nadon Thai story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <figure class="case-study-promo-quote">
+        <span class="case-study-quote-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>{{ featured_study.quote }}</blockquote>
+        <figcaption>
+          <strong>{{ featured_study.quote_author }}</strong>
+          <span>{{ featured_study.quote_role }}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -5,7 +5,7 @@
 {% assign page_type = 'WebPage' %}
 {% if page.url == '/' %}
   {% assign page_type = 'WebSite' %}
-{% elsif page.layout == 'blog-article' or page.url contains '/blog/' %}
+{% elsif page.layout == 'blog-article' or page.layout == 'case-study' or page.url contains '/blog/' %}
   {% assign page_type = 'Article' %}
 {% endif %}
 
@@ -119,7 +119,7 @@
         "@id": "{{ site.url }}/#organization"
       },
       "inLanguage": "en"
-      {% if page.layout == 'blog-article' or page.url contains '/blog/' %},
+      {% if page.layout == 'blog-article' or page.layout == 'case-study' or page.url contains '/blog/' %},
       "mainEntityOfPage": "{{ page_url }}",
       "author": {
         "@id": "{{ site.url }}/#organization"
@@ -148,12 +148,27 @@
           "item": "{{ site.url }}/"
         }
         {% if page.url != '/' %},
+        {% if page.parent and page.parent_url %}
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.parent | jsonify }},
+          "item": "{{ page.parent_url | absolute_url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page_title | jsonify }},
+          "item": "{{ page_url }}"
+        }
+        {% else %}
         {
           "@type": "ListItem",
           "position": 2,
           "name": {{ page_title | jsonify }},
           "item": "{{ page_url }}"
         }
+        {% endif %}
         {% endif %}
       ]
     }

@@ -155,6 +155,11 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Integrations and API: https://www.smartspanner.com/integrations-api/
 - Fire Risk Assessment Software: https://www.smartspanner.com/fire-risk-assessment-software/
 
+## Customer Stories
+
+- Customer stories overview: https://www.smartspanner.com/case-studies/
+- Nadon Thai: https://www.smartspanner.com/case-studies/nadon-thai/ — how a three-restaurant group uses Smartspanner to schedule recurring maintenance and compliance activity, retrieve evidence during inspections, and track corrective actions through to completion.
+
 ## Industry Pages
 
 - Industries overview: https://www.smartspanner.com/industries/
