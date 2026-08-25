@@ -4075,8 +4075,8 @@ section {
 
 .case-study-index-card-top {
   align-items: center;
-  background: #eeeeee;
-  border-bottom: 1px solid #e2e5e8;
+  background: #111111;
+  border-bottom: 1px solid #111111;
   display: flex;
   justify-content: space-between;
   min-height: 150px;
@@ -4084,7 +4084,7 @@ section {
 }
 
 .case-study-index-card-top .case-study-eyebrow {
-  color: #111111;
+  color: var(--color-primary);
 }
 
 .case-study-customer-mark {
