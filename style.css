@@ -3567,34 +3567,6 @@ section {
   position: relative;
 }
 
-.case-study-breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  margin: 0 0 52px;
-  padding: 0;
-}
-
-.case-study-breadcrumbs li {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 13px;
-}
-
-.case-study-breadcrumbs li + li:before {
-  color: rgba(255, 255, 255, 0.34);
-  content: "/";
-  margin-right: 8px;
-}
-
-.case-study-breadcrumbs a {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.case-study-breadcrumbs a:hover {
-  color: var(--color-primary);
-}
-
 .case-study-hero-grid {
   align-items: center;
   display: grid;
@@ -4244,10 +4216,6 @@ section {
 
   .case-study-hero {
     padding: 125px 0 65px;
-  }
-
-  .case-study-breadcrumbs ol {
-    margin-bottom: 35px;
   }
 
   .case-study-hero-copy h1,
