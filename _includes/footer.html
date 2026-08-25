@@ -33,7 +33,10 @@
         <h4 style="margin-top: 20px;">Resources</h4>
         <ul>
           <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/case-studies' | relative_url }}">Customer Stories</a></li>
+          <li><a href="{{ '/case-studies' | relative_url }}">Case Studies</a></li>
+          {% for study in site.data.case_studies %}
+          <li><a href="{{ study.url | relative_url }}">{{ study.customer }} Case Study</a></li>
+          {% endfor %}
           <li><a href="{{ '/blog/what-is-cmms' | relative_url }}">What is a CMMS?</a></li>
           <li><a href="{{ '/blog/what-is-predictive-maintenance' | relative_url }}">Predictive Maintenance</a></li>
           <li><a href="{{ '/blog/maintenance-kpis' | relative_url }}">Maintenance KPIs</a></li>
