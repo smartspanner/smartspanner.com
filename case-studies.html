@@ -41,6 +41,9 @@ permalink: /case-studies/
             <div class="case-study-index-facts">
               <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ study.locations }}</span>
               <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ study.operating_model }}</span>
+              {% if study.tenure %}
+              <span class="case-study-index-fact-full"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> {{ study.tenure }}</span>
+              {% endif %}
             </div>
             <a href="{{ study.url | relative_url }}" class="case-study-text-link">Read customer story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>

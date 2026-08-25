@@ -4149,6 +4149,10 @@ section {
   font-size: 13px;
 }
 
+.case-study-index-facts .case-study-index-fact-full {
+  flex-basis: 100%;
+}
+
 .case-study-index-facts i {
   color: #9a7000;
   margin-right: 5px;
