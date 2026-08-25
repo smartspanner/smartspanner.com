@@ -4084,7 +4084,7 @@ section {
 }
 
 .case-study-index-card-top .case-study-eyebrow {
-  color: #8f6800;
+  color: var(--color-secondary);
 }
 
 .case-study-customer-mark {
