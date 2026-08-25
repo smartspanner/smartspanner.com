@@ -45,16 +45,6 @@
       </div>
 
       <div class="footer-col mb-4">
-        <h4>Case Studies</h4>
-        <ul>
-          <li><a href="{{ '/case-studies' | relative_url }}">All Case Studies</a></li>
-          {% for study in site.data.case_studies %}
-          <li><a href="{{ study.url | relative_url }}">{{ study.customer }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="footer-col mb-4">
         <h4>Company</h4>
         <ul>
           <li><a href="{{ '/about' | relative_url }}">About</a></li>
@@ -64,6 +54,13 @@
           <li><a href="{{ '/features' | relative_url }}">Features</a></li>
           <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
           <li><a href="{{ '/terms-of-service' | relative_url }}">Terms of Service</a></li>
+        </ul>
+        <h4 style="margin-top: 20px;">Case Studies</h4>
+        <ul>
+          <li><a href="{{ '/case-studies' | relative_url }}">All Case Studies</a></li>
+          {% for study in site.data.case_studies %}
+          <li><a href="{{ study.url | relative_url }}">{{ study.customer }}</a></li>
+          {% endfor %}
         </ul>
       </div>
 
