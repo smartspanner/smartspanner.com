@@ -5,6 +5,8 @@
 {% assign page_type = 'WebPage' %}
 {% if page.url == '/' %}
   {% assign page_type = 'WebSite' %}
+{% elsif page.url == '/case-studies/' %}
+  {% assign page_type = 'CollectionPage' %}
 {% elsif page.layout == 'blog-article' or page.layout == 'case-study' or page.url contains '/blog/' %}
   {% assign page_type = 'Article' %}
 {% endif %}
@@ -123,6 +125,31 @@
       "mainEntityOfPage": "{{ page_url }}",
       "author": {
         "@id": "{{ site.url }}/#organization"
+      }
+      {% if page.layout == 'case-study' %},
+      "articleSection": "Customer Stories"
+      {% endif %}
+      {% if page.date_published %},
+      "datePublished": "{{ page.date_published | date_to_xmlschema }}"
+      {% endif %}
+      {% if page.date_modified %},
+      "dateModified": "{{ page.date_modified | date_to_xmlschema }}"
+      {% endif %}
+      {% endif %}
+      {% if page.url == '/case-studies/' %},
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": {{ site.data.case_studies | size }},
+        "itemListElement": [
+          {% for study in site.data.case_studies %}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ study.url | absolute_url }}",
+            "name": {{ study.customer | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
       }
       {% endif %}
     },

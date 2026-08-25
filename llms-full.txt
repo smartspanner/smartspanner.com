@@ -159,6 +159,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 
 - Customer stories overview: https://www.smartspanner.com/case-studies/
 - Nadon Thai: https://www.smartspanner.com/case-studies/nadon-thai/ — how a three-restaurant group uses Smartspanner to schedule recurring maintenance and compliance activity, retrieve evidence during inspections, and track corrective actions through to completion.
+- Oiltech Bearings: https://www.smartspanner.com/case-studies/oiltech-bearings/ — how a Newcastle manufacturing business uses Smartspanner for compliance, preventative maintenance, machinery breakdowns, warranty records and ISO 9001 evidence, with day-to-day plant experience helping inform platform development.
 
 ## Industry Pages
 

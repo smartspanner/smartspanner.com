@@ -1,4 +1,8 @@
-{% assign featured_study = site.data.case_studies | where: "featured", true | first %}
+{% if include.slug %}
+  {% assign featured_study = site.data.case_studies | where: "slug", include.slug | first %}
+{% else %}
+  {% assign featured_study = site.data.case_studies | where: "featured", true | first %}
+{% endif %}
 {% if featured_study %}
 <section class="case-study-promo{% if include.section_bg %} section-bg{% endif %}" aria-labelledby="case-study-promo-title">
   <div class="container">
@@ -31,6 +35,9 @@
           <strong>{{ featured_study.quote_author }}</strong>
           <span>{{ featured_study.quote_role }}</span>
         </figcaption>
+        {% if featured_study.disclosure %}
+        <p class="case-study-promo-disclosure">{{ featured_study.disclosure }}</p>
+        {% endif %}
       </figure>
     </div>
   </div>
