@@ -9,7 +9,12 @@
         <p>{{ featured_study.summary }}</p>
         <div class="case-study-promo-facts" aria-label="Case study summary">
           <span><strong>{{ featured_study.locations }}</strong></span>
+          {% if featured_study.operating_model %}
           <span><strong>{{ featured_study.operating_model }}</strong></span>
+          {% endif %}
+          {% if featured_study.tenure %}
+          <span><strong>{{ featured_study.tenure }}</strong></span>
+          {% endif %}
           <span>{{ featured_study.primary_use }}</span>
         </div>
         <a href="{{ featured_study.url | relative_url }}" class="case-study-text-link">Read the {{ featured_study.customer }} story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>

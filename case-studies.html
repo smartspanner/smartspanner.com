@@ -40,7 +40,9 @@ permalink: /case-studies/
             <p>{{ study.summary }}</p>
             <div class="case-study-index-facts">
               <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ study.locations }}</span>
+              {% if study.operating_model %}
               <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ study.operating_model }}</span>
+              {% endif %}
               {% if study.tenure %}
               <span class="case-study-index-fact-full"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> {{ study.tenure }}</span>
               {% endif %}
