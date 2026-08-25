@@ -27,7 +27,11 @@ permalink: /case-studies/
         <article class="case-study-index-card">
           <div class="case-study-index-card-top">
             <span class="case-study-eyebrow">{{ study.industry }}</span>
+            {% if study.logo %}
+            <img src="{{ study.logo | relative_url }}" alt="{{ study.customer }}" class="case-study-index-logo" loading="lazy">
+            {% else %}
             <span class="case-study-customer-mark" aria-hidden="true">{{ study.customer | slice: 0 }}</span>
+            {% endif %}
           </div>
           <div class="case-study-index-card-body">
             <h2><a href="{{ study.url | relative_url }}">{{ study.title }}</a></h2>

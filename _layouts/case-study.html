@@ -22,7 +22,11 @@ layout: default
 
         <aside class="case-study-hero-panel" aria-label="Nadon Thai case study overview">
           <span class="case-study-panel-label">At a glance</span>
+          {% if page.logo %}
+          <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo">
+          {% else %}
           <h2>{{ page.customer }}</h2>
+          {% endif %}
           <dl>
             <div>
               <dt>Industry</dt>
