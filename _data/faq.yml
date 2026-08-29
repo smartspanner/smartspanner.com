@@ -1,17 +1,17 @@
 - question: How do I access Smartspanner CMMS?
-  answer: Smartspanner is a cloud hosted web application. It is accessed by using a normal web browser to login to your account. Please note that we do not provide support for Microsoft IE or Edge browsers. You can also access the platform using our native iOS or Android applications. For sign up and set up, a web browser must be used. You can use Smartspanner CMMS on a tablet by using a browser.
+  answer: Smartspanner is a cloud-hosted application accessed through a current modern browser, including Microsoft Edge. Internet Explorer is not supported. Native iOS and Android apps are also available and require an internet connection. Initial signup and account setup are completed in a web browser.
 
 - question: Will Smartspanner work for my company?
-  answer: "Can't keep on top of preventative maintenance schedules because you are too busy firefighting? Lost some records from the last breakdown that would help solve a current issue? Smartspanner works for small companies with single users, up to large organisations with over 20 maintenance technicians. Its simplicity is a key to its success. It is easy to sign up and deploy with our mobile apps and desktop access. If you are looking to move from spreadsheets, emails, calendars to an integrated maintenance solution, Smartspanner is an ideal choice for first time CMMS users."
+  answer: Smartspanner supports small maintenance teams and multi-site organisations. Teams can begin with assets, work orders and preventive maintenance, then add procedures, inspections, inventory, purchasing, permits, reporting and other operational controls as required.
 
 - question: Is my data secure?
-  answer: Smartspanner uses a secure connection when you log in to encrypt the link between your PC or tablet and our servers. You can check this as with any website by looking for https:// in the address and the secure padlock logo on your browser.
+  answer: Connections to Smartspanner are protected using HTTPS. Customers should also protect account credentials and follow their own access-control policies. Further information is available in the Smartspanner Privacy Policy and Terms of Service.
 
 - question: If I cancel my subscription, what happens to the data?
-  answer: You can download all your data into excel using our reporting tools and delete your account with Smartspanner.
+  answer: Customers can end a subscription by giving the notice set out in the Terms of Service. In-app CSV and PDF exports remain available for 30 days following termination or expiry, except where Smartspanner terminates for cause. Stored data may be deleted after that period unless retention is required by law or the Privacy Policy.
 
-- question: I don't have a company credit card, are there other ways to pay?
-  answer: We can arrange for an account to be set up and paid without a credit card in GBP, EUR, USD, NZD or AUD. Please contact us for details.
+- question: What payment methods are available?
+  answer: We accept credit cards for subscription payments. Account billing without a credit card can also be arranged in GBP, EUR, USD, NZD or AUD. Fees are billed in advance for the monthly or annual billing cycle and exclude applicable taxes. Please contact us for details.
 
 - question: Where can I get an invoice?
   answer: Invoices are emailed automatically at every billing cycle.
