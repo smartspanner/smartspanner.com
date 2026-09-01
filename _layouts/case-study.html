@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-{% assign case_study_hero_image = page.hero_image | default: '/assets/img/breadcrumbs-bg.jpg' %}
 <main id="main" class="case-study-page">
-  <section class="case-study-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ case_study_hero_image | relative_url }}');">
+  <section class="case-study-hero"{% if page.hero_image %} style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ page.hero_image | relative_url }}');"{% endif %}>
     <div class="container">
       <div class="case-study-hero-grid">
         <div class="case-study-hero-copy">
@@ -32,7 +31,7 @@ layout: default
               <dd>{{ page.locations }}</dd>
             </div>
             <div>
-              <dt>Operating model</dt>
+              <dt>{{ page.operating_model_label | default: 'Operating model' }}</dt>
               <dd>{{ page.operating_model }}</dd>
             </div>
             <div>
@@ -49,9 +48,14 @@ layout: default
     <div class="container">
       <div class="case-study-outcome-grid">
         {% for outcome in page.outcomes %}
-        <div class="case-study-outcome">
+        <div class="case-study-outcome"{% if outcome.value %} style="align-items: flex-start; flex-direction: column; gap: 2px;"{% endif %}>
+          {% if outcome.value %}
+          <strong style="font-size: 27px; line-height: 1.1;">{{ outcome.value }}</strong>
+          <span>{{ outcome.label }}</span>
+          {% else %}
           <i class="fa-solid {{ outcome.icon }}" aria-hidden="true"></i>
           <span>{{ outcome.text }}</span>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
