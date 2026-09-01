@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<main id="main" class="case-study-page">
+<main id="main" class="case-study-page" data-case-study="{{ page.analytics_case_study | default: page.customer | slugify }}" data-case-study-industry="{{ page.analytics_industry | default: page.industry | slugify }}">
   <section class="case-study-hero"{% if page.hero_image %} style="background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url('{{ page.hero_image | relative_url }}');"{% endif %}>
     <div class="container">
       <div class="case-study-hero-grid">
@@ -9,7 +9,7 @@ layout: default
           <span class="case-study-eyebrow">Customer story <span aria-hidden="true">·</span> {{ page.industry }}</span>
           <h1>{{ page.hero_title }}</h1>
           <p class="case-study-standfirst">{{ page.standfirst }}</p>
-          <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary case-study-hero-cta">Book a Smartspanner Demo</a>
+          <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary case-study-hero-cta" data-ga-event="case_study_cta_click" data-ga-cta-location="hero">Book a Smartspanner Demo</a>
         </div>
 
         <aside class="case-study-hero-panel" aria-label="{{ page.customer }} case study overview">
@@ -96,7 +96,7 @@ layout: default
       <span class="case-study-eyebrow">Your maintenance, in one place</span>
       <h2>Could Smartspanner do the same for your business?</h2>
       <p>See how planned maintenance, compliance inspections, corrective actions and supporting records work together in one system.</p>
-      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Book a Smartspanner Demo</a>
+      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary" data-ga-event="case_study_cta_click" data-ga-cta-location="final">Book a Smartspanner Demo</a>
       <a href="{{ '/case-studies/' | relative_url }}" class="case-study-all-link">View all customer stories</a>
     </div>
   </section>

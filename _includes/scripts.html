@@ -209,6 +209,193 @@
     });
   })();
 
+  // GA4 measurement for the customer-story to demo funnel.
+  (function() {
+    const originStorageKey = 'smartspanner_case_study_origin';
+    const submissionStorageKey = 'smartspanner_demo_submission';
+    const attributionWindowMs = 30 * 60 * 1000;
+
+    function trackEvent(eventName, parameters) {
+      if (typeof window.gtag !== 'function') {
+        return;
+      }
+
+      window.gtag('event', eventName, Object.assign({
+        transport_type: 'beacon'
+      }, parameters || {}));
+    }
+
+    function writeSessionValue(key, value) {
+      try {
+        window.sessionStorage.setItem(key, JSON.stringify(value));
+      } catch (error) {
+        // Measurement must never interrupt navigation or form submission.
+      }
+    }
+
+    function readSessionValue(key, removeAfterReading) {
+      try {
+        const rawValue = window.sessionStorage.getItem(key);
+
+        if (!rawValue) {
+          return null;
+        }
+
+        if (removeAfterReading) {
+          window.sessionStorage.removeItem(key);
+        }
+
+        return JSON.parse(rawValue);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getCaseStudyOrigin() {
+      const origin = readSessionValue(originStorageKey, false);
+
+      if (!origin || !origin.timestamp || Date.now() - origin.timestamp > attributionWindowMs) {
+        return null;
+      }
+
+      return origin;
+    }
+
+    function addOriginParameters(parameters) {
+      const origin = getCaseStudyOrigin();
+
+      if (!origin) {
+        return parameters;
+      }
+
+      return Object.assign(parameters, {
+        entry_content: origin.caseStudy,
+        entry_industry: origin.industry
+      });
+    }
+
+    window.smartspannerAnalytics = {
+      recordSuccessfulDemoSubmission: function() {
+        writeSessionValue(submissionStorageKey, {
+          timestamp: Date.now(),
+          origin: getCaseStudyOrigin()
+        });
+      }
+    };
+
+    const caseStudyPage = document.querySelector('.case-study-page[data-case-study]');
+
+    if (caseStudyPage) {
+      const caseStudy = caseStudyPage.dataset.caseStudy;
+      const industry = caseStudyPage.dataset.caseStudyIndustry;
+      let engagementRecorded = false;
+      let activeSeconds = 0;
+      let activeTimer;
+
+      function recordEngagement(method) {
+        if (engagementRecorded) {
+          return;
+        }
+
+        engagementRecorded = true;
+        window.clearInterval(activeTimer);
+        window.removeEventListener('scroll', checkScrollDepth);
+        trackEvent('case_study_engaged', {
+          case_study: caseStudy,
+          industry: industry,
+          engagement_method: method
+        });
+      }
+
+      function checkScrollDepth() {
+        const pageTop = window.scrollY + caseStudyPage.getBoundingClientRect().top;
+        const viewedDistance = window.scrollY + window.innerHeight - pageTop;
+        const progress = viewedDistance / caseStudyPage.offsetHeight;
+
+        if (progress >= 0.5) {
+          recordEngagement('scroll_50_percent');
+        }
+      }
+
+      activeTimer = window.setInterval(function() {
+        if (document.visibilityState === 'visible') {
+          activeSeconds += 1;
+        }
+
+        if (activeSeconds >= 45) {
+          recordEngagement('active_45_seconds');
+        }
+      }, 1000);
+
+      window.addEventListener('scroll', checkScrollDepth, { passive: true });
+      checkScrollDepth();
+
+      caseStudyPage.querySelectorAll('[data-ga-event="case_study_cta_click"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          writeSessionValue(originStorageKey, {
+            caseStudy: caseStudy,
+            industry: industry,
+            timestamp: Date.now()
+          });
+
+          trackEvent('case_study_cta_click', {
+            case_study: caseStudy,
+            industry: industry,
+            cta_location: link.dataset.gaCtaLocation || 'unknown',
+            link_url: link.href
+          });
+        });
+      });
+    }
+
+    const demoForm = document.querySelector('.js-hubspot-demo-form');
+
+    if (demoForm) {
+      let formViewRecorded = false;
+
+      function recordFormView() {
+        if (formViewRecorded) {
+          return;
+        }
+
+        formViewRecorded = true;
+        trackEvent('view_demo_form', addOriginParameters({
+          form_id: 'demo_request'
+        }));
+      }
+
+      if ('IntersectionObserver' in window) {
+        const formObserver = new IntersectionObserver(function(entries) {
+          if (entries.some(function(entry) { return entry.isIntersecting; })) {
+            recordFormView();
+            formObserver.disconnect();
+          }
+        }, { threshold: 0.25 });
+
+        formObserver.observe(demoForm);
+      } else {
+        recordFormView();
+      }
+    }
+
+    if (document.querySelector('[data-ga-page="demo-thank-you"]')) {
+      const successfulSubmission = readSessionValue(submissionStorageKey, true);
+
+      if (successfulSubmission && successfulSubmission.timestamp && Date.now() - successfulSubmission.timestamp <= attributionWindowMs) {
+        const leadParameters = {
+          form_id: 'demo_request'
+        };
+
+        if (successfulSubmission.origin) {
+          leadParameters.entry_content = successfulSubmission.origin.caseStudy;
+          leadParameters.entry_industry = successfulSubmission.origin.industry;
+        }
+
+        trackEvent('generate_lead', leadParameters);
+      }
+    }
+  })();
+
   // HubSpot forms. Keeps local styling while submitting to HubSpot's Forms API.
   (function() {
     const hubspotForms = document.querySelectorAll('.js-hubspot-lead-form, .js-hubspot-demo-form');
@@ -344,6 +531,10 @@
           .then(function(response) {
             if (!response.ok) {
               throw new Error('HubSpot form submission failed');
+            }
+
+            if (window.smartspannerAnalytics) {
+              window.smartspannerAnalytics.recordSuccessfulDemoSubmission();
             }
 
             window.location.href = redirectUrl;
