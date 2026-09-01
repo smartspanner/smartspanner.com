@@ -3517,7 +3517,7 @@ section {
 
 .case-study-quote-mark {
   color: var(--color-primary);
-  font-family: Georgia, serif;
+  font-family: var(--font-default);
   font-size: 76px;
   height: 48px;
   line-height: 0.95;
@@ -3525,7 +3525,7 @@ section {
 
 .case-study-promo-quote blockquote {
   color: #fff;
-  font-family: Georgia, serif;
+  font-family: var(--font-default);
   font-size: 19px;
   font-style: italic;
   line-height: 1.55;
@@ -3877,7 +3877,7 @@ section {
 
 .case-study-feature-quote blockquote {
   color: #2e3035;
-  font-family: Georgia, serif;
+  font-family: var(--font-default);
   font-size: 23px;
   font-style: italic;
   line-height: 1.55;
