@@ -2,6 +2,8 @@
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
+Last updated: 2026-09-01
+
 ## Canonical URLs
 
 - Website: https://www.smartspanner.com/
@@ -24,7 +26,7 @@ Smartspanner is a UK-based CMMS software company founded in 2013 and based in Ga
 
 ## Product Summary
 
-Smartspanner helps maintenance teams move from spreadsheets, paper records, and reactive maintenance into a structured maintenance management system. It combines SME-friendly simplicity with enterprise-ready capability, allowing organisations to introduce multi-site controls, inventory governance, reporting, APIs, and other advanced features according to their requirements.
+Smartspanner helps maintenance teams move from spreadsheets, paper records, and fragmented reactive processes into a structured maintenance management system. It is built from operational maintenance experience and designed to keep common workflows short while making deeper multi-site, inventory, safety, reporting, and integration controls available when required.
 
 The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, permits to work, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
 
@@ -34,17 +36,17 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Manage reactive and planned work orders
 - Schedule preventive maintenance and inspections
 - Track equipment, assets, sites, locations, and asset history
-- Give technicians mobile access to maintenance tasks
-- Manage maintenance across multiple sites
+- Give technicians connected mobile access to maintenance tasks; the native apps require an internet connection and do not work offline
+- Manage maintenance across multiple sites with site-based permissions, multiple currencies, multiple languages, site-specific KPIs, and global site rankings
 - Control spare parts and consumables across sites with categories, BIN locations, replenishment rules, intelligent perpetual counting, inventory health, and purchase orders
-- Standardize procedures and maintenance checklists
+- Standardise procedures and maintenance checklists
 - Run on-demand pre-use equipment checks and walkarounds by selecting or scanning assets, with photo evidence, alerts, follow-up work orders, and asset-level history
-- Manage UK-aligned permits to work for higher-risk maintenance tasks, with mobile signature capture, PDF export for wet signatures, email sharing, and links to one or more CMMS users
+- Support customer-defined permits to work for higher-risk maintenance tasks, with mobile signature capture, PDF export for wet signatures, email sharing, and links to one or more CMMS users; the software does not replace risk assessment, competence, or safe systems of work
 - Record failure codes for root cause analysis
 - Coordinate subcontractor maintenance work
-- Monitor vibration, temperature, power consumption, flow, and machine health
+- Monitor supported vibration, temperature, power-consumption, and flow data and turn configured signals or thresholds into maintenance attention
 - Prepare maintenance reports and KPI dashboards
-- Manage fire risk assessment observations and corrective actions
+- Structure fire risk assessment records around current UK guidance and turn observations into corrective actions; Smartspanner supports the process but does not define or guarantee compliance
 - Support app users who prefer English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, or Japanese
 - Translate supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, into each user's app language while keeping the original accessible
 
@@ -53,20 +55,20 @@ The product supports planned preventive maintenance, reactive work orders, asset
 - Work order management: create, assign, schedule, prioritize, and close maintenance work.
 - Preventive maintenance: automate recurring maintenance tasks, servicing, inspections, and compliance work.
 - Asset management: maintain asset records, hierarchy, locations, history, linked parts, and documents.
-- Mobile CMMS: iOS and Android apps for technicians in the field.
-- Multi-site maintenance: deploy across multiple sites with site-level permissions and dashboards.
+- Mobile CMMS: connected iOS and Android apps for technicians in the field; the apps require an internet connection and do not work offline.
+- Multi-site maintenance: deploy across multiple sites with site-based permissions, multiple currencies, multiple languages, site dashboards, site-specific KPIs, and global site rankings.
 - Spare parts and inventory: structure stock with categories and BIN locations, apply replenishment and verification rules, automate daily cycle-counting workloads, monitor site Stock Control, and compare organisation-wide Inventory Performance.
 - Purchase orders: create and manage maintenance purchase orders and goods receipts.
 - Checklists and inspections: capture inspection responses, notes, comments, and media.
 - Equipment checks: create reusable routines from published checklists, assign them to relevant assets, start checks by search or QR scan, and turn negative responses into alerts or follow-up work orders.
-- Permits to work: create UK-aligned permit-to-work records, capture signatures on mobile or tablet, generate PDFs for wet signatures, email permits, and link each permit to one or more Smartspanner users.
+- Permits to work: support customer-defined permit workflows, capture signatures on mobile or tablet, generate PDFs for wet signatures, email permits, and link each permit to one or more Smartspanner users. A permit record does not by itself make work safe.
 - Procedures: standardize repeatable maintenance procedures and attach supporting documents.
 - Subcontractors: track external maintenance teams, costs, and related files.
 - Failure codes: tag work orders with failure codes for analysis and reporting.
 - Dashboards and reporting: view overdue work, breakdowns, requests, stock issues, trends, and KPIs.
 - Lockout/tagout: record lockout activity, lock IDs, and reasons.
-- IoT condition monitoring: use wireless sensors for vibration, temperature, energy, flow, and machine health.
-- Integrations and API: connect Smartspanner data to Power BI, Excel, Python, ERP systems, and other reporting tools.
+- IoT condition monitoring: use supported wireless vibration sensors and other supported temperature, energy, and flow data to create maintenance attention from configured signals or thresholds.
+- Integrations and API: broad API coverage supports key integration requirements and reporting workflows involving tools such as Power BI, Excel, Python, and wider operational systems. No additional named integrations are currently announced.
 - Multi-language app interface: support English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese users in the Smartspanner app.
 - In-app translation: supported procedures, checklists, instructions, descriptions, and comments can be shown in each user's selected language while retaining access to the original text.
 
@@ -80,7 +82,7 @@ Sales, onboarding, and customer support are currently provided in English from t
 
 ## Pricing
 
-Smartspanner pricing is per user per month and includes a 14-day free trial with no credit card required.
+Smartspanner pricing is per user per month, excludes applicable taxes, and includes a 14-day free trial with no credit card required.
 
 - Basic: GBP 15/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
 - Standard: GBP 21/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
@@ -113,12 +115,12 @@ Primary audiences include maintenance managers, facilities managers, operations 
 
 ## Differentiators
 
-- Fast implementation: teams can be up and running quickly, often in under an hour.
-- Simple user experience: designed for technicians and supervisors, not only administrators.
-- Scalable by requirement: organisations can introduce advanced multi-site, inventory, reporting, compliance, and integration capabilities without replacing the core CMMS.
-- Affordable pricing: entry plan starts from GBP 15/user/month.
-- Unlimited support: telephone and online support are included.
-- Mobile-first field workflow: native iOS and Android apps support technicians away from a desk.
+- Focused implementation: a first site and core workflow can be configured in a focused setup session; wider rollout time depends on data preparation, integrations, sites, and workflows.
+- Short everyday workflows: designed around the job technicians and supervisors need to complete.
+- Depth without obstruction: organisations can introduce advanced multi-site, inventory, reporting, compliance, and integration capabilities without replacing or cluttering the core workflow.
+- Transparent pricing: the entry plan starts from GBP 15/user/month, excluding applicable taxes.
+- Included support: telephone and online support are included.
+- Connected mobile field workflow: native iOS and Android apps support technicians away from a desk where an internet connection is available.
 - On-demand equipment checks: operators can select or scan assets, complete pre-use routines, capture evidence, and raise alerts or follow-up work orders without adding every routine check to the work-order list.
 - Multi-site support: suitable for teams managing assets across multiple locations.
 - IoT-ready: optional sensor monitoring supports condition-based maintenance.
@@ -160,7 +162,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Customer stories overview: https://www.smartspanner.com/case-studies/
 - AMES Goldsmith UK: https://www.smartspanner.com/case-studies/ames-goldsmith-uk/ — how a two-site chemical and metals manufacturer moved from fragmented Excel workbooks to one live maintenance system, logging more than 1,100 jobs and saving an estimated 8–10 hours of administration each week.
 - Nadon Thai: https://www.smartspanner.com/case-studies/nadon-thai/ — how a three-restaurant group uses Smartspanner to schedule recurring maintenance and compliance activity, retrieve evidence during inspections, and track corrective actions through to completion.
-- Oiltech Bearings: https://www.smartspanner.com/case-studies/oiltech-bearings/ — how a Newcastle manufacturing business uses Smartspanner for compliance, preventative maintenance, machinery breakdowns, warranty records and ISO 9001 evidence, with day-to-day plant experience helping inform platform development.
+- Oiltech Bearings: https://www.smartspanner.com/case-studies/oiltech-bearings/ — how a Newcastle manufacturing business uses Smartspanner for compliance, preventive maintenance, machinery breakdowns, warranty records and ISO 9001 evidence, with day-to-day plant experience helping inform platform development.
 
 ## Industry Pages
 

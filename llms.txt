@@ -2,9 +2,11 @@
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
+Last updated: 2026-09-01
+
 ## About
 
-Smartspanner combines SME-friendly simplicity with enterprise-ready capability for maintenance teams in manufacturing, facilities management, and industrial sectors. Teams can start with straightforward CMMS workflows and introduce multi-site controls, inventory governance, reporting, APIs, and other advanced capabilities as requirements grow.
+Smartspanner is built from operational maintenance experience and designed to reduce friction in everyday work. Teams can start with focused work-order, asset, and preventive-maintenance workflows, then introduce multi-site controls, inventory governance, reporting, APIs, and other advanced capabilities as requirements grow.
 
 Based in Gateshead, United Kingdom.
 
@@ -19,9 +21,9 @@ Based in Gateshead, United Kingdom.
 - Work order management (reactive and planned)
 - Preventive maintenance scheduling and automation
 - Asset management with hierarchy and location structure
-- Multi-site deployment
+- Multi-site deployment with site-based permissions, multiple currencies, multiple languages, site-specific KPIs, and global site rankings
 - Multi-site inventory and stock control with categories, BIN locations, replenishment rules, intelligent perpetual counting, site-level Stock Control, and organisation-wide Inventory Performance
-- Mobile apps (iOS and Android)
+- Connected mobile apps (iOS and Android); an internet connection is required and the apps do not work offline
 - Multi-language app interface (English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese)
 - In-app translation for supported user-entered maintenance content including procedures, checklists, instructions, descriptions, and comments
 - Reporting and dashboards
@@ -29,16 +31,16 @@ Based in Gateshead, United Kingdom.
 - Checklists and inspections
 - Equipment checks for pre-use inspections and walkarounds, with asset QR scanning, photo evidence, alerts, follow-up work orders, and asset-level history (Advanced plan)
 - Permits to work (UK-aligned permit-to-work workflows, mobile signature capture, PDF export for wet signatures, email sharing, and linked CMMS users)
-- Fire risk assessments (UK-compliant, multi-site, with photo evidence and work-order actions)
-- IoT condition monitoring (vibration, temperature, energy, flow meters)
+- Fire risk assessments structured around current UK guidance, with configurable reviews, photo evidence, and work-order actions; Smartspanner supports the customer's process but does not guarantee compliance
+- IoT condition monitoring for supported vibration, temperature, energy, and flow data, turning configured signals and thresholds into maintenance attention
 - Failure codes and root cause tracking
 - Purchasing and purchase orders
-- API access and integrations (Power BI, ERP systems)
+- API access with broad coverage for key integration requirements, including reporting and links to wider operational systems
 - Lockout/tagout (LOTO) procedures
 
 ## Pricing
 
-All prices are per user, per month. 14-day free trial included. No credit card required.
+All prices are per user, per month and exclude applicable taxes. A 14-day free trial is included and no credit card is required.
 
 - Basic: £15/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
 - Standard: £21/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
@@ -92,11 +94,11 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 
 ## Best Fit
 
-Smartspanner is suited to organisations ranging from small maintenance teams to global, multi-site companies. It keeps core workflows practical and quick to implement while providing enterprise-ready controls when required. Common use cases include replacing maintenance spreadsheets, managing planned preventive maintenance, tracking reactive work orders, keeping asset history, coordinating contractors, controlling multi-site inventory, managing higher-risk work with permits to work, and giving technicians mobile access in the field.
+Smartspanner is suited to organisations ranging from small maintenance teams to global, multi-site companies. It keeps common workflows short while making deeper operational controls available when required. Common use cases include replacing maintenance spreadsheets, managing planned preventive maintenance, tracking reactive work orders, keeping asset history, coordinating contractors, controlling multi-site inventory, supporting higher-risk work with permits to work, and giving technicians connected mobile access in the field.
 
 ## Countries and Markets
 
-Smartspanner serves maintenance teams internationally, with dedicated information for the United Kingdom, United States, Australia, and New Zealand.
+Smartspanner is based and supported in the United Kingdom and serves maintenance teams internationally, with dedicated information pages for the United States, Australia, and New Zealand.
 
 ## Language Support
 
@@ -104,10 +106,10 @@ The Smartspanner app interface supports English, German, French, Spanish, Portug
 
 ## Differentiators
 
-- Fast implementation — up and running in under an hour
-- Simple to use — designed for technicians, not just administrators
-- Scalable by requirement — use straightforward core workflows or introduce advanced multi-site controls without changing systems
-- Affordable — starting from £15/user/month
-- Unlimited support — telephone and online support included at no extra cost
-- Mobile-first — native iOS and Android apps for field use
-- IoT-ready — optional wireless sensor monitoring with AI-powered machine health
+- Focused implementation — a first site and core workflow can be configured in a focused setup session; wider rollout time depends on data, integrations, sites, and workflows
+- Short everyday workflows — designed around the job technicians and supervisors need to complete
+- Depth without obstruction — advanced multi-site, safety, inventory, purchasing, reporting, and integration controls remain available without cluttering common work
+- Transparent pricing — starting from £15/user/month, excluding applicable taxes
+- Included support — telephone and online support are included
+- Connected mobile access — native iOS and Android apps for field use where an internet connection is available
+- Condition monitoring — optional sensor monitoring, including supported vibration sensors, can turn equipment data into maintenance action
