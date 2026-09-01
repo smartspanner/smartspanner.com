@@ -158,6 +158,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 ## Customer Stories
 
 - Customer stories overview: https://www.smartspanner.com/case-studies/
+- AMES Goldsmith UK: https://www.smartspanner.com/case-studies/ames-goldsmith-uk/ — how a two-site chemical and metals manufacturer moved from fragmented Excel workbooks to one live maintenance system, logging more than 1,100 jobs and saving an estimated 8–10 hours of administration each week.
 - Nadon Thai: https://www.smartspanner.com/case-studies/nadon-thai/ — how a three-restaurant group uses Smartspanner to schedule recurring maintenance and compliance activity, retrieve evidence during inspections, and track corrective actions through to completion.
 - Oiltech Bearings: https://www.smartspanner.com/case-studies/oiltech-bearings/ — how a Newcastle manufacturing business uses Smartspanner for compliance, preventative maintenance, machinery breakdowns, warranty records and ISO 9001 evidence, with day-to-day plant experience helping inform platform development.
 

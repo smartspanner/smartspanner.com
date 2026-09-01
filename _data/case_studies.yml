@@ -1,3 +1,18 @@
+- customer: AMES Goldsmith UK
+  slug: ames-goldsmith-uk
+  url: /case-studies/ames-goldsmith-uk/
+  logo: /assets/img/case-studies/ames-goldsmith-uk-logo.png
+  industry: Manufacturing
+  locations: 2 manufacturing sites
+  operating_model: Approximately 35–40 employees
+  primary_use: Maintenance, compliance & KPI reporting
+  title: How AMES Goldsmith UK moved from Excel to a live maintenance system
+  summary: AMES replaced a fragmented spreadsheet process with one current view of jobs, preventive maintenance, statutory inspections and engineering KPIs across two sites.
+  quote: It means that we can access maintenance data instantly, rather than having to search through various Excel workbooks.
+  quote_author: Mike Gray
+  quote_role: AMES Goldsmith UK
+  featured: false
+
 - customer: Nadon Thai
   slug: nadon-thai
   url: /case-studies/nadon-thai/
