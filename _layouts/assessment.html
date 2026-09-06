@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Smartspanner</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/features/dashboard-thumb.webp' | absolute_url }}">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/icon.png">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/maintenance-assessment.css">
+  <noscript><style>#ma-load-status{display:none}</style></noscript>
+</head>
+<body>
+  <a class="ma-skip" href="#main">Skip to assessment</a>
+  <header class="ma-header">
+    <a href="{{ '/' | relative_url }}" aria-label="Smartspanner home"><img src="{{ site.baseurl }}/assets/img/logo.png" alt="Smartspanner" width="176"></a>
+    <span class="ma-header-label">THE MAINTENANCE ASSESSMENT</span>
+    <a class="ma-exit" href="{{ '/' | relative_url }}">Back to Smartspanner <span aria-hidden="true">↗</span></a>
+  </header>
+  {{ content }}
+  <footer class="ma-footer"><span>Made by Smartspanner · A practical next step for maintenance teams</span><a href="{{ '/privacy-policy/' | relative_url }}">Privacy</a></footer>
+  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment-model.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment.js" defer></script>
+</body>
+</html>

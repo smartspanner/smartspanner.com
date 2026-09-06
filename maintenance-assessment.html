@@ -1,0 +1,68 @@
+---
+layout: assessment
+title: "Should You Actually Buy a CMMS?"
+description: "Take Smartspanner’s interactive maintenance assessment. Find out whether a CMMS could help, what to improve first and whether Smartspanner fits your needs. No email required."
+permalink: /maintenance-assessment/
+---
+<main id="main" class="ma-main" data-baseurl="{{ site.baseurl }}">
+  <section id="ma-intro" class="ma-intro" aria-labelledby="ma-title">
+    <div class="ma-intro-copy">
+      <p class="ma-eyebrow"><span class="ma-dot"></span> A clearer next step</p>
+      <h1 id="ma-title">Should you<br>actually buy<br><em>a CMMS?</em></h1>
+      <p class="ma-lead">Tell us how maintenance works in your organisation. We’ll help you decide what to do next.</p>
+      <p class="ma-promise">If we don’t think you need one, we’ll say so.</p>
+      <button id="ma-start" class="ma-button" type="button" hidden>Find out where you stand <span aria-hidden="true">↗</span></button>
+      <p class="ma-small">Around 20 questions · Allow 5–7 minutes<br>No email needed for your recommendation</p>
+      <button id="ma-resume" class="ma-text-button" type="button" hidden>Continue your saved assessment →</button>
+      <p id="ma-load-status" class="ma-small">Loading the assessment…</p>
+      <noscript><p>This interactive tool needs JavaScript. You can also use our <a href="{{ '/free-guide-choosing-your-cmms-vendors/' | relative_url }}">CMMS selection guide</a>.</p></noscript>
+    </div>
+    <aside class="ma-outcomes">
+      <p class="ma-eyebrow">An open question</p>
+      <h2>Four possible directions.<br>One useful answer.</h2>
+      <ol>
+        <li><span>01</span><div><h3>Keep things simple.</h3><p>Your current tools may be enough. We’ll suggest what to improve and when to reassess.</p></div></li>
+        <li><span>02</span><div><h3>Improve what you already have.</h3><p>Clearer routines, better records or changes to your existing system may come first.</p></div></li>
+        <li><span>03</span><div><h3>Investigate a CMMS.</h3><p>Dedicated maintenance control may help. We’ll explain where and what to look for.</p></div></li>
+        <li><span>04</span><div><h3>Consider a different fit.</h3><p>You may need a CMMS with requirements Smartspanner doesn’t meet. We’ll flag those.</p></div></li>
+      </ol>
+      <p class="ma-outcome-foot">Your need for CMMS and your fit with Smartspanner are assessed separately.</p>
+    </aside>
+  </section>
+
+  <section id="ma-journey" hidden aria-label="Maintenance assessment questions">
+    <div class="ma-progress"><span id="ma-stage"></span><span id="ma-step"></span><progress id="ma-progress" max="100" value="0" aria-label="Assessment progress"></progress></div>
+    <div class="ma-journey-grid">
+      <aside class="ma-rail"><p class="ma-eyebrow">Your maintenance,<br>in perspective.</p><ol id="ma-chapters"></ol><p>There are no right answers.<br>Just your working day.</p></aside>
+      <div>
+        <form id="ma-question-form" novalidate>
+          <div id="ma-scene" class="ma-scene"></div>
+          <p id="ma-error" class="ma-error" role="alert" tabindex="-1"></p>
+          <div class="ma-controls"><button id="ma-back" class="ma-text-button" type="button">← Back</button><button id="ma-next" class="ma-button" type="submit">Continue <span aria-hidden="true">→</span></button></div>
+        </form>
+        <p id="ma-storage-note" class="ma-small ma-storage-note">Your answers stay in this browser tab. Nothing is sent to our team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ma-result" class="ma-result" hidden aria-labelledby="ma-result-title">
+    <p class="ma-eyebrow">Your maintenance assessment · By Smartspanner</p>
+    <h1 id="ma-result-title" tabindex="-1"></h1>
+    <p id="ma-result-summary" class="ma-lead"></p>
+    <div id="ma-verdicts" class="ma-verdicts"></div>
+    <div class="ma-report-grid">
+      <section><p class="ma-eyebrow">The reasoning</p><h2>Why we think this</h2><ul id="ma-reasons" class="ma-reasons"></ul></section>
+      <section class="ma-action-panel"><p class="ma-eyebrow">Your next move</p><h2>Start here.</h2><ol id="ma-actions"></ol></section>
+    </div>
+    <section class="ma-focus-section"><p class="ma-eyebrow">Where to focus</p><h2>Your maintenance priorities</h2><div id="ma-focus" class="ma-focus"></div></section>
+    <section class="ma-system"><p class="ma-eyebrow">What kind of tool?</p><h2 id="ma-system-type"></h2><p>Match the tool to the work, the people who will use it and the cost of keeping it up to date.</p></section>
+    <section class="ma-fit"><div><p class="ma-eyebrow">A separate question</p><h2>Is Smartspanner<br>a good fit?</h2></div><div><h3 id="ma-fit-title"></h3><p id="ma-fit-reason"></p><a id="ma-fit-link" href="{{ '/features/' | relative_url }}">Explore the capabilities →</a></div></section>
+    <p class="ma-small">This is an initial recommendation based on your answers, not a costed business case or a compliance audit. Smartspanner makes this tool; product fit does not determine the CMMS recommendation.</p>
+    <div class="ma-result-controls"><button id="ma-print" class="ma-button" type="button">Save or print your report <span aria-hidden="true">↗</span></button><button id="ma-edit" class="ma-text-button" type="button">Review your answers</button><button id="ma-restart" class="ma-text-button" type="button">Start again</button></div>
+    <details class="ma-answer-details"><summary>Your answers</summary><dl id="ma-answer-list"></dl></details>
+    <aside class="ma-contact"><div><p class="ma-eyebrow">A second pair of eyes</p><h2>Want to talk it through?</h2><p>Your report is yours to keep. If you contact us, you can choose which details to share.</p></div><a class="ma-button" href="{{ '/contact/' | relative_url }}">Talk to the team <span aria-hidden="true">↗</span></a></aside>
+  </section>
+
+  <details class="ma-method"><summary>How this assessment works</summary><div><p>We look at maintenance complexity, observed control gaps, business impact and implementation readiness. Headcount, spreadsheets or a large asset register alone do not establish a reason to buy. Unknown or conflicting answers lead to a request for more evidence.</p><p>The approach is informed by the <a href="https://www1.eere.energy.gov/femp/pdfs/OM_4.pdf">US Department of Energy’s CMMS needs guidance</a> and <a href="https://www.hse.gov.uk/work-equipment-machinery/inspection.htm">HSE guidance on inspection records</a>. Neither source endorses this tool or sets its decision rules. The categories are practical judgements, not scientifically validated scores. Software does not establish compliance.</p><p>Smartspanner fit uses its <a href="{{ '/features/' | relative_url }}">documented features</a> and <a href="{{ '/pricing/' | relative_url }}">access requirements</a>, reviewed September 2026. Specialist integrations, IoT, validation and governance requirements need detailed review.</p><p>Answers are stored only for this tab’s session where your browser allows it. Closing the tab normally clears them; browser session restoration can retain them. Use “Start again” to clear saved answers. This page does not send your answers or load analytics or session recording.</p></div></details>
+  <script id="ma-data" type="application/json">{{ site.data.maintenance_assessment | jsonify }}</script>
+</main>

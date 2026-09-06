@@ -1,0 +1,801 @@
+{
+  "version": "1.0.0",
+  "chapters": [
+    "Your operation",
+    "Your current control",
+    "Your next step"
+  ],
+  "questions": [
+    {
+      "id": "sector",
+      "chapter": 0,
+      "title": "What kind of organisation are you?",
+      "hint": "Choose the closest match. Your industry alone won’t decide the recommendation.",
+      "options": [
+        [
+          "manufacturing",
+          "Manufacturing"
+        ],
+        [
+          "facilities",
+          "Facilities or property"
+        ],
+        [
+          "hospitality",
+          "Hospitality or leisure"
+        ],
+        [
+          "healthcare",
+          "Healthcare"
+        ],
+        [
+          "education",
+          "Education"
+        ],
+        [
+          "logistics",
+          "Logistics or warehousing"
+        ],
+        [
+          "energy",
+          "Energy or utilities"
+        ],
+        [
+          "other",
+          "Other or mixed"
+        ]
+      ]
+    },
+    {
+      "id": "team",
+      "chapter": 0,
+      "title": "How many people look after maintenance?",
+      "hint": "Include people who organise or carry out the work, including regular contractors.",
+      "options": [
+        [
+          "solo",
+          "1–2"
+        ],
+        [
+          "small",
+          "3–5"
+        ],
+        [
+          "medium",
+          "6–10"
+        ],
+        [
+          "large",
+          "11–25"
+        ],
+        [
+          "larger",
+          "26–50"
+        ],
+        [
+          "extensive",
+          "More than 50"
+        ]
+      ]
+    },
+    {
+      "id": "assets",
+      "chapter": 0,
+      "title": "How many assets do you maintain?",
+      "hint": "Count the equipment, buildings or systems you need individual maintenance records for. An estimate is fine.",
+      "options": [
+        [
+          "few",
+          "Under 50"
+        ],
+        [
+          "some",
+          "50–250"
+        ],
+        [
+          "many",
+          "251–1,000"
+        ],
+        [
+          "thousands",
+          "1,001–5,000"
+        ],
+        [
+          "extensive",
+          "More than 5,000"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "sites",
+      "chapter": 0,
+      "title": "How many sites do you look after?",
+      "hint": "Think about locations whose maintenance you need to coordinate.",
+      "options": [
+        [
+          "one",
+          "1 site"
+        ],
+        [
+          "few",
+          "2–5 sites"
+        ],
+        [
+          "many",
+          "6–20 sites"
+        ],
+        [
+          "extensive",
+          "More than 20 sites"
+        ]
+      ]
+    },
+    {
+      "id": "demands",
+      "chapter": 0,
+      "title": "What does your maintenance involve?",
+      "hint": "Select everything you regularly coordinate.",
+      "multi": true,
+      "options": [
+        [
+          "pm",
+          "Recurring preventive maintenance"
+        ],
+        [
+          "procedures",
+          "Multi-step procedures"
+        ],
+        [
+          "contractors",
+          "External contractors"
+        ],
+        [
+          "traceability",
+          "Inspection evidence and traceability"
+        ],
+        [
+          "condition",
+          "Condition readings or monitoring"
+        ],
+        [
+          "none",
+          "Simple checks and occasional repairs"
+        ],
+        [
+          "unknown",
+          "Not sure yet"
+        ]
+      ]
+    },
+    {
+      "id": "pm_volume",
+      "chapter": 0,
+      "when": "pm",
+      "title": "How many planned tasks fall due in a typical month?",
+      "hint": "Count individual jobs due across all assets, not the number of schedule templates.",
+      "options": [
+        [
+          "few",
+          "Fewer than 25"
+        ],
+        [
+          "some",
+          "25–100"
+        ],
+        [
+          "many",
+          "101–500"
+        ],
+        [
+          "extensive",
+          "More than 500"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "system",
+      "chapter": 1,
+      "title": "Where does your maintenance information live?",
+      "hint": "Choose the description that best reflects everyday work.",
+      "options": [
+        [
+          "informal",
+          "Conversations, paper or whiteboards"
+        ],
+        [
+          "sheets",
+          "Spreadsheets, email or messaging"
+        ],
+        [
+          "separate",
+          "Several separate tools"
+        ],
+        [
+          "cmms",
+          "An existing CMMS"
+        ],
+        [
+          "erp",
+          "Maintenance managed in our ERP"
+        ],
+        [
+          "connected",
+          "A connected system that largely works well"
+        ]
+      ]
+    },
+    {
+      "id": "existing_reason",
+      "chapter": 1,
+      "when": "existing",
+      "title": "Why are you considering a change?",
+      "hint": "Improving the system you already have may be the best next step.",
+      "options": [
+        [
+          "capability",
+          "An essential capability is missing"
+        ],
+        [
+          "adoption",
+          "It’s difficult to use or poorly adopted"
+        ],
+        [
+          "setup",
+          "Our setup or data needs attention"
+        ],
+        [
+          "support",
+          "Reliability or support is a problem"
+        ],
+        [
+          "none",
+          "No significant problem — just exploring"
+        ]
+      ]
+    },
+    {
+      "id": "pm_control",
+      "chapter": 1,
+      "when": "pm",
+      "title": "What happens to planned maintenance?",
+      "hint": "Think about on-time completion and how quickly you notice anything overdue.",
+      "options": [
+        [
+          "controlled",
+          "Completed on time, with overdue work visible"
+        ],
+        [
+          "mostly",
+          "Mostly on time, with manual follow-up"
+        ],
+        [
+          "missed",
+          "Tasks are regularly missed or overdue"
+        ],
+        [
+          "invisible",
+          "We can’t reliably tell what was missed"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "visibility",
+      "chapter": 1,
+      "title": "Can you see every open maintenance job?",
+      "hint": "Include requests arriving by phone, message and in person.",
+      "options": [
+        [
+          "clear",
+          "Yes — with an owner and current status"
+        ],
+        [
+          "manual",
+          "Yes, after checking lists or asking around"
+        ],
+        [
+          "gaps",
+          "Some requests or updates get lost"
+        ],
+        [
+          "poor",
+          "We don’t have a reliable view"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "history",
+      "chapter": 1,
+      "title": "Can you find what was done to an asset?",
+      "hint": "Think about the last repair, who did it and the work recorded.",
+      "options": [
+        [
+          "clear",
+          "Yes, in one dependable record"
+        ],
+        [
+          "manual",
+          "Yes, but it takes some searching"
+        ],
+        [
+          "gaps",
+          "Only some of the work is recorded"
+        ],
+        [
+          "poor",
+          "We often rely on someone remembering"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "parts",
+      "chapter": 1,
+      "title": "Do missing spare parts delay maintenance?",
+      "hint": "This helps separate inventory control from other causes of delay.",
+      "options": [
+        [
+          "none",
+          "We don’t manage spare parts"
+        ],
+        [
+          "rare",
+          "Never or rarely"
+        ],
+        [
+          "sometimes",
+          "Occasionally"
+        ],
+        [
+          "often",
+          "Frequently"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "required",
+      "chapter": 1,
+      "title": "Do you have required inspections or maintenance?",
+      "hint": "Include work required by your organisation, insurer or applicable rules.",
+      "options": [
+        [
+          "none",
+          "No specific requirements"
+        ],
+        [
+          "some",
+          "Some assets or tasks"
+        ],
+        [
+          "many",
+          "A substantial part of our maintenance"
+        ],
+        [
+          "unknown",
+          "Not sure which requirements apply"
+        ]
+      ]
+    },
+    {
+      "id": "evidence",
+      "chapter": 1,
+      "when": "required",
+      "title": "Could you produce the completion records?",
+      "hint": "The format matters less than having complete, retrievable evidence.",
+      "options": [
+        [
+          "clear",
+          "Yes — complete and easy to retrieve"
+        ],
+        [
+          "manual",
+          "Yes, with manual searching"
+        ],
+        [
+          "gaps",
+          "We would find gaps in the records"
+        ],
+        [
+          "poor",
+          "We couldn’t reliably prove completion"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "pains",
+      "chapter": 1,
+      "title": "What most needs to improve?",
+      "hint": "Choose up to three. It’s fine if things are working well.",
+      "multi": true,
+      "max": 3,
+      "options": [
+        [
+          "pm",
+          "Missed preventive maintenance"
+        ],
+        [
+          "visibility",
+          "Lost jobs or poor work visibility"
+        ],
+        [
+          "downtime",
+          "Unplanned equipment downtime"
+        ],
+        [
+          "admin",
+          "Too much chasing and administration"
+        ],
+        [
+          "history",
+          "Incomplete asset history"
+        ],
+        [
+          "parts",
+          "Spare parts availability"
+        ],
+        [
+          "evidence",
+          "Inspection and audit records"
+        ],
+        [
+          "contractors",
+          "Coordinating contractors"
+        ],
+        [
+          "reporting",
+          "Maintenance reporting"
+        ],
+        [
+          "none",
+          "No significant problems"
+        ]
+      ]
+    },
+    {
+      "id": "frequency",
+      "chapter": 1,
+      "when": "pain",
+      "title": "How often do those problems disrupt work?",
+      "hint": "Consider the problems you just selected across a typical month.",
+      "options": [
+        [
+          "rare",
+          "Rarely"
+        ],
+        [
+          "monthly",
+          "A few times a month"
+        ],
+        [
+          "weekly",
+          "Every week"
+        ],
+        [
+          "daily",
+          "Most days"
+        ]
+      ]
+    },
+    {
+      "id": "impact",
+      "chapter": 1,
+      "title": "What would an unexpected asset failure mean?",
+      "hint": "Consider production, service delivery and the importance of the affected assets. This does not assume failures are happening.",
+      "options": [
+        [
+          "low",
+          "Little disruption"
+        ],
+        [
+          "some",
+          "A manageable interruption"
+        ],
+        [
+          "high",
+          "Significant lost production or service"
+        ],
+        [
+          "critical",
+          "Critical service or safety consequences"
+        ],
+        [
+          "unknown",
+          "It depends / not sure"
+        ]
+      ]
+    },
+    {
+      "id": "hours",
+      "chapter": 1,
+      "title": "How much time goes into chasing and re-entering information?",
+      "hint": "Estimate the combined team time each week. Exclude useful planning and the maintenance work itself.",
+      "options": [
+        [
+          "low",
+          "Under 1 hour"
+        ],
+        [
+          "some",
+          "1–5 hours"
+        ],
+        [
+          "medium",
+          "6–10 hours"
+        ],
+        [
+          "high",
+          "11–20 hours"
+        ],
+        [
+          "extensive",
+          "More than 20 hours"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "causes",
+      "chapter": 2,
+      "when": "pain",
+      "title": "What seems to be driving those problems?",
+      "hint": "Choose up to two. Software is only useful if it addresses the cause.",
+      "multi": true,
+      "max": 2,
+      "options": [
+        [
+          "information",
+          "Scattered or missing information"
+        ],
+        [
+          "software",
+          "Our tools lack a needed capability"
+        ],
+        [
+          "process",
+          "Unclear responsibilities or routines"
+        ],
+        [
+          "data",
+          "Unreliable asset or maintenance data"
+        ],
+        [
+          "capacity",
+          "Not enough people or time to do the work"
+        ],
+        [
+          "external",
+          "Suppliers or ageing equipment"
+        ],
+        [
+          "unknown",
+          "We haven’t established the cause"
+        ]
+      ]
+    },
+    {
+      "id": "growth",
+      "chapter": 2,
+      "title": "What is likely to change in the next 12–24 months?",
+      "hint": "Select confirmed changes. An ambition to grow is different from a committed plan.",
+      "multi": true,
+      "options": [
+        [
+          "assets",
+          "More assets or planned tasks"
+        ],
+        [
+          "sites",
+          "Additional sites"
+        ],
+        [
+          "controls",
+          "More demanding inspection or reporting requirements"
+        ],
+        [
+          "team",
+          "More technicians or contractors"
+        ],
+        [
+          "ambition",
+          "Growth is an ambition, not yet confirmed"
+        ],
+        [
+          "none",
+          "No major change expected"
+        ],
+        [
+          "unknown",
+          "Not sure yet"
+        ]
+      ]
+    },
+    {
+      "id": "data",
+      "chapter": 2,
+      "title": "How dependable is your asset register?",
+      "hint": "Think about asset identities, locations and who maintains those records.",
+      "options": [
+        [
+          "good",
+          "Accurate and actively maintained"
+        ],
+        [
+          "gaps",
+          "Useful, with some gaps"
+        ],
+        [
+          "poor",
+          "Major gaps or no reliable register"
+        ],
+        [
+          "unknown",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "owner",
+      "chapter": 2,
+      "title": "Could someone lead an improvement project?",
+      "hint": "Good implementation needs time, clear ownership and involvement from the people doing the work.",
+      "options": [
+        [
+          "ready",
+          "Yes — with time and management support"
+        ],
+        [
+          "tight",
+          "Someone could, but time is tight"
+        ],
+        [
+          "none",
+          "There is no clear owner yet"
+        ],
+        [
+          "exploring",
+          "We are only exploring"
+        ]
+      ]
+    },
+    {
+      "id": "requirements",
+      "chapter": 2,
+      "title": "What would a maintenance system have to do?",
+      "hint": "Select your essentials. These assess Smartspanner fit separately from your need for CMMS.",
+      "multi": true,
+      "options": [
+        [
+          "workorders",
+          "Work requests and work orders"
+        ],
+        [
+          "pm",
+          "Preventive maintenance and scheduling"
+        ],
+        [
+          "assets",
+          "Asset records and history"
+        ],
+        [
+          "mobile",
+          "Mobile updates from site"
+        ],
+        [
+          "parts",
+          "Spare parts and inventory"
+        ],
+        [
+          "contractors",
+          "Contractor workflows"
+        ],
+        [
+          "evidence",
+          "Inspections and maintenance evidence"
+        ],
+        [
+          "reporting",
+          "Reporting and multi-site visibility"
+        ],
+        [
+          "iot",
+          "IoT or predictive maintenance"
+        ],
+        [
+          "integration",
+          "A specific software or machine integration"
+        ],
+        [
+          "specialist",
+          "Specialist validation or enterprise controls"
+        ],
+        [
+          "unknown",
+          "We haven’t defined our essentials yet"
+        ]
+      ]
+    },
+    {
+      "id": "access",
+      "chapter": 2,
+      "title": "Where must the system work?",
+      "hint": "Choose the requirement your team cannot compromise on.",
+      "options": [
+        [
+          "online",
+          "Browser and mobile, with internet access"
+        ],
+        [
+          "offline",
+          "Technicians must work without internet"
+        ],
+        [
+          "onpremise",
+          "It must run on our own servers"
+        ],
+        [
+          "unknown",
+          "We need to check connectivity and IT requirements"
+        ]
+      ]
+    },
+    {
+      "id": "specialist",
+      "chapter": 2,
+      "when": "specialist",
+      "title": "What needs a detailed technical review?",
+      "hint": "Select the requirements a supplier would have to demonstrate.",
+      "multi": true,
+      "options": [
+        [
+          "iot",
+          "Specific sensors or predictive models"
+        ],
+        [
+          "integration",
+          "Named integrations or data exchange"
+        ],
+        [
+          "validation",
+          "Regulated validation or electronic signatures"
+        ],
+        [
+          "enterprise",
+          "Complex permissions, governance or group controls"
+        ],
+        [
+          "unknown",
+          "Another specialist requirement / not yet defined"
+        ]
+      ]
+    }
+  ]
+}
