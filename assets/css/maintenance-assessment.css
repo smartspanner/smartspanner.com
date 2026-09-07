@@ -15,9 +15,11 @@
 .ma-gate-field input{width:100%;min-height:48px;border:1px solid #9a9e90;border-radius:5px;background:#fff;color:var(--ink);padding:12px;font-size:1rem}
 .ma-gate-privacy{font-size:.77rem;color:var(--muted);line-height:1.65;margin:22px 0 10px}
 .ma-print-dialog .ma-error:empty{display:none}.ma-print-dialog .ma-button{width:100%}.ma-print-dialog .ma-text-button{font-size:.82rem;margin-top:12px}
-.ma-gate-method{max-width:940px}.ma-print-note{margin-top:-10px}
+.ma-report-preview{max-width:850px;margin:36px 0 20px;padding:32px;background:var(--soft);border:1px solid var(--line);border-radius:var(--radius)}
+.ma-report-preview h2{font-size:clamp(1.5rem,3vw,2rem)}.ma-report-preview>p:not(.ma-eyebrow){color:var(--muted)}.ma-report-preview .ma-small{margin:16px 0 0}.ma-report-preview .ma-eyebrow{margin-bottom:16px}
+#ma-full-report-title{margin:42px 0 24px;scroll-margin-top:24px}
 @media(max-width:480px){.ma-print-dialog{padding:30px 22px}.ma-print-dialog h2{font-size:1.7rem}}
-@media print{.ma-print-dialog,.ma-print-note,.ma-gate-method{display:none!important}}
+@media print{.ma-print-dialog,.ma-report-preview{display:none!important}}
 @keyframes arrive{from{opacity:.45;transform:translateY(6px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(min-width:1500px){.ma-intro{padding-top:90px;padding-bottom:85px}}
 @media(max-width:1000px){.ma-main{padding:0 28px}.ma-header-label{display:none}.ma-intro{gap:5%;padding-top:45px}.ma-intro h1{font-size:4.3rem}.ma-outcomes{padding:28px}.ma-journey-grid{grid-template-columns:155px minmax(0,1fr);gap:32px}.ma-report-grid{gap:30px}.ma-focus{gap:20px}}

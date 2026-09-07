@@ -30,7 +30,18 @@ try {
   await page.reload();
   await page.locator('#ma-resume').click();
   assert.equal(submissions.length,0);
-  await page.locator('#ma-print').click();
+  assert.equal(await page.locator('#ma-full-report').isVisible(),false);
+  assert.equal(await page.locator('#ma-verdicts').isVisible(),false);
+  assert.equal(await page.locator('#ma-fit-title').isVisible(),false);
+  assert.equal(await page.locator('.ma-answer-details').isVisible(),false);
+  await page.screenshot({path:artifacts+'/desktop-conclusion.png',fullPage:true});
+  await page.emulateMedia({media:'print'});
+  assert.equal(await page.locator('#ma-reasons').isVisible(),false,'Native print must not reveal locked details');
+  await page.emulateMedia({media:'screen'});
+  await page.reload();
+  await page.locator('#ma-resume').click();
+  assert.equal(await page.locator('#ma-full-report').isVisible(),false,'Reload must not unlock an unsubmitted report');
+  await page.locator('#ma-unlock').click();
   assert.equal(await page.locator('#ma-print-dialog').evaluate(el=>el.open),true);
   assert.equal(await page.evaluate(()=>window.printCount),0);
   await page.locator('#ma-print-submit').click();
@@ -42,18 +53,18 @@ try {
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('#ma-print-dialog').evaluate(el=>el.open),false);
   assert.equal(await page.locator('#ma-result').isVisible(),true);
-  await page.locator('#ma-print').click();
+  await page.locator('#ma-unlock').click();
   await page.locator('#ma-print-name').fill('Taylor');
   await page.locator('#ma-print-email').fill('taylor@example.invalid');
   await page.screenshot({path:artifacts+'/desktop-form.png'});
   await page.locator('#ma-print-submit').click();
   await page.locator('#ma-print-error').filter({hasText:'couldn’t confirm'}).waitFor();
-  assert.equal(await page.locator('#ma-print-success').isVisible(),false);
+  assert.equal(await page.locator('#ma-full-report').isVisible(),false);
   assert.equal(await page.evaluate(()=>window.printCount),0);
   mode='network';
   await page.locator('#ma-print-submit').click();
   await page.locator('#ma-print-submit:not([disabled])').waitFor();
-  assert.equal(await page.locator('#ma-print-success').isVisible(),false);
+  assert.equal(await page.locator('#ma-full-report').isVisible(),false);
   mode='pending';
   await page.locator('#ma-print-submit').click();
   await page.waitForFunction(()=>document.getElementById('ma-print-submit').disabled);
@@ -63,14 +74,19 @@ try {
   assert.ok(release);
   mode='success';
   release();
-  await page.locator('#ma-print-ready').waitFor({state:'visible'});
+  await page.locator('#ma-full-report').waitFor({state:'visible'});
+  assert.equal(await page.locator('#ma-report-preview').isVisible(),false);
+  assert.equal(await page.locator('#ma-print-dialog').evaluate(el=>el.open),false);
+  assert.equal(await page.evaluate(()=>window.printCount),0,'Unlock reveals the report without opening print');
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'ma-full-report-title');
+  await page.screenshot({path:artifacts+'/desktop-unlocked.png',fullPage:true});
   assert.deepEqual(submissions.at(-1),{
-    fields:[{name:'firstname',value:'Taylor'},{name:'email',value:'taylor@example.invalid'},{name:'lead_gen_name',value:'Maintenance Assessment: Printable Report'}],
+    fields:[{name:'firstname',value:'Taylor'},{name:'email',value:'taylor@example.invalid'},{name:'lead_gen_name',value:'Maintenance Assessment: Full Report'}],
     context:{pageUri:url,pageName:'Smartspanner Maintenance Assessment'}
   });
   const saved=await page.evaluate(()=>JSON.stringify({...sessionStorage}));
   assert.ok(!saved.includes('Taylor') && !saved.includes('taylor@example.invalid'),'Contact details must not be persisted');
-  await page.locator('#ma-print-ready').click();
+  await page.locator('#ma-print').click();
   assert.equal(await page.evaluate(()=>window.printCount),1);
   await page.locator('#ma-print').click();
   assert.equal(await page.evaluate(()=>window.printCount),2);
@@ -79,6 +95,11 @@ try {
   await page.locator('#ma-resume').click();
   await page.locator('#ma-print').click();
   assert.equal(await page.evaluate(()=>window.printCount),1,'Successful unlock survives reload in the same tab');
+  assert.equal(await page.locator('#ma-full-report').isVisible(),true);
+  await page.emulateMedia({media:'print'});
+  assert.equal(await page.locator('#ma-reasons').isVisible(),true,'Unlocked report is printable');
+  await page.pdf({path:artifacts+'/unlocked-report.pdf',format:'A4'});
+  await page.emulateMedia({media:'screen'});
   assert.equal(submissions.length,count);
   assert.deepEqual(errors,[]);
 
@@ -89,7 +110,9 @@ try {
     await mobile.evaluate(answers=>sessionStorage.setItem('smartspanner-maintenance-assessment',JSON.stringify({version:'1.0.0',answers,cursor:'access',finished:true})),simple);
     await mobile.reload();
     await mobile.locator('#ma-resume').click();
-    await mobile.locator('#ma-print').click();
+    await mobile.screenshot({path:artifacts+`/mobile-${width}-conclusion.png`,fullPage:true});
+    assert.equal(await mobile.locator('#ma-full-report').isVisible(),false);
+    await mobile.locator('#ma-unlock').click();
     await mobile.screenshot({path:artifacts+`/mobile-${width}-form.png`});
     assert.ok(await mobile.locator('#ma-print-dialog').evaluate(el=>el.scrollWidth<=el.clientWidth),'Dialog has no horizontal overflow');
     await mobile.locator('#ma-print-cancel').click();

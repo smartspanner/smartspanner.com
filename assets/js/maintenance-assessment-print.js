@@ -5,27 +5,33 @@
   const dialog = $('ma-print-dialog');
   const form = $('ma-print-form');
   if (!dialog || !form) return;
+  // Honour contact submissions already made through the original print gate.
   const unlockKey = 'smartspanner-assessment-print-unlocked-v1';
   let unlocked = false;
   let submitting = false;
   try {unlocked = sessionStorage.getItem(unlockKey) === 'yes';} catch (_) { /* In-memory fallback. */ }
-  function updateButton() {
-    $('ma-print').textContent = unlocked ? 'Save or print your report ↗' : 'Unlock your printable report ↗';
+  function updateAccess() {
+    $('ma-full-report').hidden = !unlocked;
+    $('ma-report-preview').hidden = unlocked;
   }
-  function close() {dialog.close();$('ma-print').focus({preventScroll:true});}
+  function close() {
+    dialog.close();
+    if (!$('ma-result').hidden) (unlocked ? $('ma-full-report-title') : $('ma-unlock')).focus({preventScroll:true});
+  }
   function print() {if (dialog.open) dialog.close();window.print();}
-  updateButton();
-  $('ma-print').addEventListener('click',() => {
-    if (unlocked) {print();return;}
+  updateAccess();
+  function openGate() {
+    if (unlocked) return;
     dialog.showModal();
     if (submitting) $('ma-print-close').focus();
     else $('ma-print-name').focus();
-  });
+  }
+  $('ma-unlock').addEventListener('click',openGate);
+  $('ma-print').addEventListener('click',() => {if (unlocked) print();else openGate();});
   $('ma-print-close').addEventListener('click',close);
   $('ma-print-cancel').addEventListener('click',close);
-  $('ma-print-ready').addEventListener('click',print);
   dialog.addEventListener('close',() => {if (!submitting) form.reset();});
-  // Native browser printing remains available because the complete report is public.
+  // The hidden report is also excluded from native printing until unlocked.
   form.addEventListener('submit',async event => {
     event.preventDefault();
     if (submitting || unlocked) return;
@@ -37,7 +43,7 @@
     const portalId = form.dataset.portalId;
     const formId = form.dataset.formId;
     if (!/^\d+$/.test(portalId) || !/^[a-f0-9-]{36}$/i.test(formId)) {
-      $('ma-print-error').textContent = 'Report requests are temporarily unavailable. Your full recommendation is still available on this page.';
+      $('ma-print-error').textContent = 'Report requests are temporarily unavailable. Your conclusion is still available on this page.';
       $('ma-print-error').focus();
       return;
     }
@@ -46,7 +52,7 @@
       fields:[
         {name:'firstname',value:name.value},
         {name:'email',value:email.value},
-        {name:'lead_gen_name',value:'Maintenance Assessment: Printable Report'}
+        {name:'lead_gen_name',value:'Maintenance Assessment: Full Report'}
       ],
       context:{pageUri:location.origin + location.pathname,pageName:'Smartspanner Maintenance Assessment'}
     };
@@ -66,19 +72,17 @@
       unlocked = true;
       try {sessionStorage.setItem(unlockKey,'yes');} catch (_) { /* Do not retain contact details. */ }
       form.reset();
-      form.hidden = true;
-      $('ma-print-success').hidden = false;
-      $('ma-print-cancel').hidden = true;
-      updateButton();
-      if (dialog.open) $('ma-print-ready').focus();
+      updateAccess();
+      close();
+      if (!$('ma-result').hidden) $('ma-full-report-title').scrollIntoView({block:'start'});
     } catch (_) {
-      $('ma-print-error').textContent = 'We couldn’t confirm your request. Please try again. Your assessment is still available, and your answers have not been sent.';
+      $('ma-print-error').textContent = 'We couldn’t confirm your request. Please try again. Your conclusion is still available, and your answers have not been sent.';
       if (dialog.open) $('ma-print-error').focus();
     } finally {
       clearTimeout(timer);
       submitting = false;
       $('ma-print-submit').disabled = false;
-      $('ma-print-submit').textContent = 'Unlock printable report →';
+      $('ma-print-submit').textContent = 'Unlock my full report →';
       form.removeAttribute('aria-busy');
       if (!dialog.open) form.reset();
     }

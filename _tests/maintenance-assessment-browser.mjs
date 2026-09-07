@@ -47,10 +47,13 @@ try {
   await complete(page,simple);
   assert.match(await page.locator('#ma-result-title').innerText(),/don’t see a strong case/);
   assert.equal(await page.locator('#ma-answer-list dt').count(),18);
+  assert.equal(await page.locator('#ma-full-report').isVisible(),false);
+  assert.equal(await page.locator('#ma-unlock').isVisible(),true);
   await page.screenshot({path:artifacts+'/desktop-result.png',fullPage:true});
   await page.evaluate(()=>window.dispatchEvent(new Event('beforeprint')));
   assert.equal(await page.locator('.ma-answer-details').getAttribute('open'),'');
-  await page.pdf({path:artifacts+'/assessment-report.pdf',format:'A4',printBackground:true});
+  assert.equal(await page.locator('.ma-answer-details').isVisible(),false);
+  await page.pdf({path:artifacts+'/assessment-conclusion.pdf',format:'A4',printBackground:true});
   await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
   await page.reload();
   await page.locator('#ma-resume').click();
