@@ -16,6 +16,7 @@ try {
   // All HubSpot submissions are intercepted; no test leads are sent.
   await page.route('https://api.hsforms.com/**',async route=>{
     submissions.push(route.request().postDataJSON());
+    assert.equal(route.request().url(),'https://api.hsforms.com/submissions/v3/integration/submit/9191859/977dfaef-f796-432e-a5c0-b614ff58d21d');
     assert.equal(route.request().method(),'POST');
     assert.equal(route.request().headers().cookie,undefined);
     assert.equal(route.request().headers().referer,undefined);
