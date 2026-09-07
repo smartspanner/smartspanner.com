@@ -12,7 +12,8 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/img/features/dashboard-thumb.webp' | absolute_url }}">
   <link rel="icon" href="{{ site.baseurl }}/assets/img/icon.png">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/maintenance-assessment.css">
+  {% assign assessment_asset_version = site.time | date: '%s' %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/maintenance-assessment.css?v={{ assessment_asset_version }}">
   <noscript><style>#ma-load-status{display:none}</style></noscript>
 </head>
 <body>
@@ -24,8 +25,8 @@
   </header>
   {{ content }}
   <footer class="ma-footer"><span>Made by Smartspanner · A practical next step for maintenance teams</span><a href="{{ '/privacy-policy/' | relative_url }}">Privacy</a></footer>
-  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment-model.js" defer></script>
-  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment.js" defer></script>
-  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment-print.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment-model.js?v={{ assessment_asset_version }}" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment.js?v={{ assessment_asset_version }}" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/maintenance-assessment-print.js?v={{ assessment_asset_version }}" defer></script>
 </body>
 </html>

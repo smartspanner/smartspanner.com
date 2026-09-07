@@ -68,15 +68,31 @@
         method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),
         credentials:'omit',referrerPolicy:'no-referrer',signal:controller.signal
       });
-      if (!response.ok) throw new Error('HubSpot did not accept the request');
+      if (!response.ok) {
+        let details = {};
+        try {details = await response.json();} catch (_) { /* A proxy may return non-JSON errors. */ }
+        const types = Array.isArray(details.errors) ? details.errors.map(item => item.errorType).filter(type => typeof type === 'string') : [];
+        const failure = new Error('HubSpot did not accept the request');
+        failure.status = response.status;
+        failure.types = types;
+        // Do not log submitted values or HubSpot's raw messages, which may repeat them.
+        console.warn('Assessment form submission rejected', {status:response.status,types,reference:details.correlationId});
+        throw failure;
+      }
       unlocked = true;
       try {sessionStorage.setItem(unlockKey,'yes');} catch (_) { /* Do not retain contact details. */ }
       form.reset();
       updateAccess();
       close();
       if (!$('ma-result').hidden) $('ma-full-report-title').scrollIntoView({block:'start'});
-    } catch (_) {
-      $('ma-print-error').textContent = 'We couldn’t confirm your request. Please try again. Your conclusion is still available, and your answers have not been sent.';
+    } catch (failure) {
+      let message = 'We couldn’t confirm your request. Please try again.';
+      if ((failure.types || []).includes('INVALID_EMAIL')) message = 'HubSpot could not accept that email address. Please check it and try again.';
+      else if ((failure.types || []).includes('BLOCKED_EMAIL')) message = 'HubSpot could not accept that email address. Please try your work email.';
+      else if (failure.status === 429) message = 'Too many requests have been made. Please wait a minute and try again.';
+      else if (failure.name === 'AbortError') message = 'HubSpot took too long to respond. Please try again.';
+      else if (failure instanceof TypeError) message = 'We couldn’t connect to HubSpot. Check your connection and whether your browser is blocking forms, then try again.';
+      $('ma-print-error').textContent = message + ' Your conclusion is still available, and your answers have not been sent.';
       if (dialog.open) $('ma-print-error').focus();
     } finally {
       clearTimeout(timer);

@@ -26,6 +26,10 @@ try {
   });
   await page.addInitScript(()=>{window.printCount=0;window.print=()=>{window.printCount++;};});
   await page.goto(url+'?utm_source=private-test#private-value');
+  const assetVersions = await page.locator('script[src*="maintenance-assessment"], link[href*="maintenance-assessment.css"]').evaluateAll(elements => elements.map(el => new URL(el.src || el.href,location.href).searchParams.get('v')));
+  assert.equal(assetVersions.length,4);
+  assert.ok(assetVersions.every(version => /^\d+$/.test(version || '')),'Assessment scripts and styles must use versioned URLs');
+  assert.equal(new Set(assetVersions).size,1,'All assessment assets must come from the same build');
   await page.evaluate(answers=>sessionStorage.setItem('smartspanner-maintenance-assessment',JSON.stringify({version:'1.0.0',answers,cursor:'access',finished:true})),simple);
   await page.reload();
   await page.locator('#ma-resume').click();
