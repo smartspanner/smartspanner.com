@@ -192,7 +192,6 @@
   const details = document.querySelector('.ma-answer-details');
   window.addEventListener('beforeprint',() => {printWasOpen=details.open;details.open=true;});
   window.addEventListener('afterprint',() => {details.open=printWasOpen;});
-  $('ma-print').addEventListener('click',() => window.print());
   if (Object.keys(answers).length) {
     $('ma-resume').hidden = false;
     $('ma-resume').textContent = finished ? 'View your saved recommendation →' : 'Continue your saved assessment →';

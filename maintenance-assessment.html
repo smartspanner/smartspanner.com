@@ -3,6 +3,8 @@ layout: assessment
 title: "Should You Actually Buy a CMMS?"
 description: "Take Smartspanner’s interactive maintenance assessment. Find out whether a CMMS could help, what to improve first and whether Smartspanner fits your needs. No email required."
 permalink: /maintenance-assessment/
+report_hubspot_portal_id: "9191859"
+report_hubspot_form_id: "97d7900e-1887-4f57-8ff8-0307aa2e9b25"
 ---
 <main id="main" class="ma-main" data-baseurl="{{ site.baseurl }}">
   <section id="ma-intro" class="ma-intro" aria-labelledby="ma-title">
@@ -12,7 +14,7 @@ permalink: /maintenance-assessment/
       <p class="ma-lead">Tell us how maintenance works in your organisation. We’ll help you decide what to do next.</p>
       <p class="ma-promise">If we don’t think you need one, we’ll say so.</p>
       <button id="ma-start" class="ma-button" type="button" hidden>Find out where you stand <span aria-hidden="true">↗</span></button>
-      <p class="ma-small">Around 20 questions · Allow 5–7 minutes<br>No email needed for your recommendation</p>
+      <p class="ma-small">Around 20 questions · Allow 5–7 minutes<br>No email needed for your recommendation.<br>Name and email unlock the printable report.</p>
       <button id="ma-resume" class="ma-text-button" type="button" hidden>Continue your saved assessment →</button>
       <p id="ma-load-status" class="ma-small">Loading the assessment…</p>
       <noscript><p>This interactive tool needs JavaScript. You can also use our <a href="{{ '/free-guide-choosing-your-cmms-vendors/' | relative_url }}">CMMS selection guide</a>.</p></noscript>
@@ -40,7 +42,7 @@ permalink: /maintenance-assessment/
           <p id="ma-error" class="ma-error" role="alert" tabindex="-1"></p>
           <div class="ma-controls"><button id="ma-back" class="ma-text-button" type="button">← Back</button><button id="ma-next" class="ma-button" type="submit">Continue <span aria-hidden="true">→</span></button></div>
         </form>
-        <p id="ma-storage-note" class="ma-small ma-storage-note">Your answers stay in this browser tab. Nothing is sent to our team.</p>
+        <p id="ma-storage-note" class="ma-small ma-storage-note">Your assessment answers stay in this browser tab. They are not sent to our team.</p>
       </div>
     </div>
   </section>
@@ -58,11 +60,32 @@ permalink: /maintenance-assessment/
     <section class="ma-system"><p class="ma-eyebrow">What kind of tool?</p><h2 id="ma-system-type"></h2><p>Match the tool to the work, the people who will use it and the cost of keeping it up to date.</p></section>
     <section class="ma-fit"><div><p class="ma-eyebrow">A separate question</p><h2>Is Smartspanner<br>a good fit?</h2></div><div><h3 id="ma-fit-title"></h3><p id="ma-fit-reason"></p><a id="ma-fit-link" href="{{ '/features/' | relative_url }}">Explore the capabilities →</a></div></section>
     <p class="ma-small">This is an initial recommendation based on your answers, not a costed business case or a compliance audit. Smartspanner makes this tool; product fit does not determine the CMMS recommendation.</p>
-    <div class="ma-result-controls"><button id="ma-print" class="ma-button" type="button">Save or print your report <span aria-hidden="true">↗</span></button><button id="ma-edit" class="ma-text-button" type="button">Review your answers</button><button id="ma-restart" class="ma-text-button" type="button">Start again</button></div>
+    <div class="ma-result-controls"><button id="ma-print" class="ma-button" type="button">Unlock your printable report <span aria-hidden="true">↗</span></button><button id="ma-edit" class="ma-text-button" type="button">Review your answers</button><button id="ma-restart" class="ma-text-button" type="button">Start again</button></div>
+    <p class="ma-small ma-print-note">Your recommendation is free to read above. Share your name and email to unlock printing; your answers and results stay private.</p>
     <details class="ma-answer-details"><summary>Your answers</summary><dl id="ma-answer-list"></dl></details>
     <aside class="ma-contact"><div><p class="ma-eyebrow">A second pair of eyes</p><h2>Want to talk it through?</h2><p>Your report is yours to keep. If you contact us, you can choose which details to share.</p></div><a class="ma-button" href="{{ '/contact/' | relative_url }}">Talk to the team <span aria-hidden="true">↗</span></a></aside>
   </section>
 
+  <dialog id="ma-print-dialog" class="ma-print-dialog" aria-labelledby="ma-print-title" aria-describedby="ma-print-description">
+    <button id="ma-print-close" class="ma-dialog-close" type="button" aria-label="Close report form">×</button>
+    <p class="ma-eyebrow">A copy to keep</p>
+    <h2 id="ma-print-title">Your report.<br>Your answers stay private.</h2>
+    <p id="ma-print-description">Enter your name and email to unlock the printable version. You can save it as a PDF using your browser. Your report is not emailed.</p>
+    <form id="ma-print-form" data-portal-id="{{ page.report_hubspot_portal_id }}" data-form-id="{{ page.report_hubspot_form_id }}">
+      <div class="ma-gate-field"><label for="ma-print-name">First name</label><input id="ma-print-name" name="firstname" autocomplete="given-name" maxlength="100" required></div>
+      <div class="ma-gate-field"><label for="ma-print-email">Email address</label><input id="ma-print-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+      <p class="ma-gate-privacy">By continuing, you share your name, email and the fact that you requested this report with Smartspanner through HubSpot. We do not send your answers or recommendations. See our <a href="{{ '/privacy-policy/' | relative_url }}" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
+      <p id="ma-print-error" class="ma-error" role="alert" tabindex="-1"></p>
+      <button id="ma-print-submit" class="ma-button" type="submit">Unlock printable report <span aria-hidden="true">→</span></button>
+    </form>
+    <div id="ma-print-success" hidden>
+      <p role="status">Your printable report is unlocked. Choose “Save as PDF” or a printer in the next window.</p>
+      <button id="ma-print-ready" class="ma-button" type="button">Save or print your report <span aria-hidden="true">↗</span></button>
+    </div>
+    <button id="ma-print-cancel" class="ma-text-button" type="button">Keep reading without sharing my details</button>
+  </dialog>
+
   <details class="ma-method"><summary>How this assessment works</summary><div><p>We look at maintenance complexity, observed control gaps, business impact and implementation readiness. Headcount, spreadsheets or a large asset register alone do not establish a reason to buy. Unknown or conflicting answers lead to a request for more evidence.</p><p>The approach is informed by the <a href="https://www1.eere.energy.gov/femp/pdfs/OM_4.pdf">US Department of Energy’s CMMS needs guidance</a> and <a href="https://www.hse.gov.uk/work-equipment-machinery/inspection.htm">HSE guidance on inspection records</a>. Neither source endorses this tool or sets its decision rules. The categories are practical judgements, not scientifically validated scores. Software does not establish compliance.</p><p>Smartspanner fit uses its <a href="{{ '/features/' | relative_url }}">documented features</a> and <a href="{{ '/pricing/' | relative_url }}">access requirements</a>, reviewed September 2026. Specialist integrations, IoT, validation and governance requirements need detailed review.</p><p>Answers are stored only for this tab’s session where your browser allows it. Closing the tab normally clears them; browser session restoration can retain them. Use “Start again” to clear saved answers. This page does not send your answers or load analytics or session recording.</p></div></details>
+  <p class="ma-small ma-gate-method">If you unlock printing, only your name, email and report-request source are submitted to HubSpot. Assessment answers and results stay in your browser.</p>
   <script id="ma-data" type="application/json">{{ site.data.maintenance_assessment | jsonify }}</script>
 </main>

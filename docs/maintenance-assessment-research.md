@@ -26,7 +26,7 @@ Reviewed the sibling project's `erp-assessment.html`, `_layouts/assessment.html`
 - Preserve “keep current system” and “review setup/adoption” outcomes. Capacity and supplier constraints require operational action; software cannot remove them alone.
 - A required-inspection evidence gap receives a specific action even with few assets. This is a record-control prompt, not a compliance verdict or inspection schedule.
 - Fit follows essential workflows and access requirements, not industry stereotypes. Offline/on-premise essentials indicate unlikely fit; specialist validation, enterprise governance, IoT and integrations require review. No undocumented scale cutoff.
-- Full results require no email. Answers stay in session storage in the current browser tab, with an in-memory fallback; no answers in URLs, analytics, contact links or third-party requests. Dedicated assessment layout has no analytics/session replay scripts. Optional contact uses the existing contact page and does not transfer answers.
+- Full on-screen results require no email. As of 7 September 2026, the site's print button requires a successful HubSpot contact submission; see the report-gate contract below. Answers stay in session storage in the current browser tab, with an in-memory fallback; no answers in URLs, analytics, contact links or third-party requests. Dedicated assessment layout has no analytics/session replay scripts. Optional contact uses the existing contact page and does not transfer answers.
 - Responsive cream, charcoal and Smartspanner amber presentation, generous type, a chapter rail, selectable cards, progress and subtle motion. Respect reduced motion; support keyboard navigation, visible focus, announced validation, print and JavaScript-disabled fallback.
 
 ## Validation
@@ -42,3 +42,24 @@ Validated 6 September 2026:
 - Development assessment responds with HTTP 200. Static and generated report links resolve. Internal `_tests`, `_data` and `_layouts` directories are not published.
 
 Remaining validation is real-user research: completion time, question comprehension and usefulness of recommendations. No conversion, savings or diagnostic accuracy claims have been inferred from automated testing.
+
+## Report gate: 7 September 2026
+
+The full recommendation stays visible. “Unlock your printable report” opens a native dialog requesting first name and email. A successful Forms API response unlocks printing for the current tab. The visitor explicitly clicks again to open the browser's print/PDF dialog. No report-delivery email is promised or configured. Native browser printing remains available; gating a button on a public static page is a lead-capture flow, not an access-control boundary.
+
+The gate reuses the existing download form contract from `free-guide-choosing-your-cmms-vendors.html` and `_includes/scripts.html`: portal `9191859`, form `97d7900e-1887-4f57-8ff8-0307aa2e9b25`. Both IDs are page front-matter settings so a dedicated form can replace it. The existing site form collects first name and email; no new HubSpot properties are assumed.
+
+The payload is an explicit allowlist:
+
+- `firstname`
+- `email`
+- `lead_gen_name`: `Maintenance Assessment: Printable Report`
+- Context: the assessment page's origin/path and fixed page title. Query strings, fragments, tracking cookies and referrers are omitted.
+
+Answers, need/fit categories, recommendations and report text are never read by the gate script or submitted to HubSpot. Contact details are cleared from the form after success or dismissal and are not saved in browser storage. Only a boolean unlock marker is saved. Assessment answers still follow the tab-local storage rules above.
+
+Failed, interrupted or timed-out requests do not unlock the button or remove the on-screen report. Duplicate submissions while a request is in flight are blocked. Closing the dialog does not cancel an already submitted request. There is no new tracking script or email automation. Existing HubSpot workflows may still apply to this reused form: check them in HubSpot before relying on a particular follow-up behaviour.
+
+Reference: [HubSpot's unauthenticated Forms API](https://developers.hubspot.com/docs/api-reference/legacy/marketing/forms/v3-legacy/submit-data-unauthenticated). A read-only request for the public form definition returned a 403 payload; authenticated HubSpot configuration is not accessible in this workspace. The implementation follows the existing site's field contract. A live submission and existing email automation behaviour were not tested.
+
+Validation: `_tests/maintenance-assessment-print-browser.mjs` intercepts every HubSpot request, so it creates no real leads or emails. It verifies exact payload contents, omitted cookies/referrers/query strings, required fields, invalid email, dismissal, HTTP errors, network errors, retries, duplicate prevention, successful unlock, contact-data non-persistence, repeat printing, tab reload and 390px/320px layouts. Run with the same `PLAYWRIGHT_MODULE` environment setting as the main browser suite. Review screenshots are in `/tmp/smartspanner-assessment-gate`.
