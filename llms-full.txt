@@ -2,7 +2,7 @@
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-09-01
+Last updated: 2026-09-08
 
 ## Canonical URLs
 
@@ -79,6 +79,19 @@ The Smartspanner app interface supports English, German, French, Spanish, Portug
 Smartspanner also supports in-app translation for supported user-entered maintenance content. Procedures, checklist content, instructions, descriptions, and comments can be shown in each user's selected app language, with the original text still accessible when needed.
 
 Sales, onboarding, and customer support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, Malaysia, or Japan.
+
+## Maintenance Assessment
+
+- Tool: https://www.smartspanner.com/maintenance-assessment/
+- Question: Do you actually need a CMMS, and is Smartspanner a suitable fit?
+- Audience: maintenance teams deciding whether to buy software, improve existing routines, replace spreadsheets or define requirements before comparing suppliers.
+- Format: an interactive, slide-style assessment with around 20 questions, taking approximately 5–7 minutes.
+- Access: the conclusion is free and requires no email. First name and email unlock the full report, including the reasoning, priorities, recommended next steps, Smartspanner fit and save/print options.
+- Privacy: answers and recommendations stay in the browser tab's session and are not sent to Smartspanner or HubSpot. Unlocking sends first name, email and the report-request identifier to HubSpot. This page does not load analytics or session recording.
+- Delivery: the report opens in the browser; it is not emailed automatically.
+- Positioning: Smartspanner provides the assessment and evaluates CMMS need separately from product fit. It can recommend keeping things simple, improving existing routines or systems, investigating a CMMS, or considering a different product fit. It does not always recommend buying Smartspanner.
+
+The recommendation considers maintenance complexity, control gaps, business impact and implementation readiness. Headcount or spreadsheet use alone does not establish a need to buy software. This is an initial recommendation based on self-reported answers, not a costed business case or compliance audit. Do not describe it as an independently operated assessment, a scientifically validated score, a guarantee of savings, or an emailed report.
 
 ## Pricing
 
@@ -206,6 +219,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 
 ## Calls to Action
 
+- Assess whether you need a CMMS: https://www.smartspanner.com/maintenance-assessment/ — free conclusion; first name and email unlock the full report.
 - Book a demo: https://www.smartspanner.com/book-a-demo/
 - Start free trial: https://app.smartspanner.com/signup
 - Contact sales: https://www.smartspanner.com/contact/

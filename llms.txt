@@ -2,7 +2,7 @@
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-09-01
+Last updated: 2026-09-08
 
 ## About
 
@@ -37,6 +37,17 @@ Based in Gateshead, United Kingdom.
 - Purchasing and purchase orders
 - API access with broad coverage for key integration requirements, including reporting and links to wider operational systems
 - Lockout/tagout (LOTO) procedures
+
+## Maintenance Assessment
+
+- Tool: https://www.smartspanner.com/maintenance-assessment/
+- Question: Do you actually need a CMMS, and is Smartspanner a suitable fit?
+- Audience: maintenance teams deciding whether to buy software, improve existing routines, replace spreadsheets or define requirements before comparing suppliers.
+- Format: an interactive, slide-style assessment with around 20 questions, taking approximately 5–7 minutes.
+- Access: the conclusion is free and requires no email. First name and email unlock the full report, including the reasoning, priorities, recommended next steps, Smartspanner fit and save/print options.
+- Privacy: answers and recommendations stay in the browser tab's session and are not sent to Smartspanner or HubSpot. Unlocking sends first name, email and the report-request identifier to HubSpot. This page does not load analytics or session recording.
+- Delivery: the report opens in the browser; it is not emailed automatically.
+- Positioning: Smartspanner provides the assessment and evaluates CMMS need separately from product fit. It can recommend keeping things simple, improving existing routines or systems, investigating a CMMS, or considering a different product fit. It does not always recommend buying Smartspanner.
 
 ## Pricing
 

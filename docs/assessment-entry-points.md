@@ -42,3 +42,15 @@ Compare event counts by placement and source page in GA4 to see which entry poin
 Development build uses `_config.yml,_config_dev.yml` in the current `websites` container. Browser checks cover the 12 contextual placements at 1440px and 390px widths, correct development-baseurl destinations, one analytics event per click, retained demo navigation, unchanged callout behaviour on an unselected technical article and navigation from the homepage into the assessment. Analytics services and form submissions are blocked during click-measurement checks. Review screenshots are saved in `/tmp/smartspanner-assessment-entries`.
 
 Placement is based on page content and visitor intent, not observed conversion data. Review the entry-click data before adding more callouts or promoting the assessment more heavily on buying pages.
+
+## Search and AI discovery
+
+Updated 8 September 2026. The assessment has a dedicated search title, description, Open Graph and Twitter card metadata, canonical URL, links to both AI context files, and a separate JSON-LD graph for its WebPage, WebApplication, publisher, website and breadcrumbs. It describes the assessment itself rather than reusing the paid CMMS product schema. Public introductory copy and background-reading links are available in the generated HTML without JavaScript; individual answers, conclusions and report details are not placed in metadata.
+
+Both `llms.txt` and `llms-full.txt` describe the assessment's purpose, possible directions, browser-only report delivery, email gate and answer privacy. The longer file explains its limitations and includes it among the site's calls to action. Resource-directory, selection-guide, comparison and spreadsheet-migration descriptions now mention the relevant assessment step.
+
+The existing `jekyll-sitemap` plugin already includes `/maintenance-assessment/`. The assessment now explicitly opts in and supplies `last_modified_at`; the eleven pages updated with contextual links also carry their actual modification date. Do not hand-edit `_site/sitemap.xml` or change these dates on every build. `robots.txt` already allows the assessment and advertises the production sitemap and AI files, so no crawler-rule changes were required.
+
+Verification covered separate production and development builds: all twelve affected sitemap entries and dates, canonical URLs, metadata, parsed JSON-LD, local assessment links and AI context files. The production sitemap contains production URLs only. The existing assessment browser suite passed desktop/mobile journeys, keyboard navigation, validation, result gating, print, resume, conditional questions, storage fallback, no-JavaScript fallback and privacy checks. The development assessment returned HTTP 200.
+
+Implementation references: [Jekyll sitemap lastmod support](https://github.com/jekyll/jekyll-sitemap#lastmod-tag) and [Schema.org WebApplication](https://schema.org/WebApplication). These files describe the tool for crawlers; indexing and search appearance remain controlled by the search providers.

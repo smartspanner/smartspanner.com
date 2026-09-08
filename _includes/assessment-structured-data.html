@@ -1,0 +1,67 @@
+{% assign assessment_url = page.url | absolute_url %}
+{% assign home_url = '/' | absolute_url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ home_url }}#organization",
+      "name": {{ site.company.name | jsonify }},
+      "url": {{ home_url | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ home_url }}#website",
+      "name": {{ site.title | jsonify }},
+      "url": {{ home_url | jsonify }},
+      "publisher": { "@id": "{{ home_url }}#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ assessment_url }}#webpage",
+      "url": {{ assessment_url | jsonify }},
+      "name": {{ page.meta_title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      "inLanguage": "en-GB",
+      "isPartOf": { "@id": "{{ home_url }}#website" },
+      "publisher": { "@id": "{{ home_url }}#organization" },
+      "mainEntity": { "@id": "{{ assessment_url }}#assessment" },
+      "breadcrumb": { "@id": "{{ assessment_url }}#breadcrumb" },
+      "relatedLink": [
+        "{{ '/blog/what-is-cmms/' | absolute_url }}",
+        "{{ '/blog/how-to-choose-cmms/' | absolute_url }}"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "{{ assessment_url }}#assessment",
+      "name": "Smartspanner Maintenance Assessment",
+      "url": {{ assessment_url | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "{{ home_url }}#organization" },
+      "featureList": [
+        "Interactive maintenance assessment taking around 5–7 minutes",
+        "CMMS need and Smartspanner fit assessed separately",
+        "Free conclusion without email",
+        "Name and email unlock the full report in the browser, including save and print options",
+        "Assessment answers and recommendations are not sent to Smartspanner or HubSpot"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ assessment_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ home_url | jsonify }} },
+        { "@type": "ListItem", "position": 2, "name": "Maintenance Assessment", "item": {{ assessment_url | jsonify }} }
+      ]
+    }
+  ]
+}
+</script>
