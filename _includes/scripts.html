@@ -209,7 +209,7 @@
     });
   })();
 
-  // GA4 measurement for the customer-story to demo funnel.
+  // GA4 measurement for assessment entry links and the customer-story to demo funnel.
   (function() {
     const originStorageKey = 'smartspanner_case_study_origin';
     const submissionStorageKey = 'smartspanner_demo_submission';
@@ -224,6 +224,16 @@
         transport_type: 'beacon'
       }, parameters || {}));
     }
+
+    // Measure only the entry link on marketing pages, never assessment answers.
+    document.querySelectorAll('a[data-assessment-placement]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        trackEvent('assessment_cta_click', {
+          placement: link.dataset.assessmentPlacement,
+          source_path: window.location.pathname
+        });
+      });
+    });
 
     function writeSessionValue(key, value) {
       try {

@@ -1,4 +1,5 @@
 ---
+assessment_cta: true
 layout: page
 title: CMMS Pricing Plans
 description: Affordable CMMS pricing from £15/user/month. All plans include unlimited support, mobile apps, and free 14-day trial. No credit card required.
@@ -165,6 +166,7 @@ document.querySelectorAll('.currency-btn').forEach(function(btn) {
       </div>
       <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary">Book a Demo</a>
     </div>
+    {% include assessment-cta.html prompt="pricing" placement="pricing-unsure" compact=true %}
   </div>
 </section>
 

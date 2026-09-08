@@ -1,0 +1,15 @@
+{% assign assessment_prompt = site.data.assessment_prompts[include.prompt] %}
+{% if include.compact %}
+<div class="assessment-inline">
+  <p>{{ assessment_prompt.title }} <a href="{{ '/maintenance-assessment/' | relative_url }}" data-assessment-placement="{{ include.placement }}">{{ assessment_prompt.link }} <span aria-hidden="true">→</span></a></p>
+  <p class="assessment-cta-note">Free conclusion · Name and email unlock the full report</p>
+</div>
+{% else %}
+<aside class="assessment-cta" aria-label="Maintenance assessment">
+  <p class="assessment-cta-eyebrow">Your next step · 5–7 minute assessment</p>
+  <h3>{{ assessment_prompt.title }}</h3>
+  <p>{{ assessment_prompt.description }}</p>
+  <a class="assessment-cta-link" href="{{ '/maintenance-assessment/' | relative_url }}" data-assessment-placement="{{ include.placement }}">{{ assessment_prompt.link }} <span aria-hidden="true">→</span></a>
+  <p class="assessment-cta-note">See your conclusion without email. Name and email unlock your full report. Your assessment answers stay private.</p>
+</aside>
+{% endif %}

@@ -1,0 +1,39 @@
+home:
+  title: "Not sure you need a CMMS?"
+  description: "Work out whether a CMMS could help, whether your current tools are enough or whether a few process improvements should come first."
+  link: "Take the maintenance assessment"
+awareness:
+  title: "Would a CMMS make a difference to your team?"
+  description: "Apply what you’ve read to your own operation. Assess your maintenance workload, current controls and next steps before deciding to buy software."
+  link: "Assess your maintenance operation"
+small:
+  title: "Does your small team actually need a CMMS?"
+  description: "Team size alone doesn’t decide it. Check whether your maintenance needs justify a dedicated system or whether simpler tools are enough for now."
+  link: "Find out what your team needs"
+benefits:
+  title: "Which improvements matter for your operation?"
+  description: "Explore your control gaps and maintenance priorities to work out whether a CMMS could make a useful difference to your working day."
+  link: "Find your maintenance priorities"
+strategy:
+  title: "What is making maintenance hard to manage?"
+  description: "Look at missed tasks, work visibility and recurring disruption to decide whether better routines or a CMMS should be your next step."
+  link: "Assess your next step"
+cmms:
+  title: "Do these maintenance gaps justify a CMMS?"
+  description: "Assess your current operation before choosing software. We’ll explain whether a dedicated system is worth investigating and what to improve first."
+  link: "Check whether you need a CMMS"
+spreadsheets:
+  title: "Have you actually outgrown your spreadsheets?"
+  description: "Before planning a migration, check whether your maintenance workload and control gaps make a case for change. Your current tools may still be enough."
+  link: "Assess whether it’s time to switch"
+selection:
+  title: "Define your needs before choosing a supplier."
+  description: "Use your maintenance operation to identify priorities and the kind of system worth considering, then use this guide to evaluate your shortlist."
+  link: "Assess your requirements first"
+compare:
+  title: "What should your CMMS shortlist be based on?"
+  description: "Start with your maintenance needs, priorities and essential requirements. Our assessment considers your need for CMMS separately from your fit with Smartspanner."
+  link: "Clarify what you need from a CMMS"
+pricing:
+  title: "Still deciding whether a CMMS is worth the investment?"
+  link: "Take the maintenance assessment first"

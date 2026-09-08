@@ -23,6 +23,9 @@ layout: default
         {{ content }}
 
         <!-- Smartspanner Insert -->
+        {% if page.assessment_cta %}
+        {% include assessment-cta.html prompt=page.assessment_cta placement="article-next-step" %}
+        {% else %}
         <div class="blog-article-cta-box">
           <h3>How Smartspanner Helps</h3>
           <p>Smartspanner provides a simple, powerful <a href="{{ '/cmms-software' | relative_url }}">CMMS platform</a> to help your team manage maintenance more effectively — with <a href="{{ '/preventative-maintenance-software' | relative_url }}">preventive maintenance</a>, <a href="{{ '/asset-management-software' | relative_url }}">asset management</a>, and <a href="{{ '/mobile-cmms' | relative_url }}">mobile access</a> in one system.</p>
@@ -31,6 +34,7 @@ layout: default
             <a href="{{ site.signup_url }}" class="btn btn-secondary">Start Free Trial</a>
           </div>
         </div>
+        {% endif %}
 
         <!-- Related Links -->
         {% if page.related_links %}

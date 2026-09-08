@@ -71,3 +71,4 @@
 
 <!-- Main stylesheet (minified) -->
 <link href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">
+{% if page.assessment_cta %}<link href="{{ site.baseurl }}/assets/css/assessment-cta.css?v={{ css_version }}" rel="stylesheet">{% endif %}
