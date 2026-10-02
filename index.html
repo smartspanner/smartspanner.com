@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2026-09-08
+last_modified_at: 2026-10-02
 assessment_cta: true
 layout: default
 title: CMMS Software for Maintenance Management
@@ -17,29 +17,22 @@ whatsapp_badge: true
         <p class="hero-split-sub">Most CMMS systems take weeks to deploy and months for teams to adopt. Smartspanner is different — after a 45-minute demo you can have your first site running the same day.</p>
         <div class="hero-split-ctas">
           <a href="{{ site.signup_url }}" class="btn btn-primary hero-split-btn-primary">Start 14-Day Free Trial</a>
-          <button type="button" class="btn hero-split-btn-secondary hero-video-trigger" data-video-src="https://player.vimeo.com/video/519444930?autoplay=1&title=0&byline=0&portrait=0">
-            <i class="fa-solid fa-play" aria-hidden="true"></i>
-            <span>Watch 3-Minute Intro</span>
-          </button>
         </div>
         <p class="hero-split-trust">No credit card required. Unlimited support included. UK-hosted and UK-supported.</p>
         {% include assessment-cta.html prompt="home" placement="home-hero" compact=true %}
       </div>
       <div class="hero-split-visual">
-        <img src="{{ '/assets/img/features/dashboard-thumb.webp' | relative_url }}" alt="Smartspanner CMMS Dashboard" class="hero-split-img">
+        <div class="hero-preview hero-video-frame">
+          <a class="hero-preview-play" href="https://vimeo.com/519444930" target="_blank" rel="noopener noreferrer" aria-label="Play the 47-second Smartspanner product preview" data-video-src="https://player.vimeo.com/video/519444930?autoplay=1&dnt=1&title=0&byline=0&portrait=0">
+            <img src="{{ '/assets/img/features/dashboard-thumb.webp' | relative_url }}" alt="Smartspanner CMMS dashboard" class="hero-preview-poster" fetchpriority="high">
+            <span class="hero-preview-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 4v16l13-8z" fill="currentColor"/></svg></span>
+          </a>
+        </div>
+        <p class="hero-preview-caption">47-second product preview</p>
       </div>
     </div>
   </div>
 </section>
-
-<div class="hero-video-modal" aria-hidden="true">
-  <div class="hero-video-modal-dialog" role="dialog" aria-modal="true" aria-label="Smartspanner introduction video">
-    <button class="hero-video-modal-close" type="button" aria-label="Close video">&times;</button>
-    <div class="hero-video-frame">
-      <iframe title="Smartspanner Introduction" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
 
 <!-- Proof Bar -->
 <section class="proof-bar">

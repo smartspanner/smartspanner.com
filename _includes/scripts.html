@@ -54,50 +54,23 @@
     });
   }
 
-  // Hero introduction video modal
+  // Load the homepage preview only after the visitor chooses to play it.
   (function() {
-    const videoTrigger = document.querySelector('.hero-video-trigger');
-    const videoModal = document.querySelector('.hero-video-modal');
+    const previewLink = document.querySelector('.hero-preview-play');
+    if (!previewLink) return;
 
-    if (!videoTrigger || !videoModal) {
-      return;
-    }
-
-    const iframe = videoModal.querySelector('iframe');
-    const closeButton = videoModal.querySelector('.hero-video-modal-close');
-    let lastFocusedElement = null;
-
-    function openVideoModal() {
-      lastFocusedElement = document.activeElement;
-      iframe.src = videoTrigger.dataset.videoSrc;
-      videoModal.classList.add('active');
-      videoModal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('hero-video-modal-open');
-      closeButton.focus();
-    }
-
-    function closeVideoModal() {
-      videoModal.classList.remove('active');
-      videoModal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('hero-video-modal-open');
-      iframe.removeAttribute('src');
-
-      if (lastFocusedElement) {
-        lastFocusedElement.focus();
-      }
-    }
-
-    videoTrigger.addEventListener('click', openVideoModal);
-    closeButton.addEventListener('click', closeVideoModal);
-    videoModal.addEventListener('click', function(event) {
-      if (event.target === videoModal) {
-        closeVideoModal();
-      }
-    });
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && videoModal.classList.contains('active')) {
-        closeVideoModal();
-      }
+    previewLink.addEventListener('click', function(event) {
+      // Preserve normal link behaviour for opening the video in another tab.
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.title = 'Smartspanner 47-second product preview';
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.tabIndex = 0;
+      iframe.src = previewLink.dataset.videoSrc;
+      previewLink.replaceWith(iframe);
+      iframe.focus();
     });
   })();
 

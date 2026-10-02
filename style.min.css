@@ -550,18 +550,6 @@ img {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.hero-video-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: inherit;
-}
-
-.hero-video-trigger i {
-  font-size: 12px;
-}
-
 .hero-split-trust {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
@@ -578,26 +566,6 @@ img {
   height: auto;
   border-radius: 14px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-}
-
-.hero-video-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  background: rgba(0, 0, 0, 0.88);
-}
-
-.hero-video-modal.active {
-  display: flex;
-}
-
-.hero-video-modal-dialog {
-  position: relative;
-  width: min(960px, 96vw);
 }
 
 .hero-video-frame {
@@ -618,24 +586,68 @@ img {
   border: 0;
 }
 
-.hero-video-modal-close {
-  position: absolute;
-  top: -52px;
-  right: 0;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
+.hero-preview {
+  width: min(480px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.hero-video-modal-open {
-  overflow: hidden;
+.hero-preview-play {
+  display: block;
+  position: absolute;
+  inset: 0;
+  color: #252d31;
 }
+
+.hero-preview-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-preview-play::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero-preview-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-preview-play:hover .hero-preview-icon {
+  background: #ffd15c;
+}
+
+.hero-preview-play:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -5px;
+}
+
+.hero-preview-caption {
+  margin: 12px 0 0;
+  color: #c7c7c7;
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .hero-preview { max-width: 420px; }
+}
+
+
 
 .screenshot-expandable {
   cursor: zoom-in;
