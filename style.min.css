@@ -637,12 +637,6 @@ img {
   outline-offset: -5px;
 }
 
-.hero-preview-caption {
-  margin: 12px 0 0;
-  color: #c7c7c7;
-  font-size: 14px;
-}
-
 @media (max-width: 991px) {
   .hero-preview { max-width: 420px; }
 }
