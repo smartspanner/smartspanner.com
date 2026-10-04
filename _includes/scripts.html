@@ -74,6 +74,37 @@
     });
   })();
 
+  // Load the longer overview on demand; closing the dialog stops playback.
+  (function() {
+    const trigger = document.querySelector('.hero-overview-trigger');
+    const dialog = document.querySelector('#hero-overview-dialog');
+    if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+    const player = dialog.querySelector('.hero-overview-player');
+
+    trigger.addEventListener('click', function(event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.title = 'Smartspanner 4-minute product overview';
+      iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.src = 'https://www.youtube-nocookie.com/embed/2PKdJVoo8Eg?autoplay=1&rel=0';
+      player.replaceChildren(iframe);
+      dialog.showModal();
+    });
+    dialog.querySelector('.hero-overview-close').addEventListener('click', function() {
+      dialog.close();
+    });
+    dialog.addEventListener('click', function(event) {
+      const bounds = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+    });
+    dialog.addEventListener('close', function() {
+      player.replaceChildren();
+      trigger.focus();
+    });
+  })();
+
   // Click-to-expand product screenshots
   (function() {
     const imageModal = document.createElement('div');

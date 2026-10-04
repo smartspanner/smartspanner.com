@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2026-10-02
+last_modified_at: 2026-10-04
 assessment_cta: true
 layout: default
 title: CMMS Software for Maintenance Management
@@ -17,6 +17,7 @@ whatsapp_badge: true
         <p class="hero-split-sub">Most CMMS systems take weeks to deploy and months for teams to adopt. Smartspanner is different — after a 45-minute demo you can have your first site running the same day.</p>
         <div class="hero-split-ctas">
           <a href="{{ site.signup_url }}" class="btn btn-primary hero-split-btn-primary">Start 14-Day Free Trial</a>
+          <a href="https://youtu.be/2PKdJVoo8Eg" class="btn hero-split-btn-secondary hero-overview-trigger" aria-haspopup="dialog" aria-controls="hero-overview-dialog"><span aria-hidden="true">▶</span> Watch 4-minute overview</a>
         </div>
         <p class="hero-split-trust">No credit card required. Unlimited support included. UK-hosted and UK-supported.</p>
         {% include assessment-cta.html prompt="home" placement="home-hero" compact=true %}
@@ -32,6 +33,14 @@ whatsapp_badge: true
     </div>
   </div>
 </section>
+
+<dialog id="hero-overview-dialog" class="hero-overview-dialog" aria-labelledby="hero-overview-title">
+  <div class="hero-overview-heading">
+    <h2 id="hero-overview-title">Smartspanner overview</h2>
+    <button type="button" class="hero-overview-close" aria-label="Close overview video">&times;</button>
+  </div>
+  <div class="hero-video-frame hero-overview-player"></div>
+</dialog>
 
 <!-- Proof Bar -->
 <section class="proof-bar">
