@@ -88,7 +88,8 @@
       iframe.title = 'Smartspanner 4-minute product overview';
       iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
       iframe.allowFullscreen = true;
-      iframe.src = 'https://www.youtube-nocookie.com/embed/2PKdJVoo8Eg?autoplay=1&rel=0';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.src = trigger.dataset.videoSrc;
       player.replaceChildren(iframe);
       dialog.showModal();
     });
