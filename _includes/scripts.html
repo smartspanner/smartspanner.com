@@ -1,3 +1,4 @@
+{% if page.video_analytics %}<script src="{{ '/assets/js/video-analytics.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 <script>
   // Mobile Navigation Toggle
   const mobileNavShow = document.querySelector('.mobile-nav-show');
@@ -70,6 +71,7 @@
       iframe.tabIndex = 0;
       iframe.src = previewLink.dataset.videoSrc;
       previewLink.replaceWith(iframe);
+      if (window.SmartspannerVideoAnalytics) window.SmartspannerVideoAnalytics.attach(iframe, previewLink);
       iframe.focus();
     });
   })();
@@ -80,6 +82,7 @@
     const dialog = document.querySelector('#hero-overview-dialog');
     if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
     const player = dialog.querySelector('.hero-overview-player');
+    let disposeVideoAnalytics = function() {};
 
     trigger.addEventListener('click', function(event) {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -92,6 +95,7 @@
       iframe.src = trigger.dataset.videoSrc;
       player.replaceChildren(iframe);
       dialog.showModal();
+      if (window.SmartspannerVideoAnalytics) disposeVideoAnalytics = window.SmartspannerVideoAnalytics.attach(iframe, trigger);
     });
     dialog.querySelector('.hero-overview-close').addEventListener('click', function() {
       dialog.close();
@@ -101,6 +105,7 @@
       if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
     });
     dialog.addEventListener('close', function() {
+      disposeVideoAnalytics();
       player.replaceChildren();
       trigger.focus();
     });
