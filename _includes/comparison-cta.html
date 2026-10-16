@@ -1,0 +1,5 @@
+<div class="shire-actions">
+  <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary" data-ga-event="comparison_cta_click" data-ga-cta-action="demo" data-ga-cta-location="{{ include.location }}">{{ include.demo_label | default: 'Book a demo' }}</a>
+  <a href="{{ site.signup_url }}" class="btn shire-secondary" data-ga-event="comparison_cta_click" data-ga-cta-action="trial" data-ga-cta-location="{{ include.location }}">Start a free trial</a>
+  <a href="{{ '/pricing/' | relative_url }}" data-ga-event="comparison_cta_click" data-ga-cta-action="pricing" data-ga-cta-location="{{ include.location }}">View pricing</a>
+</div>

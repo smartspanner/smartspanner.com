@@ -1,0 +1,34 @@
+# Reviewed 2026-10-16 against these official sources. Recheck before changing claims.
+# Live Smartspanner pricing verified: GBP 15/21/27; plan content is rendered from
+# pricing.yml, shared with pricing.html's GBP prices and SoftwareApplication offers.
+# Keep visible FAQs without FAQPage markup: Google retired FAQ rich results in
+# May 2026 (https://developers.google.com/search/updates#june-2026).
+reviewed: 2026-10-16
+sources:
+  features: https://eleco.com/products/shiresystem/features/
+  expert: https://eleco.com/products/shiresystem-expert/
+  deployment: https://help.elecosoft.com/system_requirements_guide/english/Content/Topics/Products/ShireSystem.htm
+  integrations: https://eleco.com/products/shiresystem/integrations/
+  safety: https://eleco.com/products/shiresystem/dynamic-risk-assessments/
+  resource_planning: https://eleco.com/products/shiresystem/advanced-resource-planning/
+rows:
+  - {capability: Asset management, smart: "Yes", shire: "Yes"}
+  - {capability: Work orders, smart: "Yes", shire: "Yes"}
+  - {capability: Preventive maintenance, smart: "Yes", shire: "Yes"}
+  - {capability: Mobile access, smart: 'Yes — internet connection required', shire: "Yes"}
+  - {capability: Multi-site, smart: "Yes", shire: "Yes"}
+  - {capability: Spare parts / inventory, smart: "Yes", shire: "Yes"}
+  - {capability: Procedures / instructions, smart: "Yes", shire: "Yes"}
+  - {capability: Inspections, smart: 'Yes — Advanced', shire: "Yes"}
+  - {capability: Condition monitoring, smart: 'Yes — Advanced', shire: "Yes"}
+  - {capability: Purchasing, smart: 'Yes — Advanced', shire: "Yes"}
+  - {capability: Permits to work, smart: 'Yes — Advanced', shire: "Yes"}
+  - {capability: Risk assessments, smart: 'Fire risk assessments — Advanced; general risk assessments coming soon', shire: "Yes"}
+  - {capability: API, smart: 'Yes — Advanced', shire: "Yes"}
+  - {capability: Reporting & KPIs, smart: 'Excel reporting on all plans; advanced statistics on Advanced', shire: "Yes"}
+  - {capability: Multi-language, smart: "Yes", shire: "Yes"}
+  - {capability: Cloud hosted, smart: "Yes", shire: "Yes"}
+  - {capability: On-premise deployment, smart: "No", shire: "Yes"}
+  - {capability: Published pricing, smart: "Yes", shire: 'Published tier examples; check with ShireSystem for your requirements'}
+# Dedicated advanced resource/document modules are discussed in the balanced-fit
+# section. Do not infer that a feature is absent merely because it is not listed.

@@ -2,7 +2,7 @@
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-09-08
+Last updated: 2026-10-16
 
 ## About
 
@@ -96,6 +96,8 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Blog: https://www.smartspanner.com/blog/
 
 ## Comparisons
+
+- ShireSystem Alternative: https://smartspanner.com/shire-system-alternative/ — balanced comparison, package-dependent capabilities, current Smartspanner prices and switching guidance.
 
 - Smartspanner vs MaintainX: https://www.smartspanner.com/maintainx-alternative/
 - Smartspanner vs Limble: https://www.smartspanner.com/limble-alternative/

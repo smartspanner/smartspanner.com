@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+{% assign canonical_page_url = page.canonical_url | default: page.url | absolute_url %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% assign title_tag = page.meta_title | default: nil %}
 {% unless title_tag %}
@@ -18,7 +19,7 @@
 <meta property="og:type" content="{{ social_type }}">
 <meta property="og:title" content="{{ title_tag }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ canonical_page_url }}">
 <meta property="og:image" content="{{ social_image | absolute_url }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title_tag }}">
@@ -26,7 +27,7 @@
 <meta name="twitter:image" content="{{ social_image | absolute_url }}">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="canonical" href="{{ canonical_page_url }}">
 <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="LLMs.txt">
 <link rel="alternate" type="text/plain" href="{{ '/llms-full.txt' | absolute_url }}" title="LLMs Full Context">
 
@@ -72,3 +73,5 @@
 <!-- Main stylesheet (minified) -->
 <link href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">
 {% if page.assessment_cta %}<link href="{{ site.baseurl }}/assets/css/assessment-cta.css?v={{ css_version }}" rel="stylesheet">{% endif %}
+
+{% if page.comparison_page %}<link href="{{ '/assets/css/shire-comparison.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">{% endif %}

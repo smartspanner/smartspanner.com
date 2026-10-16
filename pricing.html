@@ -32,7 +32,7 @@ whatsapp_badge: true
         <div class="box featured">
           <h3>Basic</h3>
           <p class="plan-description">Run everyday maintenance with assets, work orders, schedules and mobile access.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="15" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">15</span><span>per user/month</span></h4>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[0].price }}" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">{{ site.data.pricing.plans[0].price }}</span><span>per user/month</span></h4>
           <ul>
             {% for item in site.data.pricing.all_plans_include %}
             <li><i class="fa-regular fa-circle-check"></i> <strong>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</strong></li>
@@ -48,7 +48,7 @@ whatsapp_badge: true
         <div class="box featured">
           <h3>Standard</h3>
           <p class="plan-description">Standardise team knowledge with procedures, contractors, failure codes and labels.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="21" data-usd="28" data-eur="25" data-aud="41" data-nzd="49">21</span><span>per user/month</span></h4>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[1].price }}" data-usd="28" data-eur="25" data-aud="41" data-nzd="49">{{ site.data.pricing.plans[1].price }}</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Basic features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-procedure-software' | relative_url }}">Procedures</a></strong></li>
@@ -69,7 +69,7 @@ whatsapp_badge: true
           <div class="popular-badge">Most Popular</div>
           <h3>Advanced</h3>
           <p class="plan-description">Connect maintenance with inspections, safety, stock, purchasing and performance.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="27" data-usd="36" data-eur="31" data-aud="52" data-nzd="63">27</span><span>per user/month</span></h4>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[2].price }}" data-usd="36" data-eur="31" data-aud="52" data-nzd="63">{{ site.data.pricing.plans[2].price }}</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Standard features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/compliance-software' | relative_url }}">Checklists</a></strong></li>

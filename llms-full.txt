@@ -2,7 +2,7 @@
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-09-08
+Last updated: 2026-10-16
 
 ## Canonical URLs
 
@@ -194,6 +194,8 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - CMMS Software USA: https://www.smartspanner.com/cmms-software-usa/
 
 ## Comparisons
+
+- ShireSystem Alternative: https://smartspanner.com/shire-system-alternative/ — balanced comparison, package-dependent capabilities, current Smartspanner prices and switching guidance.
 
 - MaintainX Alternative: https://www.smartspanner.com/maintainx-alternative/
 - Limble Alternative: https://www.smartspanner.com/limble-alternative/

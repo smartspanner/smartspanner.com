@@ -1,0 +1,63 @@
+.shire-page { color: #364146; }
+.shire-page section { padding: 64px 0; }
+.shire-page .shire-hero { padding: 130px 0 64px; background: #252525; color: #e2e2e2; }
+.shire-hero h1 { color: #fff; font-size: clamp(2rem, 3.2vw, 2.8rem); line-height: 1.15; }
+.shire-subtitle { color: #fff; font-size: 1.3rem; margin: 20px 0; }
+.shire-price-highlight { color: #ffd15c; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px; }
+.shire-page .shire-hero .shire-note { color: #bfc1c2; }
+.shire-breadcrumb { margin-bottom: 32px; font-size: .8rem; color: #c7c7c7; }
+.shire-breadcrumb a { color: #ffd15c; }
+.shire-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 24px; }
+.shire-actions .btn { padding: 12px 20px; font-weight: 600; }
+.shire-page .btn-primary { color: #171b1d; }
+.shire-actions > a:not(.btn) { color: #ffd15c; text-decoration: underline; }
+.shire-secondary { color: #fff; border: 1px solid #a0a0a0; }
+.shire-secondary:hover { color: #fff; border-color: var(--color-primary); background: #383838; }
+.shire-page figure { margin: 0; }
+.shire-page figure img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 8px 24px #0002; }
+.shire-page figcaption { font-size: .84rem; line-height: 1.5; margin-top: 12px; }
+.shire-page .shire-note { font-size: .85rem; line-height: 1.6; color: #56616a; }
+.shire-page .shire-reading { max-width: 900px; }
+.shire-page .section-header { padding-bottom: 25px; }
+.shire-comparison { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: .94rem; }
+.shire-comparison caption { caption-side: top; color: #56616a; font-size: .85rem; padding-bottom: 12px; }
+.shire-comparison th, .shire-comparison td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #dce0e3; vertical-align: top; }
+.shire-comparison thead { background: #feb900; color: #171b1d; }
+.shire-comparison th { width: 30%; }
+.shire-comparison td { width: 35%; }
+.shire-comparison tbody tr:nth-child(even) { background: #fff; }
+.shire-page details { border-bottom: 1px solid #dce0e3; padding: 16px 0; }
+.shire-page summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+.shire-page details p { margin: 16px 0 0; }
+.shire-page a:focus-visible, .shire-page summary:focus-visible { outline: 3px solid #ac7900; outline-offset: 4px; }
+.shire-page .shire-mobile { max-width: 230px; margin: 0 auto; }
+.shire-screen-grid { margin-top: 40px; align-items: center; }
+.shire-page .shire-plan { height: 100%; text-align: left; }
+.shire-page .shire-plan h3 { text-align: left; }
+.shire-page .shire-plan ul { padding: 0 0 0 18px; list-style: disc; }
+.shire-page .shire-plan li { padding: 6px 0; }
+.shire-page .shire-plan-price { font-size: 2.1rem; color: #252d31; font-weight: 700; margin: 10px 0 24px; }
+.shire-plan-price span { font-size: .9rem; font-weight: 400; }
+.shire-switch-box { background: #fff7df; border-left: 4px solid #feb900; border-radius: 8px; padding: 28px; margin-top: 30px; }
+.shire-page .service-item { height: 100%; padding: 28px; }
+.shire-page .service-item h3 { font-size: 1.2rem; border: 0; padding: 0; }
+.shire-evidence { background: #fff; padding: 28px; height: 100%; border: 1px solid #e0e2e4; border-radius: 8px; }
+.shire-evidence h3 { font-size: 1.25rem; }
+.shire-page .shire-final { background: #252525; color: #e2e2e2; }
+.shire-final h2 { color: #fff; }
+.shire-related h2 { font-size: 1.5rem; }
+@media (max-width: 767px) {
+  .shire-page section { padding: 44px 0; }
+  .shire-page .shire-hero { padding-top: 110px; }
+  .shire-breadcrumb { margin-bottom: 24px; }
+  .shire-actions .btn { width: 100%; }
+  .shire-comparison, .shire-comparison tbody, .shire-comparison tr, .shire-comparison th, .shire-comparison td { display: block; width: 100%; }
+  .shire-comparison caption { display: block; }
+  .shire-comparison thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .shire-comparison tbody tr { border: 1px solid #dce0e3; border-radius: 8px; margin: 14px 0; overflow: hidden; background: #fff; }
+  .shire-comparison tbody th { background: #fff3ce; }
+  .shire-comparison td { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; overflow-wrap: anywhere; }
+  .shire-comparison td::before { content: attr(data-label); font-weight: 600; }
+  .shire-comparison td:last-child { border-bottom: 0; }
+  .shire-switch-box { padding: 22px; }
+}
