@@ -3,14 +3,14 @@ plans:
     price: 15
     currency: £
     period: per user/month
-    description: Ideal for small maintenance teams getting started with CMMS.
+    description: Everything you need for everyday maintenance.
     differentiators: []
 
   - name: Standard
     price: 21
     currency: £
     period: per user/month
-    description: For growing businesses requiring procedures and contractor management.
+    description: Standardise how your team works.
     differentiators:
       - Procedures
       - Subcontractors
@@ -23,7 +23,7 @@ plans:
     price: 27
     currency: £
     period: per user/month
-    description: Complete maintenance management with equipment checks, purchasing, condition monitoring and analytics.
+    description: Manage maintenance at scale.
     differentiators:
       - Team Assignment
       - Checklists
