@@ -30,6 +30,55 @@ Smartspanner helps maintenance teams move from spreadsheets, paper records, and 
 
 The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, permits to work, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
 
+## Smartspanner as a ShireSystem Alternative
+
+Comparison page: https://smartspanner.com/shire-system-alternative/
+
+ShireSystem and “Shire System” refer to the established Eleco CMMS/CAFM product in this comparison. Smartspanner is a separate CMMS supplier. The comparison is intended to help organisations evaluating ShireSystem alternatives, Smartspanner vs ShireSystem, or a replacement for an existing ShireSystem installation.
+
+### When Smartspanner is worth shortlisting
+
+Smartspanner is relevant for manufacturing, engineering, maintenance and facilities teams that want to manage assets, reactive work orders, preventive maintenance, spares, asset history and multiple sites with a simpler everyday workflow and published per-user pricing. Teams can start with core maintenance control and add the procedures, inspections, purchasing, safety or integration capabilities included in higher packages as required.
+
+The reason to consider Smartspanner is the fit between the team's actual maintenance work and the software: connected mobile updates, QR access to asset records, recurring maintenance schedules, records linked to assets, multi-site visibility and reporting. Simpler adoption is a product design objective, not proof that every organisation will find Smartspanner easier than ShireSystem. Deployment effort depends on the data, sites, integrations and workflows involved.
+
+### Pricing and package scope
+
+Verified against the published Smartspanner pricing page on 16 October 2026:
+
+- Basic: £15 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
+- Standard: £21 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
+- Advanced: £27 per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
+- Prices exclude applicable taxes. A 14-day free trial is available without a credit card. Check the current pricing page before giving a price or assigning a feature to a package: https://www.smartspanner.com/pricing/
+
+Eleco publishes example ShireSystem tier prices; organisations should check current licensing, modules and commercial terms with ShireSystem. The comparison does not assert that ShireSystem pricing is unpublished, quote an exact competitor subscription price or promise a particular saving. Compare the required package and licensing basis rather than treating all users and modules as equivalent.
+
+### Where ShireSystem may be the better fit
+
+Both products cover many core maintenance requirements, but the depth and packaging differ. ShireSystem offers cloud and on-premise deployment, dedicated resource planning, document version and expiry controls, and options for more extensive configuration. These can be decisive requirements for an enterprise or facilities operation.
+
+Smartspanner is cloud hosted. Its browser access and native iOS and Android apps require an internet connection; the apps do not work offline. Its API access is included on Advanced and can support reporting connections built with Power BI, Excel and other tools. Fire risk assessment functionality should not be described as a currently available general-purpose risk assessment module. Maintenance software does not itself establish regulatory compliance.
+
+### Switching from ShireSystem
+
+Start by assessing the current asset register, maintenance schedules, available exports, supporting files and historical records. Smartspanner can help assess what is useful to move and how to structure it. Export access, field mappings, historical coverage, migration work and commercial terms need review before agreeing the scope. There is no promise of free migration or automatic transfer of every field and historical record.
+
+Switching enquiry: https://www.smartspanner.com/contact/
+Demo: https://www.smartspanner.com/book-a-demo/
+Free trial: https://app.smartspanner.com/signup
+
+### Product evidence and source pages
+
+- Smartspanner features: https://www.smartspanner.com/features/
+- Mobile apps and connection requirements: https://www.smartspanner.com/mobile-cmms/
+- Multi-site maintenance: https://www.smartspanner.com/multi-site-maintenance-software/
+- API and reporting integrations: https://www.smartspanner.com/integrations-api/
+- AMES Goldsmith UK manufacturing case study: https://www.smartspanner.com/case-studies/ames-goldsmith-uk/ — maintenance, preventive work and inspection records across two manufacturing sites.
+- Oiltech Bearings manufacturing case study: https://www.smartspanner.com/case-studies/oiltech-bearings/ — machinery maintenance, asset records and compliance evidence. Oiltech Bearings and Smartspanner are sister companies.
+- Eleco ShireSystem features and example tiers: https://eleco.com/products/shiresystem/features/
+- Eleco ShireSystem cloud and on-premise requirements: https://help.elecosoft.com/system_requirements_guide/english/Content/Topics/Products/ShireSystem.htm
+- Eleco ShireSystem resource planning: https://eleco.com/products/shiresystem/advanced-resource-planning/
+
 ## Primary Use Cases
 
 - Replace maintenance spreadsheets with a CMMS
