@@ -1,6 +1,6 @@
 # Release status is deliberately shared by the pillar, pricing and discovery links.
-# Keep coming_soon true until the application rollout is confirmed.
-coming_soon: true
+# Team assignment is advertised as included in Advanced.
+coming_soon: false
 url: /maintenance-team-management-software/
 plan: Advanced
 reviewed: 2026-10-16
