@@ -1,0 +1,16 @@
+# Release status is deliberately shared by the pillar, pricing and discovery links.
+# Keep coming_soon true until the application rollout is confirmed.
+coming_soon: true
+url: /maintenance-team-management-software/
+plan: Advanced
+reviewed: 2026-10-16
+# Product evidence: app_v3/specs/work-order-teams.md, src/tasks/teams.py,
+# src/tasks/test/test_team_assignments.py and plans migration 0009.
+# Team assignment is distinct from shift rotas, automatic dispatch and capacity planning.
+sources:
+  - name: MaintainX — users and teams
+    url: https://help.getmaintainx.com/about-users-and-teams
+  - name: Limble — creating teams by trade or shift
+    url: https://help.limblecmms.com/en/articles/8573159-how-to-create-teams-in-limble
+  - name: MaintainX — resource planning and workload scheduling
+    url: https://help.getmaintainx.com/schedule-work-in-the-workload-view

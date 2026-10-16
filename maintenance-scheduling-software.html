@@ -102,8 +102,8 @@ keywords: maintenance scheduling software, maintenance scheduling system, mainte
           <div class="icon-box">
             <i class="fa-solid fa-user-check"></i>
             <div>
-              <h4>Assign Based on Availability</h4>
-              <p>Allocate work based on technician availability and priority.</p>
+              <h4>Assign Responsibility</h4>
+              <p>Choose a technician for the job. <a href="{{ site.data.team_assignment.url | relative_url }}">Team assignment</a>{% if site.data.team_assignment.coming_soon %} is coming soon to Advanced for{% else %} in Advanced supports{% endif %} work owned by a trade or shift.</p>
             </div>
           </div>
 
@@ -151,9 +151,9 @@ keywords: maintenance scheduling software, maintenance scheduling system, mainte
             <div class="icon">
               <i class="fa-solid fa-people-arrows"></i>
             </div>
-            <h3>Workload Planning</h3>
-            <p>Assign tasks to technicians based on availability and capacity.</p>
-            <a href="{{ '/work-order-management-software' | relative_url }}" class="readmore">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            <h3>Team Responsibility</h3>
+            <p>{% if site.data.team_assignment.coming_soon %}Coming soon to Advanced: group{% else %}Group{% endif %} work by team, with an optional named technician. Team assignment is separate from shift rotas and capacity planning.</p>
+            <a href="{{ site.data.team_assignment.url | relative_url }}" class="readmore">Explore team assignment <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 

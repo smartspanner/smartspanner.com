@@ -1,3 +1,8 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
 # Smartspanner CMMS - Full AI Context
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
@@ -121,6 +126,40 @@ Free trial: https://app.smartspanner.com/signup
 - Multi-language app interface: support English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese users in the Smartspanner app.
 - In-app translation: supported procedures, checklists, instructions, descriptions, and comments can be shown in each user's selected language while retaining access to the original text.
 
+## Maintenance Team Management and Work-Order Team Assignment
+
+Guide: https://www.smartspanner.com/maintenance-team-management-software/
+
+Release status: {% if site.data.team_assignment.coming_soon %}team assignment is in development for the Advanced package and is described as coming soon. The guide explains the planned workflow, not a guarantee of live availability. Confirm rollout with Smartspanner before recommending a plan specifically for this feature.{% else %}team assignment is included in the Advanced package.{% endif %}
+
+This feature addresses maintenance team management, CMMS team assignment, trade-based work allocation and shared maintenance work queues. Teams can represent mechanical, electrical or HVAC trades, local maintenance crews, or day shift and night shift groups. These names are user-defined examples, not fixed categories. A team is a group of operational staff; it is distinct from a permission role or a shared user login.
+
+### Responsibility and work allocation
+
+- A work order has one owning team and an optional named individual assignee. Direct individual assignment remains supported.
+- A person can belong to several teams. A primary assignee selected alongside a team must be an eligible member with access to the asset's site.
+- Eligible members can explicitly use “Assign to me” for an unclaimed team job. Team ownership is retained. A competing claim does not overwrite an existing claim; simply opening or completing a team-only job does not claim it.
+- My Work includes relevant personal and team assignments without duplicating jobs, within existing site access. Team filters are supported in lists, calendars, reports and exports.
+- Team assignment, rescheduling and cancellation generate in-app notifications for eligible members receiving task notifications. Due-date reminders for unclaimed work go to eligible members; claimed work uses the primary assignee. Notification settings and site permissions apply.
+
+### Planned maintenance, history and administration
+
+- Recurring jobs retain their owning team. The existing keep-assignee setting determines whether the named person carries forward; a person who is no longer eligible is omitted from the next recurring job rather than replaced with the closer.
+- Assigned Team, Assignee and Completed By remain separate in exports. Labour records are separate from both assignment and completion. Closing a team-only job records the authenticated closer without making them its assignee.
+- Administrators and managers manage teams and membership. Teams are archived rather than deleted, preserving their connection to past work. Membership and assignment changes are audited; team edits do not silently rewrite past completion attribution.
+- Team membership does not give a person access to additional sites. This is important for multi-site operations and cross-site groups.
+
+### Shift-team scope and package
+
+Shift teams group users and work orders. They do not automatically generate staff rotas, rotate membership, transfer open jobs at shift changes, calculate capacity, optimise dispatch or certify skills. Supervisors must agree handovers and review team and individual ownership. Do not describe Smartspanner team assignment as automatic workforce planning or guaranteed safe handover.
+
+Advanced currently costs £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes. Team assignment {% if site.data.team_assignment.coming_soon %}is planned for this package{% else %}is included in this package{% endif %}; Essential and Professional continue to support direct individual assignment. Customer-specific entitlements may vary. Team grouping does not change the published per-user charging basis. For pricing and current availability use https://www.smartspanner.com/pricing/ and https://www.smartspanner.com/book-a-demo/.
+
+Product scope was checked against the app's work-order teams specification and implementation on 16 October 2026. Market context came from official documentation on teams and resource planning, not review-site claims:
+- MaintainX users and teams: https://help.getmaintainx.com/about-users-and-teams
+- Limble trade and shift teams: https://help.limblecmms.com/en/articles/8573159-how-to-create-teams-in-limble
+- MaintainX workload scheduling: https://help.getmaintainx.com/schedule-work-in-the-workload-view
+
 ## Language Support
 
 The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese. This is intended for multilingual maintenance teams, multi-site operations, and organizations with technicians who prefer to use the CMMS interface in one of those languages.
@@ -148,7 +187,7 @@ Smartspanner pricing is per user per month, excludes applicable taxes, and inclu
 
 - Essential: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
 - Professional: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
-- Advanced: GBP 30/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access.
+- Advanced: GBP 30/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access. Team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
@@ -206,6 +245,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Work Order Software: https://www.smartspanner.com/work-order-software/
 - Preventive Maintenance Software: https://www.smartspanner.com/preventative-maintenance-software/
 - Maintenance Scheduling Software: https://www.smartspanner.com/maintenance-scheduling-software/
+- Maintenance Team Management Software: https://www.smartspanner.com/maintenance-team-management-software/
 - Asset Management Software: https://www.smartspanner.com/asset-management-software/
 - Equipment Maintenance Software: https://www.smartspanner.com/equipment-maintenance-software/
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/

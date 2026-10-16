@@ -1,3 +1,8 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
 # Smartspanner CMMS
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
@@ -48,6 +53,16 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 - API access with broad coverage for key integration requirements, including reporting and links to wider operational systems
 - Lockout/tagout (LOTO) procedures
 
+## Maintenance Team Management and Team Assignment
+
+- Guide: https://www.smartspanner.com/maintenance-team-management-software/
+- Purpose: allocate maintenance work orders to mechanical, electrical, HVAC, site or shift teams, such as day shift and night shift. Useful for searches about CMMS team assignment, trade-based maintenance work allocation and shared maintenance work queues.
+- Availability: {% if site.data.team_assignment.coming_soon %}in development for Advanced; coming soon. Do not describe this feature as generally available. Confirm rollout with Smartspanner before recommending a subscription specifically for team assignment.{% else %}included in Advanced.{% endif %}
+- Workflow: one owning team per work order, with an optional individual assignee. Eligible members can explicitly claim unassigned team work while retaining team ownership. A person can belong to multiple teams.
+- Continuity: recurring work retains the team; individual assignment is controlled separately. Team ownership, named assignee, person completing the job and labour records remain distinct.
+- Boundaries: membership never grants site access. Shift teams do not automatically generate rotas, rotate membership, transfer jobs at shift changes, verify qualifications or optimise workforce capacity.
+- Plan: Advanced, currently £{{ site.data.pricing.plans[2].price }}/user/month excluding applicable taxes. Essential and Professional retain direct individual assignment. See current pricing and confirm feature availability.
+
 ## Maintenance Assessment
 
 - Tool: https://www.smartspanner.com/maintenance-assessment/
@@ -65,7 +80,7 @@ All prices are per user, per month and exclude applicable taxes. A 14-day free t
 
 - Essential: £18/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
 - Professional: £24/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
-- Advanced: £30/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access
+- Advanced: £30/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access; team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
@@ -89,6 +104,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Industries: https://www.smartspanner.com/industries/
 - Preventive Maintenance: https://www.smartspanner.com/preventative-maintenance-software/
 - Work Order Management: https://www.smartspanner.com/work-order-management-software/
+- Maintenance Team Management and Team Assignment: https://www.smartspanner.com/maintenance-team-management-software/
 - Asset Management: https://www.smartspanner.com/asset-management-software/
 - Inventory Management: https://www.smartspanner.com/spare-part-inventory-software/
 - Mobile CMMS: https://www.smartspanner.com/mobile-cmms/

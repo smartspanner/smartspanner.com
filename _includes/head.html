@@ -51,8 +51,8 @@
 <!-- Preload critical CSS -->
 <link rel="preload" href="{{ '/style.min.css' | relative_url }}?v={{ css_version }}" as="style">
 
-<!-- Google Fonts - reduced weights, display swap for faster text rendering -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts - reduced weights; optional loading keeps the team page stable -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display={% if page.team_page %}optional{% else %}swap{% endif %}" rel="stylesheet">
 
 <!-- Font Awesome - defer loading -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -75,3 +75,4 @@
 {% if page.assessment_cta %}<link href="{{ site.baseurl }}/assets/css/assessment-cta.css?v={{ css_version }}" rel="stylesheet">{% endif %}
 
 {% if page.comparison_page %}<link href="{{ '/assets/css/shire-comparison.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">{% endif %}
+{% if page.team_page %}<link href="{{ '/assets/css/team-management.css' | relative_url }}?v={{ css_version }}" rel="stylesheet">{% endif %}

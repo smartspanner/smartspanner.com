@@ -121,6 +121,9 @@
         "@id": "{{ site.url }}/#organization"
       },
       "inLanguage": "en"
+      {% if page.team_page %},
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"
+      {% endif %}
       {% if page.layout == 'blog-article' or page.layout == 'case-study' or page.url contains '/blog/' %},
       "mainEntityOfPage": "{{ page_url }}",
       "author": {

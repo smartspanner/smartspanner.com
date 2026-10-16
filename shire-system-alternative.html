@@ -84,7 +84,7 @@ sitemap: true
         <div class="col-lg-4"><div class="box featured shire-plan"><h3>{{ plan.name }}</h3><p class="shire-plan-price">{{ plan.currency }}{{ plan.price }}<span>/user/month</span></p>
           <ul>
             {% if forloop.first %}{% for item in site.data.pricing.all_plans_include %}<li>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</li>{% endfor %}
-            {% else %}<li><strong>All {% if plan.name == 'Professional' %}Essential{% else %}Professional{% endif %} features, plus:</strong></li>{% for item in plan.differentiators %}<li>{{ item | replace: '*coming soon', '— coming soon' }}</li>{% endfor %}{% endif %}
+            {% else %}<li><strong>All {% if plan.name == 'Professional' %}Essential{% else %}Professional{% endif %} features, plus:</strong></li>{% for item in plan.differentiators %}<li>{% if item == 'Team Assignment' %}<a href="{{ site.data.team_assignment.url | relative_url }}">{{ item }}</a>{% if site.data.team_assignment.coming_soon %} — coming soon{% endif %}{% else %}{{ item | replace: '*coming soon', '— coming soon' }}{% endif %}</li>{% endfor %}{% endif %}
           </ul>
         </div></div>
         {% endfor %}

@@ -1,0 +1,64 @@
+.team-page { color: #364146; }
+.team-page a { color: #805b00; text-decoration: underline; text-underline-offset: 3px; }
+.team-page section { padding: 64px 0; scroll-margin-top: 100px; }
+.team-page .team-hero { background: #252525; color: #e2e2e2; padding: 125px 0 64px; }
+.team-hero h1 { color: #fff; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.14; }
+.team-breadcrumb { font-size: .82rem; margin-bottom: 30px; }
+.team-hero a, .team-final a { color: #ffd15c; }
+.team-eyebrow { color: #ffd15c; font-weight: 700; font-size: .85rem; margin-bottom: 18px; }
+.team-lead { font-size: 1.16rem; line-height: 1.6; margin: 24px 0 18px; }
+.team-status { font-size: .87rem; border-left: 3px solid #feb900; padding-left: 15px; margin: 22px 0; }
+.team-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 25px; }
+.team-actions .btn { padding: 12px 18px; font-weight: 600; text-decoration: none; }
+.team-page .btn-primary { color: #171b1d; }
+.team-actions .team-secondary { color: #fff; border: 1px solid #aaa; }
+.team-actions .team-secondary:hover { background: #383838; border-color: #feb900; }
+.team-actions > a:not(.btn) { text-decoration: underline; }
+.team-workflow { margin: 0; background: #fff; color: #364146; border-radius: 12px; padding: 28px; box-shadow: 0 10px 32px #0003; }
+.team-workflow figcaption { color: #222; font-weight: 700; font-size: 1.05rem; margin-bottom: 22px; }
+.team-workflow ol { margin: 0; padding: 0; list-style: none; }
+.team-workflow li { display: flex; gap: 15px; padding: 18px 0; border-top: 1px solid #e0e3e5; }
+.team-workflow li > div { min-width: 0; }
+.team-workflow strong { display: block; font-size: 1rem; margin-bottom: 8px; }
+.team-workflow li div > span { display: block; font-size: .88rem; margin-top: 4px; line-height: 1.6; }
+.team-step { display: flex; align-items: center; justify-content: center; flex: 0 0 32px; height: 32px; border-radius: 50%; background: #fff0c3; color: #493400; font-weight: 700; }
+.team-contents { border-bottom: 1px solid #dce0e3; background: #fff; padding: 18px 0; }
+.team-contents .container { display: flex; flex-wrap: wrap; gap: 12px 25px; }
+.team-contents a { color: #364146; font-weight: 600; font-size: .9rem; text-decoration: underline; text-underline-offset: 4px; }
+.team-page p, .team-page li { line-height: 1.75; }
+.team-reading { max-width: 900px; }
+.team-page h2 { font-size: clamp(1.65rem, 2.5vw, 2.2rem); margin-bottom: 22px; }
+.team-page h3 { font-size: 1.2rem; line-height: 1.4; margin: 24px 0 12px; }
+.team-page .section-header { padding-bottom: 28px; }
+.team-page .section-header h2 { margin-bottom: 20px; }
+.team-callout { background: #fff7df; border-left: 4px solid #feb900; padding: 24px 28px; margin-top: 28px; border-radius: 8px; }
+.team-callout h3 { margin-top: 0; }
+.team-callout p:last-child { margin-bottom: 0; }
+.team-card { background: #fff; border: 1px solid #e0e3e5; border-radius: 8px; padding: 28px; height: 100%; }
+.team-card > i { font-size: 1.6rem; color: #8a6400; }
+.team-card h3 { margin-top: 18px; }
+.team-card p { margin-bottom: 0; }
+.team-after-grid { margin-top: 30px; }
+.team-screen { margin: 0; }
+.team-screen img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px #0002; }
+.team-screen figcaption { font-size: .85rem; line-height: 1.6; margin-top: 12px; }
+.team-setup { padding-left: 24px; }
+.team-setup li { padding-left: 8px; margin: 18px 0; }
+.team-page details { padding: 18px 0; border-bottom: 1px solid #dce0e3; }
+.team-page summary { padding: 5px 0; font-weight: 600; cursor: pointer; }
+.team-page details p, .team-page details ul { margin-top: 16px; margin-bottom: 0; }
+.team-research { font-size: .9rem; }
+.team-page .team-price { font-size: 2.1rem; font-weight: 700; color: #252525; }
+.team-price span { font-size: .9rem; font-weight: 400; }
+.team-page .team-final { background: #252525; color: #e2e2e2; }
+.team-final h2 { color: #fff; }
+.team-page a:focus-visible, .team-page summary:focus-visible, .team-contents a:focus-visible { outline: 3px solid #a67600; outline-offset: 4px; }
+@media (max-width: 767px) {
+  .team-page section { padding: 44px 0; }
+  .team-page .team-hero { padding-top: 110px; }
+  .team-actions .btn { width: 100%; }
+  .team-workflow { padding: 22px; }
+  .team-callout { padding: 22px; }
+  .team-contents .container { gap: 14px 20px; }
+  .team-price span { display: block; }
+}

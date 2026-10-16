@@ -1,0 +1,155 @@
+---
+layout: default
+title: Maintenance Team Management Software
+meta_title: Maintenance Team Management Software | Smartspanner
+description: "Maintenance team management for mechanical, electrical, HVAC and shift teams. Explore shared work orders and clear responsibility with Smartspanner."
+permalink: /maintenance-team-management-software/
+last_modified_at: 2026-10-16
+team_page: true
+hero_image: false
+image: /assets/img/features/work-order-calendar-thumb.webp
+parent: Features
+parent_url: /features/
+sitemap: true
+---
+{% assign teams = site.data.team_assignment %}
+{% assign team_plan = site.data.pricing.plans | where: 'name', teams.plan | first %}
+<main id="main" class="team-page" data-feature="team-assignment">
+  <section class="team-hero">
+    <div class="container">
+      <nav class="team-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/features/' | relative_url }}">Features</a> / <span aria-current="page">Maintenance teams</span></nav>
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <p class="team-eyebrow">Maintenance team management software</p>
+          <h1>Assign maintenance work to teams, trades and shifts</h1>
+          <p class="team-lead">Give the work to your mechanical team, electrical team, HVAC team or the next shift. Choose the individual when you know who will do the job.</p>
+          <p>Smartspanner team assignment connects shared work orders with named responsibility, recurring maintenance and the asset's history.</p>
+          {% if teams.coming_soon %}<p class="team-status"><strong>Coming soon to {{ teams.plan }}.</strong> Team assignment is in development. This guide describes the planned workflow. Ask us about availability for your organisation.</p>{% else %}<p class="team-status"><strong>Included in {{ teams.plan }}.</strong> Keep team responsibility and individual assignment together.</p>{% endif %}
+          {% include team-cta.html location="hero" %}
+        </div>
+        <div class="col-lg-6">
+          <figure class="team-workflow" aria-labelledby="team-example-caption">
+            <figcaption id="team-example-caption">Example: from team responsibility to completed work</figcaption>
+            <ol>
+              <li><span class="team-step">1</span><div><strong>Weekly conveyor inspection</strong><span>Owning team: Mechanical</span><span>Individual: not yet assigned</span></div></li>
+              <li><span class="team-step">2</span><div><strong>A team member takes the job</strong><span>Owning team: Mechanical</span><span>Individual: named technician</span></div></li>
+              <li><span class="team-step">3</span><div><strong>Completion recorded</strong><span>Team, assignee and person completing the work remain separate records.</span></div></li>
+            </ol>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="team-contents" aria-label="On this page"><div class="container"><a href="#what-is-team-assignment">How it works</a><a href="#trades-and-shifts">Trades and shifts</a><a href="#planned-maintenance">Planned maintenance</a><a href="#setting-up">Getting started</a><a href="#team-pricing">Pricing</a><a href="#team-faq">FAQs</a></div></nav>
+
+  <section id="what-is-team-assignment">
+    <div class="container team-reading">
+      <h2>What is maintenance team assignment?</h2>
+      <p>Maintenance team assignment means allocating a work order to a group of people with a shared responsibility. The group might be a trade, a shift or a maintenance crew looking after particular equipment.</p>
+      <p>It is useful when you know which team should handle a job but do not yet know which technician will carry it out. Instead of choosing someone simply to give the job an owner, you put it in the right team's work queue.</p>
+      <p>A team and a person answer different questions: <strong>which group is responsible?</strong> and <strong>who is taking this job?</strong> Smartspanner's team workflow keeps both answers on the same <a href="{{ '/work-order-management-software/' | relative_url }}">maintenance work order</a>.</p>
+      <aside class="team-callout"><h3>Keep direct assignment when it makes sense</h3><p>If a specialist has already agreed to do a repair, assign it to that person. Use team ownership when work should first sit with a group, or combine a team with a named member. You do not need to make every job a team job.</p></aside>
+    </div>
+  </section>
+
+  <section id="trades-and-shifts" class="section-bg">
+    <div class="container">
+      <div class="section-header"><h2>Organise maintenance around how your people work</h2><p>These are examples of teams you could create, not fixed categories.</p></div>
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-gears" aria-hidden="true"></i><h3>Mechanical teams</h3><p>Group mechanical repairs, lubrication rounds, conveyor inspections and equipment servicing under the team responsible for them.</p></article></div>
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-bolt" aria-hidden="true"></i><h3>Electrical teams</h3><p>Route electrical faults and planned electrical work to the appropriate group. Supervisors still decide who is competent and authorised to carry out each task.</p></article></div>
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-fan" aria-hidden="true"></i><h3>HVAC teams</h3><p>Keep heating, ventilation and air-conditioning work together, with the relevant asset records and service instructions.</p></article></div>
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-sun" aria-hidden="true"></i><h3>Day shift teams</h3><p>Allocate work intended for the day shift to a named group, then agree individual responsibility as the shift reviews its jobs.</p></article></div>
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-moon" aria-hidden="true"></i><h3>Night shift teams</h3><p>Give the night shift a shared queue of work with priorities, due dates and job information instead of relying on a separate paper list.</p></article></div>
+        <div class="col-md-6 col-lg-4"><article class="team-card"><i class="fa-solid fa-building" aria-hidden="true"></i><h3>Site maintenance crews</h3><p>Organise local or cross-site groups while retaining each person's existing <a href="{{ '/multi-site-maintenance-software/' | relative_url }}">site access permissions</a>.</p></article></div>
+      </div>
+      <p class="team-after-grid">A person can belong to more than one team. You might use “Electrical” for trade responsibility and “Night shift” for shift responsibility. Choose the relevant owning team for each job; one work order has one owning team, with an optional individual assignee.</p>
+    </div>
+  </section>
+
+  <section id="shared-work-orders">
+    <div class="container">
+      <div class="section-header"><h2>A shared work queue with clear responsibility</h2><p>The team owns the work. Individual actions stay attributable.</p></div>
+      <div class="row gy-4">
+        <div class="col-lg-6"><h3>Assign the team first</h3><p>Select the team responsible for the asset's work. Add a named member immediately if the job is already allocated, or leave the individual open until someone takes it.</p><h3>Let an eligible member take responsibility</h3><p>A team member with access to the asset's site can use “Assign to me” on an unclaimed team job. The team remains attached to it. Opening or reading a work order does not take ownership.</p><p>If two people try to claim the same job, the first successful claim is retained. The second person needs to review the updated assignment.</p></div>
+        <div class="col-lg-6"><h3>Review the team's backlog</h3><p>Team filters help supervisors review work in lists, calendars, reports and exports. My Work includes relevant team assignments alongside personal jobs, subject to the user's site access.</p><h3>Keep the completion record clear</h3><p>The owning team, named assignee and person who completes the job are separate records. Closing a team-only job records the person completing it without silently making them its assignee.</p><p>Labour entries remain separate too. Use them to record who worked on the job and the time involved.</p></div>
+      </div>
+      <aside class="team-callout"><h3>Notify the people who can act</h3><p>The team workflow includes in-app assignment, rescheduling and cancellation notifications for eligible members who receive task notifications. Due-date reminders go to eligible members while a job is unclaimed, then to the primary assignee once it is claimed. Site access and notification settings still apply.</p></aside>
+    </div>
+  </section>
+
+  <section id="planned-maintenance" class="section-bg">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-6"><h2>Give recurring maintenance a responsible team</h2><p>A weekly inspection can belong to Mechanical even when a different technician carries it out each week. The responsibility stays with the group rather than depending on one person's name.</p><p>Recurring work retains its owning team. The existing keep-assignee setting controls whether a named individual carries forward. If that person is no longer an eligible team member, they are left off the next job rather than replaced automatically by whoever closed the previous one.</p><p>Connect team ownership to <a href="{{ '/preventative-maintenance-software/' | relative_url }}">planned preventive maintenance</a> and review upcoming work through <a href="{{ '/maintenance-scheduling-software/' | relative_url }}">maintenance scheduling</a>.</p></div>
+        <div class="col-lg-6"><figure class="team-screen"><img src="{{ '/assets/img/features/work-order-calendar-thumb.webp' | relative_url }}" width="960" height="600" loading="lazy" alt="Smartspanner maintenance calendar displaying scheduled work orders by date"><figcaption>The existing Smartspanner maintenance calendar. The team workflow is illustrated at the top of this page.</figcaption></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shift-handover">
+    <div class="container team-reading">
+      <h2>Use shift teams to make handovers clearer</h2>
+      <p>At the end of a shift, review unfinished work, update the job notes and agree who is responsible next. Keep the asset, fault details, photos, parts and outstanding actions with the work order.</p>
+      <p>If responsibility moves from the day shift to the night shift, update the owning team and review any named assignment. Do not assume that a change of clock time transfers the job.</p>
+      <p>Team assignment groups people and work. It does not automatically build shift rotas, calculate available hours, check qualifications or transfer jobs when a shift ends. Supervisors remain responsible for staffing, competence and safe handover.</p>
+      <p><a href="{{ '/mobile-cmms/' | relative_url }}">Smartspanner's mobile apps</a> give technicians access to work-order information away from a desk. Browser and mobile access require an internet connection.</p>
+    </div>
+  </section>
+
+  <section id="setting-up" class="section-bg">
+    <div class="container team-reading">
+      <h2>How to set up maintenance teams that stay useful</h2>
+      <ol class="team-setup">
+        <li><strong>Start with responsibility.</strong> Create groups for work that genuinely shares an owner. A small site may only need Mechanical and Electrical; a larger operation may also need shift teams.</li>
+        <li><strong>Choose names people recognise.</strong> “Night shift — Gateshead” is more useful than “Team 4” if the group is tied to a particular site and shift.</li>
+        <li><strong>Check membership and site access.</strong> Administrators and managers maintain teams. Membership does not grant additional site permissions.</li>
+        <li><strong>Agree how jobs are taken.</strong> Decide which jobs members can claim and which need a supervisor to name an assignee. Keep urgent work and safety decisions in your established process.</li>
+        <li><strong>Review the queue at handover.</strong> Look at due dates, priorities, unclaimed jobs and unfinished work. Update responsibility when the receiving team accepts it.</li>
+        <li><strong>Keep teams current.</strong> Review membership as people move roles. Archive teams you no longer use so old work records retain their team history.</li>
+      </ol>
+      <h3>What to check when comparing CMMS team features</h3>
+      <p>Ask whether the software separates a team's responsibility from an individual's assignment. Check how shared queues, recurring jobs, site permissions, notifications and completion history work. If you also need automatic dispatch or workforce capacity planning, evaluate those capabilities separately.</p>
+      <details class="team-research"><summary>Research behind this guide</summary><p>Official MaintainX and Limble documentation describes grouping CMMS users into teams, including functional groups and shift groups. MaintainX documents resource planning separately. These sources informed the questions above; Smartspanner's workflow descriptions were checked against its team-assignment development specification. Reviewed {{ teams.reviewed | date: '%-d %B %Y' }}.</p><ul>{% for source in teams.sources %}<li><a href="{{ source.url }}">{{ source.name }}</a></li>{% endfor %}</ul></details>
+    </div>
+  </section>
+
+  <section id="team-pricing">
+    <div class="container team-reading">
+      <h2>Team assignment in {{ team_plan.name }}</h2>
+      <p class="team-price">{{ team_plan.currency }}{{ team_plan.price }} <span>per user/month, excluding applicable taxes</span></p>
+      <p>{% if teams.coming_soon %}Team assignment is planned for the {{ team_plan.name }} package. Confirm its availability with us before choosing a plan for this feature.{% else %}Team assignment is included in the {{ team_plan.name }} package.{% endif %} Essential and Professional continue to support direct individual work-order assignment.</p>
+      <p>{{ team_plan.name }} also includes Professional features, checklists, equipment checks, purchasing, permits to work and API access. See the <a href="{{ '/pricing/' | relative_url }}" data-ga-event="feature_cta_click" data-ga-cta-action="pricing" data-ga-cta-location="plan">current package comparison</a> for full details and currency options.</p>
+      <p>Organising users into teams does not change the published per-user pricing basis.</p>
+    </div>
+  </section>
+
+  <section id="team-faq" class="section-bg">
+    <div class="container team-reading">
+      <h2>Maintenance team management FAQs</h2>
+      <details><summary>Can I assign a work order to a team instead of a person?</summary><p>That is the purpose of Smartspanner's team-assignment workflow. A work order can have an owning team without a named assignee, or a team plus an eligible named member. Direct assignment to a person remains supported. {% if teams.coming_soon %}Team assignment is currently in development for Advanced; contact us to confirm availability.{% else %}Team assignment is included in Advanced.{% endif %}</p></details>
+      <details><summary>Can I create mechanical, electrical and HVAC teams?</summary><p>Yes. Those are examples of groups you can define in the team workflow. You choose the names and members rather than selecting from fixed trade categories. Team membership does not verify a person's qualifications or authorisation to work.</p></details>
+      <details><summary>Can I use teams for day shift and night shift?</summary><p>Yes. A team can represent a shift. Allocate the relevant work orders to that group and maintain its membership. Changes of shift do not automatically rotate membership or transfer open jobs; review and update ownership as part of your handover.</p></details>
+      <details><summary>Can a technician belong to more than one team?</summary><p>Yes. One person can belong to multiple teams, such as Electrical and Night shift. Each work order has one owning team and can also have a named assignee.</p></details>
+      <details><summary>How does a technician take an unclaimed team job?</summary><p>An eligible member uses “Assign to me”. They must belong to the owning team and have access to the asset's site. The team stays on the work order, and a competing claim does not overwrite an existing assignment.</p></details>
+      <details><summary>Can recurring preventive maintenance stay with a team?</summary><p>Yes. The team workflow retains ownership on recurring jobs. The keep-assignee setting separately controls whether a named person carries forward, subject to their continuing eligibility.</p></details>
+      <details><summary>Does team membership give access to other sites?</summary><p>No. A person's existing site permissions still apply. Someone can belong to a group that works across sites while only seeing and claiming work at the sites they are authorised to access.</p></details>
+      <details><summary>Will I still know who completed the work?</summary><p>Yes. The completion record identifies the person who closes the job. Team ownership, individual assignment, completion attribution and labour entries remain separate, so they can describe what actually happened.</p></details>
+      <details><summary>Is this a shift scheduling or workforce planning system?</summary><p>Team assignment provides shared ownership and work queues. It does not automatically generate rotas, optimise workloads against available hours or verify skills. Discuss those requirements explicitly if they are important to your operation.</p></details>
+      <details><summary>Which Smartspanner plan includes team assignment?</summary><p>{% if teams.coming_soon %}Team assignment is being developed for{% else %}Team assignment is included in{% endif %} {{ team_plan.name }}, currently {{ team_plan.currency }}{{ team_plan.price }} per user/month excluding applicable taxes. <a href="{{ '/pricing/' | relative_url }}">View current Smartspanner pricing</a>{% if teams.coming_soon %} and confirm feature availability before subscribing{% endif %}.</p></details>
+    </div>
+  </section>
+
+  <section class="team-related">
+    <div class="container"><h2>Connect team responsibility to the rest of maintenance</h2><div class="row gy-4">
+      <div class="col-md-4"><h3><a href="{{ '/cmms-for-manufacturing/' | relative_url }}">Manufacturing maintenance</a></h3><p>Keep production equipment, planned jobs and repair history in the same system.</p></div>
+      <div class="col-md-4"><h3><a href="{{ '/facility-management-software/' | relative_url }}">Facilities maintenance</a></h3><p>Connect building assets and service work across your locations.</p></div>
+      <div class="col-md-4"><h3><a href="{{ '/reporting/' | relative_url }}">Maintenance reporting</a></h3><p>Review work records and use exports to investigate the jobs behind your figures.</p></div>
+    </div><p class="team-after-grid">See how organisations use the wider CMMS in our <a href="{{ '/case-studies/' | relative_url }}">customer stories</a>.</p></div>
+  </section>
+
+  <section class="team-final">
+    <div class="container team-reading"><h2>Show us how your maintenance teams work</h2><p>Tell us which trades, shifts and sites handle your maintenance. We can discuss how team assignment fits your work orders, planned maintenance and handovers{% if teams.coming_soon %}, and when the feature will be available{% endif %}.</p>{% include team-cta.html location="final" %}</div>
+  </section>
+</main>

@@ -56,6 +56,14 @@ keywords: cmms features, maintenance software features, work order management, a
           </div>
 
           <div class="icon-box">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <div>
+              <h4><a href="{{ site.data.team_assignment.url | relative_url }}">Team Assignment</a></h4>
+              <p>{% if site.data.team_assignment.coming_soon %}Coming soon to Advanced: allocate{% else %}Allocate{% endif %} work to mechanical, electrical, HVAC or shift teams, with an optional named assignee.</p>
+            </div>
+          </div>
+
+          <div class="icon-box">
             <i class="fa-solid fa-list-check"></i>
             <div>
               <h4><a href="{{ '/maintenance-scheduling-software' | relative_url }}">Maintenance Scheduling</a></h4>
