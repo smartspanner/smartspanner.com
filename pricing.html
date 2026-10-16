@@ -3,7 +3,7 @@ last_modified_at: 2026-10-16
 assessment_cta: true
 layout: page
 title: CMMS Pricing Plans
-description: Affordable CMMS pricing from £15/user/month. All plans include unlimited support, mobile apps, and free 14-day trial. No credit card required.
+description: Affordable CMMS pricing from £18/user/month. All plans include unlimited support, mobile apps, and free 14-day trial. No credit card required.
 keywords: cmms pricing, maintenance software pricing, cmms cost, maintenance app pricing
 hero_image: /assets/img/compressed-air-maintenance.JPG
 whatsapp_badge: true
@@ -31,8 +31,8 @@ whatsapp_badge: true
       <div class="col-lg-4">
         <div class="box featured">
           <h3>Basic</h3>
-          <p class="plan-description">Everything you need for everyday maintenance.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[0].price }}" data-usd="20" data-eur="18" data-aud="29" data-nzd="35">{{ site.data.pricing.plans[0].price }}</span><span>per user/month</span></h4>
+          <p class="plan-description">{{ site.data.pricing.plans[0].description }}</p>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[0].price }}" data-usd="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[0].price }}</span><span>per user/month</span></h4>
           <ul>
             {% for item in site.data.pricing.all_plans_include %}
             <li><i class="fa-regular fa-circle-check"></i> <strong>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</strong></li>
@@ -47,8 +47,8 @@ whatsapp_badge: true
       <div class="col-lg-4">
         <div class="box featured">
           <h3>Standard</h3>
-          <p class="plan-description">Standardise how your team works.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[1].price }}" data-usd="28" data-eur="25" data-aud="41" data-nzd="49">{{ site.data.pricing.plans[1].price }}</span><span>per user/month</span></h4>
+          <p class="plan-description">{{ site.data.pricing.plans[1].description }}</p>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[1].price }}" data-usd="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[1].price }}</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Basic features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-procedure-software' | relative_url }}">Procedures</a></strong></li>
@@ -68,8 +68,8 @@ whatsapp_badge: true
         <div class="box featured plan-most-popular">
           <div class="popular-badge">Most Popular</div>
           <h3>Advanced</h3>
-          <p class="plan-description">Manage maintenance at scale.</p>
-          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[2].price }}" data-usd="36" data-eur="31" data-aud="52" data-nzd="63">{{ site.data.pricing.plans[2].price }}</span><span>per user/month</span></h4>
+          <p class="plan-description">{{ site.data.pricing.plans[2].description }}</p>
+          <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[2].price }}" data-usd="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[2].price }}</span><span>per user/month</span></h4>
           <ul>
             <li><i class="fa-regular fa-circle-check"></i> <strong>All Standard features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Team Assignment</strong></li>

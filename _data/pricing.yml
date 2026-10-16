@@ -1,13 +1,25 @@
+# Fixed reference-rate snapshot used to publish whole-unit foreign prices.
+# Convert GBP to EUR, then to the selected currency; always round upward.
+exchange_rates:
+  source: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
+  as_of: 2026-10-15
+  base_currency: EUR
+  gbp: 0.84610
+  eur: 1.0
+  usd: 1.1208
+  aud: 1.6218
+  nzd: 2.0012
+
 plans:
   - name: Basic
-    price: 15
+    price: 18
     currency: £
     period: per user/month
     description: Everything you need for everyday maintenance.
     differentiators: []
 
   - name: Standard
-    price: 21
+    price: 24
     currency: £
     period: per user/month
     description: Standardise how your team works.
@@ -20,7 +32,7 @@ plans:
       - Technician Leave
 
   - name: Advanced
-    price: 27
+    price: 30
     currency: £
     period: per user/month
     description: Manage maintenance at scale.

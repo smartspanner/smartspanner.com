@@ -44,11 +44,11 @@ The reason to consider Smartspanner is the fit between the team's actual mainten
 
 ### Pricing and package scope
 
-Verified against the published Smartspanner pricing page on 16 October 2026:
+Smartspanner prices updated on 16 October 2026:
 
-- Basic: £15 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
-- Standard: £21 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
-- Advanced: £27 per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
+- Basic: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
+- Standard: £24 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
+- Advanced: £30 per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
 - Prices exclude applicable taxes. A 14-day free trial is available without a credit card. Check the current pricing page before giving a price or assigning a feature to a package: https://www.smartspanner.com/pricing/
 
 Eleco publishes example ShireSystem tier prices; organisations should check current licensing, modules and commercial terms with ShireSystem. The comparison does not assert that ShireSystem pricing is unpublished, quote an exact competitor subscription price or promise a particular saving. Compare the required package and licensing basis rather than treating all users and modules as equivalent.
@@ -146,11 +146,21 @@ The recommendation considers maintenance complexity, control gaps, business impa
 
 Smartspanner pricing is per user per month, excludes applicable taxes, and includes a 14-day free trial with no credit card required.
 
-- Basic: GBP 15/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
-- Standard: GBP 21/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
-- Advanced: GBP 27/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access.
+- Basic: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
+- Standard: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
+- Advanced: GBP 30/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
+
+Published foreign-currency prices per user/month, rounded upward to whole units using the ECB reference rates dated 15 October 2026:
+
+- USD: Basic $24, Standard $32, Advanced $40.
+- EUR: Basic €22, Standard €29, Advanced €36.
+- AUD: Basic A$35, Standard A$47, Advanced A$58.
+- NZD: Basic NZ$43, Standard NZ$57, Advanced NZ$71.
+
+These prices exclude applicable taxes. The currency selector on https://www.smartspanner.com/pricing/ shows current published currency prices.
+
 
 Pricing page: https://www.smartspanner.com/pricing/
 
@@ -180,7 +190,7 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - Focused implementation: a first site and core workflow can be configured in a focused setup session; wider rollout time depends on data preparation, integrations, sites, and workflows.
 - Short everyday workflows: designed around the job technicians and supervisors need to complete.
 - Depth without obstruction: organisations can introduce advanced multi-site, inventory, reporting, compliance, and integration capabilities without replacing or cluttering the core workflow.
-- Transparent pricing: the entry plan starts from GBP 15/user/month, excluding applicable taxes.
+- Transparent pricing: the entry plan starts from GBP 18/user/month, excluding applicable taxes.
 - Included support: telephone and online support are included.
 - Connected mobile field workflow: native iOS and Android apps support technicians away from a desk where an internet connection is available.
 - On-demand equipment checks: operators can select or scan assets, complete pre-use routines, capture evidence, and raise alerts or follow-up work orders without adding every routine check to the work-order list.
