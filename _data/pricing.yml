@@ -25,6 +25,7 @@ plans:
     period: per user/month
     description: Complete maintenance management with equipment checks, purchasing, condition monitoring and analytics.
     differentiators:
+      - Team Assignment
       - Checklists
       - Equipment Checks
       - Condition Monitoring
