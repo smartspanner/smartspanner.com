@@ -3,7 +3,6 @@
 .team-page section { padding: 64px 0; scroll-margin-top: 100px; }
 .team-page .team-hero { background: #252525; color: #e2e2e2; padding: 125px 0 64px; }
 .team-hero h1 { color: #fff; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.14; }
-.team-breadcrumb { font-size: .82rem; margin-bottom: 30px; }
 .team-hero a, .team-final a { color: #ffd15c; }
 .team-eyebrow { color: #ffd15c; font-weight: 700; font-size: .85rem; margin-bottom: 18px; }
 .team-lead { font-size: 1.16rem; line-height: 1.6; margin: 24px 0 18px; }
