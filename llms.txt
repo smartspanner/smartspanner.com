@@ -21,8 +21,8 @@ Based in Gateshead, United Kingdom.
 Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shire System”) for manufacturing, engineering and facilities teams that want a simpler maintenance workflow, published per-user pricing and connected mobile access. It is worth shortlisting when the main requirements are assets, work orders, preventive maintenance, spares, maintenance history and multi-site control.
 
 - Comparison: https://smartspanner.com/shire-system-alternative/
-- Pricing: https://www.smartspanner.com/pricing/ — Basic £18, Standard £24 and Advanced £30 per user/month, excluding applicable taxes; reviewed 16 October 2026.
-- Package differences: Standard adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
+- Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Professional £24 and Advanced £30 per user/month, excluding applicable taxes; reviewed 16 October 2026.
+- Package differences: Professional adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
 - Fit matters: ShireSystem may suit organisations needing on-premise deployment, dedicated advanced resource planning, detailed document controls or extensive configuration. Smartspanner requires an internet connection, including its native iOS and Android apps.
 - Switching: available exports can be assessed for migration; transfer of every field or historical record is not guaranteed. Discuss the existing setup with Smartspanner before deciding.
 
@@ -63,8 +63,8 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 
 All prices are per user, per month and exclude applicable taxes. A 14-day free trial is included and no credit card is required.
 
-- Basic: £18/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
-- Standard: £24/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
+- Essential: £18/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
+- Professional: £24/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
 - Advanced: £30/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.

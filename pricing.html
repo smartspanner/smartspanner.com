@@ -30,7 +30,7 @@ whatsapp_badge: true
     <div class="row">
       <div class="col-lg-4">
         <div class="box featured">
-          <h3>Basic</h3>
+          <h3>{{ site.data.pricing.plans[0].name }}</h3>
           <p class="plan-description">{{ site.data.pricing.plans[0].description }}</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[0].price }}" data-usd="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[0].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[0].price }}</span><span>per user/month</span></h4>
           <ul>
@@ -46,11 +46,11 @@ whatsapp_badge: true
 
       <div class="col-lg-4">
         <div class="box featured">
-          <h3>Standard</h3>
+          <h3>{{ site.data.pricing.plans[1].name }}</h3>
           <p class="plan-description">{{ site.data.pricing.plans[1].description }}</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[1].price }}" data-usd="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[1].price }}</span><span>per user/month</span></h4>
           <ul>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>All Basic features</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong>All {{ site.data.pricing.plans[0].name }} features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-procedure-software' | relative_url }}">Procedures</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/subcontractors' | relative_url }}">Subcontractors</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/maintenance-failure-codes' | relative_url }}">Failure Codes</a></strong></li>
@@ -67,11 +67,11 @@ whatsapp_badge: true
       <div class="col-lg-4">
         <div class="box featured plan-most-popular">
           <div class="popular-badge">Most Popular</div>
-          <h3>Advanced</h3>
+          <h3>{{ site.data.pricing.plans[2].name }}</h3>
           <p class="plan-description">{{ site.data.pricing.plans[2].description }}</p>
           <h4><sup class="price-symbol">£</sup><span class="price-value" data-gbp="{{ site.data.pricing.plans[2].price }}" data-usd="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-eur="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-aud="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}" data-nzd="{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}">{{ site.data.pricing.plans[2].price }}</span><span>per user/month</span></h4>
           <ul>
-            <li><i class="fa-regular fa-circle-check"></i> <strong>All Standard features</strong></li>
+            <li><i class="fa-regular fa-circle-check"></i> <strong>All {{ site.data.pricing.plans[1].name }} features</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong>Team Assignment</strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/compliance-software' | relative_url }}">Checklists</a></strong></li>
             <li><i class="fa-regular fa-circle-check"></i> <strong><a href="{{ '/equipment-check-software' | relative_url }}">Equipment Checks</a></strong></li>

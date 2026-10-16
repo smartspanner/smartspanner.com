@@ -11,14 +11,14 @@ exchange_rates:
   nzd: 2.0012
 
 plans:
-  - name: Basic
+  - name: Essential
     price: 18
     currency: £
     period: per user/month
     description: Everything you need for everyday maintenance.
     differentiators: []
 
-  - name: Standard
+  - name: Professional
     price: 24
     currency: £
     period: per user/month

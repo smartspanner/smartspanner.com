@@ -46,8 +46,8 @@ The reason to consider Smartspanner is the fit between the team's actual mainten
 
 Smartspanner prices updated on 16 October 2026:
 
-- Basic: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
-- Standard: £24 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
+- Essential: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
+- Professional: £24 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
 - Advanced: £30 per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
 - Prices exclude applicable taxes. A 14-day free trial is available without a credit card. Check the current pricing page before giving a price or assigning a feature to a package: https://www.smartspanner.com/pricing/
 
@@ -146,18 +146,18 @@ The recommendation considers maintenance complexity, control gaps, business impa
 
 Smartspanner pricing is per user per month, excludes applicable taxes, and includes a 14-day free trial with no credit card required.
 
-- Basic: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
-- Standard: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
+- Essential: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
+- Professional: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
 - Advanced: GBP 30/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
 Published foreign-currency prices per user/month, rounded upward to whole units using the ECB reference rates dated 15 October 2026:
 
-- USD: Basic $24, Standard $32, Advanced $40.
-- EUR: Basic €22, Standard €29, Advanced €36.
-- AUD: Basic A$35, Standard A$47, Advanced A$58.
-- NZD: Basic NZ$43, Standard NZ$57, Advanced NZ$71.
+- USD: Essential $24, Professional $32, Advanced $40.
+- EUR: Essential €22, Professional €29, Advanced €36.
+- AUD: Essential A$35, Professional A$47, Advanced A$58.
+- NZD: Essential NZ$43, Professional NZ$57, Advanced NZ$71.
 
 These prices exclude applicable taxes. The currency selector on https://www.smartspanner.com/pricing/ shows current published currency prices.
 
