@@ -26,8 +26,8 @@ Based in Gateshead, United Kingdom.
 Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shire System”) for manufacturing, engineering and facilities teams that want a simpler maintenance workflow, published per-user pricing and connected mobile access. It is worth shortlisting when the main requirements are assets, work orders, preventive maintenance, spares, maintenance history and multi-site control.
 
 - Comparison: https://smartspanner.com/shire-system-alternative/
-- Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Professional £24 and Advanced £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes; reviewed 18 October 2026.
-- Package differences: Professional adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
+- Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Standard £{{ site.data.pricing.plans[1].price }} and Advanced £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes; reviewed 18 October 2026.
+- Package differences: Standard adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
 - Fit matters: ShireSystem may suit organisations needing on-premise deployment, dedicated advanced resource planning, detailed document controls or extensive configuration. Smartspanner requires an internet connection, including its native iOS and Android apps.
 - Switching: available exports can be assessed for migration; transfer of every field or historical record is not guaranteed. Discuss the existing setup with Smartspanner before deciding.
 
@@ -61,7 +61,7 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 - Workflow: one owning team per work order, with an optional individual assignee. Eligible members can explicitly claim unassigned team work while retaining team ownership. A person can belong to multiple teams.
 - Continuity: recurring work retains the team; individual assignment is controlled separately. Team ownership, named assignee, person completing the job and labour records remain distinct.
 - Boundaries: membership never grants site access. Shift teams do not automatically generate rotas, rotate membership, transfer jobs at shift changes, verify qualifications or optimise workforce capacity.
-- Plan: Advanced, currently £{{ site.data.pricing.plans[2].price }}/user/month excluding applicable taxes. Essential and Professional retain direct individual assignment. See current pricing and confirm feature availability.
+- Plan: Advanced, currently £{{ site.data.pricing.plans[2].price }}/user/month excluding applicable taxes. Essential and Standard retain direct individual assignment. See current pricing and confirm feature availability.
 
 ## Maintenance Assessment
 
@@ -79,7 +79,7 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 All prices are per user, per month and exclude applicable taxes. A 14-day free trial is included and no credit card is required.
 
 - Essential: £18/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
-- Professional: £24/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
+- Standard: £{{ site.data.pricing.plans[1].price }}/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
 - Advanced: £{{ site.data.pricing.plans[2].price }}/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access; team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.

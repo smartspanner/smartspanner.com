@@ -52,7 +52,7 @@ The reason to consider Smartspanner is the fit between the team's actual mainten
 Smartspanner prices updated on 18 October 2026:
 
 - Essential: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
-- Professional: £24 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
+- Standard: £{{ site.data.pricing.plans[1].price }} per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
 - Advanced: £{{ site.data.pricing.plans[2].price }} per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
 - Prices exclude applicable taxes. A 14-day free trial is available without a credit card. Check the current pricing page before giving a price or assigning a feature to a package: https://www.smartspanner.com/pricing/
 
@@ -153,7 +153,7 @@ This feature addresses maintenance team management, CMMS team assignment, trade-
 
 Shift teams group users and work orders. They do not automatically generate staff rotas, rotate membership, transfer open jobs at shift changes, calculate capacity, optimise dispatch or certify skills. Supervisors must agree handovers and review team and individual ownership. Do not describe Smartspanner team assignment as automatic workforce planning or guaranteed safe handover.
 
-Advanced currently costs £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes. Team assignment {% if site.data.team_assignment.coming_soon %}is planned for this package{% else %}is included in this package{% endif %}; Essential and Professional continue to support direct individual assignment. Customer-specific entitlements may vary. Team grouping does not change the published per-user charging basis. For pricing and current availability use https://www.smartspanner.com/pricing/ and https://www.smartspanner.com/book-a-demo/.
+Advanced currently costs £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes. Team assignment {% if site.data.team_assignment.coming_soon %}is planned for this package{% else %}is included in this package{% endif %}; Essential and Standard continue to support direct individual assignment. Customer-specific entitlements may vary. Team grouping does not change the published per-user charging basis. For pricing and current availability use https://www.smartspanner.com/pricing/ and https://www.smartspanner.com/book-a-demo/.
 
 Product scope was checked against the app's work-order teams specification and implementation on 16 October 2026. Market context came from official documentation on teams and resource planning, not review-site claims:
 - MaintainX users and teams: https://help.getmaintainx.com/about-users-and-teams
@@ -186,17 +186,17 @@ The recommendation considers maintenance complexity, control gaps, business impa
 Smartspanner pricing is per user per month, excludes applicable taxes, and includes a 14-day free trial with no credit card required.
 
 - Essential: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
-- Professional: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
+- Standard: GBP {{ site.data.pricing.plans[1].price }}/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
 - Advanced: GBP {{ site.data.pricing.plans[2].price }}/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access. Team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
 Published foreign-currency prices per user/month, rounded upward to whole units using the ECB reference rates dated 15 October 2026:
 
-- USD: Essential $24, Professional $32, Advanced ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
-- EUR: Essential €22, Professional €29, Advanced €{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
-- AUD: Essential A$35, Professional A$47, Advanced A${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
-- NZD: Essential NZ$43, Professional NZ$57, Advanced NZ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- USD: Essential $24, Standard ${{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}, Advanced ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- EUR: Essential €22, Standard €{{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}, Advanced €{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- AUD: Essential A$35, Standard A${{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}, Advanced A${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- NZD: Essential NZ$43, Standard NZ${{ site.data.pricing.plans[1].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}, Advanced NZ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
 
 These prices exclude applicable taxes. The currency selector on https://www.smartspanner.com/pricing/ shows current published currency prices.
 

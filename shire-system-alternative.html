@@ -71,7 +71,7 @@ sitemap: true
       </div>
       <div class="row gy-4 shire-screen-grid">
         <div class="col-md-8"><figure><img src="{{ '/assets/img/features/work-order-calendar-thumb.webp' | relative_url }}" alt="Smartspanner maintenance calendar showing scheduled work orders" width="960" height="600" loading="lazy"><figcaption>See planned work in the maintenance calendar.</figcaption></figure></div>
-        <div class="col-md-4"><figure><img src="{{ '/assets/img/features/asset-qr-label.webp' | relative_url }}" alt="Smartspanner asset label with a QR code for opening the asset record" width="824" height="571" loading="lazy"><figcaption>Use QR labels to open <a href="{{ '/asset-management-software/' | relative_url }}">asset records</a> and their maintenance history. Label features are included from Professional.</figcaption></figure></div>
+        <div class="col-md-4"><figure><img src="{{ '/assets/img/features/asset-qr-label.webp' | relative_url }}" alt="Smartspanner asset label with a QR code for opening the asset record" width="824" height="571" loading="lazy"><figcaption>Use QR labels to open <a href="{{ '/asset-management-software/' | relative_url }}">asset records</a> and their maintenance history. Label features are included from Standard.</figcaption></figure></div>
       </div>
     </div>
   </section>
@@ -84,7 +84,7 @@ sitemap: true
         <div class="col-lg-4"><div class="box featured shire-plan"><h3>{{ plan.name }}</h3><p class="shire-plan-price">{{ plan.currency }}{{ plan.price }}<span>/user/month</span></p>
           <ul>
             {% if forloop.first %}{% for item in site.data.pricing.all_plans_include %}<li>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</li>{% endfor %}
-            {% else %}<li><strong>All {% if plan.name == 'Professional' %}Essential{% else %}Professional{% endif %} features, plus:</strong></li>{% for item in plan.differentiators %}<li>{% if item == 'Team Assignment' %}<a href="{{ site.data.team_assignment.url | relative_url }}">{{ item }}</a>{% if site.data.team_assignment.coming_soon %} — coming soon{% endif %}{% else %}{{ item | replace: '*coming soon', '— coming soon' }}{% endif %}</li>{% endfor %}{% endif %}
+            {% else %}<li><strong>All {% if plan.name == 'Standard' %}Essential{% else %}Standard{% endif %} features, plus:</strong></li>{% for item in plan.differentiators %}<li>{% if item == 'Team Assignment' %}<a href="{{ site.data.team_assignment.url | relative_url }}">{{ item }}</a>{% if site.data.team_assignment.coming_soon %} — coming soon{% endif %}{% else %}{{ item | replace: '*coming soon', '— coming soon' }}{% endif %}</li>{% endfor %}{% endif %}
           </ul>
         </div></div>
         {% endfor %}

@@ -18,8 +18,8 @@ plans:
     description: Everything you need for everyday maintenance.
     differentiators: []
 
-  - name: Professional
-    price: 24
+  - name: Standard
+    price: 25
     currency: £
     period: per user/month
     description: Standardise how your team works.
