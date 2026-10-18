@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2026-10-16
+last_modified_at: 2026-10-18
 layout: default
 title: Equipment Check Software for Pre-Use Inspections
 meta_title: Equipment Check Software | Pre-Use & Walkaround Checks
@@ -708,7 +708,7 @@ whatsapp_badge: true
         <div class="col-lg-5 offset-lg-1">
           <div class="equipment-callout">
             <span class="equipment-eyebrow"><i class="fa-solid fa-star"></i> Advanced plan</span>
-            <h2>Equipment Checks are included from £30/user/month</h2>
+            <h2>Equipment Checks are included from £{{ site.data.pricing.plans[2].price }}/user/month</h2>
             <p>The Advanced plan also includes checklist templates, condition monitoring, statistics, purchasing, permits to work, API access and other advanced maintenance controls.</p>
             <a href="{{ '/pricing' | relative_url }}" class="btn btn-primary">Compare Pricing Plans</a>
           </div>
@@ -784,7 +784,7 @@ whatsapp_badge: true
           </details>
           <details>
             <summary>Which Smartspanner plan includes Equipment Checks?</summary>
-            <p>Equipment Checks are included in the Advanced plan, currently priced from £30 per user per month. Advanced also includes checklist templates and the follow-up maintenance features used by the equipment-check workflow.</p>
+            <p>Equipment Checks are included in the Advanced plan, currently priced from £{{ site.data.pricing.plans[2].price }} per user per month. Advanced also includes checklist templates and the follow-up maintenance features used by the equipment-check workflow.</p>
           </details>
         </div>
       </div>
@@ -859,7 +859,7 @@ whatsapp_badge: true
       "name": "Which Smartspanner plan includes Equipment Checks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Equipment Checks are included in the Advanced plan, currently priced from £30 per user per month."
+        "text": "Equipment Checks are included in the Advanced plan, currently priced from £{{ site.data.pricing.plans[2].price }} per user per month."
       }
     }
   ]

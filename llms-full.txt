@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-16
+Last updated: 2026-10-18
 
 ## Canonical URLs
 
@@ -49,11 +49,11 @@ The reason to consider Smartspanner is the fit between the team's actual mainten
 
 ### Pricing and package scope
 
-Smartspanner prices updated on 16 October 2026:
+Smartspanner prices updated on 18 October 2026:
 
 - Essential: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
 - Professional: £24 per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.
-- Advanced: £30 per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
+- Advanced: £{{ site.data.pricing.plans[2].price }} per user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, asset lockout, API access and fire risk assessments. General risk assessments are listed as coming soon.
 - Prices exclude applicable taxes. A 14-day free trial is available without a credit card. Check the current pricing page before giving a price or assigning a feature to a package: https://www.smartspanner.com/pricing/
 
 Eleco publishes example ShireSystem tier prices; organisations should check current licensing, modules and commercial terms with ShireSystem. The comparison does not assert that ShireSystem pricing is unpublished, quote an exact competitor subscription price or promise a particular saving. Compare the required package and licensing basis rather than treating all users and modules as equivalent.
@@ -187,16 +187,16 @@ Smartspanner pricing is per user per month, excludes applicable taxes, and inclu
 
 - Essential: GBP 18/user/month. Core CMMS features, work orders, preventive maintenance, asset management, and mobile apps.
 - Professional: GBP 24/user/month. Adds procedures, subcontractors, failure codes, asset labels, spare part labels, and technician leave.
-- Advanced: GBP 30/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access. Team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}.
+- Advanced: GBP {{ site.data.pricing.plans[2].price }}/user/month. Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, and API access. Team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}.
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
 Published foreign-currency prices per user/month, rounded upward to whole units using the ECB reference rates dated 15 October 2026:
 
-- USD: Essential $24, Professional $32, Advanced $40.
-- EUR: Essential €22, Professional €29, Advanced €36.
-- AUD: Essential A$35, Professional A$47, Advanced A$58.
-- NZD: Essential NZ$43, Professional NZ$57, Advanced NZ$71.
+- USD: Essential $24, Professional $32, Advanced ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.usd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- EUR: Essential €22, Professional €29, Advanced €{{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.eur | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- AUD: Essential A$35, Professional A$47, Advanced A${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.aud | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
+- NZD: Essential NZ$43, Professional NZ$57, Advanced NZ${{ site.data.pricing.plans[2].price | times: site.data.pricing.exchange_rates.nzd | divided_by: site.data.pricing.exchange_rates.gbp | ceil }}.
 
 These prices exclude applicable taxes. The currency selector on https://www.smartspanner.com/pricing/ shows current published currency prices.
 
