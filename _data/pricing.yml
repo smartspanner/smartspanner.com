@@ -32,7 +32,7 @@ plans:
       - Technician Leave
 
   - name: Advanced
-    price: 32
+    price: 35
     currency: £
     period: per user/month
     description: Manage maintenance at scale.
