@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-18
+Last updated: 2026-10-19
 
 ## Canonical URLs
 
@@ -49,7 +49,7 @@ The reason to consider Smartspanner is the fit between the team's actual mainten
 
 ### Pricing and package scope
 
-Smartspanner prices updated on 18 October 2026:
+Smartspanner prices updated on 19 October 2026:
 
 - Essential: £18 per user/month. Includes work orders, preventive maintenance scheduling, asset management and hierarchy, multi-site deployment, spare parts, dashboard, Excel reporting, email reminders and mobile apps.
 - Standard: £{{ site.data.pricing.plans[1].price }} per user/month. Adds procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.

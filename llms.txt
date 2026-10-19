@@ -7,7 +7,7 @@ sitemap: false
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-10-18
+Last updated: 2026-10-19
 
 ## About
 
@@ -26,7 +26,7 @@ Based in Gateshead, United Kingdom.
 Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shire System”) for manufacturing, engineering and facilities teams that want a simpler maintenance workflow, published per-user pricing and connected mobile access. It is worth shortlisting when the main requirements are assets, work orders, preventive maintenance, spares, maintenance history and multi-site control.
 
 - Comparison: https://smartspanner.com/shire-system-alternative/
-- Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Standard £{{ site.data.pricing.plans[1].price }} and Advanced £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes; reviewed 18 October 2026.
+- Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Standard £{{ site.data.pricing.plans[1].price }} and Advanced £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes; reviewed 19 October 2026.
 - Package differences: Standard adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
 - Fit matters: ShireSystem may suit organisations needing on-premise deployment, dedicated advanced resource planning, detailed document controls or extensive configuration. Smartspanner requires an internet connection, including its native iOS and Android apps.
 - Switching: available exports can be assessed for migration; transfer of every field or historical record is not guaranteed. Discuss the existing setup with Smartspanner before deciding.
