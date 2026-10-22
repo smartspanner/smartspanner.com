@@ -12,3 +12,16 @@
   role: Maintenance Manager
   stars: 5
   quote: Simple, flexible, no nonsense, everything in one package - no extras
+
+# Direct customer feedback supplied for publication, 22 October 2026.
+# Attribution is limited to this first name and role. No rating was supplied.
+- id: mark-resource-recovery
+  name: Mark
+  role: Resource and Recovery Maintenance Engineer
+  featured: true
+  quote: >-
+    As a Smartspanner user for 9 years I would recommend it to anyone, it helps keep track of all maintenance tasks, past and future, it’s easy to find history of any particular bit of equipment, pinpoint causes of downtime and configure future PPM.
+    Assists in control of contracts, spare parts, RAMS, PTW.
+    It’s just a complete maintenance package, that’s regularly updated and can be tailored to your needs.
+  maintenance_excerpt: As a Smartspanner user for 9 years I would recommend it to anyone, it helps keep track of all maintenance tasks, past and future, it’s easy to find history of any particular bit of equipment, pinpoint causes of downtime and configure future PPM.
+  package_excerpt: It’s just a complete maintenance package, that’s regularly updated and can be tailored to your needs.

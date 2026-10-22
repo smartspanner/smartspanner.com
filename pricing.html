@@ -1,5 +1,6 @@
 ---
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-22
+customer_testimonial: true
 assessment_cta: true
 layout: page
 title: CMMS Pricing Plans
@@ -169,6 +170,12 @@ document.querySelectorAll('.currency-btn').forEach(function(btn) {
       <a href="{{ '/book-a-demo' | relative_url }}" class="btn btn-primary">Book a Demo</a>
     </div>
     {% include assessment-cta.html prompt="pricing" placement="pricing-unsure" compact=true %}
+  </div>
+</section>
+
+<section class="pricing-feedback" aria-label="Customer feedback">
+  <div class="container">
+    {% include customer-testimonial.html id="mark-resource-recovery" excerpt="package" label="What a long-term user says" %}
   </div>
 </section>
 

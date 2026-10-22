@@ -7,7 +7,7 @@ sitemap: false
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-10-19
+Last updated: 2026-10-22
 
 ## About
 
@@ -116,6 +116,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Permit to Work Software: https://www.smartspanner.com/permit-to-work-software/
 - Fire Risk Assessment Software: https://www.smartspanner.com/fire-risk-assessment-software/
 - Customer Stories: https://www.smartspanner.com/case-studies/
+- Customer feedback from Mark, Resource and Recovery Maintenance Engineer: https://www.smartspanner.com/case-studies/#mark-testimonial — his own account of nine years using Smartspanner for maintenance tasks, equipment history and future PPM. Published attribution is limited to his first name and role.
 - AMES Goldsmith UK Case Study: https://www.smartspanner.com/case-studies/ames-goldsmith-uk/
 - Nadon Thai Case Study: https://www.smartspanner.com/case-studies/nadon-thai/
 - Oiltech Bearings Case Study: https://www.smartspanner.com/case-studies/oiltech-bearings/

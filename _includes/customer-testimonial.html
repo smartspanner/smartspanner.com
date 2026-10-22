@@ -1,0 +1,11 @@
+{% assign customer_feedback = site.data.testimonials | where: 'id', include.id | first %}
+{% if customer_feedback %}
+{% assign feedback_text = customer_feedback.quote %}
+{% if include.excerpt == 'maintenance' %}{% assign feedback_text = customer_feedback.maintenance_excerpt %}{% elsif include.excerpt == 'package' %}{% assign feedback_text = customer_feedback.package_excerpt %}{% endif %}
+<figure class="customer-testimonial{% if include.compact %} customer-testimonial-compact{% endif %}" data-testimonial="{{ customer_feedback.id }}">
+  {% if include.label %}<p class="customer-testimonial-label">{{ include.label | escape }}</p>{% endif %}
+  <blockquote><p>{{ feedback_text | escape }}</p></blockquote>
+  <figcaption><strong>{{ customer_feedback.name | escape }}</strong><span>{{ customer_feedback.role | escape }}</span></figcaption>
+  {% if include.excerpt %}<p class="customer-testimonial-link"><a href="{{ '/case-studies/#mark-testimonial' | relative_url }}">Read Mark’s full comment <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>{% endif %}
+</figure>
+{% endif %}

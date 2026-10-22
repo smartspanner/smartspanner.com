@@ -1,5 +1,6 @@
 ---
-last_modified_at: 2026-10-16
+last_modified_at: 2026-10-22
+customer_testimonial: true
 assessment_cta: true
 video_analytics: true
 layout: default
@@ -60,7 +61,7 @@ whatsapp_badge: true
   <section id="customer-quotes" class="services">
     <div class="container">
       <div class="section-header">
-        <h2>Heard From Real Users, Not Press Releases</h2>
+        <h2>What maintenance teams say</h2>
       </div>
 
       <div class="row gy-4">
@@ -73,9 +74,8 @@ whatsapp_badge: true
         </div>
 
         <div class="col-lg-4">
-          <div class="service-item">
-            <p><em>"Best CMMS software for small organisations. Give it a try if you are looking for something simple that actually works."</em></p>
-            <p style="color: #6c757d; margin-bottom: 0;">Verified reviewer · Software Advice</p>
+          <div class="service-item customer-feedback-card">
+            {% include customer-testimonial.html id="mark-resource-recovery" excerpt="maintenance" compact=true %}
           </div>
         </div>
 

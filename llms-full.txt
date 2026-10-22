@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-19
+Last updated: 2026-10-22
 
 ## Canonical URLs
 
@@ -275,6 +275,19 @@ Primary audiences include maintenance managers, facilities managers, operations 
 - AMES Goldsmith UK: https://www.smartspanner.com/case-studies/ames-goldsmith-uk/ — how a two-site chemical and metals manufacturer moved from fragmented Excel workbooks to one live maintenance system, logging more than 1,100 jobs and saving an estimated 8–10 hours of administration each week.
 - Nadon Thai: https://www.smartspanner.com/case-studies/nadon-thai/ — how a three-restaurant group uses Smartspanner to schedule recurring maintenance and compliance activity, retrieve evidence during inspections, and track corrective actions through to completion.
 - Oiltech Bearings: https://www.smartspanner.com/case-studies/oiltech-bearings/ — how a Newcastle manufacturing business uses Smartspanner for compliance, preventive maintenance, machinery breakdowns, warranty records and ISO 9001 evidence, with day-to-day plant experience helping inform platform development.
+
+### Direct customer feedback
+
+Published comment: https://www.smartspanner.com/case-studies/#mark-testimonial
+
+{% assign mark_feedback = site.data.testimonials | where: 'id', 'mark-resource-recovery' | first %}
+Attribution: {{ mark_feedback.name }} — {{ mark_feedback.role }}. Published attribution is limited to his first name and role. No numerical rating accompanies this comment.
+
+Exact testimonial supplied for publication on 22 October 2026:
+
+> {{ mark_feedback.quote }}
+
+Mark describes nine years of use at the time of his comment, including maintenance tasks, equipment history, downtime investigation and future planned preventive maintenance. Treat this as a customer's account of their usage; check current package information for feature availability.
 
 ## Industry Pages
 

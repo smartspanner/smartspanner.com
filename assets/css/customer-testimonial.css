@@ -1,0 +1,40 @@
+.customer-testimonial {
+  margin: 0;
+  padding: clamp(24px, 4vw, 42px);
+  color: #364146;
+  background: #fff8e4;
+  border: 1px solid #eadfbe;
+  border-left: 4px solid #feb900;
+  border-radius: 8px;
+}
+.customer-testimonial .customer-testimonial-label {
+  color: #65501b;
+  font-size: .8rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+.customer-testimonial blockquote { margin: 0 0 24px; }
+.customer-testimonial blockquote p { margin: 0; font-size: 1.1rem; font-style: normal; line-height: 1.8; }
+.customer-testimonial figcaption { display: flex; flex-direction: column; gap: 4px; line-height: 1.6; }
+.customer-testimonial figcaption strong { color: #252525; font-size: 1rem; }
+.customer-testimonial figcaption span { color: #52565e; font-size: .9rem; }
+.customer-testimonial .customer-testimonial-link { margin: 20px 0 0; font-size: .9rem; font-style: normal; }
+.customer-testimonial a { color: #765300; text-decoration: underline; text-underline-offset: 3px; }
+.customer-testimonial a:hover { color: #4b3500; }
+.customer-testimonial a:focus-visible { outline: 3px solid #a67600; outline-offset: 4px; }
+.customer-testimonial-link i { font-size: .75rem; margin-left: 5px; }
+.customer-testimonial-compact { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.customer-testimonial-compact blockquote p { font-size: 1rem; line-height: 1.75; }
+.testimonials .customer-testimonial { margin-bottom: 32px; }
+.customer-feedback-section .container { max-width: 960px; }
+.customer-feedback-section .section-header { padding-bottom: 28px; }
+#mark-testimonial { scroll-margin-top: 110px; }
+.pricing-feedback { padding: 0 0 60px; background: #f5f6f7; }
+.pricing-feedback .container { max-width: 960px; }
+#customer-quotes .customer-feedback-card { padding: 36px 32px; background: #fff8e4; }
+#customer-quotes .customer-feedback-card blockquote { margin-bottom: 18px; }
+@media (max-width: 767px) {
+  #customer-quotes .customer-feedback-card { padding: 28px; }
+  .customer-testimonial blockquote p { font-size: 1rem; }
+  .pricing-feedback { padding-bottom: 44px; }
+}

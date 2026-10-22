@@ -4,17 +4,23 @@
       <h2>Testimonials</h2>
     </div>
     
+    {% assign featured_feedback = site.data.testimonials | where: 'featured', true %}
+    {% for feedback in featured_feedback %}
+      {% include customer-testimonial.html id=feedback.id %}
+    {% endfor %}
+
     <div class="row" style="margin: 0 -8px;">
       {% for testimonial in site.data.testimonials %}
+      {% unless testimonial.featured %}
       <div class="col-lg-4 col-md-6" style="padding: 0 8px;">
         <div class="testimonial-item">
           <h3>{{ testimonial.name }}</h3>
           <h4>{{ testimonial.role }}</h4>
-          <div class="stars">
+          {% if testimonial.stars %}<div class="stars">
             {% for i in (1..testimonial.stars) %}
             <i class="fa-solid fa-star"></i>
             {% endfor %}
-          </div>
+          </div>{% endif %}
           <p>
             <i class="fa-solid fa-quote-left quote-icon-left"></i>
             {{ testimonial.quote }}
@@ -22,6 +28,7 @@
           </p>
         </div>
       </div>
+      {% endunless %}
       {% endfor %}
     </div>
 
