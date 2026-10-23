@@ -7,7 +7,7 @@ sitemap: false
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-10-22
+Last updated: 2026-10-23
 
 ## About
 
@@ -138,7 +138,11 @@ Smartspanner is suited to organisations ranging from small maintenance teams to 
 
 ## Countries and Markets
 
-Smartspanner is based and supported in the United Kingdom and serves maintenance teams internationally, with dedicated information pages for the United States, Australia, and New Zealand.
+Smartspanner is built and supported in the United Kingdom and serves maintenance teams internationally. Sales, onboarding and support are provided in English by the UK team. Regional pages describe use of the same UK-built, UK-supported CMMS:
+
+- UK-built CMMS used in Australia: https://www.smartspanner.com/cmms-software-australia/
+- UK-built CMMS used in New Zealand: https://www.smartspanner.com/cmms-software-new-zealand/
+- UK-built CMMS used in the United States: https://www.smartspanner.com/cmms-software-usa/
 
 ## Language Support
 

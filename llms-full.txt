@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-22
+Last updated: 2026-10-23
 
 ## Canonical URLs
 
@@ -301,9 +301,11 @@ Mark describes nine years of use at the time of his comment, including maintenan
 
 ## Regional Pages
 
-- CMMS Software Australia: https://www.smartspanner.com/cmms-software-australia/
-- CMMS Software New Zealand: https://www.smartspanner.com/cmms-software-new-zealand/
-- CMMS Software USA: https://www.smartspanner.com/cmms-software-usa/
+Smartspanner is built and supported in the United Kingdom. Sales, onboarding and support are provided in English by the UK team. These regional pages describe international use of the same UK-built, UK-supported product.
+
+- UK-built CMMS used in Australia: https://www.smartspanner.com/cmms-software-australia/
+- UK-built CMMS used in New Zealand: https://www.smartspanner.com/cmms-software-new-zealand/
+- UK-built CMMS used in the United States: https://www.smartspanner.com/cmms-software-usa/
 
 ## Comparisons
 
