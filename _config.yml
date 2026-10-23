@@ -97,3 +97,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  # Internal files must stay out of the deployed site, including raw Markdown.
+  - AGENTS.md
+  - "**/AGENTS.md"
+  - CLAUDE.md
+  - "**/CLAUDE.md"
+  - docs
+  - _tests
+  - .claude
+  - .superpowers

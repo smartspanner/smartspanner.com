@@ -62,11 +62,17 @@ Marketing website for SmartSpanner CMMS (Computerized Maintenance Management Sys
 
 ```bash
 # Build with dev config for local testing
-docker exec websites_jekyll bash -c "cd /srv/smartspanner.com && jekyll build --config _config.yml,_config_dev.yml"
+docker exec websites sh -c "cd /srv/smartspanner.com && jekyll build --config _config.yml,_config_dev.yml"
 
 # Verify build
 curl -I https://tenx.fraction.app/smartspanner.com/
 ```
+
+## Public Build Boundaries
+
+- Keep `AGENTS.md`, `CLAUDE.md`, `docs/`, test files and local agent directories excluded in `_config.yml`. They are internal source files and must not be copied or rendered into the deployed site.
+- `llms.txt` and `llms-full.txt` are intentional public product information and should remain published.
+- After changing build exclusions, rebuild and run `node _tests/site-output.test.cjs`. Check both raw Markdown URLs and rendered page URLs return 404 after deployment.
 
 ## Key Info
 - **App URL**: https://app.smartspanner.com
