@@ -1,0 +1,81 @@
+# Internal operational handoff. Excluded from the public Jekyll output.
+audit_date: 2026-10-27
+paid_campaigns_ready: false
+
+implemented:
+  - Basic Consent Mode v2; optional tags remain unloaded before category consent.
+  - Separate analytics, replay and marketing choices, rejection and withdrawal.
+  - Contentsquare blocked on form and assessment pages; form controls masked elsewhere.
+  - Privacy notice, company number, cookie policy and footer links updated.
+  - Successful native forms emit their own lead type once on the matching confirmation page.
+  - Demo, guide and checklist flows tested with mocked HubSpot submissions.
+  - Consent-aware attribution capture and optional HubSpot property mapping prepared.
+  - UK campaign page, MaintainX comparison, pricing tiers and setup wording updated.
+  - Published customer evidence and sector demo links added.
+  - Homepage fonts, responsive images and deferred industry images optimised.
+
+account_configuration_required:
+  ga4:
+    website_measurement_id: G-T4RJ2H2VS1
+    trial_app_measurement_id: G-V0NF73J3CD
+    key_events:
+      enable_only: [demo_request, trial_signup]
+      disable_as_lead_conversions: [generate_lead, guide_download, checklist_download, contact_form]
+    notes:
+      - Confirm existing key events and imported advertising conversions in the GA4 and Ads accounts.
+      - Trial signups happen in the separate app; website signup-link clicks are not conversions.
+      - Move the app into the chosen shared GA4 property and apply consent before analytics loads.
+      - Configure cross-domain measurement for www.smartspanner.com and app.smartspanner.com and test continuity after consent.
+      - Cross-domain settings alone do not join two different GA4 properties.
+      - The website contact page currently uses email and phone, not a submitted contact form.
+  gtm:
+    missing: GTM container ID and permission to configure and publish the container.
+    notes:
+      - Keep _data/tracking.yml gtm_container_id empty until the consent-aware container is configured and tested.
+      - Setting the container ID disables the direct GA4, Contentsquare, HubSpot and advertising tag loaders.
+      - Recreate all required tags in the container before enabling it; avoid duplicate direct tags.
+      - Use smartspanner_consent_update and consent_analytics, consent_replay, consent_marketing variables for tag triggers.
+      - Respect Consent Mode v2 and the replay page exclusions; never trigger every tag on every GTM page view.
+      - Analytics events use the dataLayer event name and existing non-personal event parameters.
+      - Advertising events use smartspanner_ad_conversion with lead_type and event_id; only demo_request and trial_signup are eligible.
+      - Test before consent, rejection, category grants, returning consent, revocation and form confirmations in Tag Assistant.
+  advertising:
+    missing:
+      - Google Ads AW conversion ID plus demo and trial conversion labels.
+      - LinkedIn Insight partner ID.
+      - Meta pixel ID.
+    notes:
+      - Select one conversion implementation per platform; do not count the same lead through both an imported GA4 event and a separate primary Ads conversion.
+      - Test demo and trial conversions end to end without creating unapproved CRM leads.
+  hubspot:
+    portal_id: 9191859
+    missing: Confirm or create attribution contact properties and allow them on every relevant form.
+    properties: [utm_source, utm_medium, utm_campaign, utm_term, utm_content, gclid, li_fat_id, fbclid]
+    notes:
+      - Only set hubspot_attribution_fields_enabled true after property names and all form payloads have been validated.
+      - Native enquiry submissions work without optional tracking consent.
+      - Behavioural tracking requires marketing consent; assessment tracking stays disabled to honour the existing privacy promise.
+  calendar:
+    missing: Approved calendar booking URL and provider.
+    notes:
+      - Existing demo request form remains available; no invented appointment availability or booking-success event.
+      - Embed the approved booking workflow and verify confirmed-booking tracking separately from widget or button clicks.
+  search_console:
+    missing: Property access or an account owner to request old internal URL removals.
+    urls: [/AGENTS/, /AGENTS.md, /CLAUDE/, /CLAUDE.md, /docs/superpowers/]
+    notes:
+      - Source exclusions and sitemap removal are already implemented; confirm old URLs return 404 before submitting removal requests.
+
+performance_lab:
+  environment: Development site, Chromium, 390x844, cold cache, 150ms latency, 1.6 Mbps download, 4x CPU slowdown.
+  runs_lcp_ms: [1504, 1356, 1336]
+  median_lcp_ms: 1356
+  notes:
+    - This is a lab result, not a field Core Web Vitals guarantee or a like-for-like rerun of the original audit.
+    - Verify production after deployment and monitor field data as traffic becomes available.
+
+evidence:
+  maintainx_implementation: https://www.getmaintainx.com/enterprise
+  maintainx_packages: https://www.getmaintainx.com/pricing
+  fiix_packages: https://fiixsoftware.com/cmms/pricing/
+  company: https://find-and-update.company-information.service.gov.uk/company/08592005

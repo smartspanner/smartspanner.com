@@ -1,5 +1,17 @@
 {% if page.video_analytics %}<script src="{{ '/assets/js/video-analytics.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 <script>
+  const lazyBackgrounds = document.querySelectorAll('[data-lazy-background]');
+  function loadBackground(panel) {
+    panel.style.backgroundImage = 'url("' + panel.dataset.lazyBackground + '")';
+    panel.removeAttribute('data-lazy-background');
+  }
+  if ('IntersectionObserver' in window) {
+    const backgroundObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) { if (entry.isIntersecting) { loadBackground(entry.target); backgroundObserver.unobserve(entry.target); } });
+    }, { rootMargin: '200px' });
+    lazyBackgrounds.forEach(function(panel) { backgroundObserver.observe(panel); });
+  } else lazyBackgrounds.forEach(loadBackground);
+
   // Embedded videos are requested by the visitor, rather than loaded on scroll.
   document.querySelectorAll('iframe[data-click-video-src]').forEach(function(frame) {
     const play = document.createElement('button');
@@ -256,6 +268,12 @@
     }
 
     // Product-feature CTAs reuse the same beacon and action/location conventions.
+    document.querySelectorAll('[data-landing-page] [data-ga-event="landing_cta_click"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        trackEvent('landing_cta_click', { landing_page: link.closest('[data-landing-page]').dataset.landingPage, cta_action: link.dataset.gaCtaAction, cta_location: link.dataset.gaCtaLocation });
+      });
+    });
+
     const featurePage = document.querySelector('[data-feature]');
     if (featurePage) {
       featurePage.querySelectorAll('[data-ga-event="feature_cta_click"]').forEach(function(link) {

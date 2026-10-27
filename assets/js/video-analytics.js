@@ -54,8 +54,8 @@
     const listeners = [];
 
     function send(event, percent) {
-      if (disposed || typeof window.gtag !== 'function') return;
-      window.gtag('event', event, {
+      if (disposed || !window.SmartspannerConsent) return;
+      window.SmartspannerConsent.track(event, {
         video_title: name,
         video_name: name,
         video_version: version,

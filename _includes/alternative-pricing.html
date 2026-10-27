@@ -1,0 +1,19 @@
+<section id="smartspanner-pricing" class="pricing section-bg">
+  <div class="container">
+    <div class="section-header"><h2>Smartspanner pricing by tier</h2><p>Published GBP prices per user, per month, excluding VAT. Feature availability depends on the package.</p></div>
+    <div class="row gy-4">
+      {% for plan in site.data.pricing.plans %}
+      {% assign previous_index = forloop.index0 | minus: 1 %}
+      <div class="col-lg-4"><div class="box featured">
+        <h3>{{ plan.name }}</h3>
+        <h4><sup>{{ plan.currency }}</sup>{{ plan.price }}<span>per user/month</span></h4>
+        <p>{{ plan.description }}</p>
+        {% if forloop.first %}<p>Assets, work orders, preventive maintenance, multi-site, spare parts, reporting and mobile apps.</p>
+        {% elsif forloop.index == 2 %}<p>All {{ site.data.pricing.plans[previous_index].name }} features, plus procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.</p>
+        {% else %}<p>All {{ site.data.pricing.plans[previous_index].name }} features, plus team assignment, checklists, equipment checks, purchasing, permits to work and API access.</p>{% endif %}
+      </div></div>
+      {% endfor %}
+    </div>
+    <p class="text-center mt-4"><a href="{{ '/pricing/' | relative_url }}">View the full package comparison and currency options</a></p>
+  </div>
+</section>

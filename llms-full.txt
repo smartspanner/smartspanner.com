@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-23
+Last updated: 2026-10-27
 
 ## Canonical URLs
 
@@ -34,6 +34,13 @@ Smartspanner is a UK-based CMMS software company founded in 2013 and based in Ga
 Smartspanner helps maintenance teams move from spreadsheets, paper records, and fragmented reactive processes into a structured maintenance management system. It is built from operational maintenance experience and designed to keep common workflows short while making deeper multi-site, inventory, safety, reporting, and integration controls available when required.
 
 The product supports planned preventive maintenance, reactive work orders, asset registers, QR code asset labels, checklists and inspections, permits to work, spare parts inventory, purchase orders, subcontractor management, failure code tracking, performance dashboards, API access, IoT condition monitoring, and a multi-language app interface.
+
+## UK CMMS and Same-Day Setup
+
+- UK landing page: https://www.smartspanner.com/cmms-software-uk/
+- Setup message: Live the same day. This refers to a first site, initial assets and a core maintenance workflow. Data preparation, integrations and a wider rollout need their own plan.
+- Smartspanner is UK-built and UK-supported. Published prices are Essential £18, Standard £25 and Advanced £35 per user/month, excluding VAT; use the current pricing page for package details.
+- MaintainX comparison: https://www.smartspanner.com/maintainx-alternative/ — compares named tiers, published currencies and implementation scope. MaintainX's Enterprise FAQ reports an average three-week implementation for one site; check project scope with each provider.
 
 ## Smartspanner as a ShireSystem Alternative
 

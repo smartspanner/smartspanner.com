@@ -1,0 +1,39 @@
+.paid-page { color: #364146; }
+.paid-page .paid-hero { padding: 125px 0 64px; background: #252525; color: #e2e2e2; }
+.paid-hero h1 { color: #fff; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.16; }
+.paid-eyebrow { font-weight: 700; font-size: .85rem; color: #ffd15c; }
+.paid-lead { font-size: 1.15rem; line-height: 1.7; margin: 24px 0; }
+.paid-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.paid-actions .btn { padding: 13px 22px; font-weight: 600; }
+.paid-page .btn-primary { color: #252525; }
+.paid-actions .paid-secondary { color: #fff; border: 1px solid #aaa; }
+.paid-actions .paid-secondary:hover { background: #444; }
+.paid-page .paid-note { font-size: .85rem; line-height: 1.65; }
+.paid-page figure { margin: 0; }
+.paid-page figure img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px #0002; }
+.paid-page figcaption { font-size: .85rem; margin-top: 12px; }
+.paid-page .paid-reading { max-width: 960px; }
+.paid-page h2 { margin-bottom: 24px; font-size: clamp(1.7rem, 2.6vw, 2.2rem); }
+.paid-page h3 { font-size: 1.2rem; }
+.paid-page p, .paid-page li { line-height: 1.75; }
+.paid-page a:not(.btn) { color: #765300; text-decoration: underline; }
+.paid-hero a:not(.btn), .paid-final a:not(.btn) { color: #ffd15c; }
+.paid-page .paid-card { padding: 26px; height: 100%; border: 1px solid #dce0e3; border-radius: 8px; background: #fff; }
+.paid-page .paid-proof-number { font-size: 1.6rem; font-weight: 700; color: #252525; margin-bottom: 10px; }
+.paid-proof-card { padding: 28px; background: #fff8df; border-left: 4px solid #feb900; border-radius: 8px; }
+.paid-page .paid-final { background: #252525; color: #e2e2e2; }
+.paid-final h2 { color: #fff; }
+.paid-table { width: 100%; border-collapse: collapse; margin: 26px 0; }
+.paid-table th, .paid-table td { text-align: left; padding: 18px; border-bottom: 1px solid #dce0e3; vertical-align: top; }
+.paid-table thead { background: #feb900; color: #252525; }
+.paid-table tbody tr:nth-child(even) { background: #f5f6f7; }
+.paid-page a:focus-visible { outline: 3px solid #ac7900; outline-offset: 4px; }
+@media(max-width:767px) {
+  .paid-page .paid-hero { padding-top: 110px; }
+  .paid-actions .btn { width: 100%; }
+  .paid-table, .paid-table tbody, .paid-table tr, .paid-table th, .paid-table td { display: block; width: 100%; }
+  .paid-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .paid-table tbody tr { border: 1px solid #dce0e3; border-radius: 8px; margin: 16px 0; overflow: hidden; }
+  .paid-table tbody th { background: #fff3ce; }
+  .paid-table td::before { content: attr(data-label); display: block; font-weight: 700; margin-bottom: 8px; }
+}

@@ -4,7 +4,7 @@ const vm = require('node:vm');
 const fs = require('node:fs');
 const code = fs.readFileSync('assets/js/video-analytics.js', 'utf8');
 const flush = () => new Promise(resolve => setImmediate(resolve));
-function fixture(provider = 'bunny', withGtag = true) {
+function fixture(provider = 'bunny', withConsent = true) {
   let clock = 0;
   const events = [], players = [];
   class Player {
@@ -18,7 +18,7 @@ function fixture(provider = 'bunny', withGtag = true) {
     ready() { return Promise.resolve(); }
   }
   const window = {Vimeo: {Player}, playerjs: {Player}, location: {pathname: '/smartspanner.com/'}};
-  if (withGtag) window.gtag = (...args) => events.push(args);
+  if (withConsent) window.SmartspannerConsent = {track: (name, values) => events.push(['event', name, values])};
   const document = {hidden: false};
   vm.runInNewContext(code, {window, document, Date: {now: () => clock}, Map, Set, Promise, Number});
   const link = {href: 'https://example.test/video?token=secret#private', dataset: {
@@ -67,7 +67,7 @@ test('reopening deduplicates a version; a new version has fresh statistics', asy
   f.link.dataset.videoVersion = 'v2'; f.attach(); await flush(); f.players[2].emit('play');f.players[2].emit('timeupdate', {seconds: 1, duration: 100});
   assert.equal(f.events.length, 2);assert.equal(f.events[1][2].video_version, 'v2');
 });
-test('closing before attachment, malformed timing and unavailable GA4 are harmless', async () => {
+test('closing before attachment, malformed timing and unavailable consent adapter are harmless', async () => {
   const f = fixture(); const dispose = f.attach(); dispose(); await flush();assert.equal(f.players.length, 0);
   const g = fixture('bunny', false);g.attach();await flush();g.players[0].emit('play');
   g.players[0].emit('timeupdate', {seconds: NaN, duration: -1});g.players[0].emit('ended');assert.equal(g.events.length, 0);

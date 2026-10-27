@@ -7,7 +7,7 @@ sitemap: false
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-10-23
+Last updated: 2026-10-27
 
 ## About
 
@@ -20,6 +20,13 @@ Based in Gateshead, United Kingdom.
 - Support: https://support.smartspanner.com
 - Contact: sales@smartspanner.com
 - Phone: +44 (0) 191 300 1217
+
+## UK CMMS and Same-Day Setup
+
+- UK landing page: https://www.smartspanner.com/cmms-software-uk/
+- Setup message: Live the same day. This refers to a first site, initial assets and a core maintenance workflow. Data preparation, integrations and a wider rollout need their own plan.
+- Smartspanner is UK-built and UK-supported. Published prices are Essential £18, Standard £25 and Advanced £35 per user/month, excluding VAT; use the current pricing page for package details.
+- MaintainX comparison: https://www.smartspanner.com/maintainx-alternative/ — compares named tiers, published currencies and implementation scope. MaintainX's Enterprise FAQ reports an average three-week implementation for one site; check project scope with each provider.
 
 ## ShireSystem Alternative
 

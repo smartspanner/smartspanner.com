@@ -5,7 +5,8 @@ assessment_cta: true
 video_analytics: true
 layout: default
 title: CMMS Software for Maintenance Management
-description: CMMS software built for manufacturers. Live in under an hour, priced from £18/user, with compliance-ready reporting built in. Start your 14-day free trial.
+hero_image: /assets/img/features/dashboard-thumb.webp
+description: UK-built CMMS for maintenance teams. Live the same day. Plans from £18/user/month, with UK support and a 14-day free trial.
 keywords: cmms software, maintenance software, maintenance management software, facilities management software, asset management, preventive maintenance
 whatsapp_badge: true
 ---
@@ -15,8 +16,8 @@ whatsapp_badge: true
   <div class="container">
     <div class="hero-split-grid">
       <div class="hero-split-text">
-        <h1>Maintenance Software Your Team Sets Up Before Lunch</h1>
-        <p class="hero-split-sub">Most CMMS systems take weeks to deploy and months for teams to adopt. Smartspanner is different — after a 45-minute demo you can have your first site running the same day.</p>
+        <h1>UK-built CMMS. Live the same day.</h1>
+        <p class="hero-split-sub">Bring assets, work orders and planned maintenance into one system. Start with your first site and core workflow, with support from our UK team.</p>
         <div class="hero-split-ctas">
           <a href="{{ site.signup_url }}" class="btn btn-primary hero-split-btn-primary">Start 14-Day Free Trial</a>
           <a href="https://player.mediadelivery.net/play/770161/390b4c65-ee0e-4f56-953b-ebf54baa5929" data-video-src="https://player.mediadelivery.net/embed/770161/390b4c65-ee0e-4f56-953b-ebf54baa5929?autoplay=true&amp;loop=false&amp;muted=false" data-video-name="product_overview" data-video-version="2026-10-04" data-video-provider="bunny" data-video-placement="home-hero-overview" class="btn hero-split-btn-secondary hero-overview-trigger" aria-haspopup="dialog" aria-controls="hero-overview-dialog"><span aria-hidden="true">▶</span> Watch 4-minute overview</a>
@@ -27,7 +28,7 @@ whatsapp_badge: true
       <div class="hero-split-visual">
         <div class="hero-preview hero-video-frame">
           <a data-video-name="product_preview" data-video-version="2026-10-02" data-video-provider="vimeo" data-video-placement="home-hero-preview" class="hero-preview-play" href="https://vimeo.com/519444930" target="_blank" rel="noopener noreferrer" aria-label="Play the 47-second Smartspanner product preview" data-video-src="https://player.vimeo.com/video/519444930?autoplay=1&dnt=1&title=0&byline=0&portrait=0">
-            <img src="{{ '/assets/img/features/dashboard-thumb.webp' | relative_url }}" alt="Smartspanner CMMS dashboard" class="hero-preview-poster" fetchpriority="high">
+            <img src="{{ '/assets/img/features/dashboard-thumb.webp' | relative_url }}" alt="Smartspanner CMMS dashboard" class="hero-preview-poster" width="960" height="600" srcset="{{ '/assets/img/features/dashboard-small.webp' | relative_url }} 480w, {{ '/assets/img/features/dashboard-thumb.webp' | relative_url }} 960w" sizes="(max-width: 991px) calc(100vw - 30px), 50vw" fetchpriority="high">
             <span class="hero-preview-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 4v16l13-8z" fill="currentColor"/></svg></span>
           </a>
         </div>
@@ -48,7 +49,7 @@ whatsapp_badge: true
 <section class="proof-bar">
   <div class="container">
     <div class="proof-bar-items">
-      <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> 45-minute demo to live deployment</span>
+      <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> Live the same day.</span>
       <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> Pricing from £18/user/month</span>
       <span><i class="fa-solid fa-check" style="color: var(--color-primary); margin-right: 6px;"></i> Founded in 2013 by a maintenance operator</span>
     </div>
@@ -81,8 +82,11 @@ whatsapp_badge: true
 
         <div class="col-lg-4">
           <div class="service-item">
-            <p><em>"The calendar view gets 10/10 from me. The support team replies fast and actually helps — not just pointing you to a knowledge base article."</em></p>
-            <p style="color: #6c757d; margin-bottom: 0;">Verified reviewer · Capterra</p>
+            {% assign nadon_proof = site.data.case_studies | where: 'slug', 'nadon-thai' | first %}
+            <h3>Nadon Thai · {{ nadon_proof.locations }}</h3>
+            <p><em>“{{ nadon_proof.quote }}”</em></p>
+            <p style="color: #6c757d; margin-bottom: 8px;">{{ nadon_proof.quote_author }} · {{ nadon_proof.tenure }}</p>
+            <a href="{{ nadon_proof.url | relative_url }}" class="readmore">Read the Nadon Thai story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -140,7 +144,7 @@ whatsapp_badge: true
   <section id="solution" class="alt-services">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/iphone.png' | relative_url }});"></div>
+        <div class="col-lg-6 img-bg" style="background-image: url({{ '/assets/img/features/mobile-work-orders.webp' | relative_url }});"></div>
         <div class="col-lg-5 d-flex flex-column">
           <h3>Built for Technicians First, Managers Second</h3>
           <p>Smartspanner is designed for the people actually doing maintenance. Technicians can scan an asset, update a job, add photos, record parts, and move on. Managers get the live view they need without chasing updates.</p>
@@ -271,7 +275,7 @@ whatsapp_badge: true
       <div class="row gy-4">
         <div class="col-lg-6">
           <div class="card-item">
-            <div class="card-bg" style="background-image: url({{ '/assets/img/manufacturing-maintenance.jpg' | relative_url }});"></div>
+            <div class="card-bg" data-lazy-background="{{ '/assets/img/home-manufacturing.webp' | relative_url }}"></div>
             <div class="card-body">
               <h4><a href="{{ '/cmms-for-manufacturing' | relative_url }}">Manufacturing</a></h4>
               <p>Reduce downtime, manage planned work, and keep production assets visible across the site.</p>
@@ -281,7 +285,7 @@ whatsapp_badge: true
 
         <div class="col-lg-6">
           <div class="card-item">
-            <div class="card-bg" style="background-image: url({{ '/assets/img/hero-carousel/production-maintenance.JPG' | relative_url }});"></div>
+            <div class="card-bg" data-lazy-background="{{ '/assets/img/home-production.webp' | relative_url }}"></div>
             <div class="card-body">
               <h4><a href="{{ '/cmms-for-injection-moulding' | relative_url }}">Injection Moulding</a></h4>
               <p>Track moulds, cycle-based maintenance, tooling history, breakdowns, and spare parts.</p>
@@ -291,7 +295,7 @@ whatsapp_badge: true
 
         <div class="col-lg-6">
           <div class="card-item">
-            <div class="card-bg" style="background-image: url({{ '/assets/img/apartments.jpg' | relative_url }});"></div>
+            <div class="card-bg" data-lazy-background="{{ '/assets/img/home-facilities.webp' | relative_url }}"></div>
             <div class="card-body">
               <h4><a href="{{ '/facility-management-software' | relative_url }}">Facilities Management</a></h4>
               <p>Manage building maintenance, compliance routines, contractors, and multi-site operations.</p>
@@ -301,7 +305,7 @@ whatsapp_badge: true
 
         <div class="col-lg-6">
           <div class="card-item">
-            <div class="card-bg" style="background-image: url({{ '/assets/img/energy.jpeg' | relative_url }});"></div>
+            <div class="card-bg" data-lazy-background="{{ '/assets/img/home-energy.webp' | relative_url }}"></div>
             <div class="card-body">
               <h4><a href="{{ '/energy-and-resources-maintenance' | relative_url }}">Energy & Utilities</a></h4>
               <p>Maintain critical equipment across wind, biomass, water, mining, agriculture, and utilities.</p>
@@ -396,7 +400,7 @@ whatsapp_badge: true
 
         <div class="home-steps-visual">
           <span class="home-steps-visual-label">Mobile work orders</span>
-          <img src="{{ '/assets/img/iphone.png' | relative_url }}" alt="Smartspanner mobile app showing a technician's work orders" width="832" height="1800" loading="lazy">
+          <img src="{{ '/assets/img/features/mobile-work-orders.webp' | relative_url }}" alt="Smartspanner mobile app showing a technician's work orders" width="420" height="909" loading="lazy">
         </div>
       </div>
     </div>
