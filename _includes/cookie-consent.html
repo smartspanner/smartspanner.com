@@ -1,0 +1,14 @@
+<aside id="cookie-banner" class="cookie-banner" aria-label="Cookie choices" hidden>
+  <div class="cookie-banner-copy"><strong>Your cookie choices</strong><p>We use necessary storage to make this site work. With your permission, we also use analytics, session replay and marketing tools. You can change your choices at any time.</p><a href="{{ '/cookie-policy/' | relative_url }}">Cookie policy</a> · <a href="{{ '/privacy-policy/' | relative_url }}">Privacy policy</a></div>
+  <div class="cookie-actions"><button type="button" data-cookie-action="reject">Reject optional</button><button type="button" data-cookie-action="accept">Accept all</button><button type="button" data-cookie-action="settings">Choose settings</button></div>
+</aside>
+<dialog id="cookie-settings" class="cookie-settings" aria-labelledby="cookie-settings-title">
+  <h2 id="cookie-settings-title">Cookie settings</h2>
+  <p>Optional tools stay off until you choose them. Rejecting them does not prevent you from requesting a demo, guide or trial.</p>
+  <div class="cookie-category"><strong>Necessary — always on</strong><p>Remember your privacy choices and provide features you request, such as forms and the assessment.</p></div>
+  <label class="cookie-category"><span><strong>Analytics</strong><small>Google Analytics measures visits and actions, including successful form submissions.</small></span><input type="checkbox" id="cookie-analytics"></label>
+  <label class="cookie-category"><span><strong>Session replay</strong><small>Contentsquare records browsing interactions to help us understand how the website is used. Replay is disabled on form and download pages.</small></span><input type="checkbox" id="cookie-experience"></label>
+  <label class="cookie-category"><span><strong>Marketing</strong><small>HubSpot connects website activity and campaign information to enquiries. Configured advertising tools measure ads and support personalised advertising.</small></span><input type="checkbox" id="cookie-marketing"></label>
+  <p><a href="{{ '/cookie-policy/' | relative_url }}">Read the cookie policy</a></p>
+  <div class="cookie-actions"><button type="button" data-cookie-action="save">Save choices</button><button type="button" data-cookie-action="reject">Reject optional</button><button type="button" data-cookie-action="close">Close</button></div>
+</dialog>

@@ -1,0 +1,21 @@
+.cookie-banner[hidden] { display: none; }
+.cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100000; display: flex; align-items: center; gap: 24px; padding: 22px max(24px, calc((100vw - 1200px)/2)); color: #252525; background: #fff; box-shadow: 0 -4px 24px #0003; border-top: 3px solid #feb900; font-size: 14px; line-height: 1.6; }
+.cookie-banner-copy { flex: 1; }
+.cookie-banner strong { font-size: 17px; }
+.cookie-banner p { margin: 6px 0; }
+.cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.cookie-actions button, .cookie-settings-button { font: inherit; cursor: pointer; }
+.cookie-actions button { color: #252525; background: #fff8df; border: 1px solid #9b7200; padding: 10px 14px; border-radius: 5px; font-weight: 600; }
+.cookie-actions button:hover { background: #ffe7a0; }
+.cookie-banner a, .cookie-settings a { color: #765300; text-decoration: underline; }
+.cookie-settings { width: min(620px, calc(100% - 24px)); max-height: calc(100vh - 40px); margin: auto; padding: 28px; border: 0; border-radius: 10px; color: #364146; background: #fff; font-size: 15px; line-height: 1.65; }
+.cookie-settings::backdrop { background: #0009; }
+.cookie-settings h2 { font-size: 1.6rem; color: #252525; }
+.cookie-category { display: flex; gap: 18px; justify-content: space-between; align-items: center; border-top: 1px solid #ddd; padding: 16px 0; }
+.cookie-category p { margin: 6px 0 0; }
+.cookie-category small { display: block; font-size: .9rem; margin-top: 5px; }
+.cookie-category input { flex: 0 0 22px; width: 22px; height: 22px; accent-color: #765300; }
+.cookie-settings div.cookie-category { display: block; }
+.cookie-settings-button { background: none; color: inherit; border: 0; padding: 0; text-decoration: underline; }
+.cookie-banner button:focus-visible, .cookie-settings button:focus-visible, .cookie-settings input:focus-visible { outline: 3px solid #765300; outline-offset: 3px; }
+@media(max-width: 767px) { .cookie-banner { display: block; padding: 16px; max-height: 65vh; overflow-y: auto; } .cookie-banner .cookie-actions { margin-top: 12px; } .cookie-banner .cookie-actions button { flex: 1 1 100px; } .cookie-settings { padding: 22px; } }

@@ -1,0 +1,17 @@
+<script type="application/json" id="smartspanner-tracking-config">{
+  "ga4": {{ site.data.tracking.ga4_measurement_id | jsonify }},
+  "contentsquare": {{ site.data.tracking.contentsquare_script | jsonify }},
+  "hubspot": {{ site.data.tracking.hubspot_portal_id | jsonify }},
+  "gtm": {{ site.data.tracking.gtm_container_id | jsonify }},
+  "ads": {{ site.data.tracking.google_ads_id | jsonify }},
+  "adsDemo": {{ site.data.tracking.google_ads_demo_label | jsonify }},
+  "adsTrial": {{ site.data.tracking.google_ads_trial_label | jsonify }},
+  "linkedin": {{ site.data.tracking.linkedin_partner_id | jsonify }},
+  "meta": {{ site.data.tracking.meta_pixel_id | jsonify }},
+  "attributionFields": {{ site.data.tracking.hubspot_attribution_fields_enabled | jsonify }},
+  "baseurl": {{ site.baseurl | jsonify }},
+  "replayAllowed": {% if page.url contains 'book-a-demo' or page.url contains 'thank-you' or page.url contains 'guide-download' or page.url contains 'contact' or page.url contains '/lp/' or page.url contains 'cmms-demo-video' or page.url contains 'maintenance-compliance' %}false{% else %}true{% endif %}
+}</script>
+<link rel="stylesheet" href="{{ '/assets/css/cookie-consent.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script src="{{ '/assets/js/cookie-consent.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+<script src="{{ '/assets/js/lead-tracking.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

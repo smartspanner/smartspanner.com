@@ -1,5 +1,16 @@
 {% if page.video_analytics %}<script src="{{ '/assets/js/video-analytics.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 <script>
+  // Embedded videos are requested by the visitor, rather than loaded on scroll.
+  document.querySelectorAll('iframe[data-click-video-src]').forEach(function(frame) {
+    const play = document.createElement('button');
+    play.type = 'button';
+    play.textContent = 'Play video — Vimeo';
+    play.setAttribute('aria-label', 'Play ' + (frame.title || 'product video') + ' on Vimeo');
+    play.style.cssText = 'display:block;width:100%;min-height:180px;padding:24px;background:#252525;color:#fff;border:2px solid #feb900;border-radius:8px;font:inherit;cursor:pointer';
+    frame.replaceWith(play);
+    play.addEventListener('click', function() { frame.src = frame.dataset.clickVideoSrc; play.replaceWith(frame); });
+  });
+
   // Mobile Navigation Toggle
   const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
@@ -222,17 +233,10 @@
   // GA4 measurement for assessment entry links and the customer-story to demo funnel.
   (function() {
     const originStorageKey = 'smartspanner_case_study_origin';
-    const submissionStorageKey = 'smartspanner_demo_submission';
     const attributionWindowMs = 30 * 60 * 1000;
 
     function trackEvent(eventName, parameters) {
-      if (typeof window.gtag !== 'function') {
-        return;
-      }
-
-      window.gtag('event', eventName, Object.assign({
-        transport_type: 'beacon'
-      }, parameters || {}));
+      if (window.SmartspannerConsent) window.SmartspannerConsent.track(eventName, parameters);
     }
 
     // Comparison CTAs use the existing beacon helper and existing destinations.
@@ -278,6 +282,7 @@
     });
 
     function writeSessionValue(key, value) {
+      if (!window.SmartspannerConsent || !window.SmartspannerConsent.allowed('analytics')) return;
       try {
         window.sessionStorage.setItem(key, JSON.stringify(value));
       } catch (error) {
@@ -286,6 +291,7 @@
     }
 
     function readSessionValue(key, removeAfterReading) {
+      if (!window.SmartspannerConsent || !window.SmartspannerConsent.allowed('analytics')) return null;
       try {
         const rawValue = window.sessionStorage.getItem(key);
 
@@ -326,15 +332,6 @@
       });
     }
 
-    window.smartspannerAnalytics = {
-      recordSuccessfulDemoSubmission: function() {
-        writeSessionValue(submissionStorageKey, {
-          timestamp: Date.now(),
-          origin: getCaseStudyOrigin()
-        });
-      }
-    };
-
     const caseStudyPage = document.querySelector('.case-study-page[data-case-study]');
 
     if (caseStudyPage) {
@@ -345,6 +342,7 @@
       let activeTimer;
 
       function recordEngagement(method) {
+        if (!window.SmartspannerConsent || !window.SmartspannerConsent.allowed('analytics')) return;
         if (engagementRecorded) {
           return;
         }
@@ -370,7 +368,7 @@
       }
 
       activeTimer = window.setInterval(function() {
-        if (document.visibilityState === 'visible') {
+        if (document.visibilityState === 'visible' && window.SmartspannerConsent && window.SmartspannerConsent.allowed('analytics')) {
           activeSeconds += 1;
         }
 
@@ -406,6 +404,7 @@
       let formViewRecorded = false;
 
       function recordFormView() {
+        if (!window.SmartspannerConsent || !window.SmartspannerConsent.allowed('analytics')) return;
         if (formViewRecorded) {
           return;
         }
@@ -415,6 +414,11 @@
           form_id: 'demo_request'
         }));
       }
+
+      document.addEventListener('smartspanner:consent', function() {
+        const bounds = demoForm.getBoundingClientRect();
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) recordFormView();
+      });
 
       if ('IntersectionObserver' in window) {
         const formObserver = new IntersectionObserver(function(entries) {
@@ -430,22 +434,6 @@
       }
     }
 
-    if (document.querySelector('[data-ga-page="demo-thank-you"]')) {
-      const successfulSubmission = readSessionValue(submissionStorageKey, true);
-
-      if (successfulSubmission && successfulSubmission.timestamp && Date.now() - successfulSubmission.timestamp <= attributionWindowMs) {
-        const leadParameters = {
-          form_id: 'demo_request'
-        };
-
-        if (successfulSubmission.origin) {
-          leadParameters.entry_content = successfulSubmission.origin.caseStudy;
-          leadParameters.entry_industry = successfulSubmission.origin.industry;
-        }
-
-        trackEvent('generate_lead', leadParameters);
-      }
-    }
   })();
 
   // HubSpot forms. Keeps local styling while submitting to HubSpot's Forms API.
@@ -555,11 +543,12 @@
         const redirectUrl = form.dataset.hubspotRedirect;
         const submitButton = form.querySelector('[type="submit"]');
         const originalButtonText = submitButton ? submitButton.textContent : '';
-        const hutk = getCookie('hubspotutk');
+        const marketingConsent = window.SmartspannerConsent && window.SmartspannerConsent.allowed('marketing');
+        const hutk = marketingConsent ? getCookie('hubspotutk') : '';
         const payload = {
-          fields: buildFields(form),
+          fields: buildFields(form).concat(window.SmartspannerLeads ? window.SmartspannerLeads.attributionFields() : []),
           context: {
-            pageUri: window.location.href,
+            pageUri: window.location.origin + window.location.pathname,
             pageName: document.title
           }
         };
@@ -585,8 +574,8 @@
               throw new Error('HubSpot form submission failed');
             }
 
-            if (window.smartspannerAnalytics) {
-              window.smartspannerAnalytics.recordSuccessfulDemoSubmission();
+            if (window.SmartspannerLeads) {
+              window.SmartspannerLeads.recordSuccessfulSubmission(form);
             }
 
             window.location.href = redirectUrl;

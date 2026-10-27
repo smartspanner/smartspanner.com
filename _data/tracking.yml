@@ -1,0 +1,16 @@
+# Public integration identifiers, never API keys. Empty integrations stay disabled.
+ga4_measurement_id: G-T4RJ2H2VS1
+contentsquare_script: https://t.contentsquare.net/uxa/15dfb80347065.js
+hubspot_portal_id: "9191859"
+# Set only after the GTM container has matching consent-aware tags published.
+# A configured GTM container replaces the direct consent-managed vendor tags.
+gtm_container_id: ""
+google_ads_id: ""
+google_ads_demo_label: ""
+google_ads_trial_label: ""
+linkedin_partner_id: ""
+meta_pixel_id: ""
+calendar_url: ""
+# Enable only after utm_source/medium/campaign/term/content, gclid, li_fat_id and
+# fbclid contact properties exist and are accepted by the HubSpot forms.
+hubspot_attribution_fields_enabled: false

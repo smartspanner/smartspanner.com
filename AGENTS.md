@@ -78,3 +78,11 @@ curl -I https://tenx.fraction.app/smartspanner.com/
 - **App URL**: https://app.smartspanner.com
 - **Support**: https://support.smartspanner.com
 - Use `{{ site.baseurl }}/assets/...` for all asset paths
+
+## Consent and Conversion Tracking
+
+- Load optional tags only through `assets/js/cookie-consent.js` and the public IDs in `_data/tracking.yml`. Default consent is denied; do not add unconditional vendor scripts.
+- Keep assessment answers and recommendations local to the tab. The assessment layout intentionally excludes analytics, replay and marketing tracking.
+- Emit lead events only after a successful submission and its matching thank-you page. Trial-link clicks and direct thank-you visits are not conversions.
+- Keep personal contact details and form answers out of analytics event parameters.
+- After consent or form-tracking changes, rebuild and run `_tests/consent-browser.mjs` with `PLAYWRIGHT_MODULE` pointing to an installed Playwright module. This test stubs vendors and form submissions; do not create real CRM leads during validation.

@@ -19,6 +19,7 @@
   <footer class="lp-footer">
     <div class="container">
       &copy; {{ site.time | date: '%Y' }} {{ site.company.name }}. All Rights Reserved.
+      <p><a href="{{ '/privacy-policy/' | relative_url }}">Privacy</a> · <a href="{{ '/cookie-policy/' | relative_url }}">Cookies</a> · <a href="{{ '/terms-of-service/' | relative_url }}">Terms</a> · <button type="button" class="cookie-settings-button" data-cookie-action="settings">Cookie settings</button></p>
     </div>
   </footer>
 
@@ -26,6 +27,7 @@
     <i class="fa-solid fa-arrow-up"></i>
   </div>
 
+  {% include cookie-consent.html %}
   {% include scripts.html %}
 </body>
 </html>
