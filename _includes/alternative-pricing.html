@@ -10,7 +10,7 @@
         <p>{{ plan.description }}</p>
         {% if forloop.first %}<p>Assets, work orders, preventive maintenance, multi-site, spare parts, reporting and mobile apps.</p>
         {% elsif forloop.index == 2 %}<p>All {{ site.data.pricing.plans[previous_index].name }} features, plus procedures, subcontractors, failure codes, asset labels, spare-part labels and technician leave.</p>
-        {% else %}<p>All {{ site.data.pricing.plans[previous_index].name }} features, plus team assignment, checklists, equipment checks, purchasing, permits to work and API access.</p>{% endif %}
+        {% else %}<p>All {{ site.data.pricing.plans[previous_index].name }} features, plus team assignment, checklists, equipment checks, purchasing, permits to work and API access.</p><p><a href="{{ site.data.root_cause_analysis.url | relative_url }}">Root Cause Analysis</a> {% if site.data.root_cause_analysis.coming_soon %}is coming soon to Advanced{% else %}is also included{% endif %}.</p>{% endif %}
       </div></div>
       {% endfor %}
     </div>

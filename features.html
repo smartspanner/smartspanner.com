@@ -2,7 +2,7 @@
 layout: default
 last_modified_at: 2026-11-14
 title: CMMS Features for Maintenance Teams
-description: "Complete CMMS features for real-world maintenance: work orders, asset management, preventive maintenance, IoT monitoring, mobile access, and more."
+description: "Complete CMMS features for real-world maintenance: work orders, asset management, preventive maintenance, root cause analysis, IoT monitoring and mobile access."
 keywords: cmms features, maintenance software features, work order management, asset management software, preventative maintenance software, cmms capabilities
 ---
 
@@ -61,6 +61,14 @@ keywords: cmms features, maintenance software features, work order management, a
             <div>
               <h4><a href="{{ site.data.team_assignment.url | relative_url }}">Team Assignment</a></h4>
               <p>{% if site.data.team_assignment.coming_soon %}Coming soon to Advanced: allocate{% else %}Allocate{% endif %} work to mechanical, electrical, HVAC or shift teams, with an optional named assignee.</p>
+            </div>
+          </div>
+
+          <div class="icon-box" data-feature="root-cause-analysis">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <div>
+              <h4><a href="{{ site.data.root_cause_analysis.url | relative_url }}">Root Cause Analysis (RCA)</a></h4>
+              <p>{% if site.data.root_cause_analysis.coming_soon %}Coming soon to Advanced: investigate{% else %}Investigate{% endif %} what happened, identify the cause and connect corrective work to the asset. Optional 5 Whys keep the investigation practical.</p>
             </div>
           </div>
 

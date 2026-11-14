@@ -1,0 +1,129 @@
+---
+layout: default
+title: Root Cause Analysis Software for Maintenance
+meta_title: Root Cause Analysis Software for Maintenance | Smartspanner
+description: "Investigate equipment failures with a simple RCA workflow: problem, root cause and corrective action. Optional 5 Whys, linked work orders and asset history."
+permalink: /root-cause-analysis-software/
+last_modified_at: 2026-11-14
+rca_page: true
+parent: Features
+parent_url: /features/
+image: /assets/img/features/work-order-thumb.webp
+---
+{% assign rca = site.data.root_cause_analysis %}
+{% assign rca_plan = site.data.pricing.plans | where: 'name', rca.plan | first %}
+<main id="main" class="rca-marketing" data-feature="root-cause-analysis">
+  <section class="rca-marketing-hero">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <p class="rca-eyebrow">Root Cause Analysis · {{ rca.plan }}</p>
+          <h1>Root cause analysis software for practical maintenance investigations</h1>
+          <p class="rca-lead">Record what happened, understand why and agree what should change. Keep the investigation connected to the equipment and the work needed to prevent the problem happening again.</p>
+          <p>Smartspanner RCA follows one simple path: <strong>Problem → Root Cause → Corrective Action.</strong> Start from a work order or investigate independently, with optional 5 Whys when you need to go deeper.</p>
+          <p class="rca-availability" data-rca-availability>{% if rca.coming_soon %}<strong>Coming soon to {{ rca.plan }}.</strong> The feature is in development. This page describes the upcoming workflow; ask us about release availability.{% else %}<strong>Included in {{ rca.plan }}.</strong> Investigate failures alongside your existing assets and work orders.{% endif %}</p>
+          <div class="rca-marketing-buttons"><a class="btn btn-primary" href="{{ '/book-a-demo/' | relative_url }}">Discuss RCA with us</a><a class="btn btn-outline-secondary" href="{{ '/pricing/' | relative_url }}">Compare plans</a></div>
+        </div>
+        <div class="col-lg-5">
+          <figure class="rca-example" aria-labelledby="rca-example-caption">
+            <figcaption id="rca-example-caption">Illustrative maintenance investigation</figcaption>
+            <ol>
+              <li><span>1</span><div><strong>Problem</strong><p>Conveyor stopped during production. A drive bearing had seized.</p></div></li>
+              <li><span>2</span><div><strong>Root cause</strong><p>The bearing was missed from the lubrication procedure after a machine modification.</p></div></li>
+              <li><span>3</span><div><strong>Corrective action</strong><p>Update the procedure and raise a work order to inspect and lubricate the affected bearings.</p></div></li>
+            </ol>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rca-contents" aria-label="On this page"><div class="container"><a href="#what-is-rca">What is RCA?</a><a href="#rca-workflow">How it works</a><a href="#five-whys">5 Whys example</a><a href="#downtime-trigger">Downtime trigger</a><a href="#rca-pricing">Plan</a><a href="#rca-questions">FAQs</a></div></nav>
+
+  <section id="what-is-rca">
+    <div class="container rca-copy">
+      <h2>What is root cause analysis in maintenance?</h2>
+      <p>Root Cause Analysis (RCA) is an investigation into why a maintenance problem happened and what can be changed to reduce the chance of it returning. The repair restores the equipment; the investigation records the underlying cause and the follow-up decision.</p>
+      <p>For example, replacing a seized bearing gets a conveyor moving. Investigating lubrication records, access and maintenance instructions may explain why that bearing failed. The resulting action might be a procedure change, an inspection or a design improvement, supported by the evidence available.</p>
+      <p>A useful RCA is clear enough for the next engineer to understand. It does not need a long approval chain or a diagram for every breakdown.</p>
+    </div>
+  </section>
+
+  <section id="rca-workflow" class="section-bg">
+    <div class="container">
+      <div class="section-header"><h2>One page, three practical steps</h2><p>Save an incomplete draft and return when the investigation has progressed.</p></div>
+      <div class="row gy-4">
+        <div class="col-md-4"><article class="rca-content-card"><h3>1. Describe the problem</h3><p>Explain what happened and its effect on the equipment. Starting from a work order brings through its problem description and asset. You can also create a standalone RCA, with an asset if one is relevant.</p></article></div>
+        <div class="col-md-4"><article class="rca-content-card"><h3>2. Record the root cause</h3><p>Write why the problem occurred and choose a root cause category. Expand the optional 5 Whys section when it helps explain the chain of events. Attach supporting documents if your organisation uses its own analysis paperwork.</p></article></div>
+        <div class="col-md-4"><article class="rca-content-card"><h3>3. Define corrective action</h3><p>Record what should change to prevent recurrence. Create or link one corrective work order for assignment, scheduling and completion through the existing <a href="{{ '/work-order-management-software/' | relative_url }}">work order system</a>.</p></article></div>
+      </div>
+      <div class="rca-copy rca-section-note"><h3>Keep the findings with the equipment</h3><p>The source work order shows its linked RCA records, and the <a href="{{ '/asset-management-software/' | relative_url }}">asset record</a> shows RCA history. Engineers can move between the original event, the investigation and corrective work without maintaining a separate action-tracking system.</p></div>
+    </div>
+  </section>
+
+  <section id="five-whys">
+    <div class="container rca-copy">
+      <h2>A 5 Whys example for an equipment breakdown</h2>
+      <p>The 5 Whys method asks successive questions to move from the immediate failure towards its underlying cause. Stop when the explanation is useful and supported by evidence; five completed answers are not compulsory.</p>
+      <ol class="rca-whys-example">
+        <li><strong>Why did the conveyor stop?</strong> The drive bearing seized.</li>
+        <li><strong>Why did the bearing seize?</strong> Inspection found inadequate lubrication.</li>
+        <li><strong>Why was lubrication missed?</strong> The new bearing was absent from the lubrication procedure after a machine modification.</li>
+      </ol>
+      <p>In this example, the corrective work should address the missing maintenance instruction as well as the failed bearing. In Smartspanner, you can record up to five question-and-answer pairs and write the final finding in the main root cause field.</p>
+      <p>This is an illustrative investigation. Check the actual equipment, records and evidence before deciding the cause; a sequence of guesses is not a confirmed finding. For background on the method, see <a href="https://asq.org/quality-resources/five-whys">ASQ’s guide to the Five Whys</a>.</p>
+    </div>
+  </section>
+
+  <section id="downtime-trigger" class="section-bg">
+    <div class="container rca-copy">
+      <h2>Require an RCA after a significant breakdown</h2>
+      <p>Some organisations require an investigation when a breakdown affects operations for a defined period. Smartspanner keeps this automatic requirement separate from the RCA form.</p>
+      <p>When enabled, completing a breakdown work order checks its <strong>stored breakdown downtime</strong>. If that operating-hours downtime is X minutes or more, the system creates or reuses an RCA for that work order. The threshold is configurable; its default is 30 minutes and the automatic policy is disabled until configured.</p>
+      <div class="rca-callout"><h3>Use business downtime, then investigate after the repair</h3><p>A breakdown with 45 minutes of stored operating downtime qualifies under a 30-minute policy. A repair spanning two hours overnight with only 20 minutes of stored operating downtime does not. These examples assume the operating schedule and breakdown record are correct.</p><p>Completing the breakdown work order does not wait for the RCA. Engineers can restore the equipment and complete the investigation afterwards.</p></div>
+      <p>Manual RCA creation remains available from any accessible work order or as a standalone investigation. It is not restricted to jobs that meet the automatic breakdown threshold.</p>
+    </div>
+  </section>
+
+  <section id="rca-categories">
+    <div class="container rca-copy">
+      <h2>Classify the cause without complicating the investigation</h2>
+      <p>Use six consistent root cause categories to organise the RCA register:</p>
+      <ul class="rca-category-list"><li>Maintenance / Procedure</li><li>Equipment / Design</li><li>Operation / Human Factors</li><li>Materials / Components</li><li>External / Environment</li><li>Undetermined</li></ul>
+      <p>Filter the register by status, asset and root cause category to find relevant investigations. The category supports the written finding; it does not replace it.</p>
+      <h3>RCA categories are different from failure codes</h3>
+      <p><a href="{{ '/maintenance-failure-codes/' | relative_url }}">Failure codes</a> classify maintenance events for work order filtering and reporting. An RCA records the problem, its cause and the corrective-action decision. Existing tags and failure codes remain separate from the RCA category.</p>
+    </div>
+  </section>
+
+  <section id="rca-status" class="section-bg">
+    <div class="container rca-copy">
+      <h2>Three statuses from initial notes to closure</h2>
+      <dl class="rca-status-list"><dt>Draft</dt><dd>Investigation started. Save incomplete notes without filling every field.</dd><dt>Open</dt><dd>The problem and root cause are recorded; corrective work or final review remains.</dd><dt>Closed</dt><dd>The investigation is complete and the corrective action has been addressed, or no action is explicitly required.</dd></dl>
+      <p>Closing requires a problem description and root cause, together with corrective-action text or explicit confirmation that no action is necessary. A linked corrective work order must be completed, or cancelled with an explicit no-action decision. Closed investigations can be reopened when findings need to change.</p>
+      <p>Existing site permissions apply to asset-linked records. A standalone RCA without an asset is shared within the organisation among authorised RCA users.</p>
+    </div>
+  </section>
+
+  <section id="rca-pricing">
+    <div class="container rca-copy">
+      <h2>{% if rca.coming_soon %}Coming to{% else %}Included in{% endif %} the {{ rca.plan }} plan</h2>
+      <p>Root Cause Analysis {% if rca.coming_soon %}is planned for{% else %}is included in{% endif %} {{ rca_plan.name }}, currently £{{ rca_plan.price }} per user/month, excluding applicable taxes. Existing work orders and asset management remain available on the other plans; the dedicated RCA module belongs to {{ rca.plan }}.</p>
+      {% if rca.coming_soon %}<p><strong>Confirm release availability before choosing a subscription specifically for RCA.</strong></p>{% endif %}
+      <p><a href="{{ '/pricing/' | relative_url }}">View all plans and currency options</a>, or <a href="{{ '/book-a-demo/' | relative_url }}">discuss your investigation and downtime requirements</a> with the Smartspanner team.</p>
+    </div>
+  </section>
+
+  <section id="rca-questions" class="section-bg">
+    <div class="container rca-copy">
+      <h2>Root Cause Analysis questions</h2>
+      <details><summary>Do we have to complete all five Whys?</summary><p>No. The section is optional and accepts up to five ordered questions and answers. Use as many as help explain the cause.</p></details>
+      <details><summary>Can we use our own RCA document?</summary><p>Yes. Attach your organisation's analysis paperwork as supporting documentation. Keep the overall problem, root cause and corrective-action decision in the RCA record so the findings remain easy to find.</p></details>
+      <details><summary>Does every RCA need a source work order or an asset?</summary><p>No. You can start independently and optionally select an asset. Starting from a work order supplies its problem and asset automatically.</p></details>
+      <details><summary>Can an RCA stay open after the breakdown is repaired?</summary><p>Yes. Complete the repair work order when the repair is finished. Save the investigation as Draft or Open and complete it afterwards.</p></details>
+      <details><summary>Does this include fishbone diagrams or AI investigations?</summary><p>No. This release focuses on the problem, root cause, optional 5 Whys and one corrective work order. It does not include fishbone diagrams, fault trees, AI-generated investigations, dedicated RCA analytics or automatic recurrence detection.</p></details>
+    </div>
+  </section>
+
+  <section class="rca-final-cta"><div class="container text-center"><h2>Make the next breakdown a useful investigation</h2><p>Discuss how RCA can fit your maintenance process, operating downtime and existing work orders.</p><a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary">Talk to Smartspanner</a></div></section>
+</main>

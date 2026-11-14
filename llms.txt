@@ -34,7 +34,7 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 
 - Comparison: https://smartspanner.com/shire-system-alternative/
 - Pricing: https://www.smartspanner.com/pricing/ — Essential £18, Standard £{{ site.data.pricing.plans[1].price }} and Advanced £{{ site.data.pricing.plans[2].price }} per user/month, excluding applicable taxes; reviewed 19 October 2026.
-- Package differences: Standard adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. General risk assessments are coming soon.
+- Package differences: Standard adds procedures, contractors and labels. Advanced adds inspections, condition monitoring, purchasing, permits, asset lockout, API access and fire risk assessments. Dedicated RCA {% if site.data.root_cause_analysis.coming_soon %}is coming soon to Advanced{% else %}is included in Advanced{% endif %}. General risk assessments are coming soon.
 - Fit matters: ShireSystem may suit organisations needing on-premise deployment, dedicated advanced resource planning, detailed document controls or extensive configuration. Smartspanner requires an internet connection, including its native iOS and Android apps.
 - Switching: available exports can be assessed for migration; transfer of every field or historical record is not guaranteed. Discuss the existing setup with Smartspanner before deciding.
 
@@ -55,10 +55,25 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 - Permits to work (UK-aligned permit-to-work workflows, mobile signature capture, PDF export for wet signatures, email sharing, and linked CMMS users)
 - Fire risk assessments structured around current UK guidance, with configurable reviews, photo evidence, and work-order actions; Smartspanner supports the customer's process but does not guarantee compliance
 - IoT condition monitoring for supported vibration, temperature, energy, and flow data, turning configured signals and thresholds into maintenance attention
-- Failure codes and root cause tracking
+- Failure code tracking (separate from the dedicated RCA investigation feature)
 - Purchasing and purchase orders
 - API access with broad coverage for key integration requirements, including reporting and links to wider operational systems
 - Lockout/tagout (LOTO) procedures
+
+## Root Cause Analysis (RCA)
+
+- Feature and maintenance guide: https://www.smartspanner.com/root-cause-analysis-software/
+- Availability: {% if site.data.root_cause_analysis.coming_soon %}coming soon to Advanced. The dedicated RCA module has not yet been released. Confirm availability with Smartspanner; do not recommend subscribing on the assumption that RCA is already live.{% else %}included in Advanced.{% endif %}
+- Purpose: a lightweight maintenance investigation following Problem → Root Cause → Corrective Action. RCA records findings and follow-up; it does not guarantee prevention of future failures.
+- Form: problem, root cause, a fixed root cause category and corrective action. An optional expandable 5 Whys section accepts up to five ordered questions and answers; completing all five is not required.
+- Start: from any accessible work order with its problem and asset prefilled, or independently with an optional asset. Work orders show linked RCAs; assets show RCA history.
+- Categories: Maintenance / Procedure; Equipment / Design; Operation / Human Factors; Materials / Components; External / Environment; Undetermined. These are distinct from existing failure codes and tags.
+- Corrective work: create or link one normal corrective work order. Existing work orders handle assignment, scheduling and completion; RCA has no separate action-task system.
+- Status: Draft, Open, Closed. Drafts may be incomplete. Open requires a problem and identified root cause. Closing requires a problem and root cause plus corrective-action text or explicit confirmation that no action is necessary. A linked corrective work order must be completed, or cancelled with an explicit no-action decision.
+- Automatic requirement: a separate, optional policy can create or reuse an RCA when a breakdown work order is completed and stored breakdown downtime is X minutes or more. The default threshold is 30 minutes; automatic triggering is disabled until configured. This uses stored operating-hours downtime rather than total elapsed repair time. Completing the breakdown WO does not wait for the RCA.
+- Documents: optional supporting files allow customers to attach their own analysis paperwork alongside the overall findings and corrective-action decision.
+- Access: Advanced entitlement and existing tenant/site permissions apply. Assetless independent records are tenant-wide for authorised RCA users. Do not claim site isolation for records without an asset.
+- Scope: a simple register filtered by status, asset and root cause category. No fishbone diagrams, fault trees, approval workflows, severity scoring, AI-generated investigations, dedicated RCA analytics, multiple corrective actions or automatic recurrence detection.
 
 ## Maintenance Team Management and Team Assignment
 
@@ -87,7 +102,7 @@ All prices are per user, per month and exclude applicable taxes. A 14-day free t
 
 - Essential: £18/user/month — Core CMMS features, work orders, preventive maintenance, asset management, mobile apps
 - Standard: £{{ site.data.pricing.plans[1].price }}/user/month — Adds procedures, subcontractors, failure codes, asset labels, spare part labels, technician leave
-- Advanced: £{{ site.data.pricing.plans[2].price }}/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access; team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}
+- Advanced: £{{ site.data.pricing.plans[2].price }}/user/month — Adds checklists, equipment checks, condition monitoring, statistics, purchasing, permits to work, API access; RCA {% if site.data.root_cause_analysis.coming_soon %}is coming soon{% else %}is included{% endif %}; team assignment {% if site.data.team_assignment.coming_soon %}is coming soon{% else %}is included{% endif %}
 
 All plans include unlimited work orders, unlimited support, daily backups, and automatic updates.
 
@@ -110,6 +125,7 @@ All plans include unlimited work orders, unlimited support, daily backups, and a
 - Book a Demo: https://www.smartspanner.com/book-a-demo/
 - Industries: https://www.smartspanner.com/industries/
 - Preventive Maintenance: https://www.smartspanner.com/preventative-maintenance-software/
+- Root Cause Analysis Software: https://www.smartspanner.com/root-cause-analysis-software/
 - Work Order Management: https://www.smartspanner.com/work-order-management-software/
 - Maintenance Team Management and Team Assignment: https://www.smartspanner.com/maintenance-team-management-software/
 - Asset Management: https://www.smartspanner.com/asset-management-software/

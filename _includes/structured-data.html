@@ -84,6 +84,7 @@
         "Maintenance procedures and supporting documents",
         "Subcontractor management",
         "Failure code tracking",
+        {% unless site.data.root_cause_analysis.coming_soon %}"Root cause analysis with optional 5 Whys, root cause categories, corrective work orders and asset history (Advanced)",{% endunless %}
         "Purchase orders",
         "Lockout tagout tracking",
         "IoT condition monitoring",
@@ -121,7 +122,7 @@
         "@id": "{{ site.url }}/#organization"
       },
       "inLanguage": "en"
-      {% if page.team_page %},
+      {% if page.team_page or page.rca_page %},
       "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"
       {% endif %}
       {% if page.layout == 'blog-article' or page.layout == 'case-study' or page.url contains '/blog/' %},

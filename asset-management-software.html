@@ -1,4 +1,5 @@
 ---
+last_modified_at: 2026-11-14
 layout: default
 title: Asset Management Software
 description: "Asset management software for maintenance teams. Track assets, service history, QR codes, documents, and maintenance activity with Smartspanner."
@@ -200,6 +201,16 @@ whatsapp_badge: true
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section-bg" data-feature="root-cause-analysis">
+    <div class="container">
+      <div class="row justify-content-center"><div class="col-lg-8">
+        <h2>Connect breakdowns to root cause and corrective work</h2>
+        <p>{% if site.data.root_cause_analysis.coming_soon %}Coming soon to Advanced: {% else %}With Advanced, {% endif %}<a href="{{ site.data.root_cause_analysis.url | relative_url }}">Root Cause Analysis (RCA)</a> links the problem, investigation and corrective work order to the asset's history. Record a cause, use optional 5 Whys and keep follow-up work in the normal work order system.</p>
+        <p>A completed breakdown can trigger an RCA at a configurable operating-downtime threshold. The repair can be completed before the investigation is finished.</p>
+      </div></div>
     </div>
   </section>
 

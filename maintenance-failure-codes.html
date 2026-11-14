@@ -1,5 +1,6 @@
 ---
 layout: feature
+last_modified_at: 2026-11-14
 title: Maintenance Failure Code Tracking
 description: "Maintenance failure code tracking software. Tag work orders with failure codes for in-depth analysis and reporting."
 keywords: maintenance software uk, online maintenance tool
@@ -21,6 +22,9 @@ keywords: maintenance software uk, online maintenance tool
 
       <div class="col-lg-8">
         <img src="{{ '/assets/img/features/failure-codes.png' | relative_url }}" alt="Maintenance failure codes" class="img-fluid services-img" loading="lazy">
+        <h3>Failure codes and Root Cause Analysis do different jobs</h3>
+        <p>A failure code helps classify a maintenance event for filtering and reporting. A <a href="{{ site.data.root_cause_analysis.url | relative_url }}">Root Cause Analysis (RCA)</a> records what happened, why it happened and the corrective work intended to prevent recurrence. RCA categories classify an investigation separately from existing work order failure codes.</p>
+        <p>{% if site.data.root_cause_analysis.coming_soon %}The dedicated RCA feature is coming soon to Advanced{% else %}The dedicated RCA feature is included in Advanced{% endif %}, with optional 5 Whys and linked corrective work orders.</p>
         <h3>Gain deeper insights into maintenance events, evaluate failure types and costs</h3>
         <p>
           Failure codes are customised to any value you require and can be assigned against any works order. The failure codes can then be used through the reporting tool to make further analysis based on the failure code.
