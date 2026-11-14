@@ -7,7 +7,7 @@ sitemap: false
 
 > Smartspanner is cloud-based CMMS software for maintenance management, work orders, preventive maintenance, asset tracking, facilities management, inventory, inspections, and IoT condition monitoring.
 
-Last updated: 2026-10-27
+Last updated: 2026-11-14
 
 ## Canonical URLs
 
@@ -108,7 +108,7 @@ Free trial: https://app.smartspanner.com/signup
 - Monitor supported vibration, temperature, power-consumption, and flow data and turn configured signals or thresholds into maintenance attention
 - Prepare maintenance reports and KPI dashboards
 - Structure fire risk assessment records around current UK guidance and turn observations into corrective actions; Smartspanner supports the process but does not define or guarantee compliance
-- Support app users who prefer English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, or Japanese
+- Support app users who prefer English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese, or Turkish
 - Translate supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, into each user's app language while keeping the original accessible
 
 ## Core Features
@@ -130,7 +130,7 @@ Free trial: https://app.smartspanner.com/signup
 - Lockout/tagout: record lockout activity, lock IDs, and reasons.
 - IoT condition monitoring: use supported wireless vibration sensors and other supported temperature, energy, and flow data to create maintenance attention from configured signals or thresholds.
 - Integrations and API: broad API coverage supports key integration requirements and reporting workflows involving tools such as Power BI, Excel, Python, and wider operational systems. No additional named integrations are currently announced.
-- Multi-language app interface: support English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese users in the Smartspanner app.
+- Multi-language app interface: support English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese, and Turkish users in the Smartspanner app.
 - In-app translation: supported procedures, checklists, instructions, descriptions, and comments can be shown in each user's selected language while retaining access to the original text.
 
 ## Maintenance Team Management and Work-Order Team Assignment
@@ -169,7 +169,7 @@ Product scope was checked against the app's work-order teams specification and i
 
 ## Language Support
 
-The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese. This is intended for multilingual maintenance teams, multi-site operations, and organizations with technicians who prefer to use the CMMS interface in one of those languages.
+The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese, and Turkish. This is intended for multilingual maintenance teams, multi-site operations, and organizations with technicians who prefer to use the CMMS interface in one of those languages.
 
 Smartspanner also supports in-app translation for supported user-entered maintenance content. Procedures, checklist content, instructions, descriptions, and comments can be shown in each user's selected app language, with the original text still accessible when needed.
 

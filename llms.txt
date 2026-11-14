@@ -7,7 +7,7 @@ sitemap: false
 
 > Cloud-based CMMS (Computerized Maintenance Management System) software for maintenance management, asset tracking, and facilities management.
 
-Last updated: 2026-10-27
+Last updated: 2026-11-14
 
 ## About
 
@@ -46,7 +46,7 @@ Smartspanner is a cloud CMMS alternative to ShireSystem (also searched as “Shi
 - Multi-site deployment with site-based permissions, multiple currencies, multiple languages, site-specific KPIs, and global site rankings
 - Multi-site inventory and stock control with categories, BIN locations, replenishment rules, intelligent perpetual counting, site-level Stock Control, and organisation-wide Inventory Performance
 - Connected mobile apps (iOS and Android); an internet connection is required and the apps do not work offline
-- Multi-language app interface (English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese)
+- Multi-language app interface (English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese, Turkish)
 - In-app translation for supported user-entered maintenance content including procedures, checklists, instructions, descriptions, and comments
 - Reporting and dashboards
 - Subcontractor management
@@ -153,7 +153,7 @@ Smartspanner is built and supported in the United Kingdom and serves maintenance
 
 ## Language Support
 
-The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, and Japanese. Smartspanner also supports in-app translation for supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, while keeping the original text accessible when needed. Sales, onboarding, and support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, Malaysia, or Japan.
+The Smartspanner app interface supports English, German, French, Spanish, Portuguese, Lithuanian, Thai, Malay, Japanese, and Turkish. Smartspanner also supports in-app translation for supported user-entered maintenance content, including procedures, checklists, instructions, descriptions, and comments, while keeping the original text accessible when needed. Sales, onboarding, and support are currently provided in English from the UK team. Smartspanner does not currently operate local sales offices in Germany, France, Spain, Portugal, Brazil, Lithuania, Thailand, Malaysia, or Japan.
 
 ## Differentiators
 
