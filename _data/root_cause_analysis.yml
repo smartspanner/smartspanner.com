@@ -1,6 +1,6 @@
 # Keep availability consistent across pricing, discovery links and AI context.
-# Development implementation is complete; change only with the production release.
-coming_soon: true
+# Released to production; RCA is included in the Advanced plan.
+coming_soon: false
 url: /root-cause-analysis-software/
 plan: Advanced
 reviewed: 2026-11-14
