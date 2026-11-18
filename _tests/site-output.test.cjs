@@ -42,3 +42,17 @@ test('public AI context files remain published', () => {
     assert.ok(!content.includes('{{') && !content.includes('{%'), filename);
   }
 });
+
+test('the Seras case study is available by its direct URL only', () => {
+  const slug = 'seras-80d1378311a9b8d9bf4a34ff';
+  const pagePath = path.join(output, 'case-studies', slug, 'index.html');
+  const page = fs.readFileSync(pagePath, 'utf8');
+  assert.match(page, /<meta name="robots" content="noindex, nofollow">/);
+  assert.match(page, /<h1>How Seras is bringing maintenance together across seven sites with Smartspanner<\/h1>/);
+  assert.match(page, /href="[^"]*\/book-a-demo\/"[^>]*>Book a Demo<\/a>/);
+
+  for (const filename of walk(output)) {
+    if (filename === pagePath || !/\.(html|xml|txt|json)$/i.test(filename) || !fs.statSync(filename).isFile()) continue;
+    assert.ok(!fs.readFileSync(filename, 'utf8').includes(slug), filename);
+  }
+});

@@ -9,14 +9,20 @@ layout: default
           <span class="case-study-eyebrow">Customer story <span aria-hidden="true">·</span> {{ page.industry }}</span>
           <h1>{{ page.hero_title }}</h1>
           <p class="case-study-standfirst">{{ page.standfirst }}</p>
+          {% unless page.unlisted %}
           <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary case-study-hero-cta" data-ga-event="case_study_cta_click" data-ga-cta-location="hero">Book a Smartspanner Demo</a>
+          {% endunless %}
         </div>
 
         <aside class="case-study-hero-panel" aria-label="{{ page.customer }} case study overview">
           <span class="case-study-panel-label">At a glance</span>
-          {% if page.logo %}
+          {% if page.logo or page.logo_placeholder %}
           <div class="case-study-logo-surface case-study-client-logo-surface">
+            {% if page.logo %}
             <img src="{{ page.logo | relative_url }}" alt="{{ page.customer }}" class="case-study-client-logo no-lightbox">
+            {% else %}
+            {{ page.logo_placeholder | escape }}
+            {% endif %}
           </div>
           {% else %}
           <h2>{{ page.customer }}</h2>
@@ -44,6 +50,7 @@ layout: default
     </div>
   </section>
 
+  {% if page.outcomes %}
   <section class="case-study-outcomes" aria-label="Case study outcomes">
     <div class="container">
       <div class="case-study-outcome-grid">
@@ -61,14 +68,16 @@ layout: default
       </div>
     </div>
   </section>
+  {% endif %}
 
   <article class="case-study-article">
     <div class="container">
-      <div class="case-study-article-grid">
-        <div class="case-study-article-body">
+      <div{% unless page.unlisted %} class="case-study-article-grid"{% endunless %}>
+        <div class="case-study-article-body{% if page.unlisted %} case-study-article-body-centered{% endif %}">
           {{ content }}
         </div>
 
+        {% unless page.unlisted %}
         <aside class="case-study-sidebar" aria-label="Related Smartspanner solutions">
           <div class="case-study-sidebar-card">
             <span class="case-study-sidebar-label">Relevant solutions</span>
@@ -87,17 +96,22 @@ layout: default
             </ul>
           </div>
         </aside>
+        {% endunless %}
       </div>
     </div>
   </article>
 
   <section class="case-study-final-cta">
     <div class="container text-center">
+      {% unless page.final_cta %}
       <span class="case-study-eyebrow">Your maintenance, in one place</span>
-      <h2>Could Smartspanner do the same for your business?</h2>
-      <p>See how planned maintenance, compliance inspections, corrective actions and supporting records work together in one system.</p>
-      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary" data-ga-event="case_study_cta_click" data-ga-cta-location="final">Book a Smartspanner Demo</a>
+      {% endunless %}
+      <h2>{{ page.final_cta.heading | default: 'Could Smartspanner do the same for your business?' }}</h2>
+      <p>{{ page.final_cta.description | default: 'See how planned maintenance, compliance inspections, corrective actions and supporting records work together in one system.' }}</p>
+      <a href="{{ '/book-a-demo/' | relative_url }}" class="btn btn-primary" data-ga-event="case_study_cta_click" data-ga-cta-location="final">{{ page.final_cta.label | default: 'Book a Smartspanner Demo' }}</a>
+      {% unless page.unlisted %}
       <a href="{{ '/case-studies/' | relative_url }}" class="case-study-all-link">View all customer stories</a>
+      {% endunless %}
     </div>
   </section>
 </main>

@@ -3778,6 +3778,10 @@ section {
   max-width: 760px;
 }
 
+.case-study-article-body-centered {
+  margin-inline: auto;
+}
+
 .case-study-article-body > h2 {
   color: #2e3035;
   font-size: 30px;
@@ -3884,6 +3888,18 @@ section {
 
 .case-study-photo-compact {
   max-width: 480px;
+}
+
+.case-study-photo-placeholder {
+  aspect-ratio: 16 / 9;
+  background: #f5f6f7;
+  border: 1px dashed var(--color-secondary);
+  border-radius: 14px;
+  display: grid;
+  font-weight: 600;
+  padding: 18px;
+  place-items: center;
+  text-align: center;
 }
 
 .case-study-photo img {
